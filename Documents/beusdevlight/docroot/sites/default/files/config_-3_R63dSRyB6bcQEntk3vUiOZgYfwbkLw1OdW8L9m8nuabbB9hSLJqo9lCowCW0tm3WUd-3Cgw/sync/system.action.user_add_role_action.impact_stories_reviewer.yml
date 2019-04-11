@@ -1,0 +1,14 @@
+uuid: 471f52a3-9aab-4fe6-9a47-9c851d126d21
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.impact_stories_reviewer
+  module:
+    - user
+id: user_add_role_action.impact_stories_reviewer
+label: 'Add the Impact Stories reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: impact_stories_reviewer

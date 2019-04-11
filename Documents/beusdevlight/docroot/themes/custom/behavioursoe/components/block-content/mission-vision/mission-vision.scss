@@ -1,0 +1,287 @@
+.block-content--view-mode-mission-vision {
+    margin: 20px -15px 0;
+    padding-left: 60px;
+
+    .paragraph--type--content {
+        padding: 15px 15px 0 13px;
+        max-width: 290px;
+
+        .field--name-field-title {
+            font-size: 1.667em;
+            letter-spacing: 0;
+            line-height: 30px;
+            border-bottom: 4px solid #ffcb05;
+            padding-bottom: 10px;
+            color: #333333;
+        }
+
+        .field--name-field-description {
+            font-size: 0.889em;
+            color: #555555;
+            letter-spacing: 0;
+        }
+
+        .field--name-field-cta {
+            .field__item {
+                margin: 0;
+
+                a {
+                    padding: 0;
+                    line-height: 20px;
+                    font-size: 0.889em;
+                    display: inline-block;
+                    vertical-align: middle;
+                    text-transform: capitalize;
+                    border-radius: none;
+                    font-family: "Avenir-Book", sans-serif;
+                    white-space: initial;
+                    border-bottom: 0;
+                    border: none;
+                    background: none;
+                    color: #0d57aa;
+
+                    &:after {
+                        content: "\f105";
+                        font-family: 'Fontawesome 5 pro';
+                        padding-left: 10px;
+                        font-size: 1.111rem;
+                        vertical-align: middle;
+                    }
+
+                    &:hover {
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+
+       
+    }
+     .field--name-field-link {
+            display: none;
+        }
+}
+
+
+
+// media SCSS
+@media (min-width: 568px) {
+
+    // pepole
+    // .block-content--type-people {
+    //     .field__items {
+    //         margin: 0 -15px;
+    //         letter-spacing: -0.31em;
+
+    //         &>.field__item {
+    //             .group-left {
+
+    //                 // position: relative;
+    //                 &>.field__item {
+    //                     width: 100% !important;
+    //                 }
+    //             }
+
+    //             display: inline-block;
+    //             width: 50%;
+    //             padding: 0 15px;
+    //             letter-spacing: 0;
+    //             vertical-align: top;
+    //         }
+    //     }
+    // }
+
+    // connect
+    // .block-content--view-mode-connect {
+    //     .field--name-field-content {
+    //         display: table;
+
+    //         &>.field__item {
+    //             display: table-cell;
+    //             width: 33%;
+    //             padding: 0px 20px;
+    //             border-right: 1px solid #d8d8d8;
+
+    //             &:last-child {
+    //                 border-right: none;
+    //             }
+
+    //             .paragraph--view-mode-connect {
+    //                 margin-top: 0px;
+    //             }
+    //         }
+    //     }
+    // }
+}
+
+@media (min-width: 768px) {
+    .block-content--view-mode-mission-vision {
+        .field--name-field-content {
+            display: table;
+            table-layout: fixed;
+            width: 100%;
+
+
+            &>.field__item {
+                // float: left;
+                width: 33.3%;
+                // padding-right: 36px;
+                display: table-cell;
+                // .paragraph--type--content{
+                //     .field--name-field-title {
+                //         padding-right: 48px;
+                //     }
+                // }
+            }
+        }
+    }
+
+
+    // for Full Message
+    // .block-content--view-mode-full {
+    //     .field--name-field-message {
+    //         &>.field__item {
+    //             .group-left {
+    //                 float: left;
+    //                 width: 270px;
+    //                 .field--name-field-image-caption {
+    //                     margin-top: 0;
+    //                 }
+    //             }
+
+    //             .group-right {
+    //                 float: left;
+    //                 width: calc(100% - 275px);
+    //                 padding-left: 26px;
+    //                 .field--name-field-title {
+    //                     font-size: 1.33em;
+    //                     line-height: 40px;                        
+    //                 margin-top: 0;
+    //                 }
+    //                 .field--name-field-full-description {    
+    //                     blockquote {
+    //                         margin: 0 62px;
+
+    //                     }
+
+    //                     blockquote::before {
+    //                         width: 44px;
+    //                         height: 36px;
+    //                     }
+
+    //                     blockquote::after {
+    //                         width: 44px;
+    //                         height: 36px;
+    //                     }
+
+    //                 }
+    //                 .field--name-field-topic-label,
+    //                 .field--name-field-sub-title {
+    //                     margin-left: 60px
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+    //pepole
+    // .block-content--type-people {
+    //     .field__items {
+    //         &>.field__item {
+    //             width: 25%;
+
+    //             .group-left {
+
+    //                 // position: relative;
+    //                 &>.field__item {
+    //                     width: 100% !important;
+    //                 }
+    //             }
+
+    //             .field--name-node-title {
+    //                 h3 {
+    //                     font-size: 0.88rem !important;
+    //                 }
+    //             }
+
+    //         }
+    //     }
+    // }
+}
+
+@media (min-width: 1024px) {
+    .block-content--view-mode-mission-vision {
+        .field--name-field-content {
+            &>.field__item {
+                // float: left;
+                // width: 33.3%;
+                // padding-right: 104px;
+
+                .paragraph--type--content {
+                    .field--name-field-title {
+                        padding-right: 48px;
+                    }
+                }
+            }
+        }
+    }
+
+    // for Full Message
+    // .block-content--view-mode-full {
+    //     margin: 0 70px;
+
+    //     .field--name-field-message {
+    //         &>.field__item {
+    //             .group-left {
+    //                 float: left;
+    //             }
+
+    //             .group-right {
+
+    //                 .field--name-field-title {
+    //                     font-size: 2.667em;
+    //                     line-height: 37px;
+    //                     margin-top: 0;
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
+
+
+    //pepole
+    // .block-content--type-people {
+
+    //     .field__items,
+    //     .views-row {
+
+    //         &>.field__item,
+    //         .node--type-personnel {
+    //             .group-left {
+    //                 &>.field__item {
+    //                     width: 100% !important;
+    //                 }
+    //             }
+
+    //             .field--name-node-title {
+    //                 h3 {
+    //                     font-size: 1.111em !important;
+    //                 }
+    //             }
+    //         }
+
+    //     }
+    // }
+
+    // connect
+    // .block-content--view-mode-connect {
+    //     .field--name-field-content {
+    //         max-width: 770px;
+    //         margin-left: auto;
+    //         margin-right: auto;
+    //         &>.field__item {
+    //             padding: 0px 34px;
+    //         }
+    //     }
+    // }
+}

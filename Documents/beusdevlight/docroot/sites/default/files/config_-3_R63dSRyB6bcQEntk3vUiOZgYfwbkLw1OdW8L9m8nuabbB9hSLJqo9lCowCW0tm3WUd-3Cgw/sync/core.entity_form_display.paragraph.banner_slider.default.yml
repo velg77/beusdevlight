@@ -1,0 +1,102 @@
+uuid: 152aca5c-e30c-4d59-8a5d-87bcff28757b
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.media_browser
+    - field.field.paragraph.banner_slider.field_cta
+    - field.field.paragraph.banner_slider.field_cta_button_color
+    - field.field.paragraph.banner_slider.field_description
+    - field.field.paragraph.banner_slider.field_downloadable_file
+    - field.field.paragraph.banner_slider.field_heading_style
+    - field.field.paragraph.banner_slider.field_image
+    - field.field.paragraph.banner_slider.field_title
+    - field.field.paragraph.banner_slider.field_topic_label
+    - paragraphs.paragraphs_type.banner_slider
+  module:
+    - entity_browser
+    - link
+    - text
+id: paragraph.banner_slider.default
+targetEntityType: paragraph
+bundle: banner_slider
+mode: default
+content:
+  field_cta:
+    weight: 5
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_cta_button_color:
+    weight: 6
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_description:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_downloadable_file:
+    type: entity_browser_entity_reference
+    weight: 7
+    settings:
+      entity_browser: media_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: thumbnail
+      open: true
+      field_widget_replace: false
+    region: content
+    third_party_settings: {  }
+  field_heading_style:
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_image:
+    type: entity_browser_entity_reference
+    weight: 0
+    settings:
+      entity_browser: media_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: thumbnail
+      open: true
+      field_widget_replace: false
+    region: content
+    third_party_settings: {  }
+  field_title:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_topic_label:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
+  uid: true

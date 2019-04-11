@@ -1,0 +1,17 @@
+uuid: 3accfa67-44f4-4195-99d6-7fabb519296e
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.narrow_landscape
+  module:
+    - crop
+name: crop_narrow_landscape
+label: 'Cropped: Narrow Landscape'
+effects:
+  e36a830c-7d95-43ea-be26-ed7005073aa0:
+    uuid: e36a830c-7d95-43ea-be26-ed7005073aa0
+    id: crop_crop
+    weight: null
+    data:
+      crop_type: narrow_landscape

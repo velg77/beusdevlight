@@ -1,0 +1,19 @@
+uuid: a3e78ee4-f335-4af0-8302-2613c632d16f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sub_title
+    - paragraphs.paragraphs_type.content
+id: paragraph.content.field_sub_title
+field_name: field_sub_title
+entity_type: paragraph
+bundle: content
+label: 'Sub Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

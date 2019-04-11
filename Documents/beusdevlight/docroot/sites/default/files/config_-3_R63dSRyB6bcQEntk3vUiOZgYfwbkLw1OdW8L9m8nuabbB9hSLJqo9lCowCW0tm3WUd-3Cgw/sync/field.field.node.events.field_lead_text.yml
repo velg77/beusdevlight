@@ -1,0 +1,21 @@
+uuid: 9241d835-8ffb-4e1c-a546-9edc6d0f3045
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_text
+    - node.type.events
+  module:
+    - text
+id: node.events.field_lead_text
+field_name: field_lead_text
+entity_type: node
+bundle: events
+label: 'Lead text'
+description: 'Opening Paragraph / Summary'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

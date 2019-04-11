@@ -1,0 +1,117 @@
+uuid: 75040d40-18eb-41ba-994f-dbf4d6d27700
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.courses.body
+    - field.field.node.courses.field_course_days
+    - field.field.node.courses.field_course_duration
+    - field.field.node.courses.field_course_no
+    - field.field.node.courses.field_course_themes
+    - field.field.node.courses.field_course_types
+    - field.field.node.courses.field_lead_text
+    - field.field.node.courses.field_map_location
+    - field.field.node.courses.field_programs
+    - node.type.courses
+  module:
+    - ds
+    - panelizer
+    - taxonomy
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_programs
+        - field_course_types
+        - field_course_themes
+        - field_course_no
+        - field_course_duration
+        - node_title
+        - field_lead_text
+        - body
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 5
+        label: hidden
+        formatter: default
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.courses.teaser
+targetEntityType: node
+bundle: courses
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 7
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_course_duration:
+    type: number_decimal
+    weight: 4
+    region: content
+    label: above
+    settings:
+      thousand_separator: ''
+      decimal_separator: .
+      scale: 2
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_course_no:
+    type: string
+    weight: 3
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_course_themes:
+    type: entity_reference_rss_category
+    weight: 2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_course_types:
+    type: entity_reference_rss_category
+    weight: 1
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_lead_text:
+    type: text_trimmed
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_programs:
+    type: entity_reference_rss_category
+    weight: 0
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_course_days: true
+  field_map_location: true
+  links: true

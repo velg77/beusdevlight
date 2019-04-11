@@ -1,0 +1,21 @@
+uuid: fb3ff5b1-f441-4795-a7aa-c309e5565ad3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_of_publication
+    - node.type.impact_stories
+  module:
+    - datetime
+id: node.impact_stories.field_date_of_publication
+field_name: field_date_of_publication
+entity_type: node
+bundle: impact_stories
+label: 'Date of Publication'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

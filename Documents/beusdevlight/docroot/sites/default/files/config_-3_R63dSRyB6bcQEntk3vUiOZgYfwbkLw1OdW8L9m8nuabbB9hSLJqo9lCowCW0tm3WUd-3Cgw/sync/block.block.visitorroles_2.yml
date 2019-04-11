@@ -1,0 +1,24 @@
+uuid: 25c28f0f-2005-40c4-98c9-d322de88a126
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.visitor-roles
+  module:
+    - system
+  theme:
+    - behavioursoe
+id: visitorroles_2
+theme: behavioursoe
+region: header_top
+weight: 0
+provider: null
+plugin: 'system_menu_block:visitor-roles'
+settings:
+  id: 'system_menu_block:visitor-roles'
+  label: 'Visitor Roles'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

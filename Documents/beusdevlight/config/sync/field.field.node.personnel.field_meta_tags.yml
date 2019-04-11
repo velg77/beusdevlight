@@ -1,0 +1,26 @@
+uuid: eafca663-acd4-4180-930e-a3d24b80883f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.personnel
+  module:
+    - custom_add_another
+    - metatag
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.personnel.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: personnel
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

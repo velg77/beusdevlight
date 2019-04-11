@@ -1,0 +1,25 @@
+uuid: 5df6da21-6dbf-4304-9051-c59128caed4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_funding_agency
+    - node.type.awards
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.awards.field_funding_agency
+field_name: field_funding_agency
+entity_type: node
+bundle: awards
+label: 'Funding Agency'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

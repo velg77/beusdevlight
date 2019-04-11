@@ -1,0 +1,30 @@
+uuid: 981349ad-7537-410e-a9cf-92bb270c3e9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media
+    - media.type.video
+    - media.type.video_file
+    - node.type.news
+id: node.news.field_media
+field_name: field_media
+entity_type: node
+bundle: news
+label: 'Video Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      video: video
+      video_file: video_file
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: video
+field_type: entity_reference

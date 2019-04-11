@@ -1,0 +1,34 @@
+uuid: 03a3575c-e60f-42e2-81a7-0c44f3a08afe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_people
+    - node.type.personnel
+    - taxonomy.vocabulary.personnel_type
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: taxonomy_term.personnel_type.field_people
+field_name: field_people
+entity_type: taxonomy_term
+bundle: personnel_type
+label: People
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      personnel: personnel
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

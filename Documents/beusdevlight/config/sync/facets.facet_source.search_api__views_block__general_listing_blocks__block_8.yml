@@ -1,0 +1,9 @@
+uuid: 0b329f57-6c5e-4790-a2cb-a246435c5252
+langcode: en
+status: true
+dependencies: {  }
+id: search_api__views_block__general_listing_blocks__block_8
+name: 'search_api:views_block__general_listing_blocks__block_8'
+filter_key: null
+url_processor: query_string
+breadcrumb: {  }

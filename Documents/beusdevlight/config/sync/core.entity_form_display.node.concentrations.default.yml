@@ -1,0 +1,339 @@
+uuid: 53f85d5e-d8c8-4446-8eeb-448b26d1ec5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.concentrations.body
+    - field.field.node.concentrations.field_acadamic_degree
+    - field.field.node.concentrations.field_application_process
+    - field.field.node.concentrations.field_application_process_descri
+    - field.field.node.concentrations.field_carrers
+    - field.field.node.concentrations.field_course
+    - field.field.node.concentrations.field_deadline
+    - field.field.node.concentrations.field_degree
+    - field.field.node.concentrations.field_endorsement_
+    - field.field.node.concentrations.field_full_data
+    - field.field.node.concentrations.field_heading
+    - field.field.node.concentrations.field_inter
+    - field.field.node.concentrations.field_lead_text
+    - field.field.node.concentrations.field_meta_tags
+    - field.field.node.concentrations.field_quick_fact
+    - field.field.node.concentrations.field_requirements
+    - field.field.node.concentrations.field_tab_1_title
+    - field.field.node.concentrations.field_tab_2_title
+    - field.field.node.concentrations.field_tab_3_title
+    - field.field.node.concentrations.panelizer
+    - node.type.concentrations
+  module:
+    - content_moderation
+    - entity_reference_views_select
+    - field_group
+    - metatag
+    - path
+    - scheduler
+    - scheduler_content_moderation_integration
+    - text
+third_party_settings:
+  field_group:
+    group_tab_1:
+      children:
+        - field_tab_1_title
+        - field_lead_text
+        - body
+        - field_requirements
+        - field_endorsement_
+        - group_sample_curriculum
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        label: 'Overview & Requirements'
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Overview & Requirements'
+    group_tab_:
+      children:
+        - field_tab_2_title
+        - group_deadlines
+        - group_application_process
+        - field_quick_fact
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        label: Applying
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: Applying
+    group_tab_3:
+      children:
+        - field_tab_3_title
+        - field_carrers
+        - field_inter
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        label: 'Carrers and Interships'
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Carrers and Interships'
+    group_sample_curriculum:
+      children:
+        - field_heading
+        - field_course
+      parent_name: group_tab_1
+      weight: 21
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Sample Curriculum'
+    group_deadlines:
+      children:
+        - field_full_data
+        - field_deadline
+      parent_name: group_tab_
+      weight: 10
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Deadlines
+    group_application_process:
+      children:
+        - field_application_process_descri
+        - field_application_process
+      parent_name: group_tab_
+      weight: 11
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Application Process'
+id: node.concentrations.default
+targetEntityType: node
+bundle: concentrations
+mode: default
+content:
+  body:
+    weight: 17
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_acadamic_degree:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_application_process:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_application_process_descri:
+    weight: 10
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_carrers:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_course:
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_deadline:
+    weight: 31
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_degree:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_endorsement_:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_full_data:
+    weight: 30
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_heading:
+    type: text_textfield
+    weight: 29
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_inter:
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_lead_text:
+    weight: 16
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_meta_tags:
+    weight: 32
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_quick_fact:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_requirements:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_tab_1_title:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tab_2_title:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tab_3_title:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 14
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 31
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 15
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 9
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: erviews_options_select
+    weight: 6
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  unpublish_state:
+    type: scheduler_moderation
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  panelizer: true
+  promote: true

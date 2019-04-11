@@ -1,0 +1,33 @@
+uuid: 14312cb1-8e62-48b3-8d2f-b9cf239809ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.multiple_content.field_date
+    - field.field.paragraph.multiple_content.field_sub_text
+    - paragraphs.paragraphs_type.multiple_content
+  module:
+    - datetime
+    - text
+id: paragraph.multiple_content.default
+targetEntityType: paragraph
+bundle: multiple_content
+mode: default
+content:
+  field_date:
+    weight: 0
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'F j'
+    third_party_settings: {  }
+    type: datetime_custom
+    region: content
+  field_sub_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

@@ -1,0 +1,28 @@
+uuid: 3fa1a21e-fb5c-4200-98ff-e0f8580fc5e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_url_faq
+    - taxonomy.vocabulary.admissions_based_natural_form
+  module:
+    - custom_add_another
+    - link
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: taxonomy_term.admissions_based_natural_form.field_url_faq
+field_name: field_url_faq
+entity_type: taxonomy_term
+bundle: admissions_based_natural_form
+label: 'url admissions'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

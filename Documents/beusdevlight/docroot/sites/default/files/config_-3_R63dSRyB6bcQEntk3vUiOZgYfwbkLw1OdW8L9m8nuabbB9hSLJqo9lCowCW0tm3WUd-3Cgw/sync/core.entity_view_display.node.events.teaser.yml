@@ -1,0 +1,129 @@
+uuid: 9a571c7f-38e1-40e7-9b57-93d6902323df
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.events.body
+    - field.field.node.events.field_date_of_publication
+    - field.field.node.events.field_display_event_time
+    - field.field.node.events.field_email
+    - field.field.node.events.field_event_end_date
+    - field.field.node.events.field_event_start_date
+    - field.field.node.events.field_events_type
+    - field.field.node.events.field_first_name
+    - field.field.node.events.field_information_for_calender
+    - field.field.node.events.field_lead_text
+    - field.field.node.events.field_map_location
+    - field.field.node.events.field_name
+    - field.field.node.events.field_personemail
+    - field.field.node.events.field_personnel
+    - field.field.node.events.field_phone_no
+    - field.field.node.events.field_phone_number
+    - field.field.node.events.field_registration
+    - field.field.node.events.field_related_events
+    - field.field.node.events.field_show_manual_entry
+    - field.field.node.events.field_tags
+    - field.field.node.events.field_web
+    - node.type.events
+  module:
+    - datetime
+    - ds
+    - panelizer
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_event_start_date
+        - field_tags
+        - node_title
+        - field_display_event_time
+        - field_events_type
+        - 'dynamic_token_field:node-events_tags_list_view'
+    fields:
+      'dynamic_token_field:node-events_tags_list_view':
+        plugin_id: 'dynamic_token_field:node-events_tags_list_view'
+        weight: 5
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h3
+          class: ''
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.events.teaser
+targetEntityType: node
+bundle: events
+mode: teaser
+content:
+  field_display_event_time:
+    type: string
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_event_start_date:
+    type: datetime_custom
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'M d, Y'
+    third_party_settings: {  }
+  field_events_type:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+  field_tags:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: '1'
+hidden:
+  addtoany: true
+  body: true
+  field_date_of_publication: true
+  field_email: true
+  field_event_end_date: true
+  field_first_name: true
+  field_information_for_calender: true
+  field_lead_text: true
+  field_map_location: true
+  field_name: true
+  field_personemail: true
+  field_personnel: true
+  field_phone_no: true
+  field_phone_number: true
+  field_registration: true
+  field_related_events: true
+  field_show_manual_entry: true
+  field_web: true
+  links: true

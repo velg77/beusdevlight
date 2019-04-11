@@ -1,0 +1,148 @@
+// Css3 Mixins
+@import "../../base/_variables";
+
+.block-content--view-mode-degrees-certifications {
+  & > .field--type-text-with-summary{
+    margin-bottom: 46px;
+  }
+  .field--name-field-taxonomy-reference.field--type-entity-reference {
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+    & > .field__item {
+      position:relative;
+      border:0.45px solid #fff;
+      @media (min-width: 640px) {
+        float:left;
+        width: 50%;
+      }
+      @media (min-width: 1024px) {
+        width: 33.33%;
+      }
+    }
+  }
+}
+.taxonomy-term--view-mode-teaser {
+  .field--name-field-featured-image a:after {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    background: rgba(0, 39, 76, 0.8);
+    position: absolute;
+  }
+  .group-left{
+    img{
+    width:100%;;
+    }
+  }
+  .group-right{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 2;
+    text-align:center;
+    color: #fff;
+    padding: 25px;
+    h3{
+      font-size: 2rem;
+      font-family: "Avenir-Heavy", sans-serif;
+      a{
+        color:#fff;
+        border-bottom: 4px solid #ffcb05;
+        padding-bottom: 5px;
+      }
+    }
+    .field--name-field-lead-text{
+      font-size:0.889rem;
+      line-height: 1.333rem;
+      padding-top: 5px;
+      margin: 0;
+      border-bottom: 0;
+    }
+  }
+
+}
+
+  .deg-decrp{
+    margin:20px 0;
+    padding: 30px 0;
+    border-bottom: 4px solid $site-color-yellow;
+    h2{
+      color:#333333;
+      font-size:1.444rem;
+      margin:0px;
+    }
+    .field--name-field-lead-text{
+      font-size:1.111rem;
+      border-bottom: none;
+      p{
+        margin-top:5px;
+      }
+    }
+    .field--name-description{
+      font-size:0.889rem;
+    }
+    .title-group{
+
+    }
+    .concentration-tags{
+
+        font-family: 'Avenir-medium', sans-serif;
+        line-height:1.111rem;
+        margin:10px;
+        .views-field-title{
+         margin:0px;
+        }
+        .views-row{
+          position: relative;
+          margin:10px 0;
+          &:before {
+            content: '|';
+            color: #ffcb05;
+            background: #ffcb05;
+            position: absolute;
+            left: -14px;
+            top: 0px;
+            font-size: 12px;
+            width: 4px;
+          }
+        }
+      h3{
+        font-size: 1.111rem;
+        color:#000;
+        margin-bottom: 20px;
+      }
+      a:hover{
+        border-bottom: none;
+      }
+    }
+    &:last-child{
+      border-bottom: none;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .deg-decrp{
+      .title-group{
+        float:left;
+        width:70%;
+        padding-right: 100px;
+      }
+      .concentration-tags{
+        width:27%;
+       float:right;
+      }
+    }
+
+  }
+

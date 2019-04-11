@@ -1,0 +1,87 @@
+uuid: f55d6b66-d2f1-4326-82c3-64131762c436
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.our_impact
+    - field.field.node.dije_newsletter.body
+    - field.field.node.dije_newsletter.field_created_date
+    - field.field.node.dije_newsletter.field_lead_text
+    - field.field.node.dije_newsletter.field_media_type
+    - field.field.node.dije_newsletter.field_tags
+    - node.type.dije_newsletter
+  module:
+    - datetime
+    - ds
+    - panelizer
+    - taxonomy
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: layout_twocol
+      library: layout_discovery/twocol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      first:
+        - field_media_type
+      second:
+        - field_created_date
+        - field_tags
+        - node_title
+        - field_lead_text
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 3
+        label: hidden
+        formatter: default
+id: node.dije_newsletter.our_impact
+targetEntityType: node
+bundle: dije_newsletter
+mode: our_impact
+content:
+  field_created_date:
+    type: datetime_custom
+    weight: 1
+    region: second
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'M d, Y'
+    third_party_settings: {  }
+  field_lead_text:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: second
+  field_media_type:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: hero_image
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: first
+  field_tags:
+    type: entity_reference_rss_category
+    weight: 2
+    region: second
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  links: true

@@ -1,0 +1,48 @@
+uuid: 2e462c16-be75-4b98-af4c-72df815bfe00
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.internships.body
+    - node.type.internships
+  module:
+    - ds
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - links
+        - body
+id: node.internships.default
+targetEntityType: node
+bundle: internships
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true

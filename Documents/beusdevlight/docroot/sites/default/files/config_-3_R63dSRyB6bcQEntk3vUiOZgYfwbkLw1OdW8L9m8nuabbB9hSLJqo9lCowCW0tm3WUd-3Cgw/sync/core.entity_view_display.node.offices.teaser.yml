@@ -1,0 +1,82 @@
+uuid: f11c41dc-a57c-4e24-99ca-9b50f1c9ba64
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.offices.body
+    - field.field.node.offices.field_date_of_publication
+    - field.field.node.offices.field_email
+    - field.field.node.offices.field_lead_text
+    - field.field.node.offices.field_map_location
+    - field.field.node.offices.field_phone_number
+    - field.field.node.offices.field_schedule_a_time
+    - field.field.node.offices.field_timing
+    - node.type.offices
+  module:
+    - ds
+    - panelizer
+    - telephone
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - node_title
+        - field_map_location
+        - field_email
+        - field_phone_number
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.offices.teaser
+targetEntityType: node
+bundle: offices
+mode: teaser
+content:
+  field_email:
+    type: email_mailto
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_map_location:
+    type: text_trimmed
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_phone_number:
+    type: telephone_link
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_date_of_publication: true
+  field_lead_text: true
+  field_schedule_a_time: true
+  field_timing: true
+  links: true

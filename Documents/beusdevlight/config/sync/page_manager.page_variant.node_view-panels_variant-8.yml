@@ -1,0 +1,137 @@
+uuid: 7e6562fb-9118-41ca-9bbe-3e7f6d13c0da
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.node_view
+  module:
+    - ctools
+    - ctools_block
+    - panels
+id: node_view-panels_variant-8
+label: 'Dije Newsletter Detail'
+variant: panels_variant
+variant_settings:
+  blocks:
+    814f53a4-7ffa-4e98-b2ea-a86df4632b1e:
+      id: 'entity_view:node'
+      label: 'Entity view (Content)'
+      provider: ctools
+      label_display: '0'
+      view_mode: default
+      region: row3
+      weight: -1
+      uuid: 814f53a4-7ffa-4e98-b2ea-a86df4632b1e
+      context_mapping:
+        entity: node
+    b39ec282-413f-48ad-b43c-6da319e36baf:
+      id: 'entity_field:node:title'
+      label: Title
+      provider: ctools_block
+      label_display: '0'
+      formatter:
+        label: hidden
+        type: string
+        settings:
+          link_to_entity: false
+        third_party_settings: {  }
+        weight: 0
+      region: row2
+      weight: -10
+      uuid: b39ec282-413f-48ad-b43c-6da319e36baf
+      context_mapping:
+        entity: node
+    27352f8e-6233-4645-976e-ebe53fcb9c0c:
+      id: 'entity_field:node:field_media_type'
+      label: 'Banner Image'
+      provider: ctools_block
+      label_display: '0'
+      formatter:
+        label: hidden
+        type: entity_reference_entity_view
+        settings:
+          view_mode: hero_image
+        third_party_settings: {  }
+        weight: 0
+      region: row1
+      weight: -10
+      uuid: 27352f8e-6233-4645-976e-ebe53fcb9c0c
+      context_mapping:
+        entity: node
+  id: panels_variant
+  uuid: 89e9c199-da0a-4ae8-8ba2-c991d5818105
+  label: null
+  weight: 0
+  layout: behavioursoe_layout
+  layout_settings:
+    wrappers:
+      row1: div
+      row2: div
+      row3: div
+      row4: div
+      row5: div
+      row6: div
+      row7: div
+      row8: div
+      left_sidebar: div
+      main_content: div
+      right_sidebar: div
+      row9: div
+      row10: div
+      row11: div
+      row12: div
+      row13: div
+      row14: div
+      row15: div
+    outer_wrapper: div
+    attributes: ''
+    link_attribute: ''
+    link_custom: ''
+    classes:
+      layout_class:
+        content_banner: content_banner
+      row1:
+        ful_wdt: ful_wdt
+      row2:
+        row_sp_top: row_sp_top
+        row_sp_bot: row_sp_bot
+      row3:
+        brdr_bot: brdr_bot
+        row_sp_top: row_sp_top
+        row_sp_bot: row_sp_bot
+        sm_cnt: sm_cnt
+      row4:
+        brdr_bot: brdr_bot
+        row_sp_top: row_sp_top
+        row_sp_bot: row_sp_bot
+        sdbr_lg: sdbr_lg
+      row5: {  }
+      row6: {  }
+      row7: {  }
+      row8: {  }
+      left_sidebar: {  }
+      main_content: {  }
+      right_sidebar: {  }
+      row9: {  }
+      row10: {  }
+      row11: {  }
+      row12: {  }
+      row13: {  }
+      row14: {  }
+      row15: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: node_view-panels_variant-8
+  builder: standard
+page: node_view
+weight: 0
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    bundles:
+      dije_newsletter: dije_newsletter
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+static_context: {  }

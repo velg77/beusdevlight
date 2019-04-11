@@ -1,0 +1,9 @@
+uuid: ff46b135-121c-437d-b40b-1b5b9ac7e7a8
+langcode: en
+status: true
+dependencies: {  }
+name: 'FAQ Based Natural Form'
+vid: natural_form
+description: ''
+hierarchy: 0
+weight: 0

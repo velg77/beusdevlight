@@ -1,0 +1,14 @@
+uuid: 37072a8e-5415-45f2-95d4-5d548cdc455e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.application_deadline_reviewer
+  module:
+    - user
+id: user_add_role_action.application_deadline_reviewer
+label: 'Add the Application Deadline reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: application_deadline_reviewer

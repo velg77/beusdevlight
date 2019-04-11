@@ -1,0 +1,14 @@
+uuid: b98bcd79-a804-4fff-9773-3953b6fa4a74
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.impact_stories_creator
+  module:
+    - user
+id: user_add_role_action.impact_stories_creator
+label: 'Add the Impact Stories creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: impact_stories_creator

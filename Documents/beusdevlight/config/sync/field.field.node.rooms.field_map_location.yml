@@ -1,0 +1,31 @@
+uuid: 1c137ff0-5e70-4a86-a089-b4314df7d7f0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_map_location
+    - node.type.rooms
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    limited_text_styling: limited_text_styling
+    rich_text: '0'
+    plain_text: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.rooms.field_map_location
+field_name: field_map_location
+entity_type: node
+bundle: rooms
+label: Location
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

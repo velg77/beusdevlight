@@ -1,0 +1,69 @@
+uuid: 0bddc9f4-c25c-4a21-81f1-ad58cf8567ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.multi_content_block
+    - core.entity_view_mode.block_content.floor_plans
+    - field.field.block_content.multi_content_block.body
+    - field.field.block_content.multi_content_block.field_content
+    - field.field.block_content.multi_content_block.field_link
+  module:
+    - entity_reference_revisions
+    - field_group
+    - link
+    - text
+third_party_settings:
+  field_group:
+    group_floor_plans_wrap:
+      children:
+        - body
+        - field_link
+        - field_content
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: blk-flr-pln
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Floor Plans Wrap'
+id: block_content.multi_content_block.floor_plans
+targetEntityType: block_content
+bundle: multi_content_block
+mode: floor_plans
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_content:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

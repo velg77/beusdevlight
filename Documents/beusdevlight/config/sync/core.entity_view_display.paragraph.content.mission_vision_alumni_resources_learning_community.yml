@@ -1,0 +1,50 @@
+uuid: 7f4343ac-07b1-4926-a4c3-e3049c6cd292
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.mission_vision_alumni_resources_learning_community
+    - field.field.paragraph.content.field_cta
+    - field.field.paragraph.content.field_description
+    - field.field.paragraph.content.field_image
+    - field.field.paragraph.content.field_sub_title
+    - field.field.paragraph.content.field_title
+    - paragraphs.paragraphs_type.content
+  module:
+    - link
+    - text
+id: paragraph.content.mission_vision_alumni_resources_learning_community
+targetEntityType: paragraph
+bundle: content
+mode: mission_vision_alumni_resources_learning_community
+content:
+  field_cta:
+    type: link
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_description:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_image: true
+  field_sub_title: true

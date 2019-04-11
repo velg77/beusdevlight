@@ -1,0 +1,19 @@
+uuid: 769341bc-4ddd-4665-b6f2-1d76fcd018a6
+langcode: en
+status: true
+dependencies: {  }
+id: quick_facts_reviewer
+label: 'Quick Facts reviewer'
+weight: 23
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'delete any quick_facts content'
+  - 'edit any quick_facts content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'view any unpublished content'
+  - 'view latest version'

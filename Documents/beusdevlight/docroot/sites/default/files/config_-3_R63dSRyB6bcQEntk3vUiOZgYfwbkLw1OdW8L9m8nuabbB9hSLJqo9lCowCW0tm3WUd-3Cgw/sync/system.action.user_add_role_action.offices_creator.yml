@@ -1,0 +1,14 @@
+uuid: 61c8eb48-1781-4eb5-8a0f-e48c93956224
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.offices_creator
+  module:
+    - user
+id: user_add_role_action.offices_creator
+label: 'Add the Offices creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: offices_creator

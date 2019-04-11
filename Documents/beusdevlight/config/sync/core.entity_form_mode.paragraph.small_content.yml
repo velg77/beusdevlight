@@ -1,0 +1,14 @@
+uuid: d6f97f54-7667-4683-8448-cc1c82731bd9
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - paragraphs
+third_party_settings:
+  lightning_core:
+    description: 'Small Content'
+id: paragraph.small_content
+label: 'Small Content'
+targetEntityType: paragraph
+cache: true

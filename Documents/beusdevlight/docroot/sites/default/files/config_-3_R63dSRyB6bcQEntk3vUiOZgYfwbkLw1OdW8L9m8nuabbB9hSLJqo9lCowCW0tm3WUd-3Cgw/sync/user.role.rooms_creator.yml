@@ -1,0 +1,29 @@
+uuid: c9b718df-5210-4b54-bcd6-3a1a44c98e38
+langcode: en
+status: true
+dependencies: {  }
+id: rooms_creator
+label: 'Rooms creator'
+weight: 0
+is_admin: false
+permissions:
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access toolbar'
+  - 'administer panelizer node rooms content'
+  - 'administer panelizer node rooms layout'
+  - 'change layouts in place editing'
+  - 'create rooms content'
+  - 'create url aliases'
+  - 'edit own rooms content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view rooms revisions'

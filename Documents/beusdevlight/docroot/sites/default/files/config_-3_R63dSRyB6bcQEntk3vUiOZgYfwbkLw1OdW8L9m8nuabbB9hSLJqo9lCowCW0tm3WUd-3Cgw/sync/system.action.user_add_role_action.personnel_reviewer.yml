@@ -1,0 +1,14 @@
+uuid: 4d454731-88fd-4ee9-81b8-41b7a2f5917b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.personnel_reviewer
+  module:
+    - user
+id: user_add_role_action.personnel_reviewer
+label: 'Add the Personnel reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: personnel_reviewer

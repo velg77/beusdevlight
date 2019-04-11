@@ -1,0 +1,22 @@
+uuid: a229d01a-0266-460c-bda6-d8a72f43a1ee
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.taxonomy_index
+    - taxonomy.vocabulary.event_type
+  module:
+    - text
+id: taxonomy_term.event_type.taxonomy_index
+targetEntityType: taxonomy_term
+bundle: event_type
+mode: taxonomy_index
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: dd7f94e5-142b-4c1c-bb6a-425167ec7dfc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sub_title
+    - node.type.concentration_requirements
+id: node.concentration_requirements.field_sub_title
+field_name: field_sub_title
+entity_type: node
+bundle: concentration_requirements
+label: 'Sub Title'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

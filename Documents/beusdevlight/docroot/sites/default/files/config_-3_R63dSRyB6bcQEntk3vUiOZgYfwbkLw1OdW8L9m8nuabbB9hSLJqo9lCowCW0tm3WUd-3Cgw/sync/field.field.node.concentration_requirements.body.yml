@@ -1,0 +1,22 @@
+uuid: d54e0369-9aa4-4429-96ca-1fcdee43080c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.concentration_requirements
+  module:
+    - text
+id: node.concentration_requirements.body
+field_name: body
+entity_type: node
+bundle: concentration_requirements
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

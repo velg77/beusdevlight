@@ -1,0 +1,33 @@
+uuid: 31bcbb4e-42ea-422b-ba5e-0419ccf2ccc4
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.personnel_news
+  module:
+    - ctools
+    - views
+  theme:
+    - behavioursoe
+id: views_block__personnel_news_block_1
+theme: behavioursoe
+region: footer
+weight: -6
+provider: null
+plugin: 'views_block:personnel_news-block_1'
+settings:
+  id: 'views_block:personnel_news-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      personnel: personnel
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

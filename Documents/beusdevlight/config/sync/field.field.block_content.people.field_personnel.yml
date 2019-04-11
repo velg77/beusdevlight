@@ -1,0 +1,32 @@
+uuid: c4c05796-ca4f-49c3-b74b-af2b2b36de2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.people
+    - field.storage.block_content.field_personnel
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: block_content.people.field_personnel
+field_name: field_personnel
+entity_type: block_content
+bundle: people
+label: Personnel
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: general
+      display_name: entity_reference_1
+      arguments:
+        - personnel
+field_type: entity_reference

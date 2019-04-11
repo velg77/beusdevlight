@@ -1,0 +1,19 @@
+uuid: dbb8a195-3cfc-439c-9181-0d6cb6bf672b
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_google_scholar
+field_name: field_google_scholar
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

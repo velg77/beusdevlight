@@ -1,0 +1,112 @@
+uuid: 12c4a6d6-5c86-4533-9c4a-7c9f65a9337f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news.body
+    - field.field.node.news.field_author
+    - field.field.node.news.field_date_of_publication
+    - field.field.node.news.field_lead_text
+    - field.field.node.news.field_media
+    - field.field.node.news.field_media_type
+    - field.field.node.news.field_news_type
+    - field.field.node.news.field_personnel
+    - field.field.node.news.field_programs
+    - field.field.node.news.field_related_news
+    - field.field.node.news.field_show_manual_entry
+    - field.field.node.news.field_tags
+    - image.style.sm_landscape_2x
+    - node.type.news
+  module:
+    - ds
+    - media
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_media_type
+        - 'dynamic_token_field:node-default_image'
+        - field_tags
+        - node_post_date
+        - node_title
+        - body
+    fields:
+      'dynamic_token_field:node-default_image':
+        plugin_id: 'dynamic_token_field:node-default_image'
+        weight: 1
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 4
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h3
+          class: ''
+      node_post_date:
+        plugin_id: node_post_date
+        weight: 3
+        label: hidden
+        formatter: ds_post_date_medium
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.news.teaser
+targetEntityType: node
+bundle: news
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 5
+    settings:
+      trim_length: 150
+    third_party_settings: {  }
+    region: content
+  field_media_type:
+    type: media_thumbnail
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: sm_landscape_2x
+      image_link: content
+    third_party_settings: {  }
+  field_tags:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: '1'
+hidden:
+  addtoany: true
+  content_moderation_control: true
+  field_author: true
+  field_date_of_publication: true
+  field_lead_text: true
+  field_media: true
+  field_news_type: true
+  field_personnel: true
+  field_programs: true
+  field_related_news: true
+  field_show_manual_entry: true
+  links: true

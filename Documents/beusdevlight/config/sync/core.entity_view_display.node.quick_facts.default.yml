@@ -1,0 +1,64 @@
+uuid: ac00c181-646e-4165-b34b-b467671cafd1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.quick_facts.body
+    - field.field.node.quick_facts.field_quick_facts
+    - node.type.quick_facts
+  module:
+    - ds
+    - entity_reference_revisions
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers: null
+        outer_wrapper: null
+        attributes: ''
+        link_attribute: null
+        link_custom: null
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - body
+        - field_quick_facts
+id: node.quick_facts.default
+targetEntityType: node
+bundle: quick_facts
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_quick_facts:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: quik_facts
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    region: ds_content
+hidden:
+  addtoany: true
+  links: true

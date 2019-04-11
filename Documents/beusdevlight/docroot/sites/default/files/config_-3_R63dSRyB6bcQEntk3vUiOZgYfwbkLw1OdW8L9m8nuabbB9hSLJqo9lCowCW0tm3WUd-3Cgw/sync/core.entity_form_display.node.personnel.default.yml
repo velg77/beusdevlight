@@ -1,0 +1,378 @@
+uuid: dc9e21ea-2923-4370-9ca7-46ffc0c66d1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.media_browser
+    - field.field.node.personnel.body
+    - field.field.node.personnel.field_afffiliations_committees
+    - field.field.node.personnel.field_course
+    - field.field.node.personnel.field_date_of_publication
+    - field.field.node.personnel.field_email
+    - field.field.node.personnel.field_facebook
+    - field.field.node.personnel.field_google_scholar
+    - field.field.node.personnel.field_lead_text
+    - field.field.node.personnel.field_linkedin
+    - field.field.node.personnel.field_map_location
+    - field.field.node.personnel.field_media_type
+    - field.field.node.personnel.field_office
+    - field.field.node.personnel.field_personnel_type
+    - field.field.node.personnel.field_phone_number
+    - field.field.node.personnel.field_position
+    - field.field.node.personnel.field_programs
+    - field.field.node.personnel.field_publications
+    - field.field.node.personnel.field_resume
+    - field.field.node.personnel.field_schedule_a_time
+    - field.field.node.personnel.field_services
+    - field.field.node.personnel.field_sub_copy
+    - field.field.node.personnel.field_tags
+    - field.field.node.personnel.field_timing
+    - field.field.node.personnel.field_twitter
+    - field.field.node.personnel.field_website
+    - node.type.personnel
+  module:
+    - content_moderation
+    - datetime
+    - entity_browser
+    - entity_reference_views_select
+    - field_group
+    - file
+    - link
+    - paragraphs
+    - path
+    - scheduler
+    - telephone
+    - text
+third_party_settings:
+  field_group:
+    group_contact:
+      children:
+        - field_email
+        - field_phone_number
+      parent_name: ''
+      weight: 5
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Contact
+    group_connect:
+      children:
+        - field_facebook
+        - field_twitter
+        - field_linkedin
+      parent_name: ''
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Connect
+    group_office_hours:
+      children:
+        - field_timing
+        - field_schedule_a_time
+      parent_name: ''
+      weight: 8
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Office Hours'
+    group_additional_info:
+      children:
+        - field_resume
+        - field_google_scholar
+        - field_website
+      parent_name: ''
+      weight: 15
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Additional Info'
+id: node.personnel.default
+targetEntityType: node
+bundle: personnel
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 10
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 29
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_afffiliations_committees:
+    type: entity_reference_paragraphs
+    weight: 14
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_course:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_date_of_publication:
+    weight: 25
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_email:
+    weight: 12
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_facebook:
+    weight: 12
+    settings:
+      placeholder_url: 'https://www.facebook.com/(your profile name)'
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_google_scholar:
+    weight: 30
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_lead_text:
+    weight: 9
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_linkedin:
+    weight: 15
+    settings:
+      placeholder_url: 'https://www.linkedin.com/in/(your-profile-name)'
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_map_location:
+    weight: 7
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_media_type:
+    type: entity_browser_entity_reference
+    weight: 3
+    settings:
+      entity_browser: media_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: thumbnail
+      field_widget_replace: false
+    region: content
+    third_party_settings: {  }
+  field_office:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_personnel_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_phone_number:
+    weight: 13
+    settings:
+      placeholder: 'eg. 202-555-1234'
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_position:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_programs:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_publications:
+    type: entity_reference_paragraphs
+    weight: 13
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  field_resume:
+    weight: 29
+    settings:
+      progress_indicator: throbber
+    third_party_settings: {  }
+    type: file_generic
+    region: content
+  field_schedule_a_time:
+    weight: 15
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_services:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_sub_copy:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: 'Person''s titles, eg. "William H. Payne Collegiate Professor; Arthur F Thurnau Professor"'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tags:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_timing:
+    weight: 14
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_twitter:
+    weight: 13
+    settings:
+      placeholder_url: 'https://twitter.com/(your user name)'
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_website:
+    weight: 31
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 23
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 21
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 27
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 24
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 22
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 28
+    region: content
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 26
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

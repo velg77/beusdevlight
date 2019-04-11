@@ -1,0 +1,14 @@
+uuid: 48ab8a78-dc62-4c10-9114-972b3ac99774
+name: 'University of Michigan School of Education'
+mail: vijay@behaviordesign.com
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node/3
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

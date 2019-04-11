@@ -1,0 +1,412 @@
+uuid: 7a2a4d28-65d6-4860-bf96-a5506378dd97
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.personnel.body
+    - field.field.node.personnel.field_afffiliations_committees
+    - field.field.node.personnel.field_course
+    - field.field.node.personnel.field_date_of_publication
+    - field.field.node.personnel.field_email
+    - field.field.node.personnel.field_facebook
+    - field.field.node.personnel.field_google_scholar
+    - field.field.node.personnel.field_lead_text
+    - field.field.node.personnel.field_linkedin
+    - field.field.node.personnel.field_map_location
+    - field.field.node.personnel.field_media_type
+    - field.field.node.personnel.field_office
+    - field.field.node.personnel.field_personnel_type
+    - field.field.node.personnel.field_phone_number
+    - field.field.node.personnel.field_position
+    - field.field.node.personnel.field_programs
+    - field.field.node.personnel.field_publications
+    - field.field.node.personnel.field_resume
+    - field.field.node.personnel.field_schedule_a_time
+    - field.field.node.personnel.field_services
+    - field.field.node.personnel.field_sub_copy
+    - field.field.node.personnel.field_tags
+    - field.field.node.personnel.field_timing
+    - field.field.node.personnel.field_twitter
+    - field.field.node.personnel.field_website
+    - node.type.personnel
+  module:
+    - ds
+    - field_group
+    - file
+    - link
+    - panelizer
+    - simple_gmap
+    - telephone
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - group_top_content
+        - field_media_type
+        - group_bottom_content
+        - node_title
+        - field_sub_copy
+        - field_email
+        - field_phone_number
+        - group_grp_info_wrp
+        - field_facebook
+        - field_map_location
+        - group_location
+        - group_contact
+        - field_twitter
+        - field_linkedin
+        - group_connect
+        - group_office_hours
+        - field_timing
+        - field_resume
+        - group_location_office_hours
+        - field_google_scholar
+        - field_website
+        - group_top_left
+        - group_top_right
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+  field_group:
+    group_top_content:
+      children:
+        - group_top_left
+        - group_top_right
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: 'Top Content'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'grp-tp clearfix'
+      label: 'Top Content'
+    group_bottom_content:
+      children: {  }
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-btm
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Bottom Content'
+    group_top_left:
+      children:
+        - field_media_type
+      parent_name: group_top_content
+      weight: 22
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-tp-lft
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Top Left'
+    group_top_right:
+      children:
+        - node_title
+        - field_sub_copy
+        - group_grp_info_wrp
+      parent_name: group_top_content
+      weight: 23
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-tp-rgt
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Top Right'
+    group_contact:
+      children:
+        - field_email
+        - field_phone_number
+      parent_name: group_grp_info_wrp
+      weight: 5
+      format_type: html_element
+      format_settings:
+        label: Contact
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'grp-contact grp-info'
+      label: Contact
+    group_connect:
+      children:
+        - field_facebook
+        - field_twitter
+        - field_linkedin
+        - field_resume
+        - field_google_scholar
+        - field_website
+      parent_name: group_grp_info_wrp
+      weight: 6
+      format_type: html_element
+      format_settings:
+        label: Connect
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'grp-connect grp-info'
+      label: Connect
+    group_location:
+      children:
+        - field_map_location
+      parent_name: group_location_office_hours
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-loc
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Location
+    group_office_hours:
+      children:
+        - field_timing
+      parent_name: group_location_office_hours
+      weight: 6
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-offc-hrs
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Office Hours'
+    group_location_office_hours:
+      children:
+        - group_location
+        - group_office_hours
+      parent_name: group_grp_info_wrp
+      weight: 7
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-info
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Location & Office Hours'
+    group_grp_info_wrp:
+      children:
+        - group_contact
+        - group_connect
+        - group_location_office_hours
+      parent_name: group_top_right
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-info-wrp
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Info Wrapper'
+id: node.personnel.default
+targetEntityType: node
+bundle: personnel
+mode: default
+content:
+  field_email:
+    type: email_mailto
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_facebook:
+    type: link_separate
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+  field_google_scholar:
+    type: link
+    weight: 8
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+  field_linkedin:
+    type: link_separate
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_map_location:
+    type: simple_gmap
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      apikey: ''
+      iframe_width: '200'
+      iframe_height: '200'
+      static_scale: 1
+      include_link: true
+      link_text: 'View Map'
+      zoom_level: 14
+      include_text: true
+      map_type: m
+      langcode: en
+      include_map: false
+      include_static_map: false
+    third_party_settings: {  }
+  field_media_type:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: media_library
+      link: false
+    third_party_settings: {  }
+  field_phone_number:
+    type: telephone_link
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+  field_resume:
+    type: file_default
+    weight: 7
+    region: content
+    label: hidden
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+  field_sub_copy:
+    type: string
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_timing:
+    type: text_default
+    weight: 6
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_twitter:
+    type: link_separate
+    weight: 5
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_website:
+    type: link
+    weight: 9
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_plain: true
+      url_only: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  content_moderation_control: true
+  field_afffiliations_committees: true
+  field_course: true
+  field_date_of_publication: true
+  field_lead_text: true
+  field_office: true
+  field_personnel_type: true
+  field_position: true
+  field_programs: true
+  field_publications: true
+  field_schedule_a_time: true
+  field_services: true
+  field_tags: true
+  links: true

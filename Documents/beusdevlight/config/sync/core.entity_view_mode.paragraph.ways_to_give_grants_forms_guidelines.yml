@@ -1,0 +1,14 @@
+uuid: 4a995c7d-e277-4b84-a592-6a944837b12c
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - paragraphs
+third_party_settings:
+  lightning_core:
+    description: ''
+id: paragraph.ways_to_give_grants_forms_guidelines
+label: 'Ways to Give, Grants, Forms & Guidelines'
+targetEntityType: paragraph
+cache: true

@@ -1,0 +1,28 @@
+/**
+ * Clearfix
+*/
+/**
+ * Buttons
+*/
+.box {
+  padding: 10px 30px; }
+
+/**
+ * Css3 Extensions
+*/
+/**
+ * Flex
+*/
+/**
+ * Invisible
+*/
+.node--type-internships {
+  max-width: 770px;
+  margin: 20px auto; }
+  .node--type-internships .field--name-body p > a {
+    line-height: 2.4rem; }
+  .node--type-internships .title-border {
+    color: #333333;
+    font-family: 'Avenir-Heavy', sans-serif;
+    font-size: 1.889rem;
+    padding: 20px 0; }

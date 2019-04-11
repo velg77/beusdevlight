@@ -1,0 +1,28 @@
+uuid: 0caa280a-78f7-46eb-9d07-fd96c23e7afe
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.topics_and_expertise_
+  module:
+    - panelizer
+    - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.topics_and_expertise_.default
+targetEntityType: taxonomy_term
+bundle: topics_and_expertise_
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

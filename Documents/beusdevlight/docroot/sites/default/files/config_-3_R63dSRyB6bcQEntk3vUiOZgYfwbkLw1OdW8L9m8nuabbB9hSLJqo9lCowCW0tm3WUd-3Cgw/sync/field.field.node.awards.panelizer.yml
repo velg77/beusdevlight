@@ -1,0 +1,21 @@
+uuid: 3d126652-7ec1-44e7-8d8d-aeda102b9ec4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.panelizer
+    - node.type.awards
+  module:
+    - panelizer
+id: node.awards.panelizer
+field_name: panelizer
+entity_type: node
+bundle: awards
+label: Panelizer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: panelizer

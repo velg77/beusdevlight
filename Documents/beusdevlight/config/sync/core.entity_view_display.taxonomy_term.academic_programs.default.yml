@@ -1,0 +1,347 @@
+uuid: b40cc8e6-132f-44af-8f7c-616cb9d47f0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.academic_programs.field_email
+    - field.field.taxonomy_term.academic_programs.field_lead_text
+    - field.field.taxonomy_term.academic_programs.field_location
+    - field.field.taxonomy_term.academic_programs.field_phone_number
+    - field.field.taxonomy_term.academic_programs.field_short_form
+    - field.field.taxonomy_term.academic_programs.field_submit
+    - field.field.taxonomy_term.academic_programs.panelizer
+    - taxonomy.vocabulary.academic_programs
+  module:
+    - panelizer
+third_party_settings:
+  panelizer:
+    enable: true
+    custom: true
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          72f6a31f-99c8-4b15-beb8-cbfcfa669745:
+            id: 'block_content:91509f4a-42dc-492b-b64e-1ae6b288bfdc'
+            label: 'Banner Hero [Center Programs]'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: default
+            region: row1
+            weight: -8
+            uuid: 72f6a31f-99c8-4b15-beb8-cbfcfa669745
+            context_mapping: {  }
+          9393e7d9-a932-4d10-93dd-98e34ffd6db7:
+            id: 'block_content:0f00cf90-b3ac-4898-8a3e-45739dfe80a0'
+            label: 'A Learning Community'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: mission_vision
+            region: row3
+            weight: -8
+            uuid: 9393e7d9-a932-4d10-93dd-98e34ffd6db7
+            context_mapping: {  }
+          70adfed8-fb29-45a1-b48c-d0ea499215b7:
+            id: 'block_content:2f5d7223-5fee-4e6c-b91d-270dfbe2ea2c'
+            label: 'OUR IMPACT'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: full
+            region: row4
+            weight: -8
+            uuid: 70adfed8-fb29-45a1-b48c-d0ea499215b7
+            context_mapping: {  }
+          236f06a4-2108-4d84-b5e2-9b218ba5301c:
+            id: 'block_content:17165e27-e657-4b74-bfa0-ce8fc06370bd'
+            label: 'Banner Middle[Center Program]'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: default
+            region: row6
+            weight: -7
+            uuid: 236f06a4-2108-4d84-b5e2-9b218ba5301c
+            context_mapping: {  }
+          8459a4e1-05c3-409d-9bd8-6bbab482053b:
+            id: 'views_block:general-block_2'
+            label: ''
+            provider: views
+            label_display: '0'
+            views_label: ''
+            items_per_page: none
+            region: row7
+            weight: -8
+            uuid: 8459a4e1-05c3-409d-9bd8-6bbab482053b
+            context_mapping: {  }
+          e700cc1a-87f6-4c34-b3d7-cb18b5b4ba52:
+            id: 'block_content:d455212a-6645-4d98-b5fe-8fc54ea8de65'
+            label: PEOPLE
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: people_type_list
+            region: row10
+            weight: -8
+            uuid: e700cc1a-87f6-4c34-b3d7-cb18b5b4ba52
+            context_mapping: {  }
+          b85853a6-8b6b-4e0d-8cc6-996f85752d2a:
+            id: 'block_content:e20a729e-41f5-4d12-8265-87e03b12f8fd'
+            label: 'FORMS & GUIDELINES'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: ways_to_give_grants_forms_guidelines
+            region: row11
+            weight: -8
+            uuid: b85853a6-8b6b-4e0d-8cc6-996f85752d2a
+            context_mapping: {  }
+          80c2ed3c-4e9e-4b11-b165-929ed6b991f5:
+            id: 'block_content:36dc78f9-bafc-4d65-ad08-41a4e9830894'
+            label: 'Banner Bottom [Center Programs]'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: default
+            region: row12
+            weight: -6
+            uuid: 80c2ed3c-4e9e-4b11-b165-929ed6b991f5
+            context_mapping: {  }
+          b79ff0f4-1a83-43fc-afe4-df8c3ad8c96b:
+            id: 'views_block:general-block_12'
+            label: 'CSHPE STUDENT ORGANIZATION'
+            provider: views
+            label_display: visible
+            views_label: 'CSHPE STUDENT ORGANIZATION'
+            items_per_page: none
+            region: row13
+            weight: -8
+            uuid: b79ff0f4-1a83-43fc-afe4-df8c3ad8c96b
+            context_mapping: {  }
+          76b7c7d4-6342-483c-b474-a27a71db0a3c:
+            id: 'block_content:fdb9d4ad-61de-4446-bf87-acfb433e74c4'
+            label: 'CONNECT WITH US'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: connect
+            region: row14
+            weight: -8
+            uuid: 76b7c7d4-6342-483c-b474-a27a71db0a3c
+            context_mapping: {  }
+          a25d1f56-f8ba-4260-8ff3-0940419a7b59:
+            id: 'block_content:3eb30007-2915-4374-afa7-89c4fd5be9a2'
+            label: 'DEGREES & CERTIFICATIONS '
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: default
+            region: row5
+            weight: -8
+            uuid: a25d1f56-f8ba-4260-8ff3-0940419a7b59
+            context_mapping: {  }
+          c6cb60de-610c-4184-a3a3-4548525d0493:
+            id: 'block_content:5734248b-f5bf-4c93-8f13-e92fac165fdd'
+            label: 'STUDENT HIGHLIGHTS'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: full
+            region: row9
+            weight: -8
+            uuid: c6cb60de-610c-4184-a3a3-4548525d0493
+            context_mapping: {  }
+          ed0b1cb2-3e56-4686-8ba4-ad9969f39118:
+            id: 'views_block:general-block_11'
+            label: ''
+            provider: views
+            label_display: '0'
+            views_label: ''
+            items_per_page: none
+            region: row6
+            weight: -8
+            uuid: ed0b1cb2-3e56-4686-8ba4-ad9969f39118
+            context_mapping: {  }
+          bb028a3f-21b8-4715-9982-8e7015918d06:
+            id: 'views_block:general-block_13'
+            label: ''
+            provider: views
+            label_display: '0'
+            views_label: ''
+            items_per_page: none
+            region: row9
+            weight: -7
+            uuid: bb028a3f-21b8-4715-9982-8e7015918d06
+            context_mapping: {  }
+          174276a0-e7e2-4d23-9f52-7d70faf40b4d:
+            id: 'block_content:b40a9848-2716-4870-af0f-50fb4cb8dae8'
+            label: 'MESSAGE FROM THE CHAIR [Center Program]'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: full
+            region: row2
+            weight: -8
+            uuid: 174276a0-e7e2-4d23-9f52-7d70faf40b4d
+            context_mapping: {  }
+          74259d85-e393-4e9a-96d0-e22893c4c33d:
+            id: 'views_block:general-block_4'
+            label: 'CALENDAR OF EVENTS'
+            provider: views
+            label_display: visible
+            views_label: 'CALENDAR OF EVENTS'
+            items_per_page: none
+            region: row8
+            weight: 0
+            uuid: 74259d85-e393-4e9a-96d0-e22893c4c33d
+            context_mapping: {  }
+          4d4d60e3-98db-48f1-aeb7-8d18cde1b6ff:
+            id: 'views_block:general-block_27'
+            label: ''
+            provider: views
+            label_display: '0'
+            views_label: ''
+            items_per_page: none
+            region: row4
+            weight: 0
+            uuid: 4d4d60e3-98db-48f1-aeb7-8d18cde1b6ff
+            context_mapping: {  }
+          dd8c9297-de72-4c43-9290-e443e51eaf6e:
+            id: 'views_block:general-block_8'
+            label: ''
+            provider: views
+            label_display: visible
+            views_label: ''
+            items_per_page: none
+            region: row5
+            weight: 0
+            uuid: dd8c9297-de72-4c43-9290-e443e51eaf6e
+            context_mapping: {  }
+          21617e1e-ec01-44d3-a7e3-2803ab4e0c76:
+            id: 'views_block:general-academic_programs'
+            label: ''
+            provider: views
+            label_display: '0'
+            views_label: ''
+            items_per_page: none
+            region: row5
+            weight: 0
+            uuid: 21617e1e-ec01-44d3-a7e3-2803ab4e0c76
+            context_mapping: {  }
+        id: panels_variant
+        label: Default
+        uuid: bc9bd5fa-4868-4e9e-8d2a-428faead135a
+        weight: 0
+        layout: behavioursoe_layout
+        layout_settings:
+          wrappers:
+            row1: div
+            row2: div
+            row3: div
+            row4: div
+            row5: div
+            row6: div
+            row7: div
+            row8: div
+            left_sidebar: div
+            main_content: div
+            right_sidebar: div
+            row9: div
+            row10: div
+            row11: div
+            row12: div
+            row13: div
+            row14: div
+            row15: div
+          outer_wrapper: div
+          attributes: ''
+          link_attribute: ''
+          link_custom: ''
+          classes:
+            layout_class:
+              ful_wdt: ful_wdt
+            row1:
+              ful_wdt: ful_wdt
+              gry_bg: gry_bg
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row2:
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row3:
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row4:
+              ylw_bg: ylw_bg
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row5:
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row6:
+              ful_wdt: ful_wdt
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row7:
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row8:
+              gry_bg_img: gry_bg_img
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            left_sidebar: {  }
+            main_content: {  }
+            right_sidebar: {  }
+            row9:
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row10:
+              blu_bg_img2: blu_bg_img2
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row11:
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row12:
+              ful_wdt: ful_wdt
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row13: {  }
+            row14:
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row15: {  }
+        page_title: ''
+        storage_type: panelizer_default
+        storage_id: 'taxonomy_term:academic_programs:default:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+id: taxonomy_term.academic_programs.default
+targetEntityType: taxonomy_term
+bundle: academic_programs
+mode: default
+content: {  }
+hidden:
+  description: true
+  field_email: true
+  field_lead_text: true
+  field_location: true
+  field_phone_number: true
+  field_short_form: true
+  field_submit: true
+  panelizer: true

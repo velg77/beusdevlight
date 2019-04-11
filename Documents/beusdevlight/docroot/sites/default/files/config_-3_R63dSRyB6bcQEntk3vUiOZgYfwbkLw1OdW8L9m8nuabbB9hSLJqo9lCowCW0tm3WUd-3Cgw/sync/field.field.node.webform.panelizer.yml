@@ -1,0 +1,21 @@
+uuid: a79fcae2-ad6e-464c-a65e-2a6367b1d79b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.panelizer
+    - node.type.webform
+  module:
+    - panelizer
+id: node.webform.panelizer
+field_name: panelizer
+entity_type: node
+bundle: webform
+label: Panelizer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: panelizer

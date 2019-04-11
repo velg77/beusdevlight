@@ -1,0 +1,28 @@
+disabled: false
+field_template: false
+ft-default: default
+ft-show-colon: false
+classes:
+  region:
+    - 'content_banner|Content Banner'
+    - 'ful_wdt|Full Width'
+    - 'gry_bg|Gray BG'
+    - 'gry_bg_img|Gray BG Image'
+    - 'blu_bg| Blue BG'
+    - 'blu_bg_img|Blue BG Image'
+    - 'blu_bg_img2|Blue BG Image2'
+    - 'blu_bg_img3|Blue BG Image3'
+    - 'blu_bg_img4|Blue BG Image4'
+    - 'ylw_bg|Yellow BG'
+    - 'ylw_bg_img|Yellow BG Image'
+    - 'brdr_top|Border Top'
+    - 'brdr_bot|Border Bottom'
+    - 'row_sp_top|Space Top'
+    - 'row_sp_bot|Space Bottom'
+    - 'sm_cnt|Small Container'
+    - 'mnu_bar|Menu Bar'
+    - 'bdr_tp|Border Top'
+  field: {  }
+use_field_names: true
+_core:
+  default_config_hash: xfB0qOeoAomOThclNNokdKTrVwXLcXz13SU3-4a5-FY

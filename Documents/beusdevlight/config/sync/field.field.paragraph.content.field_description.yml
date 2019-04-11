@@ -1,0 +1,26 @@
+uuid: 5643fedf-ac87-4827-a8a7-10ba2771013c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.content
+  module:
+    - custom_add_another
+    - text
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: paragraph.content.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: content
+label: 'Short Description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

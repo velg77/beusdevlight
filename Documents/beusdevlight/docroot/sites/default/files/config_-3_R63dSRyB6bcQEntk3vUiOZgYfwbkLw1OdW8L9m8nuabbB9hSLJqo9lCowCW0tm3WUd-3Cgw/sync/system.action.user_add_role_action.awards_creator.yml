@@ -1,0 +1,14 @@
+uuid: 3576ce17-f674-4756-a9d0-2a250d25abe5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.awards_creator
+  module:
+    - user
+id: user_add_role_action.awards_creator
+label: 'Add the Awards creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: awards_creator

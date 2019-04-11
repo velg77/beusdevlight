@@ -1,0 +1,121 @@
+uuid: b0fb4520-5052-4b08-bf09-ffbac72f96ec
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.feature_article
+    - field.field.node.personnel.body
+    - field.field.node.personnel.field_afffiliations_committees
+    - field.field.node.personnel.field_course
+    - field.field.node.personnel.field_date_of_publication
+    - field.field.node.personnel.field_email
+    - field.field.node.personnel.field_facebook
+    - field.field.node.personnel.field_google_scholar
+    - field.field.node.personnel.field_lead_text
+    - field.field.node.personnel.field_linkedin
+    - field.field.node.personnel.field_map_location
+    - field.field.node.personnel.field_media_type
+    - field.field.node.personnel.field_office
+    - field.field.node.personnel.field_personnel_type
+    - field.field.node.personnel.field_phone_number
+    - field.field.node.personnel.field_position
+    - field.field.node.personnel.field_programs
+    - field.field.node.personnel.field_publications
+    - field.field.node.personnel.field_resume
+    - field.field.node.personnel.field_schedule_a_time
+    - field.field.node.personnel.field_services
+    - field.field.node.personnel.field_sub_copy
+    - field.field.node.personnel.field_tags
+    - field.field.node.personnel.field_timing
+    - field.field.node.personnel.field_twitter
+    - field.field.node.personnel.field_website
+    - node.type.personnel
+  module:
+    - ds
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_media_type
+        - node_title
+        - field_sub_copy
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: node.personnel.feature_article
+targetEntityType: node
+bundle: personnel
+mode: feature_article
+content:
+  field_media_type:
+    type: entity_reference_entity_view
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: thumbnail
+      link: false
+    third_party_settings: {  }
+  field_sub_copy:
+    type: string
+    weight: 2
+    region: ds_content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_afffiliations_committees: true
+  field_course: true
+  field_date_of_publication: true
+  field_email: true
+  field_facebook: true
+  field_google_scholar: true
+  field_lead_text: true
+  field_linkedin: true
+  field_map_location: true
+  field_office: true
+  field_personnel_type: true
+  field_phone_number: true
+  field_position: true
+  field_programs: true
+  field_publications: true
+  field_resume: true
+  field_schedule_a_time: true
+  field_services: true
+  field_tags: true
+  field_timing: true
+  field_twitter: true
+  field_website: true
+  links: true

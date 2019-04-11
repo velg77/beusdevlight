@@ -1,0 +1,32 @@
+uuid: 23a15238-8e3e-4aae-97d7-4f3eb16a7398
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.offices
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    rich_text: rich_text
+    limited_text_styling: '0'
+    plain_text: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.offices.body
+field_name: body
+entity_type: node
+bundle: offices
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

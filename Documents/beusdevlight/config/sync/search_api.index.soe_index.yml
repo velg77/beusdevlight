@@ -1,0 +1,836 @@
+uuid: f3f3b857-6753-4868-aa88-5b2534ee3ead
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.block_content.field_banner_slider
+    - field.storage.node.field_programs
+    - field.storage.node.field_academic_year
+    - field.storage.node.field_room_amenities
+    - field.storage.node.body
+    - field.storage.node.field_carrers
+    - field.storage.node.field_category
+    - field.storage.node.field_course_no
+    - field.storage.node.field_course_types
+    - field.storage.node.field_course
+    - field.storage.node.field_course_duration
+    - field.storage.node.field_created_date
+    - field.storage.node.field_cta_link
+    - field.storage.node.field_degree
+    - field.storage.node.field_email
+    - field.storage.node.field_event_start_date
+    - field.storage.node.field_events_type
+    - field.storage.node.field_personnel
+    - field.storage.node.field_floor_plans
+    - field.storage.node.field_news_type
+    - field.storage.node.field_impact_story_type
+    - field.storage.node.field_map_location
+    - field.storage.node.field_office
+    - field.storage.node.field_personal_office
+    - field.storage.node.field_phone_number
+    - field.storage.node.field_date_of_publication
+    - field.storage.node.field_room_types
+    - field.storage.node.field_seating_capacity_fx
+    - field.storage.node.field_services
+    - field.storage.node.field_syllabus
+    - field.storage.node.field_tags
+    - field.storage.node.field_room_technology
+    - field.storage.node.field_course_themes
+    - field.storage.node.field_organization_type
+    - field.storage.paragraph.field_downloadable_file
+    - field.storage.paragraph.field_faculty
+    - field.storage.paragraph.field_term
+    - field.storage.taxonomy_term.field_academic_program_s
+    - field.storage.taxonomy_term.field_submit
+    - field.storage.taxonomy_term.field_email
+    - field.storage.taxonomy_term.field_location
+    - field.storage.taxonomy_term.field_phone_number
+    - search_api.server.soe
+  module:
+    - taxonomy
+    - node
+    - paragraphs
+    - search_api
+    - search_api_glossary
+    - block_content
+    - crop
+    - media
+id: soe_index
+name: SOE
+description: ''
+read_only: false
+field_settings:
+  body:
+    label: Body
+    datasource_id: 'entity:node'
+    property_path: body
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.body
+  changed:
+    label: Changed
+    datasource_id: 'entity:taxonomy_term'
+    property_path: changed
+    type: date
+    dependencies:
+      module:
+        - taxonomy
+  created:
+    label: 'Authored on'
+    datasource_id: 'entity:node'
+    property_path: created
+    type: date
+    dependencies:
+      module:
+        - node
+  default_langcode:
+    label: 'Default translation'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: default_langcode
+    type: boolean
+    dependencies:
+      module:
+        - taxonomy
+  description:
+    label: Description
+    datasource_id: 'entity:taxonomy_term'
+    property_path: description
+    type: integer
+    dependencies:
+      module:
+        - taxonomy
+  field_academic_program_s:
+    label: 'Academic Program(s)'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_academic_program_s
+    type: integer
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_academic_program_s
+  field_academic_year:
+    label: 'Academic Year'
+    datasource_id: 'entity:node'
+    property_path: field_academic_year
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_academic_year
+  field_banner_slider:
+    label: 'Banner Slider'
+    datasource_id: 'entity:block_content'
+    property_path: field_banner_slider
+    type: integer
+    dependencies:
+      config:
+        - field.storage.block_content.field_banner_slider
+  field_carrers:
+    label: Carrers
+    datasource_id: 'entity:node'
+    property_path: field_carrers
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_carrers
+  field_category:
+    label: Category
+    datasource_id: 'entity:node'
+    property_path: field_category
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_category
+  field_course_duration:
+    label: 'Course » Content » Hours'
+    datasource_id: 'entity:node'
+    property_path: 'field_course:entity:field_course_duration'
+    type: decimal
+    dependencies:
+      config:
+        - field.storage.node.field_course
+        - field.storage.node.field_course_duration
+      module:
+        - node
+  field_course_no:
+    label: 'Course No'
+    datasource_id: 'entity:node'
+    property_path: field_course_no
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_course_no
+  field_course_no_1:
+    label: 'Course » Content » Course No'
+    datasource_id: 'entity:node'
+    property_path: 'field_course:entity:field_course_no'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_course
+        - field.storage.node.field_course_no
+      module:
+        - node
+  field_course_themes:
+    label: Theme(s)
+    datasource_id: 'entity:node'
+    property_path: field_course_themes
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_course_themes
+  field_course_types:
+    label: 'Course Type(s)'
+    datasource_id: 'entity:node'
+    property_path: field_course_types
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_course_types
+  field_created_date:
+    label: 'Created Date'
+    datasource_id: 'entity:node'
+    property_path: field_created_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_created_date
+  field_cta_link:
+    label: 'CTA Link'
+    datasource_id: 'entity:node'
+    property_path: field_cta_link
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_cta_link
+  field_date_of_publication:
+    label: 'Publication Date'
+    datasource_id: 'entity:node'
+    property_path: field_date_of_publication
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_date_of_publication
+  field_degree:
+    label: Degree(s)
+    datasource_id: 'entity:node'
+    property_path: field_degree
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_degree
+  field_downloadable_file:
+    label: 'Downloadable File'
+    datasource_id: 'entity:paragraph'
+    property_path: field_downloadable_file
+    type: integer
+    dependencies:
+      config:
+        - field.storage.paragraph.field_downloadable_file
+  field_email:
+    label: Email
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_email
+    type: text
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_email
+  field_email_1:
+    label: Email
+    datasource_id: 'entity:node'
+    property_path: field_email
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_email
+  field_event_start_date:
+    label: 'Event Start Date'
+    datasource_id: 'entity:node'
+    property_path: field_event_start_date
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_event_start_date
+  field_events_type:
+    label: 'Events Type'
+    datasource_id: 'entity:node'
+    property_path: field_events_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_events_type
+  field_floor_plans:
+    label: 'Floor Plans'
+    datasource_id: 'entity:node'
+    property_path: field_floor_plans
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_floor_plans
+  field_impact_story_type:
+    label: 'Impact Story Type'
+    datasource_id: 'entity:node'
+    property_path: field_impact_story_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_impact_story_type
+  field_location:
+    label: Location
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_location
+    type: text
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_location
+  field_map_location:
+    label: Location
+    datasource_id: 'entity:node'
+    property_path: field_map_location
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_map_location
+  field_news_type:
+    label: 'Impact Format'
+    datasource_id: 'entity:node'
+    property_path: field_news_type
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_news_type
+  field_office:
+    label: Office
+    datasource_id: 'entity:node'
+    property_path: field_office
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_office
+  field_organization_type:
+    label: Type
+    datasource_id: 'entity:node'
+    property_path: field_organization_type
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_organization_type
+  field_personal_office:
+    label: Office
+    datasource_id: 'entity:node'
+    property_path: field_personal_office
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_personal_office
+  field_phone_number:
+    label: Phone
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_phone_number
+    type: string
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_phone_number
+  field_phone_number_1:
+    label: 'Phone no'
+    datasource_id: 'entity:node'
+    property_path: field_phone_number
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_phone_number
+  field_programs:
+    label: Program(s)
+    datasource_id: 'entity:node'
+    property_path: field_programs
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_programs
+  field_room_amenities:
+    label: Amenities
+    datasource_id: 'entity:node'
+    property_path: field_room_amenities
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_room_amenities
+  field_room_technology:
+    label: Technology
+    datasource_id: 'entity:node'
+    property_path: field_room_technology
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_room_technology
+  field_room_types:
+    label: 'Room Types'
+    datasource_id: 'entity:node'
+    property_path: field_room_types
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_room_types
+  field_seating_capacity_fx:
+    label: 'Seating Capacity'
+    datasource_id: 'entity:node'
+    property_path: field_seating_capacity_fx
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_seating_capacity_fx
+  field_services:
+    label: Services
+    datasource_id: 'entity:node'
+    property_path: field_services
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_services
+  field_submit:
+    label: Contact
+    datasource_id: 'entity:taxonomy_term'
+    property_path: field_submit
+    type: string
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_submit
+  field_syllabus:
+    label: Syllabus
+    datasource_id: 'entity:node'
+    property_path: field_syllabus
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_syllabus
+  field_tags:
+    label: Tags
+    datasource_id: 'entity:node'
+    property_path: field_tags
+    type: integer
+    boost: !!float 3
+    dependencies:
+      config:
+        - field.storage.node.field_tags
+  field_term:
+    label: Term
+    datasource_id: 'entity:paragraph'
+    property_path: field_term
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_term
+  glossaryaz_field_category:
+    label: 'Glossary AZ - Content » Category'
+    property_path: glossaryaz_field_category
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  glossaryaz_title:
+    label: 'Glossary AZ - Content » Title'
+    property_path: glossaryaz_title
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  glossaryaz_vid_1:
+    label: 'Glossary AZ - Taxonomy term » Term Parents » Taxonomy term » Vocabulary'
+    property_path: glossaryaz_vid_1
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  id:
+    label: ID
+    datasource_id: 'entity:paragraph'
+    property_path: id
+    type: integer
+    dependencies:
+      module:
+        - paragraphs
+  name:
+    label: Name
+    datasource_id: 'entity:taxonomy_term'
+    property_path: name
+    type: text
+    dependencies:
+      module:
+        - taxonomy
+  name_1:
+    label: 'Academic Program(s) » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_programs:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_programs
+      module:
+        - taxonomy
+        - taxonomy
+  name_2:
+    label: 'Tags » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_tags:entity:name'
+    type: text
+    dependencies:
+      config:
+        - field.storage.node.field_tags
+      module:
+        - taxonomy
+        - taxonomy
+  name_3:
+    label: 'Tags » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_tags:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_tags
+      module:
+        - taxonomy
+        - taxonomy
+  name_4:
+    label: 'Category » Taxonomy term » Name'
+    datasource_id: 'entity:node'
+    property_path: 'field_category:entity:name'
+    type: string
+    dependencies:
+      config:
+        - field.storage.node.field_category
+      module:
+        - taxonomy
+        - taxonomy
+  nid:
+    label: ID
+    datasource_id: 'entity:node'
+    property_path: nid
+    type: integer
+    dependencies:
+      module:
+        - node
+  nid_1:
+    label: 'Featured in this Article » Content » ID'
+    datasource_id: 'entity:node'
+    property_path: 'field_personnel:entity:nid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_personnel
+      module:
+        - node
+        - node
+  nid_2:
+    label: 'Office » Content » ID'
+    datasource_id: 'entity:node'
+    property_path: 'field_office:entity:nid'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_office
+      module:
+        - node
+        - node
+  node_grants:
+    label: 'Node access information'
+    property_path: search_api_node_grants
+    type: string
+    indexed_locked: true
+    type_locked: true
+    hidden: true
+  parent:
+    label: 'Term Parents'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: parent
+    type: integer
+    dependencies:
+      module:
+        - taxonomy
+  status:
+    label: Published
+    datasource_id: 'entity:node'
+    property_path: status
+    type: boolean
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  tid:
+    label: 'Term ID'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: tid
+    type: integer
+    dependencies:
+      module:
+        - taxonomy
+  title:
+    label: Title
+    datasource_id: 'entity:node'
+    property_path: title
+    type: text
+    boost: !!float 3
+    dependencies:
+      module:
+        - node
+  title_1:
+    label: 'Office » Content » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_office:entity:title'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_office
+      module:
+        - node
+        - node
+  title_2:
+    label: 'Office » Content » Title'
+    datasource_id: 'entity:node'
+    property_path: 'field_office:entity:title'
+    type: integer
+    dependencies:
+      config:
+        - field.storage.node.field_office
+      module:
+        - node
+        - node
+  title_3:
+    label: 'Contact » Link text'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: 'field_submit:title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.taxonomy_term.field_submit
+  title_4:
+    label: 'Faculty » Content » Title'
+    datasource_id: 'entity:paragraph'
+    property_path: 'field_faculty:entity:title'
+    type: string
+    dependencies:
+      config:
+        - field.storage.paragraph.field_faculty
+      module:
+        - node
+        - node
+  type:
+    label: 'Content type'
+    datasource_id: 'entity:node'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - node
+  type_1:
+    label: 'Paragraph type'
+    datasource_id: 'entity:paragraph'
+    property_path: type
+    type: string
+    dependencies:
+      module:
+        - paragraphs
+  uid:
+    label: uid
+    datasource_id: 'entity:node'
+    property_path: uid
+    type: integer
+    indexed_locked: true
+    type_locked: true
+    dependencies:
+      module:
+        - node
+  uuid:
+    label: UUID
+    datasource_id: 'entity:taxonomy_term'
+    property_path: uuid
+    type: integer
+    dependencies:
+      module:
+        - taxonomy
+  vid:
+    label: Vocabulary
+    datasource_id: 'entity:taxonomy_term'
+    property_path: vid
+    type: string
+    dependencies:
+      module:
+        - taxonomy
+  vid_1:
+    label: 'Term Parents » Taxonomy term » Vocabulary'
+    datasource_id: 'entity:taxonomy_term'
+    property_path: 'parent:entity:vid'
+    type: integer
+    dependencies:
+      module:
+        - taxonomy
+        - taxonomy
+        - taxonomy
+datasource_settings:
+  'entity:block_content':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:crop':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:media':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:node':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:paragraph':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+  'entity:taxonomy_term':
+    bundles:
+      default: true
+      selected: {  }
+    languages:
+      default: true
+      selected: {  }
+processor_settings:
+  add_url: {  }
+  aggregated_field: {  }
+  content_access:
+    weights:
+      preprocess_query: -30
+  entity_status: {  }
+  glossary:
+    glossarytable: 'a:1:{s:13:"glossarytable";a:49:{s:4:"body";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:11:"description";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:24:"field_academic_program_s";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:19:"field_academic_year";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:19:"field_banner_slider";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:13:"field_carrers";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:14:"field_category";a:2:{s:8:"glossary";s:1:"1";s:8:"grouping";a:3:{s:11:"grouping_az";s:11:"grouping_az";s:11:"grouping_09";i:0;s:14:"grouping_other";i:0;}}s:15:"field_course_no";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:19:"field_course_themes";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:18:"field_course_types";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:14:"field_cta_link";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:12:"field_degree";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:11:"field_email";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:13:"field_email_1";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:17:"field_events_type";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:17:"field_floor_plans";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:23:"field_impact_story_type";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:14:"field_location";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:18:"field_map_location";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:15:"field_news_type";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:12:"field_office";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:18:"field_phone_number";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:20:"field_phone_number_1";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:14:"field_programs";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:20:"field_room_amenities";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:21:"field_room_technology";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:16:"field_room_types";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:25:"field_seating_capacity_fx";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:14:"field_services";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:12:"field_submit";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:10:"field_tags";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:4:"name";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:6:"name_1";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:6:"name_2";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:6:"name_3";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:3:"nid";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:5:"nid_1";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:5:"nid_2";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:6:"parent";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:3:"tid";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:5:"title";a:2:{s:8:"glossary";s:1:"1";s:8:"grouping";a:3:{s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;s:14:"grouping_other";i:0;}}s:7:"title_1";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:7:"title_2";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:7:"title_3";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:4:"type";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:3:"uid";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:4:"uuid";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:3:"vid";a:2:{s:8:"grouping";a:3:{s:14:"grouping_other";s:14:"grouping_other";s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;}s:8:"glossary";i:0;}s:5:"vid_1";a:2:{s:8:"glossary";s:1:"1";s:8:"grouping";a:3:{s:11:"grouping_az";i:0;s:11:"grouping_09";i:0;s:14:"grouping_other";i:0;}}}}'
+    field_enabled: 0
+    grouping_defaults:
+      grouping_other: grouping_other
+      grouping_az: null
+      grouping_09: null
+    weights:
+      preprocess_index: -20
+  hierarchy:
+    fields:
+      field_category: taxonomy_term-parent
+      field_office: node-field_office
+    weights:
+      preprocess_index: -45
+  rendered_item: {  }
+  type_boost:
+    boosts:
+      'entity:block_content':
+        datasource_boost: !!float 1
+        bundle_boosts:
+          academics_and_admissions: !!float 0
+          basic: !!float 0
+          media_slideshow: !!float 0
+          message: !!float 0
+          multi_content_block: !!float 0
+          people: !!float 0
+          small_content: !!float 0
+      'entity:crop':
+        datasource_boost: !!float 1
+        bundle_boosts:
+          freeform: !!float 0
+          landscape: !!float 0
+          narrow_landscape: !!float 0
+          narrow_portrait: !!float 0
+          portrait: !!float 0
+          square: !!float 0
+      'entity:media':
+        datasource_boost: !!float 1
+        bundle_boosts:
+          audio_file: !!float 0
+          document: !!float 0
+          image: !!float 0
+          instagram: !!float 0
+          tweet: !!float 0
+          video: !!float 0
+          video_file: !!float 0
+      'entity:node':
+        datasource_boost: !!float 1
+        bundle_boosts:
+          application_deadline: !!float 0
+          application_process: !!float 0
+          awards: !!float 0
+          careers: !!float 0
+          concentration_requirements: !!float 0
+          concentrations: !!float 0
+          courses: !!float 0
+          dije_newsletter: !!float 0
+          endorsement_areas: !!float 0
+          events: !!float 13
+          faq: !!float 0
+          impact_stories: !!float 0
+          internships: !!float 0
+          landing_page: !!float 0
+          news: !!float 21
+          node_form_mode_example: !!float 0
+          offices: !!float 0
+          page: !!float 0
+          personnel: !!float 0
+          quick_facts: !!float 0
+          rooms: !!float 0
+          student_highlight: !!float 0
+          student_organisation: !!float 0
+          webform: !!float 0
+      'entity:paragraph':
+        datasource_boost: !!float 1
+        bundle_boosts:
+          banner_slider: !!float 0
+          content: !!float 0
+          cta_group: !!float 0
+          message: !!float 0
+          multiple_content: !!float 0
+          small_content: !!float 0
+      'entity:taxonomy_term':
+        datasource_boost: !!float 1
+        bundle_boosts:
+          academic_degrees: !!float 0
+          academic_programs: !!float 0
+          academic_year: !!float 0
+          course_types: !!float 0
+          cv_type: !!float 0
+          degree: !!float 0
+          en: !!float 0
+          endorsement_area_types_: !!float 0
+          event_type: !!float 0
+          faq_categories: !!float 0
+          impact_story_type: !!float 0
+          natural_form: !!float 0
+          news_type: !!float 0
+          personnel_position: !!float 0
+          personnel_type: !!float 0
+          room_features: !!float 0
+          room_features_seating_capacity: !!float 0
+          room_features_seating_capacityte: !!float 0
+          room_features_technology_: !!float 0
+          room_types: !!float 0
+          services: !!float 0
+          tags: !!float 0
+          themes: !!float 0
+          topics_and_expertise_: !!float 0
+    weights:
+      preprocess_index: 0
+tracker_settings:
+  default:
+    indexing_order: fifo
+options:
+  index_directly: true
+  cron_limit: 50
+server: soe

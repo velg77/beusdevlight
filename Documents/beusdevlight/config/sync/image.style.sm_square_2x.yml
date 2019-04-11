@@ -1,0 +1,25 @@
+uuid: 5bb6179f-3b4f-4bb9-99c6-e4cbff2abb69
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.square
+  module:
+    - crop
+name: sm_square_2x
+label: sm_square_2x
+effects:
+  9aab944a-1f5f-4801-8081-c0c323cbaf28:
+    uuid: 9aab944a-1f5f-4801-8081-c0c323cbaf28
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 540
+      height: 540
+      anchor: center-center
+  5536cca9-c712-4662-98b7-d51f8399fe5c:
+    uuid: 5536cca9-c712-4662-98b7-d51f8399fe5c
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: square

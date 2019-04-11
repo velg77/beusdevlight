@@ -1,0 +1,32 @@
+uuid: ac8e6fd2-11e8-42ab-bf46-cc73ffdaedc7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.careers
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    rich_text: rich_text
+    limited_text_styling: '0'
+    plain_text: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.careers.body
+field_name: body
+entity_type: node
+bundle: careers
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

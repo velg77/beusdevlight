@@ -1,0 +1,22 @@
+uuid: a8a05c74-3e24-4794-8e08-866411162282
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.rooms
+  module:
+    - text
+id: node.rooms.body
+field_name: body
+entity_type: node
+bundle: rooms
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

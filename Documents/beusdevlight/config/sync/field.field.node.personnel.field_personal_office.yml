@@ -1,0 +1,35 @@
+uuid: 20e20c49-e971-4608-8228-8ed5fb3c0f4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_personal_office
+    - node.type.personnel
+    - taxonomy.vocabulary.offices
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.personnel.field_personal_office
+field_name: field_personal_office
+entity_type: node
+bundle: personnel
+label: Office
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      offices: offices
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

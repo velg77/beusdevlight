@@ -1,0 +1,105 @@
+uuid: 777520f0-3e87-432a-80b2-5a37d8b510bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.node_view
+  module:
+    - ctools
+    - ctools_block
+    - panels
+id: node_view-panels_variant-2
+label: Offices
+variant: panels_variant
+variant_settings:
+  blocks:
+    41d21ea5-09ca-41dc-af99-865a6b144c6b:
+      id: 'entity_view:node'
+      label: 'Entity view (Content)'
+      provider: ctools
+      label_display: '0'
+      view_mode: default
+      region: row2
+      weight: 0
+      uuid: 41d21ea5-09ca-41dc-af99-865a6b144c6b
+      context_mapping:
+        entity: node
+    0c32cd5c-fb6a-4aaf-82da-c87187ed2ec9:
+      id: 'entity_field:node:title'
+      label: Title
+      provider: ctools_block
+      label_display: '0'
+      formatter:
+        label: hidden
+        type: string
+        settings:
+          link_to_entity: false
+        third_party_settings: {  }
+        weight: 0
+      region: row1
+      weight: -10
+      uuid: 0c32cd5c-fb6a-4aaf-82da-c87187ed2ec9
+      context_mapping:
+        entity: node
+  id: panels_variant
+  uuid: fec6481f-c7ef-4ea6-b6a1-1c8a12339d83
+  label: null
+  weight: 0
+  layout: behavioursoe_layout
+  layout_settings:
+    wrappers:
+      row1: div
+      row2: div
+      row3: div
+      row4: div
+      row5: div
+      row6: div
+      row7: div
+      row8: div
+      row9: div
+      row10: div
+      row11: div
+      row12: div
+      row13: div
+      row14: div
+      row15: div
+    outer_wrapper: div
+    attributes: ''
+    link_attribute: ''
+    link_custom: ''
+    classes:
+      layout_class: {  }
+      row1:
+        row_sp_top: row_sp_top
+        row_sp_bot: row_sp_bot
+        sm_cnt: sm_cnt
+      row2: {  }
+      row3: {  }
+      row4: {  }
+      row5: {  }
+      row6: {  }
+      row7: {  }
+      row8: {  }
+      row9: {  }
+      row10: {  }
+      row11: {  }
+      row12: {  }
+      row13: {  }
+      row14: {  }
+      row15: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: node_view-panels_variant-2
+  builder: standard
+page: node_view
+weight: 0
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    bundles:
+      offices: offices
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+static_context: {  }

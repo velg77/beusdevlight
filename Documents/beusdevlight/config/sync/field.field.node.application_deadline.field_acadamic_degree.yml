@@ -1,0 +1,35 @@
+uuid: 0e9fda84-1567-4a45-bc60-2c8020798b98
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_acadamic_degree
+    - node.type.application_deadline
+    - taxonomy.vocabulary.academic_degrees
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.application_deadline.field_acadamic_degree
+field_name: field_acadamic_degree
+entity_type: node
+bundle: application_deadline
+label: 'Acadamic Degree (S)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      academic_degrees: academic_degrees
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,6 @@
+permission_callbacks:
+  - Drupal\form_mode_manager\FormModeManagerPermissions::formModeManagerPermissions
+
+'access form mode manager local action':
+  title: 'Form mode manager local action permission'
+  description: 'Gives Form mode manager local action permission to the users.'  

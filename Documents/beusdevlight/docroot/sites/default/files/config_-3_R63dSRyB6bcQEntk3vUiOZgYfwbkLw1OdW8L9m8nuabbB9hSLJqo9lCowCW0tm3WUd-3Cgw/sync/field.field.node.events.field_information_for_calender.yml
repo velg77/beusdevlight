@@ -1,0 +1,27 @@
+uuid: b7ac1b91-c7a9-4a48-a60a-251f6818813c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_information_for_calender
+    - node.type.events
+  module:
+    - ics_field
+id: node.events.field_information_for_calender
+field_name: field_information_for_calender
+entity_type: node
+bundle: events
+label: 'Information for Calender Download'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    tokens:
+      tokenlist: ''
+    summary: '[node:title]'
+    description: "Description: [node:body]</br>\r\nStart Date: [node:field_event_end_date]</br></br>\r\nEnd Date: [node:field_event_date]</br>\r\n[node:field_author]"
+    url: '[node:path]'
+default_value_callback: ''
+settings: {  }
+field_type: calendar_download_type

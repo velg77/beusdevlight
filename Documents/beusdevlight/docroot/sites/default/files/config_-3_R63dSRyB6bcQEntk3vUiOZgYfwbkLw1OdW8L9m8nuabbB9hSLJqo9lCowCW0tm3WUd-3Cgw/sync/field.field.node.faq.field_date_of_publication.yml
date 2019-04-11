@@ -1,0 +1,21 @@
+uuid: 80c30a05-cd80-48cd-b015-fbeab23fd103
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_of_publication
+    - node.type.faq
+  module:
+    - datetime
+id: node.faq.field_date_of_publication
+field_name: field_date_of_publication
+entity_type: node
+bundle: faq
+label: 'Date of Publication'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,14 @@
+uuid: 94da7f7e-497f-4255-a556-2e5dc3ec5ce2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.endorsement_areas_creator
+  module:
+    - user
+id: user_add_role_action.endorsement_areas_creator
+label: 'Add the Endorsement Areas creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: endorsement_areas_creator

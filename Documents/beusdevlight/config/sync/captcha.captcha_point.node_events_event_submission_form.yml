@@ -1,0 +1,7 @@
+uuid: 7b65c01b-cc33-4941-9dde-207a8731a156
+langcode: en
+status: true
+dependencies: {  }
+formId: node_events_event_submission_form
+captchaType: recaptcha/reCAPTCHA
+label: node_events_event_submission_form

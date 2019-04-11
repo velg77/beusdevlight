@@ -1,0 +1,9 @@
+uuid: b57d9852-b04e-425e-b803-67068e579f84
+langcode: en
+status: true
+dependencies: {  }
+id: small_content
+label: 'Small Content'
+icon_uuid: null
+description: 'A Block contains fields as title and short description   '
+behavior_plugins: {  }

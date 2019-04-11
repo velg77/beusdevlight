@@ -1,0 +1,115 @@
+uuid: 4aa273b1-b215-4059-9bb3-3c8acf34c431
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.personnel.body
+    - field.field.node.personnel.field_afffiliations_committees
+    - field.field.node.personnel.field_course
+    - field.field.node.personnel.field_email
+    - field.field.node.personnel.field_facebook
+    - field.field.node.personnel.field_google_scholar
+    - field.field.node.personnel.field_lead_text
+    - field.field.node.personnel.field_linkedin
+    - field.field.node.personnel.field_map_location
+    - field.field.node.personnel.field_media_type
+    - field.field.node.personnel.field_office
+    - field.field.node.personnel.field_personnel_type
+    - field.field.node.personnel.field_phone_number
+    - field.field.node.personnel.field_position
+    - field.field.node.personnel.field_programs
+    - field.field.node.personnel.field_publications
+    - field.field.node.personnel.field_resume
+    - field.field.node.personnel.field_schedule_a_time
+    - field.field.node.personnel.field_services
+    - field.field.node.personnel.field_sub_copy
+    - field.field.node.personnel.field_tags
+    - field.field.node.personnel.field_timing
+    - field.field.node.personnel.field_twitter
+    - field.field.node.personnel.field_website
+    - node.type.personnel
+  module:
+    - ds
+    - panelizer
+    - taxonomy
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - 'bundle_field:node'
+        - node_title
+        - body
+        - field_personnel_type
+    fields:
+      'bundle_field:node':
+        plugin_id: 'bundle_field:node'
+        weight: 0
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: node.personnel.search_index
+targetEntityType: node
+bundle: personnel
+mode: search_index
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_personnel_type:
+    type: entity_reference_rss_category
+    weight: 3
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_afffiliations_committees: true
+  field_course: true
+  field_email: true
+  field_facebook: true
+  field_google_scholar: true
+  field_lead_text: true
+  field_linkedin: true
+  field_map_location: true
+  field_media_type: true
+  field_office: true
+  field_phone_number: true
+  field_position: true
+  field_programs: true
+  field_publications: true
+  field_resume: true
+  field_schedule_a_time: true
+  field_services: true
+  field_sub_copy: true
+  field_tags: true
+  field_timing: true
+  field_twitter: true
+  field_website: true
+  links: true

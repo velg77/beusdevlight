@@ -1,0 +1,11 @@
+id: room_seating_capacity_for_table
+label: 'Room Seating Capacity for Table'
+ui_limit: ''
+properties:
+  content:
+    value: '[node:field_seating_capacity]'
+    format: rich_text
+type: token
+type_label: 'Token field'
+entities:
+  node: node

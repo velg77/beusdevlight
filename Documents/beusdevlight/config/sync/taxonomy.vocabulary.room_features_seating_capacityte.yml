@@ -1,0 +1,9 @@
+uuid: ff8d5a52-3374-4337-8f49-17f05b841d73
+langcode: en
+status: true
+dependencies: {  }
+name: 'Room Features - Technology'
+vid: room_features_seating_capacityte
+description: 'Room Features - Technology'
+hierarchy: 0
+weight: 0

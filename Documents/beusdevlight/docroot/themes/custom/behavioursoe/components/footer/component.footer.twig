@@ -1,0 +1,12 @@
+{{ attach_library('behavioursoe/footer') }}
+
+<footer class="footer">
+<div class="container">
+  {% block footer_content %}
+    {% include "@header/header.html.twig" with {
+      items: footer_menu_items
+    } %}
+  {{ content }}
+  {% endblock %}
+  </div>
+</footer>

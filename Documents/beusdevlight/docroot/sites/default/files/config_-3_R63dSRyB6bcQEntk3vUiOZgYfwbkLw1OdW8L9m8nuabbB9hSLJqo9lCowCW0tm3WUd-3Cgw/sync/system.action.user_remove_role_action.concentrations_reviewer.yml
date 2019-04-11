@@ -1,0 +1,14 @@
+uuid: 1f693e78-e893-4c80-b280-2ec81ea7d504
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.concentrations_reviewer
+  module:
+    - user
+id: user_remove_role_action.concentrations_reviewer
+label: 'Remove the Concentrations reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: concentrations_reviewer

@@ -1,0 +1,22 @@
+uuid: b2cdae7b-6930-4638-88bc-e86b69173727
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.people
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.people.body
+field_name: body
+entity_type: block_content
+bundle: people
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

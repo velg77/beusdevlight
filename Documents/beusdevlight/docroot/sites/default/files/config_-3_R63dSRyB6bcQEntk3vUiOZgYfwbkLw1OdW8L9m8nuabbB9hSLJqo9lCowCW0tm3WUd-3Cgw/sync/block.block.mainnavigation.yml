@@ -1,0 +1,24 @@
+uuid: 76eadf77-79ab-4751-9700-a4b21054702b
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - behavioursoe
+id: mainnavigation
+theme: behavioursoe
+region: header_top
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

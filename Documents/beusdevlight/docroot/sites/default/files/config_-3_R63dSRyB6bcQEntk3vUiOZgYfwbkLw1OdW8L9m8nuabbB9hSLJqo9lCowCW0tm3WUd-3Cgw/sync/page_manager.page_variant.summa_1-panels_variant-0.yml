@@ -1,0 +1,56 @@
+uuid: 61ab4dab-964c-4e5c-b143-8ca8dfbf45f2
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.summa_1
+  content:
+    - 'block_content:academics_and_admissions:5e1c3a05-afb9-401c-8ef3-e11130d99304'
+    - 'block_content:multi_content_block:6970309a-5a63-4abf-849d-e6a2812595f8'
+  module:
+    - block_content
+    - panels
+id: summa_1-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    329b4aee-147c-4e68-ae10-8613d96517e9:
+      id: 'block_content:5e1c3a05-afb9-401c-8ef3-e11130d99304'
+      label: 'ACADEMIC PROGRAMS [Academics and Admissions]'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: row1
+      weight: -10
+      uuid: 329b4aee-147c-4e68-ae10-8613d96517e9
+      context_mapping: {  }
+    b1d4b18c-62f7-4e23-9cdc-2b55412b4218:
+      id: 'block_content:6970309a-5a63-4abf-849d-e6a2812595f8'
+      label: 'ALUMNI ACTIONS [Alumni]'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: row1
+      weight: 0
+      uuid: b1d4b18c-62f7-4e23-9cdc-2b55412b4218
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 2b55af28-4c0e-453d-81e0-e3762aea144f
+  label: null
+  weight: 0
+  layout: behavioursoe_layout
+  layout_settings: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: summa_1-panels_variant-0
+  builder: standard
+page: summa_1
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

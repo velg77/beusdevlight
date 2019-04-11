@@ -1,0 +1,258 @@
+uuid: 0a00d124-9345-4f65-a2f4-0991b1a40c1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.events.body
+    - field.field.node.events.field_display_event_time
+    - field.field.node.events.field_email
+    - field.field.node.events.field_event_end_date
+    - field.field.node.events.field_event_start_date
+    - field.field.node.events.field_events_type
+    - field.field.node.events.field_first_name
+    - field.field.node.events.field_footer_markup_text
+    - field.field.node.events.field_information_for_calender
+    - field.field.node.events.field_lead_text
+    - field.field.node.events.field_map_location
+    - field.field.node.events.field_meta_tags
+    - field.field.node.events.field_name
+    - field.field.node.events.field_personemail
+    - field.field.node.events.field_personnel
+    - field.field.node.events.field_phone_no
+    - field.field.node.events.field_phone_number
+    - field.field.node.events.field_registration
+    - field.field.node.events.field_related_events
+    - field.field.node.events.field_show_manual_entry
+    - field.field.node.events.field_tags
+    - field.field.node.events.field_web
+    - node.type.events
+  module:
+    - content_moderation
+    - datetime
+    - entity_reference_views_select
+    - field_group
+    - ics_field
+    - link
+    - metatag
+    - path
+    - scheduler
+    - scheduler_content_moderation_integration
+    - telephone
+    - text
+third_party_settings:
+  field_group:
+    group_contact:
+      children:
+        - field_email
+        - field_phone_number
+      parent_name: ''
+      weight: 7
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Contact
+id: node.events.default
+targetEntityType: node
+bundle: events
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 6
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_display_event_time:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_email:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: 'Contact Email to display within Event Card'
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_event_end_date:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_event_start_date:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_events_type:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_information_for_calender:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    type: calendar_download_default_widget
+    region: content
+  field_lead_text:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_map_location:
+    type: text_textarea
+    weight: 8
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_meta_tags:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_firehose
+    region: content
+  field_personnel:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_phone_number:
+    weight: 28
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_registration:
+    weight: 9
+    settings:
+      placeholder_url: 'Register button''s URL'
+      placeholder_title: 'REGISTER '
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_related_events:
+    weight: 14
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_show_manual_entry:
+    weight: 13
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_tags:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 19
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 17
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 23
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 18
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 20
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 15
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  unpublish_state:
+    type: scheduler_moderation
+    weight: 24
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_first_name: true
+  field_footer_markup_text: true
+  field_name: true
+  field_personemail: true
+  field_phone_no: true
+  field_web: true
+  promote: true

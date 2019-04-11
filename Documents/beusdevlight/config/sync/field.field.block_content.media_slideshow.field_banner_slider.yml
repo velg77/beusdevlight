@@ -1,0 +1,48 @@
+uuid: c18c27e8-04ec-4d2c-8c2c-9c8487b2bcb6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media_slideshow
+    - field.storage.block_content.field_banner_slider
+    - paragraphs.paragraphs_type.banner_slider
+  module:
+    - custom_add_another
+    - entity_reference_revisions
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: block_content.media_slideshow.field_banner_slider
+field_name: field_banner_slider
+entity_type: block_content
+bundle: media_slideshow
+label: 'Banner Slider'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      banner_slider: banner_slider
+    target_bundles_drag_drop:
+      banner_slider:
+        enabled: true
+        weight: 5
+      content:
+        weight: 7
+        enabled: false
+      cta_group:
+        weight: 8
+        enabled: false
+      message:
+        weight: 9
+        enabled: false
+      small_content:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

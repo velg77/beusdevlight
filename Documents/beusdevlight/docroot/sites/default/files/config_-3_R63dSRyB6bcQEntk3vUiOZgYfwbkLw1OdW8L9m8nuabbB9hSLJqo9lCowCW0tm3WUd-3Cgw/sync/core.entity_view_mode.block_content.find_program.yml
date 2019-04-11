@@ -1,0 +1,14 @@
+uuid: fd5143d7-73f0-4abd-b6fb-95a9bff2edf3
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: block_content.find_program
+label: 'Find the Program'
+targetEntityType: block_content
+cache: true

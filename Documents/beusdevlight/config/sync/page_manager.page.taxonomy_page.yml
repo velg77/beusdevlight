@@ -1,0 +1,21 @@
+uuid: 70e85a57-7b99-42b5-a05b-67834b2b66d1
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+id: taxonomy_page
+label: 'Taxonomy Page'
+description: ''
+use_admin_theme: false
+path: /taxonomy/term/%
+access_logic: and
+access_conditions:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      offices: offices
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+parameters: {  }

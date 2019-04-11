@@ -1,0 +1,11 @@
+id: event_day_date
+label: 'Event Day and Date'
+ui_limit: ''
+properties:
+  content:
+    value: "<?php\r\n\r\nif(function_exists('ds_events_date_format')) {\r\nprint ds_events_date_format('[node:field_event_start_date:value]', '[node:field_event_end_date:value]');\r\n}\r\n\r\n?>"
+    format: php_filter
+type: token
+type_label: 'Token field'
+entities:
+  node: node

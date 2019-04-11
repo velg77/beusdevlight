@@ -1,0 +1,26 @@
+uuid: 4f004c36-7d96-4439-9531-8b516f4e8714
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_date
+    - paragraphs.paragraphs_type.multiple_content
+  module:
+    - custom_add_another
+    - datetime
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: paragraph.multiple_content.field_date
+field_name: field_date
+entity_type: paragraph
+bundle: multiple_content
+label: Date
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

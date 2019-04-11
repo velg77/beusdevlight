@@ -1,0 +1,11 @@
+id: impact_stories_video_icon
+label: 'Impact Stories Video Icon'
+ui_limit: ''
+properties:
+  content:
+    value: "<?php\r\nif(function_exists('ds_impact_stories_video_icon')) {\r\nprint ds_impact_stories_video_icon('[node:field_impact_storytype:entity]','[node:url]','[node:field_video_duration]');\r\n}\r\n\r\n?>"
+    format: php_filter
+type: token
+type_label: 'Token field'
+entities:
+  node: node

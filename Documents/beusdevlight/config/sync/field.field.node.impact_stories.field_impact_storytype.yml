@@ -1,0 +1,39 @@
+uuid: 9f958ed5-961b-4e2a-b90b-85a526a81ec9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_impact_storytype
+    - node.type.impact_stories
+    - taxonomy.vocabulary.news_type
+  content:
+    - 'taxonomy_term:news_type:1add8b64-e6a8-4791-9f85-70c1ebdb135a'
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.impact_stories.field_impact_storytype
+field_name: field_impact_storytype
+entity_type: node
+bundle: impact_stories
+label: Type
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 1add8b64-e6a8-4791-9f85-70c1ebdb135a
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      news_type: news_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

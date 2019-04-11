@@ -1,0 +1,22 @@
+uuid: fe3077d8-d8dd-469c-af94-809a0fa631c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.taxonomy_index
+    - taxonomy.vocabulary.impact_story_type
+  module:
+    - text
+id: taxonomy_term.impact_story_type.taxonomy_index
+targetEntityType: taxonomy_term
+bundle: impact_story_type
+mode: taxonomy_index
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,19 @@
+uuid: 35e90f66-7c77-49cd-8745-7d6b8255641c
+langcode: en
+status: true
+dependencies: {  }
+id: impact_stories_reviewer
+label: 'Impact Stories reviewer'
+weight: 3
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'delete any impact_stories content'
+  - 'edit any impact_stories content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'view any unpublished content'
+  - 'view latest version'

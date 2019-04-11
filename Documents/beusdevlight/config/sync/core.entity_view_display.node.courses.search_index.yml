@@ -1,0 +1,49 @@
+uuid: ecd76068-e1a1-46b5-9703-1a41087e8c0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.courses.body
+    - field.field.node.courses.field_course_days
+    - field.field.node.courses.field_course_duration
+    - field.field.node.courses.field_course_no
+    - field.field.node.courses.field_course_themes
+    - field.field.node.courses.field_course_types
+    - field.field.node.courses.field_lead_text
+    - field.field.node.courses.field_map_location
+    - field.field.node.courses.field_programs
+    - node.type.courses
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.courses.search_index
+targetEntityType: node
+bundle: courses
+mode: search_index
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_course_days: true
+  field_course_duration: true
+  field_course_no: true
+  field_course_themes: true
+  field_course_types: true
+  field_lead_text: true
+  field_map_location: true
+  field_programs: true
+  links: true

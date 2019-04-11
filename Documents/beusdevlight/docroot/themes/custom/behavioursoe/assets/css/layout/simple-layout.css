@@ -1,0 +1,196 @@
+/**
+ * Clearfix
+*/
+/**
+ * Buttons
+*/
+.box {
+  padding: 10px 30px; }
+
+/**
+ * Css3 Extensions
+*/
+/**
+ * Flex
+*/
+/**
+ * Invisible
+*/
+.row_sp_top {
+  padding-top: 30px; }
+  @media (min-width: 768px) {
+    .row_sp_top {
+      padding-top: 50px; } }
+  @media (min-width: 1024px) {
+    .row_sp_top {
+      padding-top: 80px; } }
+
+.row_sp_bot {
+  padding-bottom: 30px; }
+  @media (min-width: 768px) {
+    .row_sp_bot {
+      padding-bottom: 50px; } }
+  @media (min-width: 1024px) {
+    .row_sp_bot {
+      padding-bottom: 80px; } }
+
+.ful_wdt > .inside {
+  padding-left: 0;
+  padding-right: 0;
+  max-width: none; }
+
+.sm_cnt > .inside {
+  max-width: 770px; }
+
+.gry_bg {
+  background-color: #f1f1f1; }
+
+.gry_bg_img {
+  position: relative;
+  background-image: url(../../../assets/images/gr-img01.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .gry_bg_img::before {
+    content: "";
+    background-color: rgba(255, 255, 255, 0.9);
+    top: 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0; }
+  .gry_bg_img > .inside {
+    position: relative; }
+
+.light_blue {
+  background-color: #0C57AA; }
+
+.blu_bg {
+  background-color: #00274c; }
+  .blu_bg h2.block-title {
+    color: #fff; }
+
+.blu_bg_img {
+  position: relative;
+  background-image: url(../../../assets/images/bl-img01.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .blu_bg_img::before {
+    content: "";
+    background-color: rgba(17, 95, 185, 0.88);
+    top: 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0; }
+
+.blu_bg_img2 {
+  position: relative;
+  background-image: url(../../../assets/images/bl-img02.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .blu_bg_img2::before {
+    content: "";
+    background-color: rgba(17, 95, 185, 0.88);
+    top: 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0; }
+
+.blu_bg_img3 {
+  position: relative;
+  background-image: url(../../../assets/images/bl-img03.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .blu_bg_img3::before {
+    content: "";
+    background-color: rgba(17, 95, 185, 0.88);
+    top: 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0; }
+
+.ylw_bg {
+  background-color: #ffcb05; }
+
+.ylw_bg_img {
+  position: relative;
+  background-image: url(../../../assets/images/yel-img01.jpg);
+  background-size: cover;
+  background-repeat: no-repeat; }
+  .ylw_bg_img::before {
+    content: "";
+    background-color: #fdcd10ed;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    bottom: 0; }
+
+.brdr_top {
+  border-top: 1px solid #d8d8d8; }
+
+.brdr_bot {
+  border-bottom: 1px solid #d8d8d8; }
+
+/*
+.lft-sd-br {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;  
+  margin-left: 0;
+  &.row_sp_bot {
+    padding-bottom: 0; 
+  }
+}
+
+.rgt-sd-br {
+  display: inline-block;
+  width: 100%;
+  margin-right: 30px;
+  &.row_sp_top {
+    padding-top: 0px; 
+  }
+  
+}*/
+.lft-sd-br .block-title {
+  text-transform: none;
+  font-size: 1.25em;
+  text-align: left;
+  font-family: 'Open Sans Bold', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: #555; }
+
+.lft-sd-br .block-block-content .field--name-body {
+  text-align: left; }
+
+@media (min-width: 1024px) {
+  .cntbx-wrp {
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .cntbx-wrp .lft-sd-br {
+      -ms-flex-preferred-size: 25%;
+      flex-basis: 25%;
+      max-width: 25%; }
+    .cntbx-wrp .mn-cnt-rg {
+      -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+      max-width: 75%;
+      padding-left: 30px; }
+  .sdbr_lg .lft-sd-br {
+    -ms-flex-preferred-size: 30%;
+    flex-basis: 30%;
+    max-width: 30%; }
+  .sdbr_lg .mn-cnt-rg {
+    -ms-flex-preferred-size: 70%;
+    flex-basis: 70%;
+    max-width: 70%;
+    padding-left: 100px; } }

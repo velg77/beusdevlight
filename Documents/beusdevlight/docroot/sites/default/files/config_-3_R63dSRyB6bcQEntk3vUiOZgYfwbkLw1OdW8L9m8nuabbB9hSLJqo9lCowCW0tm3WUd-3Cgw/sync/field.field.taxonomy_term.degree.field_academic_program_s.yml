@@ -1,0 +1,29 @@
+uuid: 452b30ff-d2cb-4ed9-801a-6b833c947376
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_academic_program_s
+    - taxonomy.vocabulary.academic_programs
+    - taxonomy.vocabulary.degree
+id: taxonomy_term.degree.field_academic_program_s
+field_name: field_academic_program_s
+entity_type: taxonomy_term
+bundle: degree
+label: 'Academic Program(s)'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      academic_programs: academic_programs
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

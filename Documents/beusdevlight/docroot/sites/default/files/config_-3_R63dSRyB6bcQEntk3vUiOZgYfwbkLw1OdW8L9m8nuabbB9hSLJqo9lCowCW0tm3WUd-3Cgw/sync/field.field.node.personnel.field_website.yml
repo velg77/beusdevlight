@@ -1,0 +1,23 @@
+uuid: 3d9ad21d-eed9-49e6-981d-e75748dfad70
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website
+    - node.type.personnel
+  module:
+    - link
+id: node.personnel.field_website
+field_name: field_website
+entity_type: node
+bundle: personnel
+label: Website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

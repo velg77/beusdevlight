@@ -1,0 +1,21 @@
+uuid: bb330ea5-0173-411a-9006-54758fe56b12
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_heading
+    - node.type.concentrations
+  module:
+    - text
+id: node.concentrations.field_heading
+field_name: field_heading
+entity_type: node
+bundle: concentrations
+label: Heading
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

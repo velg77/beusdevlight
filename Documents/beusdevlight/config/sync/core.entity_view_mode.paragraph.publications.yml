@@ -1,0 +1,14 @@
+uuid: e54b36c2-b9b0-45e9-b1e3-c12c52b98bfd
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - paragraphs
+third_party_settings:
+  lightning_core:
+    description: ''
+id: paragraph.publications
+label: Publications
+targetEntityType: paragraph
+cache: true

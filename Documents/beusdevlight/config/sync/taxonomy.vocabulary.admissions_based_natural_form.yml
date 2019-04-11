@@ -1,0 +1,9 @@
+uuid: 6a07acfd-7376-4b16-aab0-daecf543ef04
+langcode: en
+status: true
+dependencies: {  }
+name: 'Admissions Based Natural Form'
+vid: admissions_based_natural_form
+description: ''
+hierarchy: 1
+weight: 0

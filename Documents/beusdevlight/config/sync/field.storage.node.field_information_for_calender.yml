@@ -1,0 +1,23 @@
+uuid: fb6d0150-37e2-47af-9ced-5dbcfc1302da
+langcode: en
+status: true
+dependencies:
+  module:
+    - ics_field
+    - node
+id: node.field_information_for_calender
+field_name: field_information_for_calender
+entity_type: node
+type: calendar_download_type
+settings:
+  date_field_reference: field_event_start_date
+  file_directory: icsfiles
+  is_ascii: false
+  uri_scheme: public
+module: ics_field
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

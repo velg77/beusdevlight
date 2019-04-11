@@ -1,0 +1,19 @@
+uuid: 38e65d6d-cf08-435f-8e11-5209d4a23af4
+langcode: en
+status: true
+dependencies: {  }
+id: careers_reviewer
+label: 'Careers reviewer'
+weight: 29
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'delete any careers content'
+  - 'edit any careers content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'view any unpublished content'
+  - 'view latest version'

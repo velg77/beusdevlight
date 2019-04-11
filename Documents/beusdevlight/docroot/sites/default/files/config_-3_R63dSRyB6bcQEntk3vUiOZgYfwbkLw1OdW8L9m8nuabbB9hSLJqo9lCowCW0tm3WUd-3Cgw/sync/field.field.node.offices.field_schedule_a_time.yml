@@ -1,0 +1,23 @@
+uuid: f330de43-01e0-43af-bc69-315d02ca542a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_schedule_a_time
+    - node.type.offices
+  module:
+    - link
+id: node.offices.field_schedule_a_time
+field_name: field_schedule_a_time
+entity_type: node
+bundle: offices
+label: 'Schedule a time'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

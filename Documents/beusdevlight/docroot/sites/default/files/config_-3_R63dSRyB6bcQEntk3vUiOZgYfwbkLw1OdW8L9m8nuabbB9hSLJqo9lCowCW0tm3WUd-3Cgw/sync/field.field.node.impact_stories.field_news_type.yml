@@ -1,0 +1,29 @@
+uuid: ae70ebe7-7dc9-4164-b242-5e962110c279
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_news_type
+    - node.type.impact_stories
+    - taxonomy.vocabulary.news_type
+id: node.impact_stories.field_news_type
+field_name: field_news_type
+entity_type: node
+bundle: impact_stories
+label: 'Impact Format'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      news_type: news_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,107 @@
+uuid: 55aeed64-f823-4ce4-92cc-16ebcab25413
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.accordion
+    - field.field.node.courses.body
+    - field.field.node.courses.field_academic_year
+    - field.field.node.courses.field_course_days
+    - field.field.node.courses.field_course_duration
+    - field.field.node.courses.field_course_no
+    - field.field.node.courses.field_course_themes
+    - field.field.node.courses.field_course_types
+    - field.field.node.courses.field_lead_text
+    - field.field.node.courses.field_map_location
+    - field.field.node.courses.field_programs
+    - node.type.courses
+  module:
+    - ds
+    - field_group
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  field_group:
+    group_course_detail:
+      children:
+        - field_course_no
+        - node_title
+        - field_map_location
+        - field_course_days
+      parent_name: ''
+      weight: 0
+      format_type: table
+      format_settings:
+        label: 'Course Table'
+        effect: bounceslide
+        id: ''
+        classes: ''
+        fieldtitle: 1
+        wrapper: 0
+        required_fields: false
+      label: 'Course Table'
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - group_course_detail
+        - field_course_no
+        - node_title
+        - field_map_location
+        - field_course_days
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+id: node.courses.accordion
+targetEntityType: node
+bundle: courses
+mode: accordion
+content:
+  field_course_days:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_course_no:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_map_location:
+    type: text_trimmed
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_academic_year: true
+  field_course_duration: true
+  field_course_themes: true
+  field_course_types: true
+  field_lead_text: true
+  field_programs: true
+  links: true

@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:behaviorsoe1.betabasket.net
+X-WR-TIMEZONE:Asia/Kolkata
+BEGIN:VTIMEZONE
+TZID:Asia/Kolkata
+X-LIC-LOCATION:Asia/Kolkata
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:dc38f15e15a344fea41a555593546380
+DTSTART;TZID=Asia/Kolkata:20190101T000000
+SEQUENCE:0
+TRANSP:OPAQUE
+URL:http://behaviorsoe1.betabasket.net/[node:path]
+SUMMARY:vxvv
+CLASS:PUBLIC
+DESCRIPTION:Description: [node:body] Start Date: Tue\, 01/01/2019 - 00:00 E
+ nd Date:\nTue\, 01/01/2019 - 01:00 [node:field_author]
+X-ALT-DESC;FMTTYPE=text/html:Description: [node:body]</br>\nStart Date: \n\
+ n<!-- THEME DEBUG -->\n<!-- THEME HOOK: 'time' -->\n<!-- BEGIN OUTPUT from
+  'core/themes/stable/templates/field/time.html.twig' -->\n<time datetime=\
+ "2018-12-31T18:30:00Z\">Tue\, 01/01/2019 - 00:00</time>\n\n<!-- END OUTPUT
+  from 'core/themes/stable/templates/field/time.html.twig' -->\n\n</br></br
+ >\nEnd Date: \n\n<!-- THEME DEBUG -->\n<!-- THEME HOOK: 'time' -->\n<!-- B
+ EGIN OUTPUT from 'core/themes/stable/templates/field/time.html.twig' -->\n
+ <time datetime=\"2018-12-31T19:30:00Z\">Tue\, 01/01/2019 - 01:00</time>\n\
+ n<!-- END OUTPUT from 'core/themes/stable/templates/field/time.html.twig' 
+ -->\n\n</br>\n[node:field_author]
+DTSTAMP:20190320T194155Z
+END:VEVENT
+END:VCALENDAR

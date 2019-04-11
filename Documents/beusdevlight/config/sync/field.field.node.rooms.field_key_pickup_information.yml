@@ -1,0 +1,31 @@
+uuid: 99e83906-fcc7-4561-82b7-4769d8d3836e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_key_pickup_information
+    - node.type.rooms
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    limited_text_styling: limited_text_styling
+    rich_text: '0'
+    plain_text: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.rooms.field_key_pickup_information
+field_name: field_key_pickup_information
+entity_type: node
+bundle: rooms
+label: 'Key Pickup Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

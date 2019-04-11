@@ -1,0 +1,30 @@
+uuid: 034df68c-4aae-4459-8345-b0799ee908e9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_footer_markup_text
+    - node.type.news
+  module:
+    - custom_add_another
+    - markup
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.news.field_footer_markup_text
+field_name: field_footer_markup_text
+entity_type: node
+bundle: news
+label: 'Footer Markup Text'
+description: ''
+required: false
+translatable: true
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>\r\n"
+    format: rich_text
+field_type: markup

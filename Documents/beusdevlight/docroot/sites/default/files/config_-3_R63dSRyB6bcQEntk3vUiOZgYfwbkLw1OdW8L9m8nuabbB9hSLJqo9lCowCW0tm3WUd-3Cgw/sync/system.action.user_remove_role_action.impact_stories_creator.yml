@@ -1,0 +1,14 @@
+uuid: d6664abd-8afc-4171-83c1-8a89b4d2ec2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.impact_stories_creator
+  module:
+    - user
+id: user_remove_role_action.impact_stories_creator
+label: 'Remove the Impact Stories creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: impact_stories_creator

@@ -1,0 +1,14 @@
+uuid: 29b50075-1c10-4f87-904e-e7a3ea089c07
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.internships_reviewer
+  module:
+    - user
+id: user_add_role_action.internships_reviewer
+label: 'Add the Internships reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: internships_reviewer

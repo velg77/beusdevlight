@@ -1,0 +1,28 @@
+uuid: 3ae33fc5-8612-4f47-9549-f571df74b1e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.menu_link_content.small_teaser
+    - field.field.menu_link_content.main.field_image
+    - system.menu.main
+  module:
+    - ds
+id: menu_link_content.main.small_teaser
+targetEntityType: menu_link_content
+bundle: main
+mode: small_teaser
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: small_teaser
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  children: true

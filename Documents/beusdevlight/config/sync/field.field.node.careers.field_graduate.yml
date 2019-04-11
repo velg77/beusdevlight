@@ -1,0 +1,33 @@
+uuid: 417c8906-7e65-41bc-a586-547c2b5882ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_graduate
+    - node.type.careers
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    limited_text_styling: limited_text_styling
+    php_filter: '0'
+    rich_text: '0'
+    plain_text: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.careers.field_graduate
+field_name: field_graduate
+entity_type: node
+bundle: careers
+label: 'Graduates Typical work Industries'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

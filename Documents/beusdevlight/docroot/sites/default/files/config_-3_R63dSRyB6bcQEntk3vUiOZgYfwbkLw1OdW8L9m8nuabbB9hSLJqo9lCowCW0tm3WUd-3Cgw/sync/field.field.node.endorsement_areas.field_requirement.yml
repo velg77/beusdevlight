@@ -1,0 +1,46 @@
+uuid: 30c7cc19-5c3e-4572-9c4d-2b8948478ff2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_requirement
+    - node.type.endorsement_areas
+    - paragraphs.paragraphs_type.small_content
+  module:
+    - entity_reference_revisions
+id: node.endorsement_areas.field_requirement
+field_name: field_requirement
+entity_type: node
+bundle: endorsement_areas
+label: Requirements
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      small_content: small_content
+    target_bundles_drag_drop:
+      banner_slider:
+        weight: 7
+        enabled: false
+      content:
+        weight: 8
+        enabled: false
+      cta_group:
+        weight: 9
+        enabled: false
+      message:
+        weight: 10
+        enabled: false
+      multiple_content:
+        weight: 11
+        enabled: false
+      small_content:
+        enabled: true
+        weight: 12
+field_type: entity_reference_revisions

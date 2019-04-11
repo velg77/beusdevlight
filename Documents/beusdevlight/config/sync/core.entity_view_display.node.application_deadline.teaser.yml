@@ -1,0 +1,88 @@
+uuid: 84548bcb-a04e-4c06-9668-b76a3398b7b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.application_deadline.body
+    - field.field.node.application_deadline.field_fall
+    - field.field.node.application_deadline.field_final
+    - field.field.node.application_deadline.field_priority
+    - field.field.node.application_deadline.field_winter
+    - node.type.application_deadline
+  module:
+    - ds
+    - entity_reference_revisions
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers: null
+        outer_wrapper: null
+        attributes: ''
+        link_attribute: null
+        link_custom: null
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - field_priority
+        - field_final
+        - field_winter
+        - field_fall
+id: node.application_deadline.teaser
+targetEntityType: node
+bundle: application_deadline
+mode: teaser
+content:
+  field_fall:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    region: ds_content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_final:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    region: ds_content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_priority:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: ds_content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_winter:
+    type: entity_reference_revisions_entity_view
+    weight: 2
+    region: ds_content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  links: true

@@ -1,0 +1,9 @@
+uuid: 49d7239b-3cde-4c21-b966-3559653241b1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Course Types'
+vid: course_types
+description: 'Type of the course'
+hierarchy: 0
+weight: 0

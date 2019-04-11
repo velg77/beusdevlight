@@ -1,0 +1,14 @@
+uuid: fb7db3b4-7b98-40fc-bac3-97edf61e265e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.offices_reviewer
+  module:
+    - user
+id: user_remove_role_action.offices_reviewer
+label: 'Remove the Offices reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: offices_reviewer

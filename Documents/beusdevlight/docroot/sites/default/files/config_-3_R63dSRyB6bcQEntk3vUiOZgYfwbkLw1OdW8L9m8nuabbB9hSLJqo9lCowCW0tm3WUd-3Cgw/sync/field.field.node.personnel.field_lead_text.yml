@@ -1,0 +1,21 @@
+uuid: 0eff9de8-6763-4cb5-b82e-504d458ba343
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_text
+    - node.type.personnel
+  module:
+    - text
+id: node.personnel.field_lead_text
+field_name: field_lead_text
+entity_type: node
+bundle: personnel
+label: 'Lead text'
+description: 'Opening Paragraph / Summary'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

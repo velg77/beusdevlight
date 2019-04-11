@@ -1,0 +1,22 @@
+uuid: 6a7fe5cb-aea8-4397-ba7d-540ae1b67cf8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.taxonomy_index
+    - taxonomy.vocabulary.academic_year
+  module:
+    - text
+id: taxonomy_term.academic_year.taxonomy_index
+targetEntityType: taxonomy_term
+bundle: academic_year
+mode: taxonomy_index
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

@@ -1,0 +1,66 @@
+uuid: b288ada0-061d-4c6a-b4e1-62637053efcb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.student_organisation.body
+    - field.field.node.student_organisation.field_date_of_publication
+    - field.field.node.student_organisation.field_email
+    - field.field.node.student_organisation.field_media_type
+    - field.field.node.student_organisation.field_website
+    - node.type.student_organisation
+  module:
+    - link
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.student_organisation.default
+targetEntityType: node
+bundle: student_organisation
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_email:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: content
+  field_media_type:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_website:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  addtoany: true
+  field_date_of_publication: true
+  links: true

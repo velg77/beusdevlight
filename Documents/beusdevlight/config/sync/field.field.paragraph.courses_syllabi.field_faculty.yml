@@ -1,0 +1,34 @@
+uuid: 4f97b4a5-93d9-41a9-b72c-6d686af1bb45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_faculty
+    - node.type.personnel
+    - paragraphs.paragraphs_type.courses_syllabi
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: paragraph.courses_syllabi.field_faculty
+field_name: field_faculty
+entity_type: paragraph
+bundle: courses_syllabi
+label: Faculty
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      personnel: personnel
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,9 @@
+uuid: a770f8cb-1a8a-4d2d-a440-dc7766b5cd28
+langcode: en
+status: true
+dependencies: {  }
+name: 'Room Features - Amenities'
+vid: room_features_technology_
+description: 'Room Features - Amenities'
+hierarchy: 0
+weight: 0

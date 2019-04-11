@@ -1,0 +1,14 @@
+uuid: 4f6d6d45-6801-4c86-ad6f-35586db7b408
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.concentrations_reviewer
+  module:
+    - user
+id: user_add_role_action.concentrations_reviewer
+label: 'Add the Concentrations reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: concentrations_reviewer

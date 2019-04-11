@@ -1,0 +1,25 @@
+uuid: 93da4417-0957-407f-9232-a3f371db3067
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.narrow_landscape
+  module:
+    - crop
+name: sm_narrow_portrait_2x
+label: sm_narrow_portrait_2x
+effects:
+  f72b24ad-398e-4c63-9611-ea0d23075ed9:
+    uuid: f72b24ad-398e-4c63-9611-ea0d23075ed9
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: narrow_landscape
+  ee59c096-de72-4657-8bee-4dcd11eb9ebb:
+    uuid: ee59c096-de72-4657-8bee-4dcd11eb9ebb
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 540
+      height: 1060
+      anchor: center-center

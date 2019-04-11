@@ -1,0 +1,19 @@
+uuid: 185ff757-5cb1-46f1-8169-e7417b8255c8
+langcode: en
+status: true
+dependencies: {  }
+id: offices_reviewer
+label: 'Offices reviewer'
+weight: 13
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'delete any offices content'
+  - 'edit any offices content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'view any unpublished content'
+  - 'view latest version'

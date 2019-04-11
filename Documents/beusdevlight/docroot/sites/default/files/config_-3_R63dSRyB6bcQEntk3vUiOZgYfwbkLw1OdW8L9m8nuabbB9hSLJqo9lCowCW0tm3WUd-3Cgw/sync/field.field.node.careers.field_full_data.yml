@@ -1,0 +1,21 @@
+uuid: a7eadb44-a266-4022-923e-7997645d1032
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_full_data
+    - node.type.careers
+  module:
+    - text
+id: node.careers.field_full_data
+field_name: field_full_data
+entity_type: node
+bundle: careers
+label: 'Gradutes Description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,14 @@
+uuid: 80d99759-9900-4437-b1bf-4c156a92bd93
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: block_content.frequently_questions
+label: 'Frequently questions'
+targetEntityType: block_content
+cache: true

@@ -1,0 +1,28 @@
+uuid: aca9ef8a-b600-42a2-8fda-4fd7c7fdbc3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description_box_size
+    - paragraphs.paragraphs_type.banner_slider
+  module:
+    - custom_add_another
+    - options
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: paragraph.banner_slider.field_description_box_size
+field_name: field_description_box_size
+entity_type: paragraph
+bundle: banner_slider
+label: 'Description Box Size'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: large
+default_value_callback: ''
+settings: {  }
+field_type: list_string

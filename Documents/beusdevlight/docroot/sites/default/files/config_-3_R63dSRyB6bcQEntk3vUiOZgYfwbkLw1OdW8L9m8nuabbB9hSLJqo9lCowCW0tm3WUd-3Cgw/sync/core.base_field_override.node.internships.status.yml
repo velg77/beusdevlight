@@ -1,0 +1,22 @@
+uuid: 8605de84-98fa-42a4-9e24-c2199efff9a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.internships
+id: node.internships.status
+field_name: status
+entity_type: node
+bundle: internships
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

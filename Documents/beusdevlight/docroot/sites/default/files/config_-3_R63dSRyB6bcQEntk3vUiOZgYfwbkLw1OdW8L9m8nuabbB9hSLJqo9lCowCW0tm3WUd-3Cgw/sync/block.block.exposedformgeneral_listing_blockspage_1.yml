@@ -1,0 +1,29 @@
+uuid: 2beb7426-eee6-4dd4-ad9a-f11ce1e1f293
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.general_listing_blocks
+  module:
+    - system
+    - views
+  theme:
+    - behavioursoe
+id: exposedformgeneral_listing_blockspage_1
+theme: behavioursoe
+region: content
+weight: -8
+provider: null
+plugin: 'views_exposed_filter_block:general_listing_blocks-page_1'
+settings:
+  id: 'views_exposed_filter_block:general_listing_blocks-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    pages: /search1
+    negate: false
+    context_mapping: {  }

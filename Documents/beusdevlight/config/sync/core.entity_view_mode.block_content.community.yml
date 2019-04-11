@@ -1,0 +1,14 @@
+uuid: 032380c9-7ec7-474e-9942-17cc6c5dfdf7
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: block_content.community
+label: Community
+targetEntityType: block_content
+cache: true

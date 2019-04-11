@@ -1,0 +1,143 @@
+{
+    "name": "acquia/lightning-project",
+    "description": "Project template for Drupal 8 sites built with the Lightning distribution.",
+    "type": "project",
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require-dev": {
+        "drush/drush": "^9.0",
+        "drupal/media_entity_generic": "^1.0",
+        "acquia/lightning_dev": "dev-8.x-1.x"
+    },
+    "require": {
+        "drupal-composer/drupal-scaffold": "^2.0.0",
+        "cweagans/composer-patches": "^1.6.0",
+        "acquia/lightning": "~3.2.7",
+        "html2text/html2text": "^4.2",
+        "eluceo/ical": "^0.15.0",
+        "drupal/components": "^1.0",
+        "drupal/config_filter": "^1.4",
+        "drupal/config_ignore": "^2.1",
+        "drupal/security_review": "1.x-dev",
+        "drupal/scheduler_content_moderation_integration": "^1.0@alpha",
+        "drupal/addtoany": "^1.10",
+        "drupal/acquia_connector": "^1.16",
+        "drupal/admin_toolbar": "^1.26",
+        "drupal/allowed_formats": "^1.1",
+        "drupal/autogrow": "^1.0",
+        "drupal/blazy": "^1.0@RC",
+        "drupal/block_class": "^1.0",
+        "drupal/block_region_permissions": "^1.2",
+        "drupal/captcha": "^1.0@beta",
+        "drupal/checklistapi": "^1.9",
+        "drupal/chosen": "^2.6",
+        "drupal/consumers": "^1.9",
+        "drupal/contact_storage": "^1.0@beta",
+        "drupal/custom_add_another": "^1.0@beta",
+        "drupal/diff": "^1.0@RC",
+        "drupal/dropzonejs": "^2.0@alpha",
+        "drupal/ds": "^3.3",
+        "drupal/embed": "^1.0",
+        "drupal/entity_embed": "^1.0@beta",
+        "drupal/entity_reference_exposed_filters": "^1.0@alpha",
+        "drupal/entity_reference_revisions": "^1.6",
+        "drupal/entity_reference_views_select": "^1.3",
+        "drupal/extlink": "^1.1",
+        "drupal/facets": "^1.3",
+        "drupal/field_group": "^1.0",
+        "drupal/field_group_table": "^1.0@beta",
+        "drupal/fontawesome": "^2.12",
+        "drupal/form_mode_manager": "^1.3",
+        "drupal/formblock": "^1.0@beta",
+        "drupal/google_analytics": "^3.0",
+        "drupal/image_widget_crop": "^2.2",
+        "drupal/inline_entity_form": "^1.0@RC",
+        "drupal/jsonapi": "^2.1",
+        "drupal/simplify": "^1.0",
+        "drupal/tablefield": "^2.0@alpha",
+        "drupal/socialfeed": "^1.0",
+        "drupal/views_field_view": "^1.0@beta",
+        "drupal/views_taxonomy_term_name_depth": "6.x-dev",
+        "drupal/markup": "^1.0@beta",
+        "drupal/ckeditor_font": "^1.0",
+        "drupal/search_api_autocomplete": "^1.2"
+    },
+    "repositories": {
+        "drupal": {
+            "type": "composer",
+            "url": "https://packages.drupal.org/8"
+        },
+        "assets": {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        },
+        "dev": {
+            "type": "github",
+            "url": "https://github.com/acquia/lightning-dev",
+            "no-api": true
+        }
+    },
+    "config": {
+        "process-timeout": 0
+    },
+    "scripts": {
+        "post-install-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "post-update-cmd": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
+        "nuke": "rm -r -f docroot/modules/contrib docroot/profiles/contrib/lightning vendor composer.lock",
+        "quick-start": [
+            "composer install",
+            "php docroot/core/scripts/drupal quick-start lightning --no-interaction"
+        ]
+    },
+    "extra": {
+        "installer-types": [
+            "bower-asset",
+            "npm-asset"
+        ],
+        "installer-paths": {
+            "docroot/core": [
+                "type:drupal-core"
+            ],
+            "docroot/libraries/{$name}": [
+                "type:drupal-library",
+                "type:bower-asset",
+                "type:npm-asset"
+            ],
+            "docroot/modules/contrib/{$name}": [
+                "type:drupal-module"
+            ],
+            "docroot/profiles/contrib/{$name}": [
+                "type:drupal-profile"
+            ],
+            "docroot/themes/contrib/{$name}": [
+                "type:drupal-theme"
+            ],
+            "drush/contrib/{$name}": [
+                "type:drupal-drush"
+            ]
+        },
+        "enable-patching": true,
+        "patches": {
+            "drupal/formblock": {
+                "Drupal formblock fix default syncing": "patches/formblock-form-display-mode-option-2816415-3.patch"
+            },
+            "drupal/custom_add_another": {
+                "Drupal formblock fix default syncing": "patches/2931737-3.patch"
+            },
+            "drupal/panelizer": {
+                "Drupal panelizer wizard context form": "patches/3031671-2.patch",
+                "Drupal panelizer wizard conext configure form": "patches/panelizer_temp_store-3034080-03.patch"
+            },
+            "drupal/entity_browser": {
+                "Entity browser auto height iframe": "patches/entity-browser-auto-height-iframe-3025100-52.patch"
+            },
+            "drupal/facets": {
+                "'All' link in facets?": "patches/facet_reset_link-2692027-92.patch"
+            },
+            "drupal/form_mode_manager": {
+                "'Form Mode Manager - Permission based location actions links": "patches/form_mode_manager_permission_based_local_actions.patch"
+            }
+        }
+    }
+}

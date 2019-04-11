@@ -1,0 +1,66 @@
+/**block-content--view-mode-find-program
+paragraph--type-content
+*/
+.block-content--view-mode-find-program .field--name-field-cta a {
+  color: #ffffff;
+  background: none;
+  padding: 0;
+  font-size: 0.889em;
+  text-transform: none;
+  font-family: 'Avenir-Medium', sans-serif; }
+  .block-content--view-mode-find-program .field--name-field-cta a:after {
+    content: "\f105";
+    font-family: 'Fontawesome 5 pro';
+    padding-left: 10px;
+    font-size: 0.875rem; }
+
+.block-content--view-mode-find-program .field--name-field-content {
+  margin: 20px -15px 0; }
+  .block-content--view-mode-find-program .field--name-field-content > .field__item {
+    border-left: 15px solid #fff;
+    border-right: 15px solid #fff;
+    background-color: #0d57aa; }
+
+.block-content--view-mode-find-program .paragraph--type-content {
+  padding: 15px 10px; }
+  .block-content--view-mode-find-program .paragraph--type-content:after {
+    display: none; }
+  .block-content--view-mode-find-program .paragraph--type-content .group-left, .block-content--view-mode-find-program .paragraph--type-content .group-right {
+    display: inline-block;
+    vertical-align: middle; }
+  .block-content--view-mode-find-program .paragraph--type-content .group-left {
+    width: 90px;
+    padding-right: 15px; }
+  .block-content--view-mode-find-program .paragraph--type-content .group-right {
+    width: -moz-calc(100% - 90px);
+    width: -webkit-calc(100% - 90px);
+    width: calc(100% - 90px);
+    margin-left: -5px; }
+  .block-content--view-mode-find-program .paragraph--type-content .field--name-field-title {
+    color: #ffffff;
+    font-size: 1.444em;
+    font-family: 'Avenir-Heavy', sans-serif; }
+
+@media (min-width: 768px) {
+  .block-content--view-mode-find-program .field--name-field-content {
+    display: table;
+    width: 100%;
+    width: -moz-calc(100% + 30px);
+    width: -webkit-calc(100% + 30px);
+    width: calc(100% + 30px);
+    table-layout: fixed; }
+    .block-content--view-mode-find-program .field--name-field-content > .field__item {
+      width: 50%;
+      display: table-cell;
+      vertical-align: middle; } }
+
+@media (min-width: 1024px) {
+  .block-content--view-mode-find-program .paragraph--type-content {
+    padding: 20px; }
+    .block-content--view-mode-find-program .paragraph--type-content .group-left {
+      width: 100px;
+      padding-right: 20px; }
+    .block-content--view-mode-find-program .paragraph--type-content .group-right {
+      width: -moz-calc(100% - 100px);
+      width: -webkit-calc(100% - 100px);
+      width: calc(100% - 100px); } }

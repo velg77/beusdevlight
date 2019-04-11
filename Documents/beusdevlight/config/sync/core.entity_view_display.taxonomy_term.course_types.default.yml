@@ -1,0 +1,28 @@
+uuid: b75c6b56-6b62-449d-b9a7-23f09143f4ae
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.course_types
+  module:
+    - panelizer
+    - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.course_types.default
+targetEntityType: taxonomy_term
+bundle: course_types
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

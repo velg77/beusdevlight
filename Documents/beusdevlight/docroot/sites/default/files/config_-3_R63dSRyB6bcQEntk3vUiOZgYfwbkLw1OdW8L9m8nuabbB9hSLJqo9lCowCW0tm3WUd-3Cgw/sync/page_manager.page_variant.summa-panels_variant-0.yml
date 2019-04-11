@@ -1,0 +1,95 @@
+uuid: 9ef4e608-d96d-4088-a0f0-5a9fba5bdda1
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.summa
+  content:
+    - 'block_content:academics_and_admissions:5e1c3a05-afb9-401c-8ef3-e11130d99304'
+    - 'block_content:media_slideshow:be97b6fc-899c-45eb-954d-d9e423935870'
+  module:
+    - block_content
+    - panels
+id: summa-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    0fc2acbc-d507-4ea0-8a1a-353f50d68c2e:
+      id: 'block_content:5e1c3a05-afb9-401c-8ef3-e11130d99304'
+      label: 'ACADEMIC PROGRAMS [Academics and Admissions]'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: row1
+      weight: 0
+      uuid: 0fc2acbc-d507-4ea0-8a1a-353f50d68c2e
+      context_mapping: {  }
+    ccbb7d5a-08cf-4f28-a3c6-305ce8d5413e:
+      id: 'block_content:be97b6fc-899c-45eb-954d-d9e423935870'
+      label: 'Banner Bottom [Research]'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: default
+      region: row1
+      weight: 0
+      uuid: ccbb7d5a-08cf-4f28-a3c6-305ce8d5413e
+      context_mapping: {  }
+  id: panels_variant
+  uuid: edea7f65-1fe1-4475-aabd-e45161653a70
+  label: null
+  weight: 0
+  layout: behavioursoe_layout
+  layout_settings:
+    wrappers:
+      row1: div
+      row2: div
+      row3: div
+      row4: div
+      row5: div
+      row6: div
+      row7: div
+      row8: div
+      row9: div
+      row10: div
+      row11: div
+      row12: div
+      row13: div
+      row14: div
+      row15: div
+    outer_wrapper: div
+    attributes: ''
+    link_attribute: ''
+    link_custom: ''
+    classes:
+      layout_class: {  }
+      row1:
+        ful_wdt: ful_wdt
+        gry_bg: gry_bg
+      row2: {  }
+      row3: {  }
+      row4: {  }
+      row5: {  }
+      row6: {  }
+      row7: {  }
+      row8: {  }
+      row9: {  }
+      row10: {  }
+      row11: {  }
+      row12: {  }
+      row13: {  }
+      row14: {  }
+      row15: {  }
+  page_title: null
+  storage_type: page_manager
+  storage_id: summa-panels_variant-0
+  builder: standard
+page: summa
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

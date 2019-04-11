@@ -1,0 +1,173 @@
+uuid: b7dcd0e2-42dc-4a47-9be7-bf5ce3489ca3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.rooms.body
+    - field.field.node.rooms.field_360deg_image
+    - field.field.node.rooms.field_building_hours
+    - field.field.node.rooms.field_date_of_publication
+    - field.field.node.rooms.field_floor_plans
+    - field.field.node.rooms.field_key_pickup_information
+    - field.field.node.rooms.field_key_return_information
+    - field.field.node.rooms.field_lead_text
+    - field.field.node.rooms.field_map_location
+    - field.field.node.rooms.field_media_type
+    - field.field.node.rooms.field_room_amenities
+    - field.field.node.rooms.field_room_no
+    - field.field.node.rooms.field_room_technology
+    - field.field.node.rooms.field_room_types
+    - field.field.node.rooms.field_seating_capacity
+    - field.field.node.rooms.field_seating_capacity_fx
+    - node.type.rooms
+  module:
+    - datetime
+    - link
+    - panelizer
+    - simple_gmap
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.rooms.default
+targetEntityType: node
+bundle: rooms
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_360deg_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: above
+    settings:
+      view_mode: panorama
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_building_hours:
+    weight: 7
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_date_of_publication:
+    weight: 12
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_floor_plans:
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_key_pickup_information:
+    weight: 8
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_key_return_information:
+    weight: 9
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_lead_text:
+    weight: 10
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_map_location:
+    weight: 3
+    label: hidden
+    settings:
+      apikey: ''
+      iframe_width: '200'
+      iframe_height: '200'
+      static_scale: 1
+      include_link: true
+      link_text: 'View Map'
+      zoom_level: 14
+      include_text: true
+      map_type: m
+      langcode: en
+      include_map: false
+      include_static_map: false
+    third_party_settings: {  }
+    type: simple_gmap
+    region: content
+  field_room_amenities:
+    weight: 15
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_room_no:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_room_technology:
+    weight: 14
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_room_types:
+    weight: 16
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_seating_capacity_fx:
+    weight: 13
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_media_type: true
+  field_seating_capacity: true

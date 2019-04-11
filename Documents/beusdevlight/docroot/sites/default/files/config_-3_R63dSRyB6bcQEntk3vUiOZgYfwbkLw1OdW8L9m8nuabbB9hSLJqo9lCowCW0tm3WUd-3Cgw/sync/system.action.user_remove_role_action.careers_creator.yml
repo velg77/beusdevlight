@@ -1,0 +1,14 @@
+uuid: 5fa0d39e-3c2d-4a81-9e34-aab33f2772cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.careers_creator
+  module:
+    - user
+id: user_remove_role_action.careers_creator
+label: 'Remove the Careers creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: careers_creator

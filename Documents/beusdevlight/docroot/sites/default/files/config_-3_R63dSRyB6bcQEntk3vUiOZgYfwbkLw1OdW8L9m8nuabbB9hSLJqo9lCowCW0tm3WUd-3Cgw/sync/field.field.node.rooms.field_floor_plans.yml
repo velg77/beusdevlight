@@ -1,0 +1,23 @@
+uuid: 16f5e94a-eee7-44f7-9be3-b33da2f60839
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_floor_plans
+    - node.type.rooms
+  module:
+    - link
+id: node.rooms.field_floor_plans
+field_name: field_floor_plans
+entity_type: node
+bundle: rooms
+label: 'Floor Plans'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

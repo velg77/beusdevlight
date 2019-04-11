@@ -1,0 +1,14 @@
+.block-local-tasks-block {
+  background: #0D57AA;
+  text-align: center;
+  padding: 10px 15px;
+  font-size: 0.75em; }
+  .block-local-tasks-block ul {
+    margin: 0;
+    padding: 0;
+    list-style: none outside none; }
+    .block-local-tasks-block ul li {
+      display: inline;
+      margin: 0 10px; }
+  .block-local-tasks-block a {
+    color: #fff; }

@@ -1,0 +1,10 @@
+backend_forms:
+  version: 1.x
+  css:
+    theme:
+      css/backend.css: {}
+  js:
+    js/backend.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

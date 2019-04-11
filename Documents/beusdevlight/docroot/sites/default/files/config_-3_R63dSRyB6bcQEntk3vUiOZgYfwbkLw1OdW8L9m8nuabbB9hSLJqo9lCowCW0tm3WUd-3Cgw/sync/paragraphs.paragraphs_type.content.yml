@@ -1,0 +1,9 @@
+uuid: b6f0930e-f8ff-4a02-be7c-7825eb9dfe7f
+langcode: en
+status: true
+dependencies: {  }
+id: content
+label: Content
+icon_uuid: null
+description: 'A type contains multiple fields as image, title, sub title, short description and Link '
+behavior_plugins: {  }

@@ -1,0 +1,39 @@
+uuid: ea589b75-9b68-4921-988a-afcea790635f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_room_types
+    - node.type.rooms
+    - taxonomy.vocabulary.room_types
+  content:
+    - 'taxonomy_term:room_types:c855ddbd-a921-4732-b841-427c41bf76cd'
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.rooms.field_room_types
+field_name: field_room_types
+entity_type: node
+bundle: rooms
+label: 'Room Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: c855ddbd-a921-4732-b841-427c41bf76cd
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      room_types: room_types
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

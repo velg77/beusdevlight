@@ -1,0 +1,14 @@
+uuid: 4b63479b-0bf9-4349-9b05-f1b0f5c553c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.student_organisation_creator
+  module:
+    - user
+id: user_add_role_action.student_organisation_creator
+label: 'Add the Student Organisation creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: student_organisation_creator

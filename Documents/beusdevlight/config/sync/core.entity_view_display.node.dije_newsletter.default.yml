@@ -1,0 +1,267 @@
+uuid: 23c053df-a9e8-417d-a21c-71bb07101e51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.dije_newsletter.body
+    - field.field.node.dije_newsletter.field_360deg_image
+    - field.field.node.dije_newsletter.field_created_date
+    - field.field.node.dije_newsletter.field_heading
+    - field.field.node.dije_newsletter.field_lead_text
+    - field.field.node.dije_newsletter.field_media_type
+    - field.field.node.dije_newsletter.field_meta_tags
+    - field.field.node.dije_newsletter.field_tags
+    - field.field.node.dije_newsletter.panelizer
+    - node.type.dije_newsletter
+  module:
+    - ds
+    - panelizer
+    - slick_entityreference
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          d919ae4e-eb39-4398-ae72-fb1c172f27f3:
+            id: 'entity_field:node:uid'
+            label: 'Authored by'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: author
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 0
+            uuid: d919ae4e-eb39-4398-ae72-fb1c172f27f3
+          f080c2ba-8399-42f5-b388-e4181b0665d1:
+            id: 'entity_field:node:created'
+            label: 'Authored on'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: timestamp
+              settings:
+                date_format: medium
+                custom_date_format: ''
+                timezone: ''
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 0
+            uuid: f080c2ba-8399-42f5-b388-e4181b0665d1
+          a213fc69-8842-4d81-bb2f-4a9612c47bb7:
+            id: 'entity_field:node:body'
+            label: Body
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 6
+            uuid: a213fc69-8842-4d81-bb2f-4a9612c47bb7
+          5c741c24-3cf4-45f9-8674-2c8b89f6e18a:
+            id: 'entity_field:node:field_360deg_image'
+            label: 'Image Gallery'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: slick_entityreference_vanilla
+              settings:
+                override: false
+                overridables: {  }
+                skin_arrows: ''
+                skin_dots: ''
+                cache: 0
+                current_view_mode: ''
+                optionset: default
+                skin: ''
+                style: ''
+                view_mode: ''
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 7
+            uuid: 5c741c24-3cf4-45f9-8674-2c8b89f6e18a
+          437602aa-9dce-4359-a30a-c49caf213cd3:
+            id: 'entity_field:node:field_created_date'
+            label: 'Created Date'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: datetime_custom
+              settings:
+                timezone_override: ''
+                date_format: 'F d, Y'
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 3
+            uuid: 437602aa-9dce-4359-a30a-c49caf213cd3
+          3839bc71-b6e8-4c8a-83fe-b2c04ef599ce:
+            id: 'entity_field:node:field_heading'
+            label: Label
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: text_trimmed
+              settings:
+                trim_length: 600
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 4
+            uuid: 3839bc71-b6e8-4c8a-83fe-b2c04ef599ce
+          b501a40b-0132-4504-abc7-fa81646e142a:
+            id: 'entity_field:node:field_lead_text'
+            label: 'Lead text'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 5
+            uuid: b501a40b-0132-4504-abc7-fa81646e142a
+          bb02243a-1317-47d6-ad2e-556f15595e59:
+            id: 'entity_field:node:field_media_type'
+            label: 'Banner Image'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: entity_reference_entity_view
+              settings:
+                view_mode: hero_image
+                link: false
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 1
+            uuid: bb02243a-1317-47d6-ad2e-556f15595e59
+        id: panels_variant
+        label: Default
+        uuid: c7fdc7f8-549a-4fce-9950-f265779ba044
+        weight: 0
+        layout: layout_onecol
+        layout_settings: {  }
+        page_title: '[node:title]'
+        storage_type: ''
+        storage_id: ''
+        builder: ipe
+        pattern: panelizer
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_lead_text
+        - addtoany
+        - body
+        - field_360deg_image
+id: node.dije_newsletter.default
+targetEntityType: node
+bundle: dije_newsletter
+mode: default
+content:
+  addtoany:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    label: hidden
+    type: text_default
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_360deg_image:
+    weight: 3
+    label: hidden
+    settings:
+      optionset: default
+      skin: grid
+      view_mode: slideshow
+      cache: '0'
+      override: '1'
+      overridables:
+        arrows: arrows
+        dots: dots
+        draggable: draggable
+        infinite: infinite
+        autoplay: 0
+        mouseWheel: 0
+        randomize: 0
+        variableWidth: 0
+      current_view_mode: default
+      skin_arrows: ''
+      skin_dots: ''
+      style: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: slick_entityreference_vanilla
+    region: content
+  field_lead_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_created_date: true
+  field_heading: true
+  field_media_type: true
+  field_meta_tags: true
+  field_tags: true
+  links: true
+  panelizer: true

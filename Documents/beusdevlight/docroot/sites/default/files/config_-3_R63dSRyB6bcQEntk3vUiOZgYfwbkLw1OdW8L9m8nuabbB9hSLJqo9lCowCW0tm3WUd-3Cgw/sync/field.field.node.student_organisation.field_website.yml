@@ -1,0 +1,23 @@
+uuid: e565f583-e6b5-466d-92b9-dd81b62f7ba3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_website
+    - node.type.student_organisation
+  module:
+    - link
+id: node.student_organisation.field_website
+field_name: field_website
+entity_type: node
+bundle: student_organisation
+label: Website
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 0
+field_type: link

@@ -1,0 +1,14 @@
+uuid: 90a5de69-7c1e-41a8-a879-563109d4a7fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: block_content.floor_plans
+label: 'Floor Plans'
+targetEntityType: block_content
+cache: true

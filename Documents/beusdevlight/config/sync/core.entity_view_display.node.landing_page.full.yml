@@ -1,0 +1,549 @@
+uuid: 7be8afe3-b4fb-4c42-b558-d123b60f73f7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_meta_tags
+    - field.field.node.landing_page.panelizer
+    - node.type.landing_page
+  module:
+    - metatag
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: true
+    custom: true
+    displays:
+      type_homepage:
+        blocks:
+          081d558b-c287-41e1-8fff-0dd2d4c76560:
+            id: 'block_content:b89bf1e6-9887-4064-9b17-fdfc73bb46c5'
+            label: 'Banner Hero [Home Page]'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: default
+            region: row1
+            weight: 0
+            uuid: 081d558b-c287-41e1-8fff-0dd2d4c76560
+            context_mapping: {  }
+          db740c12-1e65-4505-a980-81896fd1ecce:
+            id: 'block_content:9e58985d-ce3e-442f-832d-ea445966da8f'
+            label: 'WHY SOE?'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: why_soe
+            region: row2
+            weight: 0
+            uuid: db740c12-1e65-4505-a980-81896fd1ecce
+            context_mapping: {  }
+          e33a05ca-41fb-423a-bfd4-117eca5d5f06:
+            id: 'block_content:96a50049-6b91-4549-9e27-46fbda1058c8'
+            label: 'Degrees & Certifications'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: degrees_certifications
+            region: row3
+            weight: 0
+            uuid: e33a05ca-41fb-423a-bfd4-117eca5d5f06
+            context_mapping: {  }
+          006d47b7-4383-4c51-9882-c5daf373cb72:
+            id: 'block_content:76309943-a8b9-43df-b71a-3efd6588bb40'
+            label: 'FIND THE PROGRAM THAT''S RIGHT FOR YOU'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: find_program
+            region: row4
+            weight: 0
+            uuid: 006d47b7-4383-4c51-9882-c5daf373cb72
+            context_mapping: {  }
+          658e727a-084e-4a4f-85cd-05a8ba82bc4a:
+            id: 'block_content:2f5d7223-5fee-4e6c-b91d-270dfbe2ea2c'
+            label: 'OUR IMPACT'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: full
+            region: row5
+            weight: -3
+            uuid: 658e727a-084e-4a4f-85cd-05a8ba82bc4a
+            context_mapping: {  }
+          f05d73ae-b0d0-4825-b6bb-b245f760b93d:
+            id: 'views_block:general-block_1'
+            label: ''
+            provider: views
+            label_display: '0'
+            views_label: ''
+            items_per_page: none
+            region: row5
+            weight: -2
+            uuid: f05d73ae-b0d0-4825-b6bb-b245f760b93d
+            context_mapping: {  }
+          a1cd0019-4c36-445f-ae47-4777ab52e176:
+            id: 'block_content:14fae73b-ff7c-4297-855c-ff9e5faff2ed'
+            label: 'Banner Bottom [Home Page]'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: hero_image_small
+            region: row6
+            weight: 0
+            uuid: a1cd0019-4c36-445f-ae47-4777ab52e176
+            context_mapping: {  }
+        id: panels_variant
+        uuid: 75f3b1c8-6dee-4dcb-af2d-2a9ce86195ec
+        label: 'Type: Homepage'
+        weight: 0
+        layout: behavioursoe_layout
+        layout_settings:
+          wrappers:
+            row1: div
+            row2: div
+            row3: div
+            row4: div
+            row5: div
+            row6: div
+            row7: div
+            row8: div
+            left_sidebar: div
+            main_content: div
+            right_sidebar: div
+            row9: div
+            row10: div
+            row11: div
+            row12: div
+            row13: div
+            row14: div
+            row15: div
+          outer_wrapper: div
+          attributes: ''
+          link_attribute: ''
+          link_custom: ''
+          classes:
+            layout_class: {  }
+            row1:
+              ful_wdt: ful_wdt
+            row2:
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row3:
+              ful_wdt: ful_wdt
+              brdr_top: brdr_top
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row4:
+              row_sp_bot: row_sp_bot
+            row5:
+              ylw_bg: ylw_bg
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row6:
+              ful_wdt: ful_wdt
+            row7: {  }
+            row8: {  }
+            left_sidebar: {  }
+            main_content: {  }
+            right_sidebar: {  }
+            row9: {  }
+            row10: {  }
+            row11: {  }
+            row12: {  }
+            row13: {  }
+            row14: {  }
+            row15: {  }
+        page_title: ''
+        storage_type: panelizer_default
+        storage_id: 'node:landing_page:full:type_homepage'
+        pattern: panelizer
+        builder: ipe
+        static_context: {  }
+      ty:
+        blocks:
+          3f807c23-7620-45f8-9ae8-5d27757965da:
+            id: 'block_content:82d9a153-83ba-4798-8c5e-d43c907701eb'
+            label: 'Banner Hero [About Soe]'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: default
+            region: row1
+            weight: 0
+            uuid: 3f807c23-7620-45f8-9ae8-5d27757965da
+            context_mapping: {  }
+          4211c4c2-0a18-48dc-9719-b3a7b0d0e383:
+            id: 'block_content:4b49b6e3-d4f6-46e8-bf90-4ead74c44389'
+            label: 'Mission and Vision'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: mission_vision
+            region: row2
+            weight: 0
+            uuid: 4211c4c2-0a18-48dc-9719-b3a7b0d0e383
+            context_mapping: {  }
+          3bb72624-bc61-49fa-9357-6b0f0f9fb351:
+            id: 'block_content:f5248eb9-c71e-4ce0-bfe2-b4623b8f9b2c'
+            label: 'Message from the Dean'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: full
+            region: row3
+            weight: 0
+            uuid: 3bb72624-bc61-49fa-9357-6b0f0f9fb351
+            context_mapping: {  }
+          7814a6ad-badf-443d-9af1-33a3f899a2fc:
+            id: 'block_content:06ed9115-b673-4b3b-bc0b-4c9c07a4a8f3'
+            label: 'Banner Middle [About Soe]'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: hero_image_small
+            region: row4
+            weight: 0
+            uuid: 7814a6ad-badf-443d-9af1-33a3f899a2fc
+            context_mapping: {  }
+          163c5de0-e42a-4e9a-b2ed-2b191b763479:
+            id: 'block_content:98630c33-6101-4fff-8434-542d0fc9ed83'
+            label: 'Banner Middle1 [About Soe]'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: hero_image_small
+            region: row7
+            weight: -5
+            uuid: 163c5de0-e42a-4e9a-b2ed-2b191b763479
+            context_mapping: {  }
+          3b1a1c7d-391a-4c8f-a2b4-5bc3423edea0:
+            id: 'block_content:05f7a60d-a94d-40ea-b25c-407835e438c8'
+            label: 'Why SOE?'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: why_soe
+            region: row5
+            weight: -10
+            uuid: 3b1a1c7d-391a-4c8f-a2b4-5bc3423edea0
+            context_mapping: {  }
+          fc9cee9d-cd2b-4e89-8f81-7132eb5f627d:
+            id: 'block_content:1ec34a48-da53-42af-a885-c00a6b646bda'
+            label: People
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: people_list
+            region: row6
+            weight: -5
+            uuid: fc9cee9d-cd2b-4e89-8f81-7132eb5f627d
+            context_mapping: {  }
+          31acfa8d-2da8-406c-be3f-ea7f9734ac1a:
+            id: 'block_content:afceed8d-567b-4a75-8104-f91db8171634'
+            label: 'PEOPLE-Academic Chairs and Directors [About SOE]'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: people_list
+            region: row6
+            weight: -4
+            uuid: 31acfa8d-2da8-406c-be3f-ea7f9734ac1a
+            context_mapping: {  }
+          7a508c31-2aff-45e1-ae1c-85f2e5ee6e0c:
+            id: 'block_content:e5804918-3c52-42c4-b6c6-40a0467b5d43'
+            label: 'PEOPLE-SOE Administrative Leaders [About SOE]'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: people_list
+            region: row6
+            weight: -3
+            uuid: 7a508c31-2aff-45e1-ae1c-85f2e5ee6e0c
+            context_mapping: {  }
+          cee4e9cb-0ce6-4ec6-bad1-e433733160f5:
+            id: 'block_content:bf7b38d1-0c4c-4874-996d-d5881f9f3c1f'
+            label: 'History of SOE'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: default
+            region: row8
+            weight: 0
+            uuid: cee4e9cb-0ce6-4ec6-bad1-e433733160f5
+            context_mapping: {  }
+          e17f7543-acc7-435d-ac27-2860e5e1fc2c:
+            id: 'block_content:fdb9d4ad-61de-4446-bf87-acfb433e74c4'
+            label: 'Connect with Us'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: connect
+            region: row9
+            weight: 0
+            uuid: e17f7543-acc7-435d-ac27-2860e5e1fc2c
+            context_mapping: {  }
+        id: panels_variant
+        uuid: 21b44300-6d6c-4633-95d0-e2edf2c4b26c
+        label: 'Type: About SOE'
+        weight: 0
+        layout: behavioursoe_layout
+        layout_settings:
+          wrappers:
+            row1: div
+            row2: div
+            row3: div
+            row4: div
+            row5: div
+            row6: div
+            row7: div
+            row8: div
+            left_sidebar: div
+            main_content: div
+            right_sidebar: div
+            row9: div
+            row10: div
+            row11: div
+            row12: div
+            row13: div
+            row14: div
+            row15: div
+          outer_wrapper: div
+          attributes: ''
+          link_attribute: ''
+          link_custom: ''
+          classes:
+            layout_class:
+              ful_wdt: ful_wdt
+            row1:
+              ful_wdt: ful_wdt
+            row2:
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row3:
+              gry_bg: gry_bg
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row4:
+              ful_wdt: ful_wdt
+            row5:
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row6:
+              brdr_top: brdr_top
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row7:
+              ful_wdt: ful_wdt
+            row8:
+              gry_bg: gry_bg
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            left_sidebar: {  }
+            main_content: {  }
+            right_sidebar: {  }
+            row9:
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row10: {  }
+            row11: {  }
+            row12: {  }
+            row13: {  }
+            row14: {  }
+            row15: {  }
+        page_title: ''
+        storage_type: panelizer_default
+        storage_id: 'node:landing_page:full:ty'
+        pattern: panelizer
+        builder: ipe
+        static_context: {  }
+      type_listing:
+        blocks:
+          ebe894a8-ba4c-409f-923c-9d878d3a1e7d:
+            id: 'block_content:9bd77015-bb05-416e-b6e7-dad13fe9f794'
+            label: 'Banner Hero [News]'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: hero_image_small
+            region: row1
+            weight: 0
+            uuid: ebe894a8-ba4c-409f-923c-9d878d3a1e7d
+            context_mapping: {  }
+          2e5c2efd-72ed-4c5d-93a0-9b23473563b8:
+            id: 'views_block:general_listing_blocks-block_1'
+            label: ''
+            provider: views
+            label_display: '0'
+            views_label: ''
+            items_per_page: none
+            region: row3
+            weight: 0
+            uuid: 2e5c2efd-72ed-4c5d-93a0-9b23473563b8
+            context_mapping: {  }
+        id: panels_variant
+        uuid: f0e3d27b-479e-41c3-9477-995daf9b231c
+        label: 'Type: Listing'
+        weight: 0
+        layout: behavioursoe_layout
+        layout_settings:
+          wrappers:
+            row1: div
+            row2: div
+            row3: div
+            row4: div
+            row5: div
+            row6: div
+            row7: div
+            row8: div
+            left_sidebar: div
+            main_content: div
+            right_sidebar: div
+            row9: div
+            row10: div
+            row11: div
+            row12: div
+            row13: div
+            row14: div
+            row15: div
+          outer_wrapper: div
+          attributes: ''
+          link_attribute: ''
+          link_custom: ''
+          classes:
+            layout_class: {  }
+            row1:
+              ful_wdt: ful_wdt
+            row2: {  }
+            row3:
+              row_sp_bot: row_sp_bot
+            row4: {  }
+            row5: {  }
+            row6: {  }
+            row7: {  }
+            row8: {  }
+            left_sidebar: {  }
+            main_content: {  }
+            right_sidebar: {  }
+            row9: {  }
+            row10: {  }
+            row11: {  }
+            row12: {  }
+            row13: {  }
+            row14: {  }
+            row15: {  }
+        page_title: null
+        storage_type: panelizer_default
+        storage_id: 'node:landing_page:full:type_listing'
+        pattern: panelizer
+        builder: ipe
+        static_context: {  }
+      default:
+        blocks: {  }
+        id: panels_variant
+        uuid: a2f0caaa-378a-4c7f-8731-30a872ead71c
+        label: Default
+        weight: 0
+        layout: behavioursoe_layout
+        layout_settings:
+          wrappers:
+            row1: div
+            row2: div
+            row3: div
+            row4: div
+            row5: div
+            row6: div
+            row7: div
+            row8: div
+            left_sidebar: div
+            main_content: div
+            right_sidebar: div
+            row9: div
+            row10: div
+            row11: div
+            row12: div
+            row13: div
+            row14: div
+            row15: div
+          outer_wrapper: div
+          attributes: ''
+          link_attribute: ''
+          link_custom: ''
+          classes:
+            layout_class: {  }
+            row1: {  }
+            row2: {  }
+            row3: {  }
+            row4: {  }
+            row5: {  }
+            row6: {  }
+            row7: {  }
+            row8: {  }
+            left_sidebar: {  }
+            main_content: {  }
+            right_sidebar: {  }
+            row9: {  }
+            row10: {  }
+            row11: {  }
+            row12: {  }
+            row13: {  }
+            row14: {  }
+            row15: {  }
+        page_title: ''
+        storage_type: panelizer_default
+        storage_id: 'node:landing_page:full:default'
+        pattern: panelizer
+        builder: ipe
+        static_context: {  }
+    allow: true
+    default: default
+_core:
+  default_config_hash: 4Jl7ekV85NPAM5Ybd0AMFm6PQR2aKcpP-7iTTlXph9Q
+id: node.landing_page.full
+targetEntityType: node
+bundle: landing_page
+mode: full
+content:
+  field_meta_tags:
+    type: metatag_empty_formatter
+    region: content
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  workbench_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  body: true
+  content_moderation_control: true
+  panelizer: true

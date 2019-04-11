@@ -1,0 +1,300 @@
+uuid: 53f85d5e-d8c8-4446-8eeb-448b26d1ec5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.concentrations.body
+    - field.field.node.concentrations.field_carrers
+    - field.field.node.concentrations.field_deadline
+    - field.field.node.concentrations.field_degree
+    - field.field.node.concentrations.field_endorsement_
+    - field.field.node.concentrations.field_full_data
+    - field.field.node.concentrations.field_heading
+    - field.field.node.concentrations.field_inter
+    - field.field.node.concentrations.field_lead_text
+    - field.field.node.concentrations.field_name
+    - field.field.node.concentrations.field_quick_fact
+    - field.field.node.concentrations.field_requirements
+    - field.field.node.concentrations.field_small_text
+    - field.field.node.concentrations.field_tab_1_title
+    - field.field.node.concentrations.field_tab_2_title
+    - field.field.node.concentrations.field_tab_3_title
+    - field.field.node.concentrations.panelizer
+    - node.type.concentrations
+  module:
+    - content_moderation
+    - entity_reference_views_select
+    - field_group
+    - path
+    - scheduler
+    - text
+third_party_settings:
+  field_group:
+    group_tab_1:
+      children:
+        - field_tab_1_title
+        - field_lead_text
+        - body
+        - field_requirements
+        - field_endorsement_
+        - group_sample_curriculum
+      parent_name: ''
+      weight: 1
+      format_type: details
+      format_settings:
+        label: 'Overview & Requirements'
+        open: true
+        required_fields: true
+        id: ''
+        classes: ''
+      label: 'Overview & Requirements'
+    group_tab_:
+      children:
+        - field_tab_2_title
+        - group_deadlines
+        - field_quick_fact
+      parent_name: ''
+      weight: 2
+      format_type: details
+      format_settings:
+        label: Applying
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: Applying
+    group_tab_3:
+      children:
+        - field_tab_3_title
+        - field_carrers
+        - field_inter
+        - scheduler_settings
+      parent_name: ''
+      weight: 3
+      format_type: details
+      format_settings:
+        label: 'Carrers and Interships'
+        required_fields: true
+        id: ''
+        classes: ''
+        open: false
+      label: 'Carrers and Interships'
+    group_sample_curriculum:
+      children:
+        - field_name
+        - field_small_text
+      parent_name: group_tab_1
+      weight: 20
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Sample Curriculum'
+    group_deadlines:
+      children:
+        - field_heading
+        - field_full_data
+        - field_deadline
+      parent_name: group_tab_
+      weight: 10
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Deadlines
+id: node.concentrations.default
+targetEntityType: node
+bundle: concentrations
+mode: default
+content:
+  body:
+    weight: 17
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_carrers:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_deadline:
+    weight: 29
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_degree:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_endorsement_:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_full_data:
+    weight: 28
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_heading:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textfield
+    region: content
+  field_inter:
+    weight: 30
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_lead_text:
+    weight: 16
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_name:
+    weight: 26
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_quick_fact:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_requirements:
+    weight: 18
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_small_text:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tab_1_title:
+    weight: 15
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tab_2_title:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_tab_3_title:
+    weight: 27
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 13
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 31
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 14
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 8
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: erviews_options_select
+    weight: 5
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  panelizer: true

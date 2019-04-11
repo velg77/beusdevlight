@@ -1,0 +1,25 @@
+uuid: e604ceba-bf53-4a04-82e0-fae1bdeee0e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.landscape
+  module:
+    - crop
+name: sm_landscape_2x
+label: sm_landscape_2x
+effects:
+  8426b4ef-a23f-4694-8f20-de4c62cb2c82:
+    uuid: 8426b4ef-a23f-4694-8f20-de4c62cb2c82
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: landscape
+  157d86ea-5429-40e1-8e5d-9a3d90355221:
+    uuid: 157d86ea-5429-40e1-8e5d-9a3d90355221
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 540
+      height: 304
+      anchor: center-center

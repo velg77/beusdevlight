@@ -1,0 +1,14 @@
+uuid: 2a5743e6-3c23-44f2-a514-61df80b6054d
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - media
+third_party_settings:
+  lightning_core:
+    description: ''
+id: media.hero_image_small
+label: 'Hero Image Small'
+targetEntityType: media
+cache: true

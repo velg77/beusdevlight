@@ -1,0 +1,67 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:behaviorsoe1.betabasket.net
+X-WR-TIMEZONE:Australia/Adelaide
+BEGIN:VTIMEZONE
+TZID:Australia/Adelaide
+X-LIC-LOCATION:Australia/Adelaide
+BEGIN:DAYLIGHT
+TZNAME:ACDT
+TZOFFSETFROM:+0930
+TZOFFSETTO:+1030
+DTSTART:20170930T163000
+END:DAYLIGHT
+BEGIN:DAYLIGHT
+TZNAME:ACDT
+TZOFFSETFROM:+0930
+TZOFFSETTO:+1030
+DTSTART:20181006T163000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZNAME:ACST
+TZOFFSETFROM:+1030
+TZOFFSETTO:+0930
+DTSTART:20180331T163000
+END:STANDARD
+BEGIN:STANDARD
+TZNAME:ACST
+TZOFFSETFROM:+1030
+TZOFFSETTO:+0930
+DTSTART:20190406T163000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:e33d79ae04a5ffec8f24aa82c8ec8c19
+DTSTART;TZID=Australia/Adelaide:20180911T084905
+SEQUENCE:0
+TRANSP:OPAQUE
+URL:http://behaviorsoe1.betabasket.net/[node:path]
+SUMMARY:IRB on the Road with Deborah Schild
+CLASS:PUBLIC
+DESCRIPTION:Description:\nCurabitur non nulla sit amet nisl tempus convalli
+ s quis ac lectus.\nPraesent sapien massa\, convallis a pellentesque nec\, 
+ egestas non nisi.\nSed porttitor lectus nibh. Pellentesque in ipsum id orc
+ i porta\ndapibus. Curabitur arcu erat\, accumsan id imperdiet et\, porttit
+ or at\nsem. Proin eget tortor risus. Vestibulum ac diam sit amet quam\nveh
+ icula elementum sed sit amet dui. Curabitur arcu erat\, accumsan id\nimper
+ diet et\, porttitor at sem. Cras ultricies ligula sed magna dictum\nporta.
+  Mauris blandit aliquet elit\, eget tincidunt nibh pulvinar a.\n Start Dat
+ e: Sat\, 03/16/2019 - 10:10 End Date: [node:field_event_date]\n[node:field
+ _author]
+X-ALT-DESC;FMTTYPE=text/html:Description: <p>Curabitur non nulla sit amet n
+ isl tempus convallis quis ac lectus. Praesent sapien massa\, convallis a p
+ ellentesque nec\, egestas non nisi. Sed porttitor lectus nibh. Pellentesqu
+ e in ipsum id orci porta dapibus. Curabitur arcu erat\, accumsan id imperd
+ iet et\, porttitor at sem. Proin eget tortor risus. Vestibulum ac diam sit
+  amet quam vehicula elementum sed sit amet dui. Curabitur arcu erat\, accu
+ msan id imperdiet et\, porttitor at sem. Cras ultricies ligula sed magna d
+ ictum porta. Mauris blandit aliquet elit\, eget tincidunt nibh pulvinar a.
+ </p>\n</br>\nStart Date: \n\n<!-- THEME DEBUG -->\n<!-- THEME HOOK: 'time'
+  -->\n<!-- BEGIN OUTPUT from 'core/themes/classy/templates/field/time.html
+ .twig' -->\n<time datetime=\"2019-03-15T23:40:20Z\" class=\"datetime\">Sat
+ \, 03/16/2019 - 10:10</time>\n\n<!-- END OUTPUT from 'core/themes/classy/t
+ emplates/field/time.html.twig' -->\n\n</br></br>\nEnd Date: [node:field_ev
+ ent_date]</br>\n[node:field_author]
+DTSTAMP:20190326T155518Z
+END:VEVENT
+END:VCALENDAR

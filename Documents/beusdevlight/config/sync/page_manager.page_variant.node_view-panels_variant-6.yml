@@ -1,0 +1,145 @@
+uuid: be136302-28bf-4812-8f12-69854fd8b113
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.node_view
+    - views.view.general
+  module:
+    - ctools
+    - ctools_block
+    - panels
+    - views
+id: node_view-panels_variant-6
+label: Awards
+variant: panels_variant
+variant_settings:
+  blocks:
+    195f9991-daf4-442a-a014-e849e4a48905:
+      id: 'entity_field:node:type'
+      label: 'Content type'
+      provider: ctools_block
+      label_display: '0'
+      formatter:
+        label: hidden
+        type: entity_reference_label
+        settings:
+          link: false
+        third_party_settings: {  }
+        weight: 0
+      region: row2
+      weight: 0
+      uuid: 195f9991-daf4-442a-a014-e849e4a48905
+      context_mapping:
+        entity: node
+    882d0584-fa69-4758-a42b-9e20695d7834:
+      id: 'entity_field:node:title'
+      label: Title
+      provider: ctools_block
+      label_display: '0'
+      formatter:
+        label: hidden
+        type: string
+        settings:
+          link_to_entity: false
+        third_party_settings: {  }
+        weight: 0
+      region: row2
+      weight: 0
+      uuid: 882d0584-fa69-4758-a42b-9e20695d7834
+      context_mapping:
+        entity: node
+    ac3b2be2-f0b9-437e-acf9-51494e092e20:
+      id: 'entity_view:node'
+      label: 'Entity view (Content)'
+      provider: ctools
+      label_display: '0'
+      view_mode: default
+      region: row3
+      weight: 0
+      uuid: ac3b2be2-f0b9-437e-acf9-51494e092e20
+      context_mapping:
+        entity: node
+    3fed638b-3029-4a47-9038-5ce4b4543eb5:
+      id: 'views_block:general-more_awards'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: row4
+      weight: 0
+      uuid: 3fed638b-3029-4a47-9038-5ce4b4543eb5
+      context_mapping: {  }
+  id: panels_variant
+  uuid: ddb2ede3-7329-4482-a845-eb8c61f9c082
+  label: null
+  weight: 0
+  layout: behavioursoe_layout
+  layout_settings:
+    wrappers:
+      row1: div
+      row2: div
+      row3: div
+      row4: div
+      row5: div
+      row6: div
+      row7: div
+      row8: div
+      left_sidebar: div
+      right_sidebar: div
+      row9: div
+      row10: div
+      row11: div
+      row12: div
+      row13: div
+      row14: div
+      row15: div
+    outer_wrapper: div
+    attributes: ''
+    link_attribute: ''
+    link_custom: ''
+    classes:
+      layout_class:
+        content_banner: content_banner
+      row1:
+        ful_wdt: ful_wdt
+      row2:
+        blu_bg: blu_bg
+      row3:
+        row_sp_top: row_sp_top
+        row_sp_bot: row_sp_bot
+        sm_cnt: sm_cnt
+      row4:
+        brdr_top: brdr_top
+        row_sp_top: row_sp_top
+        row_sp_bot: row_sp_bot
+      row5: {  }
+      row6: {  }
+      row7: {  }
+      row8: {  }
+      left_sidebar: {  }
+      right_sidebar: {  }
+      row9: {  }
+      row10: {  }
+      row11: {  }
+      row12: {  }
+      row13: {  }
+      row14: {  }
+      row15: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: node_view-panels_variant-6
+  builder: standard
+page: node_view
+weight: 0
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    bundles:
+      awards: awards
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+static_context: {  }

@@ -1,0 +1,11 @@
+id: events_tags_list_view
+label: 'Events Tags - List View[node:field_tags]'
+ui_limit: ''
+properties:
+  content:
+    value: "<p>[node:field_tags:0:entity]</p>\r\n"
+    format: rich_text
+type: token
+type_label: 'Token field'
+entities:
+  node: node

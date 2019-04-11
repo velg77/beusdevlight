@@ -1,0 +1,82 @@
+.block-naturalformblock-block,
+.block-admissinsnaturalformblock-block {
+  text-align: center; }
+  .block-naturalformblock-block form .block-title,
+  .block-admissinsnaturalformblock-block form .block-title {
+    color: #ffffff; }
+  .block-naturalformblock-block form p,
+  .block-admissinsnaturalformblock-block form p {
+    font-size: 1.111em;
+    font-family: 'OpenSans', sans-serif;
+    line-height: 28px;
+    letter-spacing: 0;
+    color: #ffffff; }
+  .block-naturalformblock-block form div label,
+  .block-admissinsnaturalformblock-block form div label {
+    font-size: 2.000em;
+    font-family: 'Avenir-Light', sans-serif;
+    letter-spacing: 0.25px;
+    color: #ffffff; }
+  .block-naturalformblock-block form div .chosen-container,
+  .block-admissinsnaturalformblock-block form div .chosen-container {
+    width: auto !important; }
+    .block-naturalformblock-block form div .chosen-container a.chosen-single,
+    .block-admissinsnaturalformblock-block form div .chosen-container a.chosen-single {
+      background: no-repeat;
+      border: none;
+      border-bottom: 2px solid #fff;
+      box-shadow: none;
+      color: #fff;
+      font-family: 'Avenir-Heavy', sans-serif;
+      font-size: 2.000em;
+      margin-bottom: 5px;
+      letter-spacing: 0.5px;
+      height: 33px;
+      width: fit-content;
+      border-radius: 0; }
+      .block-naturalformblock-block form div .chosen-container a.chosen-single div b,
+      .block-admissinsnaturalformblock-block form div .chosen-container a.chosen-single div b {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(../../../../assets/images/dropdown-arrow.png) no-repeat 0px 2px !important;
+        background-position: 0px -29px !important;
+        background-size: 16px 50px !important; }
+    .block-naturalformblock-block form div .chosen-container .chosen-drop,
+    .block-admissinsnaturalformblock-block form div .chosen-container .chosen-drop {
+      width: 100%; }
+      .block-naturalformblock-block form div .chosen-container .chosen-drop .chosen-search,
+      .block-admissinsnaturalformblock-block form div .chosen-container .chosen-drop .chosen-search {
+        display: none; }
+      .block-naturalformblock-block form div .chosen-container .chosen-drop ul,
+      .block-admissinsnaturalformblock-block form div .chosen-container .chosen-drop ul {
+        padding: 10px; }
+        .block-naturalformblock-block form div .chosen-container .chosen-drop ul li,
+        .block-admissinsnaturalformblock-block form div .chosen-container .chosen-drop ul li {
+          font-family: 'Avenir-Heavy', sans-serif;
+          font-size: 1.444em;
+          line-height: 24px;
+          letter-spacing: 0.36px;
+          color: #0d57aa;
+          text-align: left; }
+          .block-naturalformblock-block form div .chosen-container .chosen-drop ul li.highlighted,
+          .block-admissinsnaturalformblock-block form div .chosen-container .chosen-drop ul li.highlighted {
+            color: #fff; }
+  .block-naturalformblock-block form div .chosen-container-active.chosen-with-drop .chosen-single div b,
+  .block-admissinsnaturalformblock-block form div .chosen-container-active.chosen-with-drop .chosen-single div b {
+    background-position: 0px 9px !important; }
+  .block-naturalformblock-block form .form-item,
+  .block-admissinsnaturalformblock-block form .form-item {
+    margin: 0 0 50px; }
+  .block-naturalformblock-block form #child2_chosen,
+  .block-naturalformblock-block form #child3_chosen,
+  .block-admissinsnaturalformblock-block form #child2_chosen,
+  .block-admissinsnaturalformblock-block form #child3_chosen {
+    pointer-events: none; }
+  .block-naturalformblock-block form .form-submit,
+  .block-admissinsnaturalformblock-block form .form-submit {
+    padding: 8px 47px;
+    font-family: 'Avenir-Medium', sans-serif; }
+  .block-naturalformblock-block form #edit-submit-label,
+  .block-admissinsnaturalformblock-block form #edit-submit-label {
+    pointer-events: none; }

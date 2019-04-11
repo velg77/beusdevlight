@@ -1,0 +1,236 @@
+// Variables
+@import "../base/_variables";
+
+
+a.soebtn {
+  @include site-color-yellowbutton();
+  font-family: 'HelveticaNeueMedium', sans-serif;
+  font-size: 0.778em;
+  line-height: 28px;
+  padding: 10px 20px;
+}
+.footer {
+  clear: both;
+  background: $site-color-blue;
+  font-family: 'HelveticaNeueMedium', sans-serif;
+  color: $white;
+  padding: 40px 0;
+  .menu {
+    a:link {
+      color: $white;
+    }
+    a:visited {
+      color: $white;
+    }
+    a:hover, a:focus {
+      border-bottom-color: $white;
+    }
+    a:active {
+      color: $white;
+    }
+  }
+  .ft-logo {
+    width: 280px;
+  }
+  .flw-cnts {
+    ul {
+      padding: 0px;
+      margin: 16px 0;
+      & > li {
+        list-style: none;
+        display: inline;
+        margin: 0 10px 0 0;
+        & > a {
+          background: $white;
+          color:$site-color-blue;
+          border-radius: 50px;
+          border: 0;
+          display: inline-block;
+          line-height: 40px;
+          width: 40px;
+          height: 40px;
+          text-align: center;
+          &:hover {
+            background: $site-color-yellow;
+          }
+        }
+      }
+    }
+  }
+  ul.menu {
+    padding: 0;
+    list-style-type: none;
+    margin: 0px;
+    & > .menu-item--expanded {
+      float: left;
+      vertical-align: top;
+      width: 50%;
+      padding: 0;
+      border-bottom: 0;
+      & > a {
+        display: none;
+      }
+      ul.menu {
+        li {
+          padding:7px 0;
+          font-size: 0.778rem;
+        }
+        li:before {
+          font-family: "Font Awesome 5 Free";
+          font-size: 0.889rem;
+          padding-right: 6px;
+          font-weight: 900;
+        }
+        li:after {
+          font-family: "Font Awesome 5 Free";
+          font-size: 0.889rem;
+          padding-right: 7px;
+          font-weight: 900;
+          cursor: pointer;
+        }
+        li.ceder {
+          margin-top:20px;
+        }
+        li.news::before {
+          content: "\f1ea";
+        }
+        li.events::before {
+          content: "\f073";
+        }
+        li.Directory::before {
+          content: "\f2b9";
+        }
+        li.faq::before {
+          content: "\f059";
+        }
+        li.rf-plans::before {
+          content: "\f594";
+        }
+        li.vid-cloc::before {
+          content: "\f03d";
+        }
+        li.pho-galy::before {
+          content: "\f302";
+        }
+        li.edwks:after {
+          content: "\f35d";
+        }
+      }
+      &:nth-of-type(2n+1) {
+        clear: both;
+      }
+    }
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+  .cpy-rht-blk {
+    margin-top:15px;
+    .ftr-addrs {
+      font-size:0.667rem;
+      & > div {
+        margin: 9px 0;
+        letter-spacing: 0.017rem;
+      }
+    }
+  }
+  #block-behavioursoe-footer {
+    margin-top:20px;
+    margin-bottom: 20px;
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+  .block-block-content {
+    padding-top: 0;
+    .field--name-body {
+      text-align: left;
+      font-size: inherit;
+      max-width: none;
+      margin-bottom: 0;
+    }
+  }
+  .cpyrht{
+    a{
+      color:#fff;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .footer {
+    padding: 40px 0;
+    ul.menu {
+      & > .menu-item--expanded {
+        width:33.33%;
+        &:nth-of-type(2n+1) {
+          clear: none;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .footer {
+    #block-behavioursoe-footer {
+      float:left;
+      width:80%;
+      margin-top: 0px;
+      margin-bottom: 0;
+      li.ceder {
+        margin-top:0px;
+      }
+    }
+    #block-loginsoe {
+      width:18%;
+      float:right;
+    }
+    .menu {
+      .pho-galy {
+        display: none;
+      }
+    }
+    .cpy-rht-blk {
+      float: left;
+      width: 100%;
+    }
+  }
+}
+@media (min-width: 1200px) {
+  .footer {
+    padding: 97px 0px;
+    .ftr-logo-blk {
+      float: left;
+      width: 34%;
+    }
+    #block-behavioursoe-footer {
+      width:47.5%;
+      margin-top: -10px;
+      ul.menu {
+        & > .menu-item--expanded {
+        width:33.4%;
+        }
+        & > .menu-item--expanded:nth-child(2) {
+          width:44%;
+        }
+        & > .menu-item--expanded:last-child {
+          width:22%;
+        }
+      }
+    }
+    .cpy-rht-blk {
+      margin-top:24px;
+      .ftr-addrs {
+        .adrsdiv {
+          float:left;
+        }
+        .cpyrht {
+          float:right;
+        }
+      }
+    }
+  }
+}

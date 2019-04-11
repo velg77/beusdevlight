@@ -1,0 +1,41 @@
+uuid: d6dc49c9-205c-49df-a8bb-83915a8967a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.community
+    - field.field.paragraph.content.field_cta
+    - field.field.paragraph.content.field_description
+    - field.field.paragraph.content.field_image
+    - field.field.paragraph.content.field_sub_title
+    - field.field.paragraph.content.field_title
+    - image.style.lg_landscape_2x
+    - paragraphs.paragraphs_type.content
+  module:
+    - media
+id: paragraph.content.community
+targetEntityType: paragraph
+bundle: content
+mode: community
+content:
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: lg_landscape_2x
+      image_link: ''
+    third_party_settings: {  }
+    type: media_thumbnail
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  field_cta: true
+  field_description: true
+  field_sub_title: true

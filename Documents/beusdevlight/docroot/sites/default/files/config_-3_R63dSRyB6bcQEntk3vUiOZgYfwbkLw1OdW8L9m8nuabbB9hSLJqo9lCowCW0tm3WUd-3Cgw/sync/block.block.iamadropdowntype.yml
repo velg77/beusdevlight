@@ -1,0 +1,29 @@
+uuid: cab8760b-f8ee-4fa8-83e4-0d8afd3889e8
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:6cf1d185-47d6-4a51-bec5-21801f35453e'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - behavioursoe
+third_party_settings:
+  block_class:
+    classes: iam-blk
+id: iamadropdowntype
+theme: behavioursoe
+region: header_top
+weight: -7
+provider: null
+plugin: 'block_content:6cf1d185-47d6-4a51-bec5-21801f35453e'
+settings:
+  id: 'block_content:6cf1d185-47d6-4a51-bec5-21801f35453e'
+  label: 'I am a Dropdown type'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

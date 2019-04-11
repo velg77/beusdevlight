@@ -1,0 +1,628 @@
+uuid: f40525a9-5f67-4fcd-94aa-bcf294cf1caf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.concentrations.body
+    - field.field.node.concentrations.field_acadamic_degree
+    - field.field.node.concentrations.field_application_process
+    - field.field.node.concentrations.field_application_process_descri
+    - field.field.node.concentrations.field_carrers
+    - field.field.node.concentrations.field_course
+    - field.field.node.concentrations.field_deadline
+    - field.field.node.concentrations.field_degree
+    - field.field.node.concentrations.field_endorsement_
+    - field.field.node.concentrations.field_full_data
+    - field.field.node.concentrations.field_heading
+    - field.field.node.concentrations.field_inter
+    - field.field.node.concentrations.field_lead_text
+    - field.field.node.concentrations.field_meta_tags
+    - field.field.node.concentrations.field_quick_fact
+    - field.field.node.concentrations.field_requirements
+    - field.field.node.concentrations.field_tab_1_title
+    - field.field.node.concentrations.field_tab_2_title
+    - field.field.node.concentrations.field_tab_3_title
+    - field.field.node.concentrations.panelizer
+    - node.type.concentrations
+  module:
+    - metatag
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: true
+    custom: true
+    allow: true
+    default: default
+    displays:
+      default:
+        blocks:
+          4cdca3e5-158d-4e79-be53-2ff9ccc91d9a:
+            id: 'entity_field:node:field_lead_text'
+            label: 'Lead text'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: row4
+            weight: -9
+            uuid: 4cdca3e5-158d-4e79-be53-2ff9ccc91d9a
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          a2e0cc7e-8cc2-495d-8427-71beb7d0d22a:
+            id: 'entity_field:node:body'
+            label: Body
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: row4
+            weight: -8
+            uuid: a2e0cc7e-8cc2-495d-8427-71beb7d0d22a
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          4250f006-d3d2-42e7-ad90-2ef2ca9faf84:
+            id: 'entity_field:node:field_requirements'
+            label: Requirements
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: entity_reference_entity_view
+              settings:
+                view_mode: default
+              third_party_settings: {  }
+              weight: 0
+            region: row5
+            weight: -10
+            uuid: 4250f006-d3d2-42e7-ad90-2ef2ca9faf84
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          25d3d836-ff84-46c4-8195-c1344317cef0:
+            id: 'entity_field:node:field_tab_2_title'
+            label: 'Tab Title'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+            region: row3
+            weight: -9
+            uuid: 25d3d836-ff84-46c4-8195-c1344317cef0
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          38f6430f-1659-494c-9c76-b8e233f3800e:
+            id: 'entity_field:node:field_tab_1_title'
+            label: 'Tab Title'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+            region: row3
+            weight: -10
+            uuid: 38f6430f-1659-494c-9c76-b8e233f3800e
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          b37d2e13-09fb-4eb6-a42c-15ed332fff4f:
+            id: 'entity_field:node:field_tab_3_title'
+            label: 'Tab Title'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+            region: row3
+            weight: -8
+            uuid: b37d2e13-09fb-4eb6-a42c-15ed332fff4f
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          6616d407-3b68-48c1-b5ee-edbf05d0af68:
+            id: 'entity_field:node:title'
+            label: Title
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+            region: row2
+            weight: -10
+            uuid: 6616d407-3b68-48c1-b5ee-edbf05d0af68
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          19432bda-1a39-4824-8213-adfd18369bec:
+            id: 'entity_field:node:field_acadamic_degree'
+            label: 'Acadamic Degree'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: entity_reference_label
+              settings:
+                link: false
+              third_party_settings: {  }
+              weight: 0
+            region: row2
+            weight: -10
+            uuid: 19432bda-1a39-4824-8213-adfd18369bec
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          f37f89c6-0dd1-40cf-adc6-29bdad27b7f2:
+            id: 'entity_field:node:field_deadline'
+            label: Deadline
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: entity_reference_entity_view
+              settings:
+                view_mode: teaser
+              third_party_settings: {  }
+              weight: 0
+            region: row13
+            weight: -6
+            uuid: f37f89c6-0dd1-40cf-adc6-29bdad27b7f2
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          1721d29d-1ae0-4a6e-ba3c-a59fee5c2e44:
+            id: 'entity_field:node:field_full_data'
+            label: Deadlines
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+            region: row13
+            weight: -7
+            uuid: 1721d29d-1ae0-4a6e-ba3c-a59fee5c2e44
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          386b8d7c-a49f-4868-9f41-6f64f68cad0f:
+            id: 'entity_field:node:field_quick_fact'
+            label: 'Quick Facts'
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: entity_reference_entity_view
+              settings:
+                view_mode: default
+              third_party_settings: {  }
+              weight: 0
+            region: row15
+            weight: -7
+            uuid: 386b8d7c-a49f-4868-9f41-6f64f68cad0f
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          2e2d8465-b52a-4e48-aeef-eb3df464e957:
+            id: 'entity_field:node:field_carrers'
+            label: Careers
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: entity_reference_entity_view
+              settings:
+                view_mode: default
+              third_party_settings: {  }
+              weight: 0
+            region: row18
+            weight: -7
+            uuid: 2e2d8465-b52a-4e48-aeef-eb3df464e957
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          04ea65f2-ecc0-4e6c-a5b5-2725ece568d6:
+            id: 'entity_field:node:field_inter'
+            label: Internships
+            provider: ctools_block
+            label_display: visible
+            formatter:
+              label: hidden
+              type: entity_reference_entity_view
+              settings:
+                view_mode: default
+              third_party_settings: {  }
+              weight: 0
+            region: row19
+            weight: -7
+            uuid: 04ea65f2-ecc0-4e6c-a5b5-2725ece568d6
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+          99e2e3aa-6dc6-4230-9d79-16fa4dc6b1c7:
+            id: 'views_block:general-block_24'
+            label: 'Application Process'
+            provider: views
+            label_display: visible
+            views_label: 'Application Process'
+            items_per_page: none
+            region: row14
+            weight: -6
+            uuid: 99e2e3aa-6dc6-4230-9d79-16fa4dc6b1c7
+            context_mapping: {  }
+          e2da06bd-4ba3-4326-acc2-3942597990a8:
+            id: 'block_content:2fcf4285-5c12-40ee-8695-0d6e577277bd'
+            label: Questions
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: find_program
+            region: row7
+            weight: 0
+            uuid: e2da06bd-4ba3-4326-acc2-3942597990a8
+            context_mapping: {  }
+          954050c8-4512-4ee7-a31a-ec6c2f357711:
+            id: 'block_content:a6899a29-ec24-417e-83b8-90d13131cc6a'
+            label: 'Concentrations [Banner Bottom]'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: hero_image_small
+            region: row11
+            weight: 0
+            uuid: 954050c8-4512-4ee7-a31a-ec6c2f357711
+            context_mapping: {  }
+          5ea1e56c-7ad1-4335-89d8-85fe435d8555:
+            id: 'block_content:2f5d7223-5fee-4e6c-b91d-270dfbe2ea2c'
+            label: 'OUR IMPACT'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: full
+            region: row12
+            weight: 0
+            uuid: 5ea1e56c-7ad1-4335-89d8-85fe435d8555
+            context_mapping: {  }
+          23199481-66ff-4845-987f-c264db7373a9:
+            id: 'block_content:3ff9644f-a29f-459c-9c4d-d8417d9dfdce'
+            label: 'QUESTIONS ?'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: people_type_list
+            region: row16
+            weight: 0
+            uuid: 23199481-66ff-4845-987f-c264db7373a9
+            context_mapping: {  }
+          06478b16-166b-41f3-aab8-5ab0b181c887:
+            id: 'block_content:fdb9d4ad-61de-4446-bf87-acfb433e74c4'
+            label: 'CONNECT WITH US'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: connect
+            region: row17
+            weight: 0
+            uuid: 06478b16-166b-41f3-aab8-5ab0b181c887
+            context_mapping: {  }
+          5b041c88-70d4-4341-95f1-19bfe2cfd0c2:
+            id: 'block_content:1ec34a48-da53-42af-a885-c00a6b646bda'
+            label: PEOPLE
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: people_list
+            region: row10
+            weight: 0
+            uuid: 5b041c88-70d4-4341-95f1-19bfe2cfd0c2
+            context_mapping: {  }
+          80d65c21-d9ca-46ef-8380-8f6c9f807186:
+            id: 'block_content:a6899a29-ec24-417e-83b8-90d13131cc6a'
+            label: 'Concentrations [Banner Bottom]'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: hero_image_small
+            region: row20
+            weight: 0
+            uuid: 80d65c21-d9ca-46ef-8380-8f6c9f807186
+            context_mapping: {  }
+          995ba7b1-40f7-488a-aafe-fbfc35382c11:
+            id: 'views_block:general-concentration_courses'
+            label: 'Sample Curriculum'
+            provider: views
+            label_display: visible
+            views_label: 'Sample Curriculum'
+            items_per_page: none
+            region: row6
+            weight: 0
+            uuid: 995ba7b1-40f7-488a-aafe-fbfc35382c11
+            context_mapping: {  }
+          3c05769d-e3a2-4066-98c3-a63aea673d3a:
+            id: 'views_block:general-endorsement_areas'
+            label: 'ENDORSEMENT AREAS'
+            provider: views
+            label_display: visible
+            views_label: 'ENDORSEMENT AREAS'
+            items_per_page: none
+            region: row8
+            weight: 0
+            uuid: 3c05769d-e3a2-4066-98c3-a63aea673d3a
+            context_mapping: {  }
+        id: panels_variant
+        label: Default
+        uuid: 272f5de0-a75f-4236-8be8-9eef12f89c1f
+        weight: 0
+        layout: behavioursoe_clayout
+        layout_settings:
+          wrappers:
+            row1: div
+            row2: div
+            row3: div
+            row4: div
+            row5: div
+            row6: div
+            row7: div
+            row8: div
+            row9: div
+            row10: div
+            row11: div
+            row12: div
+            row13: div
+            row14: div
+            row15: div
+            row16: div
+            row17: div
+            row18: div
+            row19: div
+            row20: div
+          outer_wrapper: div
+          attributes: ''
+          link_attribute: ''
+          link_custom: ''
+          classes:
+            layout_class:
+              content_banner: content_banner
+            row1:
+              ful_wdt: ful_wdt
+            row2: {  }
+            row3:
+              light_blue: light_blue
+              mnu_bar: mnu_bar
+            row4:
+              brdr_bot: brdr_bot
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row5:
+              brdr_bot: brdr_bot
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row6:
+              row_sp_top: row_sp_top
+            row7:
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row8:
+              row_sp_bot: row_sp_bot
+            row9: {  }
+            row10:
+              row_sp_bot: row_sp_bot
+            row11:
+              content_banner: content_banner
+              ful_wdt: ful_wdt
+            row12:
+              ylw_bg: ylw_bg
+            row13:
+              brdr_bot: brdr_bot
+              row_sp_top: row_sp_top
+            row14:
+              brdr_bot: brdr_bot
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+              sm_cnt: sm_cnt
+            row15:
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row16:
+              blu_bg_img2: blu_bg_img2
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row17:
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row18:
+              row_sp_top: row_sp_top
+              row_sp_bot: row_sp_bot
+            row19:
+              row_sp_bot: row_sp_bot
+            row20:
+              ful_wdt: ful_wdt
+        page_title: ''
+        storage_type: panelizer_default
+        storage_id: 'node:concentrations:default:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+id: node.concentrations.default
+targetEntityType: node
+bundle: concentrations
+mode: default
+content:
+  body:
+    weight: 110
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_acadamic_degree:
+    weight: 127
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_application_process:
+    weight: 129
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_application_process_descri:
+    weight: 128
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_carrers:
+    weight: 119
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_course:
+    weight: 126
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_deadline:
+    weight: 124
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_degree:
+    weight: 109
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_endorsement_:
+    weight: 121
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_full_data:
+    weight: 118
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_heading:
+    weight: 125
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_inter:
+    weight: 120
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_lead_text:
+    weight: 111
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_meta_tags:
+    weight: 130
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_quick_fact:
+    weight: 116
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_requirements:
+    weight: 112
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_tab_1_title:
+    weight: 108
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tab_2_title:
+    weight: 104
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_tab_3_title:
+    weight: 107
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  panelizer: true

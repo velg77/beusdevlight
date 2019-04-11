@@ -1,0 +1,28 @@
+uuid: 1cc80126-75e0-43c1-82bc-352e0dc1e91c
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.room_features_seating_capacityte
+  module:
+    - panelizer
+    - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.room_features_seating_capacityte.default
+targetEntityType: taxonomy_term
+bundle: room_features_seating_capacityte
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

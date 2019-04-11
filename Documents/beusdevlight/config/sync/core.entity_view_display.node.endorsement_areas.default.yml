@@ -1,0 +1,46 @@
+uuid: c9a26a07-d3f9-44fa-99de-e18e520987ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.endorsement_areas.body
+    - field.field.node.endorsement_areas.field_endorsement_areas
+    - node.type.endorsement_areas
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.endorsement_areas.default
+targetEntityType: node
+bundle: endorsement_areas
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 1
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_endorsement_areas:
+    weight: 3
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true

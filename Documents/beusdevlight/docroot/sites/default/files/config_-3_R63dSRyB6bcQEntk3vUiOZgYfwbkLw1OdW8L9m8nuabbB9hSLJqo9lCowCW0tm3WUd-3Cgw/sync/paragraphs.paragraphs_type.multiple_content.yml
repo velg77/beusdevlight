@@ -1,0 +1,9 @@
+uuid: bbfdda18-f214-46ca-9021-a48fde6b7f7c
+langcode: en
+status: true
+dependencies: {  }
+id: multiple_content
+label: 'Multiple Content'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

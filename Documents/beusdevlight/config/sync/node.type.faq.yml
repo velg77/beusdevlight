@@ -1,0 +1,30 @@
+uuid: 6bcf7cf0-a29d-4efd-863f-7ec1aeb1be4d
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+    - scheduler
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+  scheduler:
+    expand_fieldset: when_required
+    fields_display_mode: vertical_tab
+    publish_enable: false
+    publish_past_date: error
+    publish_required: false
+    publish_revision: true
+    publish_touch: false
+    unpublish_enable: false
+    unpublish_required: false
+    unpublish_revision: true
+name: FAQ
+type: faq
+description: 'Use to add the content for the FAQs'
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: true

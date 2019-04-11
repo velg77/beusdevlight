@@ -1,0 +1,14 @@
+uuid: 1b8a1377-9b19-43b5-88f8-c1b24b8d0b36
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.node_form_mode_example_reviewer
+  module:
+    - user
+id: user_add_role_action.node_form_mode_example_reviewer
+label: 'Add the Node form mode example reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: node_form_mode_example_reviewer

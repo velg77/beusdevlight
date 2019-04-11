@@ -1,0 +1,26 @@
+uuid: 3effe3ec-09a5-4379-a67c-52bbced9ee4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.concentrations
+  module:
+    - custom_add_another
+    - metatag
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.concentrations.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: concentrations
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

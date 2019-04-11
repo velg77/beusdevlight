@@ -1,0 +1,53 @@
+/**
+ * Clearfix
+*/
+/**
+ * Buttons
+*/
+.box {
+  padding: 10px 30px; }
+
+/**
+ * Css3 Extensions
+*/
+/**
+ * Flex
+*/
+/**
+ * Invisible
+*/
+.deadline-bdy {
+  border-top: 5px solid #ffcb05;
+  font-size: 1.111em;
+  max-width: 770px;
+  margin: 20px auto;
+  display: table;
+  width: 100%; }
+  .deadline-bdy > .field {
+    vertical-align: top;
+    display: table-cell; }
+  .deadline-bdy .field__label {
+    border-bottom: 1px solid #d8d8d8;
+    padding: 15px 0;
+    text-align: center;
+    color: #000;
+    font-family: 'Open Sans SemiBold', sans-serif; }
+  .deadline-bdy .field__items {
+    padding: 30px 8px;
+    text-align: center; }
+    .deadline-bdy .field__items > .field__item {
+      display: inline-block;
+      margin: 0 15px; }
+    .deadline-bdy .field__items:after {
+      content: "";
+      display: table;
+      clear: both; }
+  .deadline-bdy .field--name-field-sub-text {
+    font-size: 0.667rem; }
+
+@media (min-width: 768px) {
+  .deadline-bdy .field--name-field-final .field__items {
+    padding: 30px 18px; }
+  .deadline-bdy .node--type-concentrations .block-entity-fieldnodefield-full-data {
+    max-width: 770px;
+    margin: 20px auto; } }

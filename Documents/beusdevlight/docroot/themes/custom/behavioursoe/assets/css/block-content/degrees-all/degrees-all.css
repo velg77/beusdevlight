@@ -1,0 +1,70 @@
+/**
+ * Clearfix
+*/
+/**
+ * Buttons
+*/
+.box {
+  padding: 10px 30px; }
+
+/**
+ * Css3 Extensions
+*/
+/**
+ * Flex
+*/
+/**
+ * Invisible
+*/
+.deg-decrp .concentration-tags > .views-row {
+  border-top: 4px solid #ffcb05;
+  margin-bottom: 50px;
+  padding-top: 70px; }
+  .deg-decrp .concentration-tags > .views-row::after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.deg-decrp .group-left .heading {
+  color: #333333;
+  font-size: 1.444rem;
+  margin: 0px;
+  font-family: 'Avenir-heavy', sans-serif; }
+
+.deg-decrp .group-right .views-field-title {
+  font-family: 'Avenir-medium', sans-serif;
+  position: relative;
+  margin: 10px; }
+  .deg-decrp .group-right .views-field-title::before {
+    content: '|';
+    color: #ffcb05;
+    background: #ffcb05;
+    position: absolute;
+    left: -14px;
+    top: 6px;
+    font-size: 12px;
+    width: 4px; }
+
+.deg-decrp .group-right .title-group {
+  border: none;
+  margin: 0px;
+  font-size: 1.111rem;
+  font-family: 'Open Sans Regular', sans-serif;
+  text-align: uppercase;
+  color: #000; }
+
+.deg-decrp .field--name-description {
+  font-size: 0.889rem; }
+
+.deg-decrp .deg-decrp .field--name-field-lead-text {
+  font-size: 1.111rem;
+  border-bottom: none; }
+
+@media (min-width: 1024px) {
+  .deg-decrp .group-left {
+    float: left;
+    width: 70%;
+    padding-right: 100px; }
+  .deg-decrp .group-right {
+    width: 30%;
+    float: right; } }

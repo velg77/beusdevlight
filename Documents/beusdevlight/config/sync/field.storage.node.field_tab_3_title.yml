@@ -1,0 +1,21 @@
+uuid: 922a7de4-0a65-4c00-bd29-3199709fbf5c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_tab_3_title
+field_name: field_tab_3_title
+entity_type: node
+type: string
+settings:
+  max_length: 255
+  is_ascii: false
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

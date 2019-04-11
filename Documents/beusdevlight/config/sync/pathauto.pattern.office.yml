@@ -1,0 +1,23 @@
+uuid: 7f34a8d7-1bef-4d86-adaa-5f4846d9fdeb
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: office
+label: Office
+type: 'canonical_entities:taxonomy_term'
+pattern: 'office/[term:name]'
+selection_criteria:
+  1eeac5df-db65-4320-9cf6-28521e1272af:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      offices: offices
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 1eeac5df-db65-4320-9cf6-28521e1272af
+selection_logic: and
+weight: -5
+relationships: {  }

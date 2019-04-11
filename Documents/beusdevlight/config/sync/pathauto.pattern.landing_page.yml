@@ -1,0 +1,25 @@
+uuid: 17dfb8d2-8619-4a71-8b20-c4f80fd4c974
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: 8aTzJfhfIZ2Twd4_TsRkj1OcwgrlV-GtbGmNGRqAv_s
+id: landing_page
+label: 'Landing page'
+type: 'canonical_entities:node'
+pattern: '[node:title]'
+selection_criteria:
+  8162d9f9-2c00-4b00-8e2c-5e7a2cb678ce:
+    id: node_type
+    bundles:
+      landing_page: landing_page
+      news: news
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 8162d9f9-2c00-4b00-8e2c-5e7a2cb678ce
+selection_logic: and
+weight: -5
+relationships: {  }

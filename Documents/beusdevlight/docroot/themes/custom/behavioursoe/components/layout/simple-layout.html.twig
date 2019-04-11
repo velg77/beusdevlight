@@ -1,0 +1,121 @@
+{#
+/**
+* @file
+* Display Suite Simple layout Template.
+*/
+#}
+
+{#
+/**
+// Add Css File here
+// simple-layout.css
+
+
+
+
+ful_wdt
+gry_bg
+gry_bg_img
+blu_bg
+blu_bg_img
+blu_bg_img2
+blu_bg_img3
+blu_bg_img4
+ylw_bg
+ylw_bg_img
+brdr_top
+brdr_bot
+
+*/
+#}
+
+{{attach_library('behavioursoe/layout')}}
+
+<div{{ attributes.addClass('simple-layout', 'clearfix lout-3') }}>
+
+  {{ title_suffix.contextual_links }}  
+
+  {% if row1 or row2 %}
+    <div class="top-wrp">
+      <div{{ row1_attributes.addClass('row1', 'sl-row row1') }}>
+        <div class="inside container">          
+          {% if row1 %}{{ row1 }}{% endif %}
+          {% if row2 %}
+            <div{{ row2_attributes.addClass('row2', 'sl-row row2') }}>
+              <div class="inside container">{{ row2 }}</div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% endif %}
+
+  {% if row3 %}
+    <div{{ row3_attributes.addClass('row3', 'sl-row row3') }}><div class="inside container">{{ row3 }}</div></div>
+  {% endif %}
+
+  {% if row4 %}
+    <div{{ row4_attributes.addClass('row4', 'sl-row row4') }}><div class="inside container">{{ row4 }}</div></div>
+  {% endif %}
+
+  {% if row5 %}
+    <div{{ row5_attributes.addClass('row5', 'sl-row row5') }}><div class="inside container">{{ row5 }}</div></div>
+  {% endif %}
+
+  {% if row6 %}
+    <div{{ row6_attributes.addClass('row6', 'sl-row row6') }}><div class="inside container">{{ row6 }}</div></div>
+  {% endif %}
+
+  {% if row7 %}
+    <div{{ row7_attributes.addClass('row7', 'sl-row row7') }}><div class="inside container">{{ row7 }}</div></div>
+  {% endif %}
+
+  {% if row8 %}
+    <div{{ row8_attributes.addClass('row8', 'sl-row row8') }}><div class="inside container">{{ row8 }}</div></div>
+  {% endif %}
+
+  {% if left_sidebar or main_content or right_sidebar %}
+    <div class="clearfix cntbx-wrp container">
+      {% if left_sidebar %}
+        <div{{ left_sidebar_attributes.addClass('lft-sd-br', 'sl-row') }}><div class="inside">{{ left_sidebar }}</div></div>
+      {% endif %}
+
+      {% if main_content %}
+        <div{{ main_content_attributes.addClass('mn-cnt-rg', 'sl-row') }}><div class="inside">{{ main_content }}</div></div>
+      {% endif %}
+
+      {% if right_sidebar %}
+        <div{{ right_sidebar_attributes.addClass('rgt-sd-br', 'sl-row') }}><div class="inside">{{ right_sidebar }}</div></div>
+      {% endif %}
+    </div>
+  {% endif %}
+
+  {% if row9 %}
+    <div{{ row9_attributes.addClass('row9', 'sl-row row9') }}><div class="inside container">{{ row9 }}</div></div>
+  {% endif %}
+
+  {% if row10 %}
+    <div{{ row10_attributes.addClass('row10', 'sl-row row10') }}><div class="inside container">{{ row10 }}</div></div>
+  {% endif %}
+
+  {% if row11 %}
+    <div{{ row11_attributes.addClass('row11', 'sl-row row11') }}><div class="inside container">{{ row11 }}</div></div>
+  {% endif %}
+
+  {% if row12 %}
+    <div{{ row12_attributes.addClass('row12', 'sl-row row12') }}><div class="inside container">{{ row12 }}</div></div>
+  {% endif %}
+
+  {% if row13 %}
+    <div{{ row13_attributes.addClass('row13', 'sl-row row13') }}><div class="inside container">{{ row13 }}</div></div>
+  {% endif %}
+
+  {% if row14 %}
+    <div{{ row14_attributes.addClass('row14', 'sl-row row14') }}><div class="inside container">{{ row14 }}</div></div>
+  {% endif %}
+
+  {% if row15 %}
+    <div{{ row15_attributes.addClass('row15', 'sl-row row15') }}><div class="inside container">{{ row15 }}</div></div>
+  {% endif %}
+
+</div>

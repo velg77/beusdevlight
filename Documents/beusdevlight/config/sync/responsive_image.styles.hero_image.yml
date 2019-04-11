@@ -1,0 +1,60 @@
+uuid: a057680e-295d-4ab0-8ead-a07952bc62b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.lg_landscape
+    - image.style.lg_landscape_2x
+    - image.style.mdlg_landscape_2x
+    - image.style.xlg_landscape
+    - image.style.xlg_landscape_2x
+    - image.style.xsm_landscape
+    - image.style.xxlg_landscape
+    - image.style.xxlg_landscape_2x
+  theme:
+    - behavioursoe
+id: hero_image
+label: 'Hero Image'
+image_style_mappings:
+  -
+    breakpoint_id: behavioursoe.xlg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: xxlg_landscape
+  -
+    breakpoint_id: behavioursoe.xlg
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: xxlg_landscape_2x
+  -
+    breakpoint_id: behavioursoe.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: xlg_landscape
+  -
+    breakpoint_id: behavioursoe.lg
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: xlg_landscape_2x
+  -
+    breakpoint_id: behavioursoe.md
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: lg_landscape
+  -
+    breakpoint_id: behavioursoe.md
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: lg_landscape_2x
+  -
+    breakpoint_id: behavioursoe.xsm
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: mdlg_landscape_2x
+  -
+    breakpoint_id: behavioursoe.xsm
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: mdlg_landscape_2x
+breakpoint_group: behavioursoe
+fallback_image_style: xsm_landscape

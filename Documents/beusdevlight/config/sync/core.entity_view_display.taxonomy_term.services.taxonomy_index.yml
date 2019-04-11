@@ -1,0 +1,35 @@
+uuid: 94483d76-2b7b-4880-926b-766b9fc0523d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.taxonomy_index
+    - field.field.taxonomy_term.services.field_email
+    - field.field.taxonomy_term.services.field_phone_number
+    - field.field.taxonomy_term.services.field_submit
+    - taxonomy.vocabulary.services
+  module:
+    - panelizer
+    - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.services.taxonomy_index
+targetEntityType: taxonomy_term
+bundle: services
+mode: taxonomy_index
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_email: true
+  field_phone_number: true
+  field_submit: true

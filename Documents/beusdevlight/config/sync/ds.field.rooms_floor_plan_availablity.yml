@@ -1,0 +1,11 @@
+id: rooms_floor_plan_availablity
+label: 'Rooms Floor Plan Availablity'
+ui_limit: ''
+properties:
+  content:
+    value: "<?php\r\n\r\nif(function_exists('ds_rooms_floorplan_availablity')) {\r\nprint ds_rooms_floorplan_availablity('[node:field_floor_plans]');\r\n}\r\n\r\n?>"
+    format: php_filter
+type: token
+type_label: 'Token field'
+entities:
+  node: node

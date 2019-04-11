@@ -1,0 +1,41 @@
+uuid: 9cdaf885-eeb1-45e0-9369-17281300e142
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.concentration_requirements.body
+    - field.field.node.concentration_requirements.field_credits
+    - field.field.node.concentration_requirements.field_full_data
+    - field.field.node.concentration_requirements.field_sub_title
+    - field.field.node.concentration_requirements.field_sub_value
+    - node.type.concentration_requirements
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.concentration_requirements.search_index
+targetEntityType: node
+bundle: concentration_requirements
+mode: search_index
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_credits: true
+  field_full_data: true
+  field_sub_title: true
+  field_sub_value: true
+  links: true

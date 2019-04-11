@@ -1,0 +1,14 @@
+uuid: ce25d825-34d3-41ea-a5a9-f51a400139dc
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.quick_facts_creator
+  module:
+    - user
+id: user_remove_role_action.quick_facts_creator
+label: 'Remove the Quick Facts creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: quick_facts_creator

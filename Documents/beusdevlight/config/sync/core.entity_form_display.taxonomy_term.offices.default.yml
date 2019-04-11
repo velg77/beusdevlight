@@ -1,0 +1,121 @@
+uuid: 8c4a823b-075b-481a-9460-40f40ffbdc21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.offices.field_email
+    - field.field.taxonomy_term.offices.field_lead_text
+    - field.field.taxonomy_term.offices.field_office_location
+    - field.field.taxonomy_term.offices.field_phone_number
+    - field.field.taxonomy_term.offices.field_schedule_a_time
+    - field.field.taxonomy_term.offices.field_timing
+    - taxonomy.vocabulary.offices
+  module:
+    - field_group
+    - link
+    - path
+    - telephone
+    - text
+third_party_settings:
+  field_group:
+    group_contact:
+      children:
+        - field_email
+        - field_phone_number
+      parent_name: ''
+      weight: 2
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: Contact
+    group_office_hours:
+      children:
+        - field_timing
+        - field_schedule_a_time
+      parent_name: ''
+      weight: 4
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Office Hours'
+id: taxonomy_term.offices.default
+targetEntityType: taxonomy_term
+bundle: offices
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_email:
+    weight: 31
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_lead_text:
+    weight: 5
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_office_location:
+    weight: 3
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_phone_number:
+    weight: 32
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_schedule_a_time:
+    weight: 9
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_timing:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

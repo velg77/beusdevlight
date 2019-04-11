@@ -1,0 +1,19 @@
+uuid: 5f8910e3-fb3f-4f4f-b5d7-7692293782c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - taxonomy
+id: taxonomy_term.field_schedule_a_time
+field_name: field_schedule_a_time
+entity_type: taxonomy_term
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

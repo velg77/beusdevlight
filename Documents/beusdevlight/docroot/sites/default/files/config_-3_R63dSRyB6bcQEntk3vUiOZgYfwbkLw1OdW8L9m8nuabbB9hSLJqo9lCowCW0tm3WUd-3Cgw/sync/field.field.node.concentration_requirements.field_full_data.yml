@@ -1,0 +1,21 @@
+uuid: 7676c9f7-2dbb-45e6-87e4-b8251357b2fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_full_data
+    - node.type.concentration_requirements
+  module:
+    - text
+id: node.concentration_requirements.field_full_data
+field_name: field_full_data
+entity_type: node
+bundle: concentration_requirements
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

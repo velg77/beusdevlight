@@ -1,0 +1,14 @@
+uuid: 4c385032-8dbe-4b2f-af83-783b9a2899a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.node_form_mode_example_creator
+  module:
+    - user
+id: user_remove_role_action.node_form_mode_example_creator
+label: 'Remove the Node form mode example creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: node_form_mode_example_creator

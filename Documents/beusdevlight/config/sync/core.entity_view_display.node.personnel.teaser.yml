@@ -1,0 +1,143 @@
+uuid: 03cd5d0e-0fa7-4e56-a70b-84fa1fd2dbe1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.personnel.body
+    - field.field.node.personnel.field_afffiliations_committees
+    - field.field.node.personnel.field_course
+    - field.field.node.personnel.field_email
+    - field.field.node.personnel.field_facebook
+    - field.field.node.personnel.field_google_scholar
+    - field.field.node.personnel.field_lead_text
+    - field.field.node.personnel.field_linkedin
+    - field.field.node.personnel.field_map_location
+    - field.field.node.personnel.field_media_type
+    - field.field.node.personnel.field_meta_tags
+    - field.field.node.personnel.field_office
+    - field.field.node.personnel.field_personal_office
+    - field.field.node.personnel.field_personnel_type
+    - field.field.node.personnel.field_phone_number
+    - field.field.node.personnel.field_position
+    - field.field.node.personnel.field_programs
+    - field.field.node.personnel.field_publications
+    - field.field.node.personnel.field_resume
+    - field.field.node.personnel.field_schedule_a_time
+    - field.field.node.personnel.field_services
+    - field.field.node.personnel.field_sub_copy
+    - field.field.node.personnel.field_tags
+    - field.field.node.personnel.field_timing
+    - field.field.node.personnel.field_twitter
+    - field.field.node.personnel.field_website
+    - image.style.md_portrait_2x
+    - node.type.personnel
+  module:
+    - ds
+    - media
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          left: {  }
+          right: {  }
+    regions:
+      left:
+        - field_media_type
+      right:
+        - node_title
+        - field_sub_copy
+        - field_email
+        - field_phone_number
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h3
+          class: ''
+id: node.personnel.teaser
+targetEntityType: node
+bundle: personnel
+mode: teaser
+content:
+  field_email:
+    type: email_mailto
+    weight: 3
+    region: right
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_media_type:
+    type: media_thumbnail
+    weight: 0
+    region: left
+    label: hidden
+    settings:
+      image_style: md_portrait_2x
+      image_link: content
+    third_party_settings: {  }
+  field_phone_number:
+    type: string
+    weight: 4
+    region: right
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_sub_copy:
+    type: string
+    weight: 2
+    region: right
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_afffiliations_committees: true
+  field_course: true
+  field_facebook: true
+  field_google_scholar: true
+  field_lead_text: true
+  field_linkedin: true
+  field_map_location: true
+  field_meta_tags: true
+  field_office: true
+  field_personal_office: true
+  field_personnel_type: true
+  field_position: true
+  field_programs: true
+  field_publications: true
+  field_resume: true
+  field_schedule_a_time: true
+  field_services: true
+  field_tags: true
+  field_timing: true
+  field_twitter: true
+  field_website: true
+  links: true

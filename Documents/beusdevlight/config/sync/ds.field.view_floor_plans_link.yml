@@ -1,0 +1,11 @@
+id: view_floor_plans_link
+label: 'View Floor Plans Link'
+ui_limit: ''
+properties:
+  content:
+    value: "<div>\r\n<p class=\"simple-gmap-link\"><a href=\"/floor-plans\">View Floor Plans</a></p>\r\n</div>\r\n"
+    format: rich_text
+type: token
+type_label: 'Token field'
+entities:
+  node: node

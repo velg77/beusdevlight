@@ -1,0 +1,82 @@
+uuid: cf2a6af6-9d53-4852-b3ac-a705a156f517
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.careers.body
+    - field.field.node.careers.field_full_data
+    - field.field.node.careers.field_graduate
+    - field.field.node.careers.field_graduates
+    - node.type.careers
+  module:
+    - ds
+    - entity_reference_revisions
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers: null
+        outer_wrapper: null
+        attributes: ''
+        link_attribute: null
+        link_custom: null
+        classes:
+          layout_class: {  }
+    regions:
+      ds_content:
+        - body
+        - field_graduates
+        - field_graduate
+        - field_full_data
+id: node.careers.default
+targetEntityType: node
+bundle: careers
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  field_full_data:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  field_graduate:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: ds_content
+  field_graduates:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    region: ds_content
+hidden:
+  addtoany: true
+  links: true

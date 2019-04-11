@@ -1,0 +1,29 @@
+uuid: 97ce13c9-df86-4f39-999e-78f546fac53a
+langcode: en
+status: true
+dependencies: {  }
+id: courses_creator
+label: 'Courses creator'
+weight: 20
+is_admin: false
+permissions:
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access toolbar'
+  - 'administer panelizer node courses content'
+  - 'administer panelizer node courses layout'
+  - 'change layouts in place editing'
+  - 'create courses content'
+  - 'create url aliases'
+  - 'edit own courses content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view courses revisions'
+  - 'view latest version'
+  - 'view own unpublished content'

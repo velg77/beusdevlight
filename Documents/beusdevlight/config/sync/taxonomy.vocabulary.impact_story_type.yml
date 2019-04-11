@@ -1,0 +1,9 @@
+uuid: 23f925f9-5c78-431b-b420-8c275615f02a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Impact Story Type'
+vid: impact_story_type
+description: 'Determines special case stories'
+hierarchy: 0
+weight: 0

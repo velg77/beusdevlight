@@ -1,0 +1,14 @@
+uuid: 214fa421-5d1c-4cc1-8556-bdecae250fcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.rooms_reviewer
+  module:
+    - user
+id: user_remove_role_action.rooms_reviewer
+label: 'Remove the Rooms reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: rooms_reviewer

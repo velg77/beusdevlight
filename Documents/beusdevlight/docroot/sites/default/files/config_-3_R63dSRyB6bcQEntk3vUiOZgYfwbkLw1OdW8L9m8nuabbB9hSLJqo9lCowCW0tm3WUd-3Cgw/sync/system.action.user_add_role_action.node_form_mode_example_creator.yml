@@ -1,0 +1,14 @@
+uuid: 9eb76b5a-0bd6-44b3-a72d-a175274281c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.node_form_mode_example_creator
+  module:
+    - user
+id: user_add_role_action.node_form_mode_example_creator
+label: 'Add the Node form mode example creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: node_form_mode_example_creator

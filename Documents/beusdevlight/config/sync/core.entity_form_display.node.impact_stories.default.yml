@@ -1,0 +1,246 @@
+uuid: ceef3dae-072b-49b6-8af4-322af422e6e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - entity_browser.browser.image_browser
+    - field.field.node.impact_stories.body
+    - field.field.node.impact_stories.field_author
+    - field.field.node.impact_stories.field_image_video_caption
+    - field.field.node.impact_stories.field_impact_story_type
+    - field.field.node.impact_stories.field_impact_storytype
+    - field.field.node.impact_stories.field_lead_text
+    - field.field.node.impact_stories.field_media
+    - field.field.node.impact_stories.field_media_type
+    - field.field.node.impact_stories.field_news_type
+    - field.field.node.impact_stories.field_personnel
+    - field.field.node.impact_stories.field_programs
+    - field.field.node.impact_stories.field_related_impact_stories
+    - field.field.node.impact_stories.field_show_manual_entry
+    - field.field.node.impact_stories.field_tags
+    - field.field.node.impact_stories.field_video_duration
+    - field.field.node.impact_stories.panelizer
+    - node.type.impact_stories
+  module:
+    - entity_browser
+    - entity_reference_views_select
+    - field_group
+    - path
+    - scheduler
+    - scheduler_content_moderation_integration
+    - text
+third_party_settings:
+  field_group:
+    group_content_banner:
+      children: {  }
+      parent_name: ''
+      weight: 10
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'Content Banner'
+id: node.impact_stories.default
+targetEntityType: node
+bundle: impact_stories
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 5
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 19
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_author:
+    weight: 3
+    settings:
+      size: 60
+      placeholder: 'Name(s) of Impact Story''s author'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_image_video_caption:
+    weight: 9
+    settings:
+      size: 60
+      placeholder: 'Caption to show in the listings below Thumbnail'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_impact_story_type:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_impact_storytype:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_lead_text:
+    weight: 4
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_media:
+    type: entity_browser_entity_reference
+    weight: 7
+    settings:
+      entity_browser: video_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: default
+      field_widget_replace: false
+    region: content
+    third_party_settings: {  }
+  field_media_type:
+    type: entity_browser_entity_reference
+    weight: 6
+    settings:
+      entity_browser: image_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      open: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: default
+      field_widget_replace: false
+    region: content
+    third_party_settings: {  }
+  field_personnel:
+    weight: 13
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_programs:
+    weight: 11
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_related_impact_stories:
+    weight: 15
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_show_manual_entry:
+    weight: 14
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_tags:
+    weight: 12
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_video_duration:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  path:
+    type: path
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 23
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 24
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 21
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 17
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 18
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 22
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  unpublish_state:
+    type: scheduler_moderation
+    weight: 25
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_news_type: true
+  moderation_state: true
+  panelizer: true

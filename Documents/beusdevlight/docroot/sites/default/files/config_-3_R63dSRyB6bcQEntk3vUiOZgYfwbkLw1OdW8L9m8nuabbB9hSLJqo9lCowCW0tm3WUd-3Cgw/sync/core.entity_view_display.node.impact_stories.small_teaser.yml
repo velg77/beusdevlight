@@ -1,0 +1,86 @@
+uuid: bfde0c7d-3e41-4d0d-898c-b2d5b01b6120
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.small_teaser
+    - field.field.node.impact_stories.body
+    - field.field.node.impact_stories.field_author
+    - field.field.node.impact_stories.field_date_of_publication
+    - field.field.node.impact_stories.field_image_video_caption
+    - field.field.node.impact_stories.field_impact_story_type
+    - field.field.node.impact_stories.field_lead_text
+    - field.field.node.impact_stories.field_media
+    - field.field.node.impact_stories.field_media_type
+    - field.field.node.impact_stories.field_news_type
+    - field.field.node.impact_stories.field_personnel
+    - field.field.node.impact_stories.field_programs
+    - field.field.node.impact_stories.field_related_impact_stories
+    - field.field.node.impact_stories.field_show_manual_entry
+    - field.field.node.impact_stories.field_tags
+    - field.field.node.impact_stories.panelizer
+    - image.style.sm_landscape_2x
+    - node.type.impact_stories
+  module:
+    - ds
+    - media
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_media_type
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: node.impact_stories.small_teaser
+targetEntityType: node
+bundle: impact_stories
+mode: small_teaser
+content:
+  field_media_type:
+    type: media_thumbnail
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: sm_landscape_2x
+      image_link: content
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_author: true
+  field_date_of_publication: true
+  field_image_video_caption: true
+  field_impact_story_type: true
+  field_lead_text: true
+  field_media: true
+  field_news_type: true
+  field_personnel: true
+  field_programs: true
+  field_related_impact_stories: true
+  field_show_manual_entry: true
+  field_tags: true
+  links: true
+  panelizer: true

@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * hook_preprocess_html()
+ */
+function behavioursoe_preprocess_html(&$variables) {
+  if (\Drupal::routeMatch()->getRouteName() == 'entity.taxonomy_term.canonical') {
+    $variables['term_id'] = \Drupal::routeMatch()->getRawParameter('taxonomy_term');
+  }
+}
+
+/*function behavioursoe_preprocess_page(&$variables) {
+
+//Hide related tags views block based on checkbox
+  $node = \Drupal::routeMatch()->getParameter('node');
+  if ($node instanceof \Drupal\node\NodeInterface) {
+  $ntype = $node->type->entity->label();
+  $shownews = $node->get('field_s')->value;
+  if($shownews=='Yes' && $ntype=='News')
+  {
+  unset($variables['page']['sidebar']['views_block__related_news_by_tags_block_1']);
+  }
+}
+
+}*/
+
+
+
+function behavioursoe_preprocess_views_view(&$variables){
+  //kint($variables['view']);
+  $view = $variables['view'];
+  $variables['display_id'] = $view->current_display;
+  
+//  kint($view->fields);
+  $id = $view->storage->id(); 
+  if($id=='general_listing_blocks' && $view->current_display=='block_1')
+  {
+
+  }
+}
+// function behavioursoe_preprocess_views_view_field(&$variables) {
+//   $view = $variables['view'];
+//   $id = $view->storage->id();
+//   if($id='general_listing_blocks' && $view->current_display=='block_1') {
+//     $myFieldValue = $variables['field']->getValue($variables['row']);
+//     kint($myFieldValue);
+//   }
+// }
+
+
+
+

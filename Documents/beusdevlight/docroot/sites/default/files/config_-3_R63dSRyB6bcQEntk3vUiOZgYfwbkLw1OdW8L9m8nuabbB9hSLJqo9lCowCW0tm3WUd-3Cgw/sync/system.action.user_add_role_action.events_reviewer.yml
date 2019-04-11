@@ -1,0 +1,14 @@
+uuid: 3a927552-bd71-4cf1-a5de-275a9d4c98ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.events_reviewer
+  module:
+    - user
+id: user_add_role_action.events_reviewer
+label: 'Add the Events reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: events_reviewer

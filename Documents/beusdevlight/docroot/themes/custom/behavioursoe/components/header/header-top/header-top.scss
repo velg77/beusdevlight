@@ -1,0 +1,142 @@
+@import "../../base/_variables";
+
+.hdr-tp {
+  font-family: 'Avenir-Medium', sans-serif;
+	background: $site-color-yellow;
+  color:$site-color-blue;
+  width: 100%;
+  display: none;
+  .block-block-content {
+    padding-top: 0;
+    .field--name-body {
+      text-align: left;
+      font-size: inherit;
+      max-width: none;
+      margin-bottom: 0;
+    }
+  }
+	.iam-blk {
+    float: left;
+    font-size: 0.778rem;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    .lnd-type{      
+			cursor: pointer;
+      padding: 0 3px 4px;
+      margin: 0 0 0 5px;
+			border-bottom: 1px solid #00274c;
+      font-family: 'Avenir-Black', sans-serif;
+			&::after{
+				font-family: "Font Awesome 5 Free";
+				font-weight: 900;
+				content: "\f0d7";
+			}
+    }    
+  }
+  a:link{
+    color:#00274c;
+  }
+  a:visited {
+    color: #00274c;
+  }
+	
+}
+
+.uty-nav-menu {    
+  ul {
+    margin: 0;
+    padding: 0;
+    li {    
+      list-style: none;       
+			padding: 15px;		   
+      a {
+      text-decoration: none;      
+      color: #00274c;
+			font-size: 0.778em; 
+			font-family: "Avenir-Medium",sans-serif;
+      padding-bottom: 2px;
+      border-bottom: 2px solid transparent;
+        &:hover {
+        border-color: #00274c;      
+				}
+				&::before{
+					content: "";
+					font-family: 'Fontawesome 5 pro';		
+					padding-right: 8px;
+    			font-size: 16px;								
+				}
+			}
+			&.cnct a::before{
+				content: "\f0c0";
+			}
+			&.visit a::before{
+				content: "\f3c5";
+			}
+			&.aply a::before{
+				content: "\f31c";
+			}
+			&.give a::before{
+				content: "\f06b";
+			}
+			&.scrh a::before{
+				content: "\f002";
+			}
+    }
+  }
+}
+
+.vstr-role {
+	position: static;
+  ul.menu {    
+    background: $site-color-yellow;
+    padding: 0;
+    list-style: none;
+    li {     
+      padding: 15px;
+      a {
+				color: $site-color-blue;
+        font-family: "Avenir-Medium",sans-serif;
+        &:hover, &:focus {
+          border-bottom-color: $site-color-blue;
+        }
+      }
+    }        
+  }
+}
+
+@media (min-width: 1024px){
+  .hdr-tp {
+    display: block;
+  }
+  .uty-nav-menu {
+    float: right;
+    margin-top: -132px;
+    ul {
+      li {
+        float: left;
+        border-right:1px solid #e5b604;        
+        &:first-child{
+          border-left:1px solid #e5b604;
+        }        
+      }
+    }
+  }  
+  .vstr-role {
+    ul.menu {
+      display: none;
+      position: absolute;
+      left: 40px;
+      top: -12px;
+      z-index: 2;
+      padding: 22px 10px 10px;
+      margin-top: 0;
+      li {
+        padding: 7px 15px;
+        font-size: 0.778rem;
+      }
+      &.active {
+        display: block;
+      }
+    }    
+  }
+}

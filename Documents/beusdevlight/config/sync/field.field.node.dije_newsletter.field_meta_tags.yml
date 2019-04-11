@@ -1,0 +1,26 @@
+uuid: eb01dd67-56d1-4042-9f71-c7695f5c35e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.dije_newsletter
+  module:
+    - custom_add_another
+    - metatag
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.dije_newsletter.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: dije_newsletter
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

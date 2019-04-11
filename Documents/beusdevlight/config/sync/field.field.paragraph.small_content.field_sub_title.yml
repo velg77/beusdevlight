@@ -1,0 +1,25 @@
+uuid: 73bf8488-1816-409a-9160-660b85ff1c63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sub_title
+    - paragraphs.paragraphs_type.small_content
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: paragraph.small_content.field_sub_title
+field_name: field_sub_title
+entity_type: paragraph
+bundle: small_content
+label: 'Sub Title'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

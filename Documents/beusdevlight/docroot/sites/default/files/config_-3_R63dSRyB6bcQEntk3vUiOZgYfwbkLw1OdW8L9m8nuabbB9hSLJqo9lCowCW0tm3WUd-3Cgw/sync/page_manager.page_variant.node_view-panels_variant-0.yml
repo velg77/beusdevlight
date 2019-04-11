@@ -1,0 +1,168 @@
+uuid: 28504b62-aeda-4921-85cf-38c0da89f1a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.node_view
+    - views.view.general
+  module:
+    - ctools
+    - ctools_block
+    - panels
+    - views
+id: node_view-panels_variant-0
+label: News
+variant: panels_variant
+variant_settings:
+  blocks:
+    ba8ad8df-272e-4368-8b9d-aee2b3b32019:
+      id: 'entity_view:node'
+      label: 'Entity view (Content)'
+      provider: ctools
+      label_display: '0'
+      view_mode: default
+      region: row3
+      weight: -1
+      uuid: ba8ad8df-272e-4368-8b9d-aee2b3b32019
+      context_mapping:
+        entity: node
+    103ce5f1-3a2d-4d9b-92eb-424f06f60840:
+      id: 'entity_field:node:field_media_type'
+      label: 'Featured Image'
+      provider: ctools_block
+      label_display: '0'
+      formatter:
+        label: hidden
+        type: entity_reference_entity_view
+        settings:
+          view_mode: hero_image
+        third_party_settings: {  }
+        weight: 0
+      region: row1
+      weight: -10
+      uuid: 103ce5f1-3a2d-4d9b-92eb-424f06f60840
+      context_mapping:
+        entity: node
+    da1d95df-17c0-4cab-8737-8cef464ea8aa:
+      id: 'entity_field:node:title'
+      label: Title
+      provider: ctools_block
+      label_display: '0'
+      formatter:
+        label: hidden
+        type: string
+        settings:
+          link_to_entity: false
+        third_party_settings: {  }
+        weight: 0
+      region: row2
+      weight: 0
+      uuid: da1d95df-17c0-4cab-8737-8cef464ea8aa
+      context_mapping:
+        entity: node
+    c96490b9-2bdf-4e90-97bc-640f4764a54d:
+      id: 'entity_field:node:type'
+      label: 'Content type'
+      provider: ctools_block
+      label_display: '0'
+      formatter:
+        label: hidden
+        type: entity_reference_label
+        settings:
+          link: false
+        third_party_settings: {  }
+        weight: 0
+      region: row2
+      weight: -1
+      uuid: c96490b9-2bdf-4e90-97bc-640f4764a54d
+      context_mapping:
+        entity: node
+    462d9e05-f134-40c9-8056-0bfb5dd5fd42:
+      id: 'views_block:general-more_news_tags'
+      label: 'More News'
+      provider: views
+      label_display: visible
+      views_label: 'More News'
+      items_per_page: none
+      region: row4
+      weight: -1
+      uuid: 462d9e05-f134-40c9-8056-0bfb5dd5fd42
+      context_mapping: {  }
+    454f44fb-c7b6-442e-83d1-be6f269c2fdf:
+      id: 'views_block:general-related_news_reference'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: row4
+      weight: -2
+      uuid: 454f44fb-c7b6-442e-83d1-be6f269c2fdf
+      context_mapping: {  }
+  id: panels_variant
+  uuid: e446d2ec-485c-4fa0-a6c3-073d569ec6a8
+  label: null
+  weight: 0
+  status_code: '404'
+  redirect_location: ''
+  layout: behavioursoe_layout
+  layout_settings:
+    wrappers:
+      row1: div
+      row2: div
+      row3: div
+      row4: div
+      row5: div
+      row6: div
+      row7: div
+      row8: div
+      row9: div
+      row10: div
+      row11: div
+      row12: div
+      row13: div
+      row14: div
+      row15: div
+    outer_wrapper: div
+    attributes: ''
+    link_attribute: ''
+    link_custom: ''
+    classes:
+      layout_class:
+        content_banner: content_banner
+      row1:
+        ful_wdt: ful_wdt
+      row2: {  }
+      row3:
+        row_sp_top: row_sp_top
+        row_sp_bot: row_sp_bot
+        sm_cnt: sm_cnt
+      row4:
+        bdr_tp: bdr_tp
+      row5: {  }
+      row6: {  }
+      row7: {  }
+      row8: {  }
+      row9: {  }
+      row10: {  }
+      row11: {  }
+      row12: {  }
+      row13: {  }
+      row14: {  }
+      row15: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: node_view-panels_variant-0
+  builder: standard
+page: node_view
+weight: 0
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    bundles:
+      news: news
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+static_context: {  }

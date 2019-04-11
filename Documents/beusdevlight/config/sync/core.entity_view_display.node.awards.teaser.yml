@@ -1,0 +1,77 @@
+uuid: 8d2fe700-ed83-483d-8421-fb8757efa1a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.awards.body
+    - field.field.node.awards.field_funding_agency
+    - field.field.node.awards.field_lead_text
+    - field.field.node.awards.field_period
+    - field.field.node.awards.field_personnel
+    - field.field.node.awards.field_primary_investigators
+    - field.field.node.awards.field_tags
+    - field.field.node.awards.panelizer
+    - node.type.awards
+  module:
+    - ds
+    - panelizer
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_period
+        - node_title
+        - field_primary_investigators
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h3
+          class: ''
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.awards.teaser
+targetEntityType: node
+bundle: awards
+mode: teaser
+content:
+  field_period:
+    type: string
+    weight: 0
+    region: content
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_primary_investigators:
+    type: entity_reference_label
+    weight: 2
+    region: content
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_funding_agency: true
+  field_lead_text: true
+  field_personnel: true
+  field_tags: true
+  links: true
+  panelizer: true

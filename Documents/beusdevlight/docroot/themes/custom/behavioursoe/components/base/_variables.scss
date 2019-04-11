@@ -1,0 +1,197 @@
+//////////////////////////
+// General Variables
+// Note: colors should go into
+// components/_patterns/00-base/global/01-colors/_color-vars.scss
+// and breakpoint related vars into
+// components/_patterns/00-base/_breakpoints.scss
+
+// Fonts
+$font-body: 'Open Sans Regular', sans-serif;
+$font-heading: "Open Sans Regular", "Helvetica", "Arial", sans-serif;
+$font-size-base:          1rem !default;
+$font-size-h1:            3.778rem !default; // ~68px
+$font-size-h2:            2.666rem !default; // ~48px
+$font-size-h3:            2.11rem !default; // ~38px
+$font-size-h4:            1.66rem !default; // ~30px
+$font-size-h5:            1.11rem !default;// ~20px
+$font-size-h6:            0.88rem !default; // ~12px
+//mobile fonts
+$font-msize-h1:            2rem !default; // ~68px
+$font-msize-h2:            1.875rem !default; // ~48px
+$font-msize-h3:            1.66rem !default; // ~38px
+$font-msize-h4:            1.11rem !default; // ~30px
+$font-msize-h5:            1.11rem !default;// ~20px
+$font-msize-h6:            0.88rem !default; // ~12px
+
+$white: #fff;
+$grey: #555;
+$site-color-blue: #00274c;
+$site-color-cntblue: #0d57aa;
+$site-color-yellow: #ffcb05;
+
+
+// Spacing
+$space: 1rem;
+
+// times
+$space-double: $space*2;
+$space-triple: $space*3;
+$space-quadruple: $space*4;
+$space-quintuple: $space*5;
+$space-sextuple: $space*6;
+$space-septuple: $space*7;
+
+// divided
+$space-one-half: $space/2;
+$space-one-third: $space/3;
+$space-one-fourth: $space/4;
+$space-one-fifth: $space/5;
+$space-one-sixth: $space/6;
+$space-one-seventh: $space/7;
+$space-one-eighth: $space/8;
+
+
+/**
+ * Clearfix
+*/
+@mixin clearfix() {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+/**
+ * Buttons
+*/
+@mixin button() {
+  display: inline-block;
+  vertical-align: middle;
+  text-transform: uppercase;
+  border-radius: 30px;
+  font-family: "Avenir-Medium",sans-serif;
+  // white-space: nowrap;
+  white-space: initial;
+  border-bottom: 0;
+  &:hover, &:focus {
+    text-decoration: none;
+    border-bottom: 0;
+  }
+}
+@mixin button_medium() {
+  padding: 5px 30px;
+  line-height: 28px;
+  font-size: 0.889rem;
+}
+@mixin button_large() {
+  padding: 10px 40px;
+  line-height: 28px;
+  font-size: 0.889em;
+}
+@mixin whitebgbutton() {
+  @include button();
+  color:$site-color-cntblue;
+  border: 1px solid $site-color-cntblue;
+  background: $white;
+  &:hover, &:active, &:focus {
+    border: 1px solid $site-color-cntblue;
+    background-color: $site-color-cntblue;
+    color: $white;
+  }
+  &:active {
+    background-color: $site-color-blue;
+  }
+}
+@mixin blue-borderbutton() {
+  @include button();
+  color: $white;
+  border: 1.5px solid #85aad4;
+  background: $site-color-cntblue;
+  &:hover, &:active, &:focus {
+    border: 1.5px solid #85aad4;
+    background-color: $white;
+    color: $site-color-cntblue;
+  }
+  &:active {
+    background-color: $site-color-blue;
+  }
+}
+@mixin site-color-yellowbutton() {
+  @include button();
+  border: 1px solid $site-color-yellow;
+  background: $site-color-yellow;
+  color: $site-color-cntblue;
+  &:hover, &:active, &:focus {
+    border: 1px solid $site-color-cntblue;
+    background-color: $site-color-cntblue;
+    color: $white;
+  }
+  &:active {
+    background-color: $site-color-blue;
+    color: $white;
+  }
+}
+
+
+.box {
+  padding: 10px 30px;
+}
+
+/**
+ * Css3 Extensions
+*/
+@mixin transition($property, $duration, $effect){
+  -webkit-transition: $property $duration $effect;
+  -moz-transition: $property $duration $effect;
+  -ms-transition: $property $duration, $effect;
+  -o-transition: $property $duration $effect;
+  transition: $property $duration $effect;
+}
+@mixin transform-rotate ($degree) {
+  -webkit-transform: rotate($degree);
+  -moz-transform: rotate($degree);
+  -ms-transform: rotate($degree);
+  -o-transform: rotate($degree);
+  transform: rotate($degree);
+}
+
+/**
+ * Flex
+*/
+@mixin flex() {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+@mixin flex-child() {
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  -webkit-box-flex: 1;
+  flex-grow: 1;
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+/**
+ * Invisible
+*/
+@mixin element-invisible() {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  word-wrap: normal;
+}

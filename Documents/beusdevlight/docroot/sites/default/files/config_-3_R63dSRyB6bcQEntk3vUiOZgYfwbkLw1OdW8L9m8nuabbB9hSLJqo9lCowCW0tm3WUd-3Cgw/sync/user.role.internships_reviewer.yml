@@ -1,0 +1,19 @@
+uuid: b3a09f3c-c784-41ed-b3f0-84e0d459f072
+langcode: en
+status: true
+dependencies: {  }
+id: internships_reviewer
+label: 'Internships reviewer'
+weight: 31
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'delete any internships content'
+  - 'edit any internships content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'view any unpublished content'
+  - 'view latest version'

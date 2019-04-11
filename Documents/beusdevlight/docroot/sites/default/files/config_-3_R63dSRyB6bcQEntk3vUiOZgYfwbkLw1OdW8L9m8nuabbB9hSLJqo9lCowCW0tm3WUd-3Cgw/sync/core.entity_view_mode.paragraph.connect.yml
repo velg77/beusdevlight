@@ -1,0 +1,14 @@
+uuid: cc3119f7-49ed-463e-bb75-b5f4e0ecbdb1
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - paragraphs
+third_party_settings:
+  lightning_core:
+    description: ''
+id: paragraph.connect
+label: Connect
+targetEntityType: paragraph
+cache: true

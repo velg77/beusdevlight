@@ -1,0 +1,14 @@
+uuid: 48f748c0-4b26-4205-b7cd-eb8b0e2c073e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.internships_creator
+  module:
+    - user
+id: user_add_role_action.internships_creator
+label: 'Add the Internships creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: internships_creator

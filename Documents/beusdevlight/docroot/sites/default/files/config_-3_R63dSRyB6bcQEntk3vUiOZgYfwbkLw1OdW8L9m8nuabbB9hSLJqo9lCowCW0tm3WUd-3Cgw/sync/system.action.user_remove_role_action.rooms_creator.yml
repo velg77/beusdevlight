@@ -1,0 +1,14 @@
+uuid: 3762e939-42cb-4f9d-b296-3cfd23976a09
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.rooms_creator
+  module:
+    - user
+id: user_remove_role_action.rooms_creator
+label: 'Remove the Rooms creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: rooms_creator

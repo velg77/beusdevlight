@@ -1,0 +1,21 @@
+uuid: aa825b2a-f3fd-413a-a752-52c983b68c21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_timing
+    - node.type.personnel
+  module:
+    - text
+id: node.personnel.field_timing
+field_name: field_timing
+entity_type: node
+bundle: personnel
+label: Timing
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,14 @@
+uuid: c2bc0192-04df-4e12-bf4a-ea88f89f0f43
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.student_organisation_reviewer
+  module:
+    - user
+id: user_add_role_action.student_organisation_reviewer
+label: 'Add the Student Organisation reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: student_organisation_reviewer

@@ -1,0 +1,94 @@
+uuid: df99095b-fdf6-4692-8f19-03dd6b1ccaab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.academic_programs.field_email
+    - field.field.taxonomy_term.academic_programs.field_lead_text
+    - field.field.taxonomy_term.academic_programs.field_location
+    - field.field.taxonomy_term.academic_programs.field_phone_number
+    - field.field.taxonomy_term.academic_programs.field_short_form
+    - field.field.taxonomy_term.academic_programs.field_submit
+    - field.field.taxonomy_term.academic_programs.panelizer
+    - taxonomy.vocabulary.academic_programs
+  module:
+    - link
+    - path
+    - telephone
+    - text
+id: taxonomy_term.academic_programs.default
+targetEntityType: taxonomy_term
+bundle: academic_programs
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_email:
+    weight: 6
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_lead_text:
+    weight: 2
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_location:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_phone_number:
+    weight: 7
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_short_form:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_submit:
+    weight: 8
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  panelizer: true

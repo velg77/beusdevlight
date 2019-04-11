@@ -1,0 +1,28 @@
+uuid: f24701f8-1f18-48cc-88c6-e17718ef0b3c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta
+    - paragraphs.paragraphs_type.banner_slider
+  module:
+    - custom_add_another
+    - link
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: paragraph.banner_slider.field_cta
+field_name: field_cta
+entity_type: paragraph
+bundle: banner_slider
+label: 'CTA button'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

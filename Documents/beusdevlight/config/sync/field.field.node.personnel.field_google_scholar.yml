@@ -1,0 +1,28 @@
+uuid: ee8e332b-3549-428b-9ebc-cf87c750dbb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_google_scholar
+    - node.type.personnel
+  module:
+    - custom_add_another
+    - link
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.personnel.field_google_scholar
+field_name: field_google_scholar
+entity_type: node
+bundle: personnel
+label: 'Google Scholar'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

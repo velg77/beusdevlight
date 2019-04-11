@@ -1,0 +1,83 @@
+uuid: f06affb7-3b04-4590-af60-5f9d6bf15621
+langcode: en
+status: true
+dependencies:
+  config:
+    - search_api.index.soe_index
+    - views.view.general_listing_blocks
+  module:
+    - search_api
+id: title
+name: 'Glossary AZ - Content » Title'
+url_alias: title
+weight: 0
+min_count: 0
+show_only_one_result: false
+field_identifier: glossaryaz_title
+facet_source_id: 'search_api:views_block__general_listing_blocks__block_10'
+widget:
+  type: links
+  config:
+    show_numbers: false
+    soft_limit: 0
+    soft_limit_settings:
+      show_less_label: 'Show less'
+      show_more_label: 'Show more'
+    show_reset_link: true
+    reset_text: All
+    hide_reset_when_no_selection: false
+query_operator: or
+use_hierarchy: true
+expand_hierarchy: false
+enable_parent_when_child_gets_disabled: true
+hard_limit: 30
+exclude: false
+only_visible_when_facet_source_is_visible: false
+processor_configs:
+  exclude_specified_items:
+    processor_id: exclude_specified_items
+    weights:
+      build: 0
+    settings:
+      exclude: '[0-9]'
+      regex: true
+  glossaryaz_pad_items_processor:
+    processor_id: glossaryaz_pad_items_processor
+    weights:
+      build: -7
+    settings: {  }
+  glossaryaz_widget_order:
+    processor_id: glossaryaz_widget_order
+    weights:
+      sort: 100
+    settings:
+      sort:
+        glossaryaz_sort_all:
+          weight: '-1'
+        glossaryaz_sort_az:
+          weight: '1'
+        glossaryaz_sort_09:
+          weight: '2'
+        glossaryaz_sort_other:
+          weight: '3'
+      glossaryaz_sort_az:
+        weight: 1
+        name: 'Alpha (A-Z)'
+      glossaryaz_sort_09:
+        weight: 2
+        name: 'Numeric (0-9)'
+      glossaryaz_sort_other:
+        weight: 3
+        name: 'Other (#)'
+      glossaryaz_sort_all:
+        weight: -1
+        name: All
+  url_processor_handler:
+    processor_id: url_processor_handler
+    weights:
+      pre_query: 50
+      build: 1
+    settings: {  }
+empty_behavior:
+  behavior: none
+show_title: false

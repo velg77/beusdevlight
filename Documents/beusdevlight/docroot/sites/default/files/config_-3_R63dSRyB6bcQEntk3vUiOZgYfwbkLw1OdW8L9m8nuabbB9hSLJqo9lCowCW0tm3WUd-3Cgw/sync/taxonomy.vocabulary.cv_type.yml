@@ -1,0 +1,9 @@
+uuid: 8a67e2f3-3c09-4566-9313-d4593be50060
+langcode: en
+status: true
+dependencies: {  }
+name: 'CV Type'
+vid: cv_type
+description: 'Personnel CV Type'
+hierarchy: 0
+weight: 0

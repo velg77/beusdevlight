@@ -1,0 +1,33 @@
+uuid: a102d50b-036e-4f6b-a4b2-647d8fc0011f
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.general
+  module:
+    - ctools
+    - views
+  theme:
+    - behavioursoe
+id: views_block__general_block_22
+theme: behavioursoe
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:general-block_22'
+settings:
+  id: 'views_block:general-block_22'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+  context_mapping: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      dije_newsletter: dije_newsletter
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

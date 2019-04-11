@@ -1,0 +1,22 @@
+uuid: ec8633e9-a7fb-4648-b23b-660d6aaaba0b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.concentrations
+  module:
+    - text
+id: node.concentrations.body
+field_name: body
+entity_type: node
+bundle: concentrations
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

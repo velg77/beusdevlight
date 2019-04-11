@@ -1,0 +1,14 @@
+uuid: f44c4a59-1836-48c2-a7a9-96f584d3386e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.personnel_creator
+  module:
+    - user
+id: user_add_role_action.personnel_creator
+label: 'Add the Personnel creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: personnel_creator

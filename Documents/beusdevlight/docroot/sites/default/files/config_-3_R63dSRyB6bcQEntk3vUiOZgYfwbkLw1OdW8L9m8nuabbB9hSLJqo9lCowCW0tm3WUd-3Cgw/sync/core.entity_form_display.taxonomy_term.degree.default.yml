@@ -1,0 +1,66 @@
+uuid: f0167137-243e-4961-a2d2-6aa0c35cd934
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.degree.field_acadamic_degree
+    - field.field.taxonomy_term.degree.field_academic_program_s
+    - field.field.taxonomy_term.degree.field_lead_text
+    - taxonomy.vocabulary.degree
+  module:
+    - path
+    - text
+id: taxonomy_term.degree.default
+targetEntityType: taxonomy_term
+bundle: degree
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+      rows: 5
+    third_party_settings: {  }
+  field_acadamic_degree:
+    weight: 4
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_academic_program_s:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_lead_text:
+    weight: 1
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

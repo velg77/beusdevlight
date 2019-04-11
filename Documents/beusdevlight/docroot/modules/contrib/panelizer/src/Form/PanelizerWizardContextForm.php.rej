@@ -1,0 +1,29 @@
+--- src/Form/PanelizerWizardContextForm.php
++++ src/Form/PanelizerWizardContextForm.php
+@@ -8,7 +8,7 @@
+ use Drupal\Core\Form\FormStateInterface;
+ use Drupal\Core\TypedData\TypedDataManagerInterface;
+ use Drupal\ctools\Form\ManageContext;
+-use Drupal\user\SharedTempStoreFactory;
++use Drupal\Core\TempStore\SharedTempStoreFactory;
+ use Symfony\Component\DependencyInjection\ContainerInterface;
+ 
+ /**
+@@ -35,7 +35,7 @@
+     return new static(
+       $container->get('typed_data_manager'),
+       $container->get('form_builder'),
+-      $container->get('user.shared_tempstore')
++      $container->get('tempstore.shared')
+     );
+   }
+ 
+@@ -46,7 +46,7 @@
+    *   The typed data manager.
+    * @param \Drupal\Core\Form\FormBuilderInterface $form_builder
+    *   The form builder.
+-   * @param \Drupal\user\SharedTempStoreFactory $tempstore_factory
++   * @param \Drupal\Core\TempStore\SharedTempStoreFactory $tempstore_factory
+    *   Shared user tempstore factory.
+    */
+   public function __construct(TypedDataManagerInterface $typed_data_manager, FormBuilderInterface $form_builder, SharedTempStoreFactory $tempstore_factory) {

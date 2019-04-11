@@ -1,0 +1,19 @@
+uuid: 31a21f01-eec9-428a-914d-f10f372e098f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.student_organisation
+id: node.student_organisation.field_email
+field_name: field_email
+entity_type: node
+bundle: student_organisation
+label: 'Contact Email'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

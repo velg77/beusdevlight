@@ -1,0 +1,25 @@
+uuid: 65e5d462-4888-404e-981c-55f3b464b345
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.narrow_portrait
+  module:
+    - crop
+name: md_narrow_portrait_2x
+label: md_narrow_portrait_2x
+effects:
+  6c24e15a-7a3d-4f16-927f-8e31b1052aaf:
+    uuid: 6c24e15a-7a3d-4f16-927f-8e31b1052aaf
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: narrow_portrait
+  529fea4b-5aea-464f-8c44-8fcffbfc164f:
+    uuid: 529fea4b-5aea-464f-8c44-8fcffbfc164f
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 740
+      height: 1453
+      anchor: center-center

@@ -1,0 +1,23 @@
+uuid: 04e21e02-8da4-418d-a4cd-a5fb5d736030
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_phone_number
+    - taxonomy.vocabulary.services
+  module:
+    - telephone
+id: taxonomy_term.services.field_phone_number
+field_name: field_phone_number
+entity_type: taxonomy_term
+bundle: services
+label: Phone
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 123-567-6788
+default_value_callback: ''
+settings: {  }
+field_type: telephone

@@ -1,0 +1,96 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:behaviorsoe1.betabasket.net
+X-WR-TIMEZONE:Australia/Adelaide
+BEGIN:VTIMEZONE
+TZID:Australia/Adelaide
+X-LIC-LOCATION:Australia/Adelaide
+BEGIN:DAYLIGHT
+TZNAME:ACDT
+TZOFFSETFROM:+0930
+TZOFFSETTO:+1030
+DTSTART:20181006T163000
+END:DAYLIGHT
+BEGIN:DAYLIGHT
+TZNAME:ACDT
+TZOFFSETFROM:+0930
+TZOFFSETTO:+1030
+DTSTART:20191005T163000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZNAME:ACST
+TZOFFSETFROM:+1030
+TZOFFSETTO:+0930
+DTSTART:20180331T163000
+END:STANDARD
+BEGIN:STANDARD
+TZNAME:ACST
+TZOFFSETFROM:+1030
+TZOFFSETTO:+0930
+DTSTART:20190406T163000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:613ceeac411cd8976455565ebc87d5ad
+DTSTART;TZID=Australia/Adelaide:20181204T170000
+SEQUENCE:0
+TRANSP:OPAQUE
+URL:http://behaviorsoe1.betabasket.net/[node:path]
+SUMMARY:Symposium on the impact of Education on Socio-Economic Strata of Su
+ b-Sahara Africa
+CLASS:PUBLIC
+DESCRIPTION:Description:\nOur core priority is training teachers with new s
+ kills\, but that\ndoesn't mean we are always the trainers! In our network 
+ of 9 schools\,\nour teachers and directors are gifted with a variety of sk
+ ills. One of\nour roles at Impact One is to give them a platform to share 
+ those\nskills with each other. One of those platforms is the Teacher Group
+ \nMeetings\, which are organized by our School Directors to encourage and\
+ nequip their own teachers. This year\, our School Directors have chosen\nt
+ o use the Teacher Group Meetings as an opportunity to build skills in\nCre
+ ative and Technology Studies. In January\, they invited all of their\nteac
+ hers to come to our Library and Resource Center for the first\nsession. Wh
+ ile there\, Fountain of Life School Director\, Priscilla\,\ntaught the oth
+ ers how to weave using local resources. This particular\nskill is found th
+ roughout the entire Zambian primary school\ncurriculum. The teachers had s
+ o much fun with the hands-on learning.\nOne teacher\, Nickton\, has alread
+ y reported that he went back to school\nand taught his students. Then he w
+ ent home and taught his wife and\nchildren! That is the beauty of educatio
+ n in our community... it\nalways has a ripple effect! Whether it's the tea
+ chers or the students\,\nwhen they learn something new\, they are eager to
+  share it with those\nthey love. The schools are already planning their ne
+ xt Teacher Group\nMeeting where two teachers will share their skills in wo
+ od carving and\nsewing. Spreading the love!\n Start Date: Tue\, 12/04/2018
+  - 17:00 End Date: Tue\, 03/05/2019 - 19:30\n[node:field_author]
+X-ALT-DESC;FMTTYPE=text/html:Description: <p>Our core priority is training 
+ teachers with new skills\, but that doesn't mean we are always the trainer
+ s! In our network of 9 schools\, our teachers and directors are gifted wit
+ h a variety of skills. One of our roles at Impact One is to give them a pl
+ atform to share those skills with each other. One of those platforms is th
+ e Teacher Group Meetings\, which are organized by our School Directors to 
+ encourage and equip their own teachers. This year\, our School Directors h
+ ave chosen to use the Teacher Group Meetings as an opportunity to build sk
+ ills in Creative and Technology Studies. In January\, they invited all of 
+ their teachers to come to our Library and Resource Center for the first se
+ ssion. While there\, Fountain of Life School Director\, Priscilla\, taught
+  the others how to weave using local resources. This particular skill is f
+ ound throughout the entire Zambian primary school curriculum. The teachers
+  had so much fun with the hands-on learning. One teacher\, Nickton\, has a
+ lready reported that he went back to school and taught his students. Then 
+ he went home and taught his wife and children! That is the beauty of educa
+ tion in our community... it always has a ripple effect! Whether it's the t
+ eachers or the students\, when they learn something new\, they are eager t
+ o share it with those they love. The schools are already planning their ne
+ xt Teacher Group Meeting where two teachers will share their skills in woo
+ d carving and sewing. Spreading the love!</p>\n</br>\nStart Date: \n\n<!--
+  THEME DEBUG -->\n<!-- THEME HOOK: 'time' -->\n<!-- BEGIN OUTPUT from 'cor
+ e/themes/classy/templates/field/time.html.twig' -->\n<time datetime=\"2018
+ -12-04T06:30:00Z\" class=\"datetime\">Tue\, 12/04/2018 - 17:00</time>\n\n<
+ !-- END OUTPUT from 'core/themes/classy/templates/field/time.html.twig' --
+ >\n\n</br></br>\nEnd Date: \n\n<!-- THEME DEBUG -->\n<!-- THEME HOOK: 'tim
+ e' -->\n<!-- BEGIN OUTPUT from 'core/themes/classy/templates/field/time.ht
+ ml.twig' -->\n<time datetime=\"2019-03-05T09:00:00Z\" class=\"datetime\">T
+ ue\, 03/05/2019 - 19:30</time>\n\n<!-- END OUTPUT from 'core/themes/classy
+ /templates/field/time.html.twig' -->\n\n</br>\n[node:field_author]
+DTSTAMP:20190409T224536Z
+END:VEVENT
+END:VCALENDAR

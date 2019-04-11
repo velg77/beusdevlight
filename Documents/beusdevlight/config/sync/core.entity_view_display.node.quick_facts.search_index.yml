@@ -1,0 +1,35 @@
+uuid: b1b987d6-bf97-43b3-b046-40c688ffea03
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.quick_facts.body
+    - field.field.node.quick_facts.field_quick_facts
+    - node.type.quick_facts
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.quick_facts.search_index
+targetEntityType: node
+bundle: quick_facts
+mode: search_index
+content:
+  body:
+    type: text_default
+    weight: 0
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_quick_facts: true
+  links: true

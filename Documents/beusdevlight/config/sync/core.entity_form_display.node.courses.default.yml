@@ -1,0 +1,191 @@
+uuid: 75b131b2-0e58-4162-ba15-b3fc38a2a8e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.courses.body
+    - field.field.node.courses.field_academic_year
+    - field.field.node.courses.field_course_days
+    - field.field.node.courses.field_course_duration
+    - field.field.node.courses.field_course_no
+    - field.field.node.courses.field_course_themes
+    - field.field.node.courses.field_course_types
+    - field.field.node.courses.field_lead_text
+    - field.field.node.courses.field_map_location
+    - field.field.node.courses.field_programs
+    - field.field.node.courses.field_syllabus
+    - node.type.courses
+  module:
+    - content_moderation
+    - entity_reference_views_select
+    - paragraphs
+    - path
+    - scheduler
+    - scheduler_content_moderation_integration
+    - text
+id: node.courses.default
+targetEntityType: node
+bundle: courses
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 7
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  created:
+    type: datetime_timestamp
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_academic_year:
+    weight: 19
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_course_days:
+    weight: 2
+    settings:
+      size: 60
+      placeholder: 'M T W'
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_course_duration:
+    weight: 3
+    settings:
+      placeholder: 'Total hours'
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_course_no:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: DDDD-101
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_course_themes:
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_course_types:
+    weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_lead_text:
+    weight: 6
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_map_location:
+    weight: 8
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_programs:
+    weight: 9
+    settings: {  }
+    third_party_settings: {  }
+    type: erviews_options_select
+    region: content
+  field_syllabus:
+    type: entity_reference_paragraphs
+    weight: 31
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  moderation_state:
+    type: moderation_state_default
+    weight: 16
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  publish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  scheduler_settings:
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 17
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 12
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: 'Name of the course'
+    third_party_settings: {  }
+  uid:
+    type: erviews_options_select
+    weight: 10
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  unpublish_state:
+    type: scheduler_moderation
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  promote: true

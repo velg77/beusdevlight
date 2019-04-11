@@ -1,0 +1,25 @@
+uuid: 012ff1bb-7a68-4d3d-9984-93a181ed2d8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sub_copy
+    - node.type.personnel
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.personnel.field_sub_copy
+field_name: field_sub_copy
+entity_type: node
+bundle: personnel
+label: 'Sub Copy / Position'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

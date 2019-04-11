@@ -1,0 +1,8 @@
+uuid: a1ab2bef-c347-4d6f-9301-80e3d2ffaec7
+langcode: en
+status: true
+dependencies: {  }
+id: directory-menu
+label: 'Directory Menu'
+description: ''
+locked: false

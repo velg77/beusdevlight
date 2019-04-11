@@ -1,0 +1,29 @@
+uuid: 929ed282-c59f-40fd-8f3a-619571926c0f
+langcode: en
+status: true
+dependencies: {  }
+id: application_deadline_creator
+label: 'Application Deadline creator'
+weight: 24
+is_admin: false
+permissions:
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access toolbar'
+  - 'administer panelizer node application_deadline content'
+  - 'administer panelizer node application_deadline layout'
+  - 'change layouts in place editing'
+  - 'create application_deadline content'
+  - 'create url aliases'
+  - 'edit own application_deadline content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view application_deadline revisions'
+  - 'view latest version'
+  - 'view own unpublished content'

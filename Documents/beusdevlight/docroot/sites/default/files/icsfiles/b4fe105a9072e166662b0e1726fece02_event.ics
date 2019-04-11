@@ -1,0 +1,70 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:behaviorsoe1.betabasket.net
+X-WR-TIMEZONE:Australia/Adelaide
+BEGIN:VTIMEZONE
+TZID:Australia/Adelaide
+X-LIC-LOCATION:Australia/Adelaide
+BEGIN:DAYLIGHT
+TZNAME:ACDT
+TZOFFSETFROM:+0930
+TZOFFSETTO:+1030
+DTSTART:20181006T163000
+END:DAYLIGHT
+BEGIN:DAYLIGHT
+TZNAME:ACDT
+TZOFFSETFROM:+0930
+TZOFFSETTO:+1030
+DTSTART:20191005T163000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZNAME:ACST
+TZOFFSETFROM:+1030
+TZOFFSETTO:+0930
+DTSTART:20190406T163000
+END:STANDARD
+BEGIN:STANDARD
+TZNAME:ACST
+TZOFFSETFROM:+1030
+TZOFFSETTO:+0930
+DTSTART:20200404T163000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:02d649ec429e26ff3a4f4dca9afb078e
+DTSTART;TZID=Australia/Adelaide:20190601T100000
+SEQUENCE:0
+TRANSP:OPAQUE
+URL:http://behaviorsoe1.betabasket.net/[node:path]
+SUMMARY:Regional EduTech Conference 2019
+CLASS:PUBLIC
+DESCRIPTION:Description:\nThis annual conference is the “only conference 
+ during the year where\nyou’ll have access to the smartest and most influ
+ ential Learning &\nTalent Tech minds from around the world.” The three-d
+ ay event hosts\nover 103 of the best and brightest in business\, entrepren
+ eurship\,\nhigher ed and education innovation. Here is our recap of the 
+ 2018\nsummit\n[https://www.gettingsmart.com/2018/04/reflections-on-the-asu
+ gsv-summit-injecting-innovation-into-charter-schools/].\n Start Date: Sat\
+ , 06/01/2019 - 10:00 End Date: Sun\, 06/02/2019 - 17:00\n[node:field_autho
+ r]
+X-ALT-DESC;FMTTYPE=text/html:Description: <p>This annual conference is the 
+ “only conference during the year where you’ll have access to the smart
+ est and most influential Learning &amp\; <span class=\"pullquote\">Talent 
+ Tech minds from around the world</span>.” The three-day event hosts over
+  10<sup>3</sup> of the best and brightest in business\, entrepreneurship\,
+  higher ed and education innovation. Here is our recap of the <a href=\"
+ https://www.gettingsmart.com/2018/04/reflections-on-the-asugsv-summit-inje
+ cting-innovation-into-charter-schools/\">2018 summit</a>.</p>\n</br>\nStar
+ t Date: \n\n<!-- THEME DEBUG -->\n<!-- THEME HOOK: 'time' -->\n<!-- BEGIN 
+ OUTPUT from 'core/themes/classy/templates/field/time.html.twig' -->\n<time
+  datetime=\"2019-06-01T00:30:00Z\" class=\"datetime\">Sat\, 06/01/2019 - 1
+ 0:00</time>\n\n<!-- END OUTPUT from 'core/themes/classy/templates/field/ti
+ me.html.twig' -->\n\n</br></br>\nEnd Date: \n\n<!-- THEME DEBUG -->\n<!-- 
+ THEME HOOK: 'time' -->\n<!-- BEGIN OUTPUT from 'core/themes/classy/templat
+ es/field/time.html.twig' -->\n<time datetime=\"2019-06-02T07:30:00Z\" clas
+ s=\"datetime\">Sun\, 06/02/2019 - 17:00</time>\n\n<!-- END OUTPUT from 'co
+ re/themes/classy/templates/field/time.html.twig' -->\n\n</br>\n[node:field
+ _author]
+DTSTAMP:20190406T024800Z
+END:VEVENT
+END:VCALENDAR

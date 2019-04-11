@@ -1,0 +1,19 @@
+uuid: f045c648-9f5a-4f5f-a998-e3cd9a82d120
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - node
+id: node.field_schedule_a_time
+field_name: field_schedule_a_time
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

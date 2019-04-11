@@ -1,0 +1,23 @@
+uuid: 1d0e98d6-be0a-4333-a3d7-318161737d76
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.people
+    - field.storage.block_content.field_link
+  module:
+    - link
+id: block_content.people.field_link
+field_name: field_link
+entity_type: block_content
+bundle: people
+label: 'CTA Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

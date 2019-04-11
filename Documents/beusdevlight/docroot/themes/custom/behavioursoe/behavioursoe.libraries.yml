@@ -1,0 +1,196 @@
+global:
+  css:
+    theme:
+      assets/css/style.css: {}
+      assets/css/base/base.css: {}
+      assets/css/base/forms.css: {}
+      assets/css/overrides.css: {}
+      assets/css/vendor/slick.css: {}
+  js:
+    assets/js/slick.min.js: {}
+    assets/js/banner/banner.js: {}
+    assets/js/base/base.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+
+status-messages:
+  css:
+    theme:
+      assets/css/misc/status-messages/status-messages.css: {}
+
+field:
+  css:
+    theme:
+      assets/css/field/field.css: {}
+
+tabs:
+  css:
+    theme:
+      assets/css/navigation/tabs.css: {}
+
+header:
+  css:
+    theme:
+      assets/css/header/header.css: {}
+      assets/css/header/header-top/header-top.css: {}
+      assets/css/vendor/jquery-mobile-mega-menu-min.css: {}
+  js:
+    assets/js/jquery-mobile-mega-menu.js: {}
+    assets/js/header/header.js: {}
+
+footer:
+  css:
+    theme:
+      assets/css/footer/footer.css: {}
+
+listing:
+  css:
+    theme:
+      assets/css/listing/listing.css: {}
+      assets/css/block-content/mission-vision/mission-vision.css: {}
+  js:
+      assets/js/listing/listing.js: {}
+
+node:
+  css:
+    theme:
+      assets/css/node/node.css: {}
+
+layout:
+  css:
+    theme:
+      assets/css/layout/simple-layout.css: {}
+
+node-requirements:
+  css:
+    theme:
+      assets/css/node/requirements/requirements.css: {}
+
+node-curriculum:
+  css:
+    theme:
+      assets/css/node/curriculum/curriculum.css: {}
+
+node-deadline:
+  css:
+    theme:
+      assets/css/node/deadline/deadline.css: {}
+
+node-endorsement:
+  css:
+    theme:
+      assets/css/node/endorsement/endorsement.css: {}
+
+node-quick-facts:
+  css:
+    theme:
+      assets/css/node/quick-facts/quick-facts.css: {}
+
+node-careers:
+  css:
+    theme:
+      assets/css/node/careers/careers.css: {}
+
+node-internships:
+  css:
+    theme:
+      assets/css/node/internships/internships.css: {}
+
+banner:
+  css:
+    theme:
+      assets/css/banner/banner.css: {}
+
+academic-programs:
+  css:
+    theme:
+      assets/css/block-content/academic-programs/academic-programs.css: {}
+
+degrees-certifications:
+  css:
+    theme:
+      assets/css/block-content/degrees-certifications/degrees-certifications.css: {}
+
+degrees-all:
+  css:
+    theme:
+      assets/css/block-content/degrees-all/degrees-all.css: {}      
+
+why-soe:
+  css:
+    theme:
+      assets/css/block-content/why-soe/why-soe.css: {}
+
+ways-to-give:
+  css:
+    theme:
+      assets/css/block-content/ways-to-give/ways-to-give.css: {}
+
+find-program:
+  css:
+    theme:
+      assets/css/block-content/find-program/find-program.css: {}
+
+mission-vision:
+  css:
+    theme:
+      assets/css/block-content/mission-vision/mission-vision.css: {}
+
+message:
+  css:
+    theme:
+      assets/css/block-content/message/message.css: {}
+
+people-type-list:
+  css:
+    theme:
+      assets/css/block-content/people-type-list/people-type-list.css: {}
+
+people-list:
+  css:
+    theme:
+      assets/css/block-content/people-list/people-list.css: {}
+
+three-cols-grid-with-bg:
+  css:
+    theme:
+      assets/css/block-content/three-cols-grid-with-bg/three-cols-grid-with-bg.css: {}
+
+two-cols-grid-with-bg:
+  css:
+    theme:
+      assets/css/block-content/two-cols-grid-with-bg/two-cols-grid-with-bg.css: {}
+
+community:
+  css:
+    theme:
+      assets/css/block-content/community/community.css: {}
+
+connect:
+  css:
+    theme:
+      assets/css/block-content/connect/connect.css: {}
+
+block-webform:
+  css:
+    theme:
+      assets/css/block-content/block-webform/block-webform.css: {}
+
+naturalformblock:
+  css:
+    theme:
+      assets/css/block/naturalform/naturalformblock.css: {}
+  js:
+    assets/js/block/naturalform/naturalformblock.js: {}
+
+frequently_questions:
+  css:
+    theme:
+      assets/css/block-content/frequently_questions/frequently_questions.css: {}
+
+formblock_node:
+  css:
+    theme:
+      assets/css/block-formblock/block-formblock-node/formblock-node.css: {}       

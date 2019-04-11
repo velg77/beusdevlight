@@ -1,0 +1,28 @@
+uuid: 26324d4e-17b9-4f1f-aa5b-f4e397287788
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.room_features_technology_
+  module:
+    - panelizer
+    - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.room_features_technology_.default
+targetEntityType: taxonomy_term
+bundle: room_features_technology_
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

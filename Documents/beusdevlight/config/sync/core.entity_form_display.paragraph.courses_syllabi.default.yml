@@ -1,0 +1,50 @@
+uuid: 6b3a13b5-710b-4c53-a54f-5bd01bc0cb51
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.courses_syllabi.field_downloadable_file
+    - field.field.paragraph.courses_syllabi.field_faculty
+    - field.field.paragraph.courses_syllabi.field_term
+    - paragraphs.paragraphs_type.courses_syllabi
+id: paragraph.courses_syllabi.default
+targetEntityType: paragraph
+bundle: courses_syllabi
+mode: default
+content:
+  field_downloadable_file:
+    type: entity_browser_entity_reference
+    weight: 2
+    settings:
+      entity_browser: media_browser
+      field_widget_display: rendered_entity
+      field_widget_edit: true
+      field_widget_remove: true
+      selection_mode: selection_append
+      field_widget_display_settings:
+        view_mode: thumbnail
+      open: true
+      field_widget_replace: false
+    region: content
+    third_party_settings: {  }
+  field_faculty:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_term:
+    weight: 0
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

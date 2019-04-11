@@ -1,0 +1,65 @@
+diff --git a/src/Plugin/Block/NodeFormBlock.php b/src/Plugin/Block/NodeFormBlock.php
+index dc9385e..0d30338 100644
+--- a/src/Plugin/Block/NodeFormBlock.php
++++ b/src/Plugin/Block/NodeFormBlock.php
+@@ -81,6 +81,7 @@ class NodeFormBlock extends BlockBase implements ContainerFactoryPluginInterface
+   public function defaultConfiguration() {
+     return [
+       'type' => NULL,
++      'form_mode' => 'default',
+       'show_help' => FALSE,
+     ];
+   }
+@@ -97,6 +98,14 @@ class NodeFormBlock extends BlockBase implements ContainerFactoryPluginInterface
+       '#options' => $this->getNodeTypes(),
+       '#default_value' => $this->configuration['type'],
+     ];
++    $form['formblock_node_form_mode'] = [
++      '#title' => $this->t('Form mode'),
++      '#description' => $this->t('Select the form mode that will be shown in the block.'),
++      '#type' => 'select',
++      '#required' => TRUE,
++      '#options' => $this->getFormModes(),
++      '#default_value' => $this->configuration['form_mode'],
++    ];
+     $form['formblock_show_help'] = [
+       '#type' => 'checkbox',
+       '#title' => $this->t('Show submission guidelines'),
+@@ -122,11 +131,28 @@ class NodeFormBlock extends BlockBase implements ContainerFactoryPluginInterface
+     return $options;
+   }
+ 
++
++  /**
++   * Get an array of node form modes.
++   *
++   * @return array
++   *   An array of form modes keyed by machine name.
++   */
++  protected function getFormModes() {
++    $options = [];
++    $modes = $this->entityTypeManager->getDefinitions()['node']->getHandlerClasses()['form'];
++    foreach ($modes as $index => $mode) {
++      $options[$index] = $index;
++    }
++    return $options;
++  }
++
+   /**
+    * Overrides \Drupal\block\BlockBase::blockSubmit().
+    */
+   public function blockSubmit($form, FormStateInterface $form_state) {
+     $this->configuration['type'] = $form_state->getValue('formblock_node_type');
++    $this->configuration['form_mode'] = $form_state->getValue('formblock_node_form_mode');
+     $this->configuration['show_help'] = $form_state->getValue('formblock_show_help');
+   }
+ 
+@@ -146,7 +172,7 @@ class NodeFormBlock extends BlockBase implements ContainerFactoryPluginInterface
+       'type' => $node_type->id(),
+     ]);
+ 
+-    $build['form'] = $this->entityFormBuilder->getForm($node);
++    $build['form'] = $this->entityFormBuilder->getForm($node, $this->configuration['form_mode']);
+ 
+     return $build;
+   }

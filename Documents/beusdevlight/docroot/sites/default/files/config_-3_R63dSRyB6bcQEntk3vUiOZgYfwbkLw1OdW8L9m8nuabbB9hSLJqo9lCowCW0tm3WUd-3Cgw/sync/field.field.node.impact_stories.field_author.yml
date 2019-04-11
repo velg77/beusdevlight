@@ -1,0 +1,19 @@
+uuid: 7786248a-7c29-453c-a554-8bdc3f283453
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_author
+    - node.type.impact_stories
+id: node.impact_stories.field_author
+field_name: field_author
+entity_type: node
+bundle: impact_stories
+label: Author
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

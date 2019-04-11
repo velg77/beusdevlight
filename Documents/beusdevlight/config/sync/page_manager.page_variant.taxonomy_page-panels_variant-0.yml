@@ -1,0 +1,93 @@
+uuid: 14f8ddbc-a2af-4365-89ef-b7095dabafd4
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.taxonomy_page
+  module:
+    - ctools
+    - panels
+id: taxonomy_page-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    1ad24846-21de-45e5-878e-e873f4f715ec:
+      id: 'entity_view:taxonomy_term'
+      label: 'Entity view (Taxonomy term)'
+      provider: ctools
+      label_display: '0'
+      view_mode: full_taxonomy
+      region: row2
+      weight: 0
+      uuid: 1ad24846-21de-45e5-878e-e873f4f715ec
+      context_mapping:
+        entity: taxonomy_term
+  id: panels_variant
+  uuid: 0aea14f3-aae2-46e8-ab93-919861648b5a
+  label: null
+  weight: 0
+  layout: behavioursoe_layout
+  layout_settings:
+    wrappers:
+      row1: div
+      row2: div
+      row3: div
+      row4: div
+      row5: div
+      row6: div
+      row7: div
+      row8: div
+      left_sidebar: div
+      main_content: div
+      right_sidebar: div
+      row9: div
+      row10: div
+      row11: div
+      row12: div
+      row13: div
+      row14: div
+      row15: div
+    outer_wrapper: div
+    attributes: ''
+    link_attribute: ''
+    link_custom: ''
+    classes:
+      layout_class: {  }
+      row1: {  }
+      row2:
+        row_sp_top: row_sp_top
+        row_sp_bot: row_sp_bot
+        sm_cnt: sm_cnt
+      row3: {  }
+      row4: {  }
+      row5: {  }
+      row6: {  }
+      row7: {  }
+      row8: {  }
+      left_sidebar: {  }
+      main_content: {  }
+      right_sidebar: {  }
+      row9: {  }
+      row10: {  }
+      row11: {  }
+      row12: {  }
+      row13: {  }
+      row14: {  }
+      row15: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: taxonomy_page-panels_variant-0
+  builder: standard
+page: taxonomy_page
+weight: 0
+selection_criteria:
+  -
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      offices: offices
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+selection_logic: and
+static_context: {  }

@@ -1,0 +1,8 @@
+uuid: a2b8a363-c2f1-4093-a4f7-30a053732985
+langcode: en
+status: true
+dependencies: {  }
+id: people
+label: People
+revision: 1
+description: 'A block is used for displaying people in About SOE'

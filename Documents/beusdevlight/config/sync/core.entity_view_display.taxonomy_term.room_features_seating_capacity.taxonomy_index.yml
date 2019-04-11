@@ -1,0 +1,29 @@
+uuid: 89fab858-55ae-48b1-ade3-0e69ead15502
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.taxonomy_index
+    - taxonomy.vocabulary.room_features_seating_capacity
+  module:
+    - panelizer
+    - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.room_features_seating_capacity.taxonomy_index
+targetEntityType: taxonomy_term
+bundle: room_features_seating_capacity
+mode: taxonomy_index
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

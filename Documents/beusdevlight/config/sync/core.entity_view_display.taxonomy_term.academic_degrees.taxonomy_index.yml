@@ -1,0 +1,133 @@
+uuid: a1e0719c-b514-4c81-971b-f10774a7126a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.taxonomy_index
+    - field.field.taxonomy_term.academic_degrees.field_featured_image
+    - field.field.taxonomy_term.academic_degrees.field_lead_text
+    - field.field.taxonomy_term.academic_degrees.panelizer
+    - taxonomy.vocabulary.academic_degrees
+  module:
+    - panelizer
+    - text
+third_party_settings:
+  panelizer:
+    enable: true
+    custom: true
+    allow: true
+    default: default
+    displays:
+      default:
+        blocks:
+          8ef1c41a-7338-4e24-9524-10ffe97087e3:
+            id: 'block_content:457d64cc-bca6-46cf-86a2-97c6a47fbf8f'
+            label: 'Banner Hero [Masters]'
+            provider: block_content
+            label_display: '0'
+            status: true
+            info: ''
+            view_mode: default
+            region: content
+            weight: -2
+            uuid: 8ef1c41a-7338-4e24-9524-10ffe97087e3
+            context_mapping: {  }
+          ec747b04-ebe5-41b4-bb53-43527f8388e3:
+            id: 'views_block:general-block_4'
+            label: 'Calendar of Events'
+            provider: views
+            label_display: visible
+            views_label: 'Calendar of Events'
+            items_per_page: none
+            region: content
+            weight: 0
+            uuid: ec747b04-ebe5-41b4-bb53-43527f8388e3
+            context_mapping: {  }
+          db5627a6-9473-4858-ba8c-368d7f0a949e:
+            id: 'block_content:2f5d7223-5fee-4e6c-b91d-270dfbe2ea2c'
+            label: 'OUR IMPACT'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: full
+            region: content
+            weight: 1
+            uuid: db5627a6-9473-4858-ba8c-368d7f0a949e
+            context_mapping: {  }
+          b48ea7a0-d29f-474d-97a0-839a418b7c5b:
+            id: 'views_block:general-block_1'
+            label: ''
+            provider: views
+            label_display: '0'
+            views_label: ''
+            items_per_page: none
+            region: content
+            weight: 2
+            uuid: b48ea7a0-d29f-474d-97a0-839a418b7c5b
+            context_mapping: {  }
+          f1924186-edf8-42ab-85c8-ae82710f5219:
+            id: 'block_content:fdb9d4ad-61de-4446-bf87-acfb433e74c4'
+            label: 'CONNECT WITH US'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: full
+            region: content
+            weight: 3
+            uuid: f1924186-edf8-42ab-85c8-ae82710f5219
+            context_mapping: {  }
+          07938989-f03a-41a3-a3ea-fabeca8e784d:
+            id: 'views_block:general-block_8'
+            label: ''
+            provider: views
+            label_display: '0'
+            views_label: ''
+            items_per_page: none
+            region: content
+            weight: -1
+            uuid: 07938989-f03a-41a3-a3ea-fabeca8e784d
+            context_mapping: {  }
+        id: panels_variant
+        label: Default
+        uuid: 7ca105f8-6cbc-4e0d-9391-d38ee3bb0ef5
+        weight: 0
+        layout: layout_onecol
+        layout_settings: {  }
+        page_title: '[term:name]'
+        storage_type: panelizer_default
+        storage_id: 'taxonomy_term:academic_degrees:default:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+id: taxonomy_term.academic_degrees.taxonomy_index
+targetEntityType: taxonomy_term
+bundle: academic_degrees
+mode: taxonomy_index
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_featured_image:
+    type: entity_reference_entity_view
+    weight: 2
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  field_lead_text:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  panelizer: true

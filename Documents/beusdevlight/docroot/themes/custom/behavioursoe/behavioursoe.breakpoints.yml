@@ -1,0 +1,63 @@
+# Breakpoints - change based on site need
+# 320 Begins  -> 170, 340
+behavioursoe.xsm:
+  label: x-small
+  mediaQuery: 'all and (min-width: 20em)'
+  weight: 0
+  multipliers:
+    - 1x
+    - 2x
+
+# 480 Begins  -> 270, 540
+behavioursoe.sm:
+  label: small
+  mediaQuery: 'all and (min-width: 30em)'
+  weight: 1
+  multipliers:
+    - 1x
+    - 2x
+
+# 768 Begins  -> 370, 740
+behavioursoe.md:
+  label: medium
+  mediaQuery: 'all and (min-width: 48em)'
+  weight: 2
+  multipliers:
+    - 1x
+    - 2x
+
+# 1024 Begins  -> 770, 1540
+behavioursoe.mdlg:
+  label: medium-large
+  mediaQuery: 'all and (min-width: 64em)'
+  weight: 3
+  multipliers:
+    - 1x
+    - 2x
+
+# 1200 Begins  -> 1168, 2336
+behavioursoe.lg:
+  label: large
+  mediaQuery: 'all and (min-width: 75em)'
+  weight: 4
+  multipliers:
+    - 1x
+    - 2x
+
+# 1440 Begins  -> 1440, 2880
+behavioursoe.xlg:
+  label: x-large
+  mediaQuery: 'all and (min-width: 90em)'
+  weight: 5
+  multipliers:
+    - 1x
+    - 2x
+
+# 1920 Begins  -> 1920, 3840
+behavioursoe.xxlg:
+  label: xx-large
+  mediaQuery: 'all and (min-width: 120em)'
+  weight: 6
+  multipliers:
+    - 1x
+    - 2x

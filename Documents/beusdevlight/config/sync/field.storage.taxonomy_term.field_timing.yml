@@ -1,0 +1,19 @@
+uuid: 7e550718-f3df-4e1d-baf3-45d7722dcd86
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - text
+id: taxonomy_term.field_timing
+field_name: field_timing
+entity_type: taxonomy_term
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

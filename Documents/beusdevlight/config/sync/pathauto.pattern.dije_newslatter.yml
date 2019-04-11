@@ -1,0 +1,22 @@
+uuid: 8eb0784f-cc52-4380-8f9b-49551bd2eb04
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: dije_newslatter
+label: 'Dije Newsletter'
+type: 'canonical_entities:node'
+pattern: 'dije-newsletter/[node:title]'
+selection_criteria:
+  e11d3628-acf1-4b82-a5b8-f1ce463f3756:
+    id: node_type
+    bundles:
+      dije_newsletter: dije_newsletter
+    negate: false
+    context_mapping:
+      node: node
+    uuid: e11d3628-acf1-4b82-a5b8-f1ce463f3756
+selection_logic: and
+weight: -5
+relationships: {  }

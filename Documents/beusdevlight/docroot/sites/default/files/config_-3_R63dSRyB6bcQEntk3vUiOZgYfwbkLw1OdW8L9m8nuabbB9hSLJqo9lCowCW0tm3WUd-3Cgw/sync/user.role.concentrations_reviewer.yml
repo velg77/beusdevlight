@@ -1,0 +1,19 @@
+uuid: e2c67ab0-d2d2-41c8-b9af-55fa0c39fb3f
+langcode: en
+status: true
+dependencies: {  }
+id: concentrations_reviewer
+label: 'Concentrations reviewer'
+weight: 19
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'delete any concentrations content'
+  - 'edit any concentrations content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'view any unpublished content'
+  - 'view latest version'

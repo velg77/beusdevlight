@@ -1,0 +1,20 @@
+uuid: 867ee4c1-9aa2-4076-8ea7-ca6879a5efc6
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+id: paragraph.field_downloadable_file
+field_name: field_downloadable_file
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

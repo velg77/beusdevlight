@@ -1,0 +1,25 @@
+uuid: f8aae9fd-3d00-43f8-a454-2e13640dbe3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.portrait
+  module:
+    - crop
+name: xsm_portrait_2x
+label: xsm_portrait_2x
+effects:
+  a91fa6bb-62ae-47cd-a274-0e7cd3e6e1e0:
+    uuid: a91fa6bb-62ae-47cd-a274-0e7cd3e6e1e0
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: portrait
+  e5b74f34-f5ec-4acd-afa1-fe6aa7cbf151:
+    uuid: e5b74f34-f5ec-4acd-afa1-fe6aa7cbf151
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 340
+      height: 368
+      anchor: center-center

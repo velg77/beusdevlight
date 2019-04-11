@@ -1,0 +1,21 @@
+uuid: b6dc5da7-65a1-41bd-8bd9-308b30bde977
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.panelizer
+    - node.type.concentrations
+  module:
+    - panelizer
+id: node.concentrations.panelizer
+field_name: panelizer
+entity_type: node
+bundle: concentrations
+label: Panelizer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: panelizer

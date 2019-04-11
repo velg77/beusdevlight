@@ -1,0 +1,14 @@
+uuid: 2ca15458-a249-4f4d-8218-db32e6d8089b
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - paragraphs
+third_party_settings:
+  lightning_core:
+    description: ''
+id: paragraph.2_cols_grid_with_bg
+label: '2 Cols Grid with BG'
+targetEntityType: paragraph
+cache: true

@@ -1,0 +1,20 @@
+uuid: 9e0da53c-a34d-4b31-8630-64f7d927ad53
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_seating_capacity_fx
+field_name: field_seating_capacity_fx
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

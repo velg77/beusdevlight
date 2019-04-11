@@ -1,0 +1,21 @@
+uuid: 3c553cca-71b5-4fcb-8130-020236961796
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_sub_text
+    - paragraphs.paragraphs_type.multiple_content
+  module:
+    - text
+id: paragraph.multiple_content.field_sub_text
+field_name: field_sub_text
+entity_type: paragraph
+bundle: multiple_content
+label: 'Sub Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text

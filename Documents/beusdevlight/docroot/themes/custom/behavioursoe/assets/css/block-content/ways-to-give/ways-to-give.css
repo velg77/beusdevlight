@@ -1,0 +1,60 @@
+/**
+ * Clearfix
+*/
+/**
+ * Buttons
+*/
+.box {
+  padding: 10px 30px; }
+
+/**
+ * Css3 Extensions
+*/
+/**
+ * Flex
+*/
+/**
+ * Invisible
+*/
+.block-content--view-mode-ways-to-give-grants-forms-guidelines .field--name-field-content {
+  letter-spacing: -0.31rem;
+  margin-top: 40px; }
+  .block-content--view-mode-ways-to-give-grants-forms-guidelines .field--name-field-content > .field__item {
+    text-align: center;
+    padding: 15px;
+    letter-spacing: 0;
+    vertical-align: top; }
+
+.block-content--view-mode-ways-to-give-grants-forms-guidelines .field--name-field-title {
+  font-size: 1.111rem;
+  font-family: 'Avenir-Black', sans-serif;
+  padding-bottom: 10px; }
+
+.block-content--view-mode-ways-to-give-grants-forms-guidelines .field--name-field-cta a {
+  background: none;
+  border: none;
+  text-transform: none;
+  color: #0d57aa; }
+  .block-content--view-mode-ways-to-give-grants-forms-guidelines .field--name-field-cta a:after {
+    content: "\f105";
+    font-family: 'Fontawesome 5 pro';
+    padding-left: 10px;
+    font-size: 1.111rem;
+    vertical-align: middle; }
+  .block-content--view-mode-ways-to-give-grants-forms-guidelines .field--name-field-cta a:hover {
+    color: #00274c; }
+
+.block-content--view-mode-ways-to-give-grants-forms-guidelines .field--name-field-sub-title {
+  font-size: 0.889rem; }
+
+.block-content--view-mode-ways-to-give-grants-forms-guidelines .field--name-field-image {
+  padding-bottom: 36px; }
+
+@media (min-width: 768px) {
+  .block-content--view-mode-ways-to-give-grants-forms-guidelines .field--name-field-content > .field__item {
+    width: 50%;
+    display: inline-block; } }
+
+@media (min-width: 1024px) {
+  .block-content--view-mode-ways-to-give-grants-forms-guidelines .field--name-field-content > .field__item {
+    width: 25%; } }

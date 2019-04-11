@@ -1,0 +1,8 @@
+uuid: 72bb1c7a-9a3f-4805-b4e7-6af152e3209b
+langcode: en
+status: true
+dependencies: {  }
+id: degree-all-menu
+label: 'Degree All Menu'
+description: 'Degree All Menu'
+locked: false

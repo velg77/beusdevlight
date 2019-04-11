@@ -1,0 +1,9 @@
+uuid: 5eddaca0-5e4d-472c-9536-add12cd9456a
+langcode: en
+status: true
+dependencies: {  }
+name: 'FAQ Categories'
+vid: faq_categories
+description: 'Used for filtering FAQs'
+hierarchy: 1
+weight: 0

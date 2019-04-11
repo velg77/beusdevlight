@@ -1,0 +1,12 @@
+uuid: ac3e07d5-dd77-4de4-8e35-19178ce22512
+langcode: en
+status: true
+dependencies: {  }
+label: 'Narrow Portrait'
+id: narrow_portrait
+description: ''
+aspect_ratio: '27:53'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

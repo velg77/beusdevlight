@@ -1,0 +1,21 @@
+uuid: 54154a87-9138-4747-ac14-e5d8951a52ca
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_full_description
+    - paragraphs.paragraphs_type.message
+  module:
+    - text
+id: paragraph.message.field_full_description
+field_name: field_full_description
+entity_type: paragraph
+bundle: message
+label: 'Full Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

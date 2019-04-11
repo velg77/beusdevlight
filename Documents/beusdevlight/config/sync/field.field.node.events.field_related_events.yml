@@ -1,0 +1,32 @@
+uuid: 41500f9a-8f53-4744-81b6-3a0ede091f99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_related_events
+    - node.type.events
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.events.field_related_events
+field_name: field_related_events
+entity_type: node
+bundle: events
+label: 'Related Events'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: general
+      display_name: entity_reference_1
+      arguments:
+        - events
+field_type: entity_reference

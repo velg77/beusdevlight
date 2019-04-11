@@ -1,0 +1,20 @@
+uuid: 450c9553-4091-4a87-bc8f-66eae5b6a347
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - node
+id: node.field_360deg_image
+field_name: field_360deg_image
+entity_type: node
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

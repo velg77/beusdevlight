@@ -1,0 +1,29 @@
+uuid: 7618422b-4115-4678-99d5-88c99f077f31
+langcode: en
+status: true
+dependencies: {  }
+id: node_form_mode_example_creator
+label: 'Node form mode example creator'
+weight: 34
+is_admin: false
+permissions:
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access toolbar'
+  - 'administer panelizer node node_form_mode_example content'
+  - 'administer panelizer node node_form_mode_example layout'
+  - 'change layouts in place editing'
+  - 'create node_form_mode_example content'
+  - 'create url aliases'
+  - 'edit own node_form_mode_example content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view node_form_mode_example revisions'
+  - 'view own unpublished content'

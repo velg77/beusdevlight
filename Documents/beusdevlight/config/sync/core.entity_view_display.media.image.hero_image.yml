@@ -1,0 +1,80 @@
+uuid: 47960de1-efde-4aa7-9013-93efb40a33f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.hero_image
+    - field.field.media.image.field_media_in_library
+    - field.field.media.image.image
+    - media.type.image
+  module:
+    - blazy
+_core:
+  default_config_hash: VLDxfMVPTkd2xvOjFMCh3kWmaOYnd03zggFXuUXQVEY
+id: media.image.hero_image
+targetEntityType: media
+bundle: image
+mode: hero_image
+content:
+  image:
+    type: blazy_file
+    weight: 0
+    label: hidden
+    settings:
+      image_style: xsm_landscape
+      thumbnail_style: ''
+      responsive_image_style: hero_image
+      media_switch: ''
+      view_mode: default
+      ratio: ''
+      iframe_lazy: true
+      sizes: ''
+      breakpoints:
+        xs:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        sm:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        md:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        lg:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+        xl:
+          image_style: ''
+          width: ''
+          breakpoint: ''
+      current_view_mode: hero_image
+      background: false
+      caption:
+        title: '0'
+        alt: '0'
+      icon: ''
+      layout: ''
+      cache: 0
+      optionset: default
+      skin: ''
+      style: ''
+      box_caption: ''
+      box_caption_custom: ''
+      box_style: ''
+      box_media_style: ''
+      grid: 0
+      grid_header: ''
+      grid_medium: 0
+      grid_small: 0
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_media_in_library: true
+  name: true
+  thumbnail: true
+  uid: true

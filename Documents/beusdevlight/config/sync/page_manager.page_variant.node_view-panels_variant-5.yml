@@ -1,0 +1,135 @@
+uuid: 69dfc0ae-54c2-4b3c-b537-9b5f802571ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.node_view
+    - views.view.general_listing_blocks
+  module:
+    - ctools
+    - ctools_block
+    - panels
+    - views
+id: node_view-panels_variant-5
+label: Rooms
+variant: panels_variant
+variant_settings:
+  blocks:
+    fe091b4e-8ad0-419b-9668-ad9a05801d34:
+      id: 'entity_view:node'
+      label: 'Entity view (Content)'
+      provider: ctools
+      label_display: '0'
+      view_mode: default
+      region: row1
+      weight: 0
+      uuid: fe091b4e-8ad0-419b-9668-ad9a05801d34
+      context_mapping:
+        entity: node
+    dd472872-d11d-4d73-a4c4-363b4bf40aff:
+      id: 'entity_field:node:field_lead_text'
+      label: 'Lead text'
+      provider: ctools_block
+      label_display: '0'
+      formatter:
+        label: hidden
+        type: text_default
+        settings: {  }
+        third_party_settings: {  }
+        weight: 0
+      region: row2
+      weight: -1
+      uuid: dd472872-d11d-4d73-a4c4-363b4bf40aff
+      context_mapping:
+        entity: node
+    da876843-1889-4fb9-88a4-af6a546b584a:
+      id: 'entity_field:node:body'
+      label: Body
+      provider: ctools_block
+      label_display: '0'
+      formatter:
+        label: hidden
+        type: text_default
+        settings: {  }
+        third_party_settings: {  }
+        weight: 0
+      region: row2
+      weight: 0
+      uuid: da876843-1889-4fb9-88a4-af6a546b584a
+      context_mapping:
+        entity: node
+    75941b62-ec75-4bec-83ea-23e70201b5c5:
+      id: 'views_block:general_listing_blocks-more_rooms'
+      label: 'More Rooms'
+      provider: views
+      label_display: visible
+      views_label: 'More Rooms'
+      items_per_page: none
+      region: row3
+      weight: 0
+      uuid: 75941b62-ec75-4bec-83ea-23e70201b5c5
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 2f8dff12-cd9e-47de-8726-98846307d5be
+  label: null
+  weight: 0
+  layout: behavioursoe_layout
+  layout_settings:
+    wrappers:
+      row1: div
+      row2: div
+      row3: div
+      row4: div
+      row5: div
+      row6: div
+      row7: div
+      row8: div
+      row9: div
+      row10: div
+      row11: div
+      row12: div
+      row13: div
+      row14: div
+      row15: div
+    outer_wrapper: div
+    attributes: ''
+    link_attribute: ''
+    link_custom: ''
+    classes:
+      layout_class:
+        row_sp_top: row_sp_top
+        row_sp_bot: row_sp_bot
+      row1: {  }
+      row2:
+        sm_cnt: sm_cnt
+      row3:
+        row_sp_top: row_sp_top
+        row_sp_bot: row_sp_bot
+      row4: {  }
+      row5: {  }
+      row6: {  }
+      row7: {  }
+      row8: {  }
+      row9: {  }
+      row10: {  }
+      row11: {  }
+      row12: {  }
+      row13: {  }
+      row14: {  }
+      row15: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: node_view-panels_variant-5
+  builder: standard
+page: node_view
+weight: 0
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    bundles:
+      rooms: rooms
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+static_context: {  }

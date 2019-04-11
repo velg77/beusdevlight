@@ -1,0 +1,28 @@
+uuid: 1d4b9417-2f98-4f14-b34d-807fbc44fd95
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.themes
+  module:
+    - panelizer
+    - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.themes.default
+targetEntityType: taxonomy_term
+bundle: themes
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

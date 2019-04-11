@@ -1,0 +1,35 @@
+uuid: 4918e49a-824c-4a59-af08-3456c67311b6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.people
+    - field.storage.block_content.field_people_taxonomy_term
+    - taxonomy.vocabulary.personnel_type
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: block_content.people.field_people_taxonomy_term
+field_name: field_people_taxonomy_term
+entity_type: block_content
+bundle: people
+label: 'Personnel Type'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      personnel_type: personnel_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

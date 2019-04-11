@@ -1,0 +1,61 @@
+uuid: 8529c452-dbd9-4d63-960c-aa886b6147d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.impact_stories.body
+    - field.field.node.impact_stories.field_author
+    - field.field.node.impact_stories.field_date_of_publication
+    - field.field.node.impact_stories.field_image_video_caption
+    - field.field.node.impact_stories.field_impact_story_type
+    - field.field.node.impact_stories.field_lead_text
+    - field.field.node.impact_stories.field_media
+    - field.field.node.impact_stories.field_media_type
+    - field.field.node.impact_stories.field_news_type
+    - field.field.node.impact_stories.field_personnel
+    - field.field.node.impact_stories.field_programs
+    - field.field.node.impact_stories.field_related_impact_stories
+    - field.field.node.impact_stories.field_show_manual_entry
+    - field.field.node.impact_stories.field_tags
+    - field.field.node.impact_stories.panelizer
+    - node.type.impact_stories
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.impact_stories.search_index
+targetEntityType: node
+bundle: impact_stories
+mode: search_index
+content:
+  body:
+    type: text_default
+    weight: 0
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_author: true
+  field_date_of_publication: true
+  field_image_video_caption: true
+  field_impact_story_type: true
+  field_lead_text: true
+  field_media: true
+  field_media_type: true
+  field_news_type: true
+  field_personnel: true
+  field_programs: true
+  field_related_impact_stories: true
+  field_show_manual_entry: true
+  field_tags: true
+  links: true
+  panelizer: true

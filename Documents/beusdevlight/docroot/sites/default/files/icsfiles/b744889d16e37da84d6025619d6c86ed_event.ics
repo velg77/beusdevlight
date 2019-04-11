@@ -1,0 +1,59 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:behaviorsoe1.betabasket.net
+X-WR-TIMEZONE:Asia/Kolkata
+BEGIN:VTIMEZONE
+TZID:Asia/Kolkata
+X-LIC-LOCATION:Asia/Kolkata
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:93fc3715ff4cede00ba06a237491d96c
+DTSTART;TZID=Asia/Kolkata:19020104T020200
+SEQUENCE:0
+TRANSP:OPAQUE
+URL:http://behaviorsoe1.betabasket.net/[node:path]
+SUMMARY:test
+CLASS:PUBLIC
+DESCRIPTION:Description:\nLOREM IPSUM is simply dummy text of the printing
+  and typesetting\nindustry. Lorem Ipsum has been the industry's standard d
+ ummy text ever\nsince the 1500s\, when an unknown printer took a galley of
+  type and\nscrambled it to make a type specimen book. It has survived not 
+ only\nfive centuries\, but also the leap into electronic typesetting\,\nre
+ maining essentially unchanged. It was popularised in the 1960s with\nthe r
+ elease of Letraset sheets containing Lorem Ipsum passages\, and\nmore rece
+ ntly with desktop publishing software like Aldus PageMaker\nincluding vers
+ ions of Lorem Ipsum.LOREM IPSUM is simply dummy text of\nthe printing and
+  typesetting industry. Lorem Ipsum has been the\nindustry's standard dummy
+  text ever since the 1500s\, when an unknown\nprinter took a galley of typ
+ e and scrambled it to make a type specimen\nbook. It has survived not only
+  five centuries\, but also the leap into\nelectronic typesetting\, remaini
+ ng essentially unchanged. It was\npopularised in the 1960s with the releas
+ e of Letraset sheets\ncontaining Lorem Ipsum passages\, and more recently 
+ with desktop\npublishing software like Aldus PageMaker including versions 
+ of Lorem\nIpsum.\n Start Date: Fri\, 02/02/1900 - 14:06 End Date: [node:fi
+ eld_event_date]\n[node:field_author]
+X-ALT-DESC;FMTTYPE=text/html:Description: <p><strong>Lorem Ipsum</strong> 
+ is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+  has been the industry's standard dummy text ever since the 1500s\, when a
+ n unknown printer took a galley of type and scrambled it to make a type sp
+ ecimen book. It has survived not only five centuries\, but also the leap i
+ nto electronic typesetting\, remaining essentially unchanged. It was popul
+ arised in the 1960s with the release of Letraset sheets containing Lorem I
+ psum passages\, and more recently with desktop publishing software like Al
+ dus PageMaker including versions of Lorem Ipsum.<strong>Lorem Ipsum</stron
+ g> is simply dummy text of the printing and typesetting industry. Lorem I
+ psum has been the industry's standard dummy text ever since the 1500s\, wh
+ en an unknown printer took a galley of type and scrambled it to make a typ
+ e specimen book. It has survived not only five centuries\, but also the le
+ ap into electronic typesetting\, remaining essentially unchanged. It was p
+ opularised in the 1960s with the release of Letraset sheets containing Lor
+ em Ipsum passages\, and more recently with desktop publishing software lik
+ e Aldus PageMaker including versions of Lorem Ipsum.</p>\n</br>\nStart Dat
+ e: \n\n<!-- THEME DEBUG -->\n<!-- THEME HOOK: 'time' -->\n<!-- BEGIN OUTPU
+ T from 'core/themes/stable/templates/field/time.html.twig' -->\n<time date
+ time=\"1900-02-02T08:36:00Z\">Fri\, 02/02/1900 - 14:06</time>\n\n<!-- END 
+ OUTPUT from 'core/themes/stable/templates/field/time.html.twig' -->\n\n</b
+ r></br>\nEnd Date: [node:field_event_date]</br>\n[node:field_author]
+DTSTAMP:20190313T134910Z
+END:VEVENT
+END:VCALENDAR

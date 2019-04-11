@@ -1,0 +1,33 @@
+uuid: 9f0c4476-5673-4adb-892a-55fc61d7e62d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_impact_story_type
+    - node.type.impact_stories
+    - taxonomy.vocabulary.impact_story_type
+  content:
+    - 'taxonomy_term:impact_story_type:9dc933b0-25d4-44c5-bbe9-6bbff00305b3'
+id: node.impact_stories.field_impact_story_type
+field_name: field_impact_story_type
+entity_type: node
+bundle: impact_stories
+label: 'Impact Story Type'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    target_uuid: 9dc933b0-25d4-44c5-bbe9-6bbff00305b3
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      impact_story_type: impact_story_type
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

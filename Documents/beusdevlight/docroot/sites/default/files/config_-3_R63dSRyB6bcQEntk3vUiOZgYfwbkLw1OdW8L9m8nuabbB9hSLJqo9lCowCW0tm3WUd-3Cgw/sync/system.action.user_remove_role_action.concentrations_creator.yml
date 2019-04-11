@@ -1,0 +1,14 @@
+uuid: e159f948-800a-4854-b447-0f3512e6a969
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.concentrations_creator
+  module:
+    - user
+id: user_remove_role_action.concentrations_creator
+label: 'Remove the Concentrations creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: concentrations_creator

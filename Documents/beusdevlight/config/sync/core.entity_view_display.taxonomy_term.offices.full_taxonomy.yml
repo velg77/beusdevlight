@@ -1,0 +1,319 @@
+uuid: 02f3f88d-4ad2-421d-812f-03464b77cb10
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.full_taxonomy
+    - field.field.taxonomy_term.offices.field_email
+    - field.field.taxonomy_term.offices.field_lead_text
+    - field.field.taxonomy_term.offices.field_office_location
+    - field.field.taxonomy_term.offices.field_phone_number
+    - field.field.taxonomy_term.offices.field_schedule_a_time
+    - field.field.taxonomy_term.offices.field_timing
+    - field.field.taxonomy_term.offices.panelizer
+    - taxonomy.vocabulary.offices
+  module:
+    - ds
+    - field_group
+    - link
+    - panelizer
+    - simple_gmap
+    - text
+third_party_settings:
+  field_group:
+    group_top_content:
+      children:
+        - group_contact
+        - group_location
+        - group_office_hours
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-top
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Top Content'
+    group_contact:
+      children:
+        - field_email
+        - field_phone_number
+      parent_name: group_top_content
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: off-grd
+        element: div
+        show_label: true
+        label_element: span
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Contact
+    group_location:
+      children:
+        - field_office_location
+      parent_name: group_top_content
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: off-grd
+        element: div
+        show_label: true
+        label_element: span
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Location
+    group_office_hours:
+      children:
+        - field_timing
+        - field_schedule_a_time
+      parent_name: group_top_content
+      weight: 6
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: off-grd
+        element: div
+        show_label: true
+        label_element: span
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Office Hours'
+    group_border_yellow:
+      children: {  }
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: brd-ylw
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Border Yellow'
+    group_grp_btm:
+      children:
+        - field_lead_text
+        - description
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-btm
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Bottom Content'
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          6704a282-af8e-4185-b979-494d660ed2bc:
+            id: 'block_content:372943de-ee54-4d8f-8617-24dfc69c1462'
+            label: 'Banner Bottom [Alumni]'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: default
+            region: row3
+            weight: 0
+            uuid: 6704a282-af8e-4185-b979-494d660ed2bc
+            context_mapping: {  }
+          c06b6f52-a809-4736-9cea-5257a41fcceb:
+            id: 'entity_view:taxonomy_term'
+            label: 'Entity view (Taxonomy term)'
+            provider: ctools
+            label_display: visible
+            view_mode: full_taxonomy
+            region: row2
+            weight: 0
+            uuid: c06b6f52-a809-4736-9cea-5257a41fcceb
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+        id: panels_variant
+        label: Default
+        uuid: 64e1219c-3039-4dc0-921c-435d474e42c2
+        weight: 0
+        layout: behavioursoe_layout
+        layout_settings:
+          wrappers:
+            row1: div
+            row2: div
+            row3: div
+            row4: div
+            row5: div
+            row6: div
+            row7: div
+            row8: div
+            left_sidebar: div
+            main_content: div
+            right_sidebar: div
+            row9: div
+            row10: div
+            row11: div
+            row12: div
+            row13: div
+            row14: div
+            row15: div
+          outer_wrapper: div
+          attributes: ''
+          link_attribute: ''
+          link_custom: ''
+          classes:
+            layout_class: {  }
+            row1:
+              sm_cnt: sm_cnt
+            row2:
+              row_sp_top: row_sp_top
+              sm_cnt: sm_cnt
+            row3: {  }
+            row4: {  }
+            row5: {  }
+            row6: {  }
+            row7: {  }
+            row8: {  }
+            left_sidebar: {  }
+            main_content: {  }
+            right_sidebar: {  }
+            row9: {  }
+            row10: {  }
+            row11: {  }
+            row12: {  }
+            row13: {  }
+            row14: {  }
+            row15: {  }
+        page_title: ''
+        storage_type: panelizer_default
+        storage_id: 'taxonomy_term:offices:full_taxonomy:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - taxonomy_term_title
+        - group_top_content
+        - field_office_location
+        - group_border_yellow
+        - group_grp_btm
+        - field_lead_text
+        - description
+        - group_contact
+        - group_location
+        - field_email
+        - field_phone_number
+        - group_office_hours
+        - field_timing
+        - field_schedule_a_time
+    fields:
+      taxonomy_term_title:
+        plugin_id: taxonomy_term_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ofc-title
+          link: false
+id: taxonomy_term.offices.full_taxonomy
+targetEntityType: taxonomy_term
+bundle: offices
+mode: full_taxonomy
+content:
+  description:
+    type: text_default
+    weight: 4
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_email:
+    type: email_mailto
+    weight: 5
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_lead_text:
+    type: text_default
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_office_location:
+    type: simple_gmap
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      apikey: ''
+      iframe_width: '200'
+      iframe_height: '200'
+      static_scale: 1
+      include_link: true
+      link_text: 'View larger map'
+      zoom_level: 14
+      include_text: true
+      map_type: m
+      langcode: en
+      include_map: false
+      include_static_map: false
+    third_party_settings: {  }
+  field_phone_number:
+    type: string
+    weight: 6
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_schedule_a_time:
+    type: link
+    weight: 7
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+  field_timing:
+    type: text_default
+    weight: 6
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  panelizer: true

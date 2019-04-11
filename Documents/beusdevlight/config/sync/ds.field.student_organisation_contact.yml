@@ -1,0 +1,11 @@
+id: student_organisation_contact
+label: 'Student Organisation Contact'
+ui_limit: ''
+properties:
+  content:
+    value: "<p><a href=\"field_email]\">Contact </a></p>\r\n"
+    format: rich_text
+type: token
+type_label: 'Token field'
+entities:
+  node: node

@@ -1,0 +1,113 @@
+uuid: f5a1c7ca-7773-44ae-ab49-a26bdb99ed2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.dije_newsletter.body
+    - field.field.node.dije_newsletter.field_360deg_image
+    - field.field.node.dije_newsletter.field_created_date
+    - field.field.node.dije_newsletter.field_heading
+    - field.field.node.dije_newsletter.field_lead_text
+    - field.field.node.dije_newsletter.field_media_type
+    - field.field.node.dije_newsletter.field_tags
+    - field.field.node.dije_newsletter.panelizer
+    - image.style.md_landscape_2x
+    - node.type.dije_newsletter
+  module:
+    - datetime
+    - ds
+    - media
+    - panelizer
+    - smart_trim
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: layout_twocol
+      library: layout_discovery/twocol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      first:
+        - field_media_type
+      second:
+        - field_tags
+        - field_created_date
+        - node_title
+        - body
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 3
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h3
+          class: ''
+id: node.dije_newsletter.teaser
+targetEntityType: node
+bundle: dije_newsletter
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: smart_trim
+    weight: 4
+    settings:
+      trim_length: 100
+      trim_type: words
+      trim_suffix: ''
+      wrap_class: trimmed
+      more_text: More
+      more_class: more-link
+      summary_handler: full
+      wrap_output: false
+      more_link: false
+      trim_options:
+        text: false
+        trim_zero: false
+    third_party_settings: {  }
+    region: second
+  field_created_date:
+    type: datetime_custom
+    weight: 2
+    region: second
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'F d, Y'
+    third_party_settings: {  }
+  field_media_type:
+    type: media_thumbnail
+    weight: 0
+    region: first
+    label: hidden
+    settings:
+      image_style: md_landscape_2x
+      image_link: content
+    third_party_settings: {  }
+  field_tags:
+    type: entity_reference_label
+    weight: 1
+    region: second
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ds_limit: '1'
+hidden:
+  addtoany: true
+  field_360deg_image: true
+  field_heading: true
+  field_lead_text: true
+  links: true
+  panelizer: true

@@ -1,0 +1,111 @@
+uuid: 66233b3d-cf76-49eb-9857-da8d2204c800
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.rooms.body
+    - field.field.node.rooms.field_360deg_image
+    - field.field.node.rooms.field_building_hours
+    - field.field.node.rooms.field_floor_plans
+    - field.field.node.rooms.field_key_pickup_information
+    - field.field.node.rooms.field_key_return_information
+    - field.field.node.rooms.field_lead_text
+    - field.field.node.rooms.field_map_location
+    - field.field.node.rooms.field_media_type
+    - field.field.node.rooms.field_room_amenities
+    - field.field.node.rooms.field_room_no
+    - field.field.node.rooms.field_room_technology
+    - field.field.node.rooms.field_room_types
+    - field.field.node.rooms.field_seating_capacity
+    - field.field.node.rooms.field_seating_capacity_fx
+    - image.style.md_square
+    - node.type.rooms
+  module:
+    - ds
+    - link
+    - media
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_360deg_image
+        - 'dynamic_token_field:node-room_seating_capacity'
+        - node_title
+        - 'dynamic_token_field:node-room_seating_capacity_for_table'
+        - field_floor_plans
+    fields:
+      'dynamic_token_field:node-room_seating_capacity':
+        plugin_id: 'dynamic_token_field:node-room_seating_capacity'
+        weight: 1
+        label: hidden
+        formatter: default
+      'dynamic_token_field:node-room_seating_capacity_for_table':
+        plugin_id: 'dynamic_token_field:node-room_seating_capacity_for_table'
+        weight: 3
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: node.rooms.search_index
+targetEntityType: node
+bundle: rooms
+mode: search_index
+content:
+  field_360deg_image:
+    type: media_thumbnail
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: md_square
+      image_link: content
+    third_party_settings: {  }
+  field_floor_plans:
+    type: link
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_building_hours: true
+  field_key_pickup_information: true
+  field_key_return_information: true
+  field_lead_text: true
+  field_map_location: true
+  field_media_type: true
+  field_room_amenities: true
+  field_room_no: true
+  field_room_technology: true
+  field_room_types: true
+  field_seating_capacity: true
+  field_seating_capacity_fx: true
+  links: true

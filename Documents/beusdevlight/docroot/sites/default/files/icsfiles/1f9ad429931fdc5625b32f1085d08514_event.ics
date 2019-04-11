@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:behaviorsoe1.betabasket.net
+X-WR-TIMEZONE:Asia/Kolkata
+BEGIN:VTIMEZONE
+TZID:Asia/Kolkata
+X-LIC-LOCATION:Asia/Kolkata
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:6086d0bff1ad92b4a9ef7a6fff93915b
+DTSTART;TZID=Asia/Kolkata:20190315T220159
+SEQUENCE:0
+TRANSP:OPAQUE
+URL:http://behaviorsoe1.betabasket.net/[node:path]
+SUMMARY:test
+CLASS:PUBLIC
+DESCRIPTION:Description:\nkk\n Start Date: Thu\, 03/07/2019 - 23:00 End Dat
+ e: [node:field_event_date]\n[node:field_author]
+X-ALT-DESC;FMTTYPE=text/html:Description: <p>kk</p>\n</br>\nStart Date: \n\
+ n<!-- THEME DEBUG -->\n<!-- THEME HOOK: 'time' -->\n<!-- BEGIN OUTPUT from
+  'core/themes/classy/templates/field/time.html.twig' -->\n<time datetime=\
+ "2019-03-07T17:30:58Z\" class=\"datetime\">Thu\, 03/07/2019 - 23:00</time>
+ \n\n<!-- END OUTPUT from 'core/themes/classy/templates/field/time.html.twi
+ g' -->\n\n</br></br>\nEnd Date: [node:field_event_date]</br>\n[node:field_
+ author]
+DTSTAMP:20190320T101629Z
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,28 @@
+uuid: f43c2a10-5ea5-458a-a656-654bc00d8951
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.multi_content_block
+    - field.storage.block_content.field_link
+  module:
+    - custom_add_another
+    - link
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: block_content.multi_content_block.field_link
+field_name: field_link
+entity_type: block_content
+bundle: multi_content_block
+label: Link
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

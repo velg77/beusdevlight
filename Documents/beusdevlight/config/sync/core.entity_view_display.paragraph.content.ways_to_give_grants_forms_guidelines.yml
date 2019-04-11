@@ -1,0 +1,66 @@
+uuid: 4afd7a34-263a-407a-b8d6-b31437e7706a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.ways_to_give_grants_forms_guidelines
+    - field.field.paragraph.content.field_cta
+    - field.field.paragraph.content.field_description
+    - field.field.paragraph.content.field_image
+    - field.field.paragraph.content.field_sub_title
+    - field.field.paragraph.content.field_title
+    - paragraphs.paragraphs_type.content
+  module:
+    - link
+    - media
+    - text
+id: paragraph.content.ways_to_give_grants_forms_guidelines
+targetEntityType: paragraph
+bundle: content
+mode: ways_to_give_grants_forms_guidelines
+content:
+  field_cta:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_description:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: media_thumbnail
+    region: content
+  field_sub_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

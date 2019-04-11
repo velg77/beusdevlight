@@ -1,0 +1,111 @@
+.form-item .form-text {
+  width: 100%;
+  padding: 8px 10px;
+}
+.form-item .form-email {
+  padding: 8px 10px;
+}
+.node-form .seven-details {
+  background: none;
+  border-radius: 0;
+}
+.form-item .form-select {
+  width: 100%;
+}
+div.chosen-container-single .chosen-single {
+  border-radius: 0; 
+  height: 28px;
+  line-height: 26px;
+}
+.node-form .seven-details__wrapper {
+  padding-bottom: 0;
+}
+.field--type-datetime fieldset:not(.fieldgroup) {
+  border: 0;
+  background: none;
+  border-radius: 0;
+  padding: 10px 0 0;
+}
+.field--type-datetime fieldset:not(.fieldgroup) > legend {
+  top: 0;
+  text-transform: none;
+}
+.field--name-field-show-manual-entry {
+  margin-top: 20px;
+}
+.field--name-field-related-news, .field--name-field-related-impact-stories, .field--name-field-related-events {
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+  overflow: hidden;
+  height: 1px;
+  word-wrap: normal;
+  visibility: hidden;
+}
+.field--name-field-related-news .chosen-container, .field--name-field-related-impact-stories .chosen-container, .field--name-field-related-events .chosen-container {
+  min-width: 100%;
+  max-width: 100%;
+}
+.enab {
+  position: static !important;
+  clip: auto;
+  overflow: visible;
+  height: auto;
+  visibility: visible;
+}
+.field--type-calendar-download-type {
+  display: none;
+}
+.views-field-name {
+  display: none !important;
+}
+.entity-browser-iframe-container .ajax-progress-fullscreen {
+  visibility: hidden;
+}
+.entity-browser-media-browser-form .field--name-revision-log-message, .entity-browser-media-browser-form .field--widget-path, .entity-browser-media-browser-form .field--name-status {
+  display: none;
+}
+.entity-form .js-form-managed-file {
+  margin-top: 15px;
+}
+.image-widget .button, .field--name-field-media .button, .field--name-field-media-type .button {
+  margin-left: 0;
+}
+.view.eb-media {
+  margin: 0 0 0 -1em;
+}
+.view.eb-media .view-content {
+  margin: 1em 0;
+  overflow: auto;
+}
+.view.eb-media div.views-exposed-form {
+  padding: 1em;
+}
+.view.eb-media div.views-exposed-form .form--inline .form-actions {
+  margin-top: 20px;
+}
+.view.eb-media .form-item .form-text {
+  padding: 4px 10px;
+}
+.view.eb-media .pager {
+  margin: 0 0 0 1em;
+  padding: 0;
+  text-align: center;
+}
+.view.eb-media .pager__item {
+  padding: 0 1em 0 0;
+}
+/*.path-node .field--name-panelizer .js-form-item-panelizer-1-default, .path-node .field--name-panelizer .js-form-item-panelizer-2-default {
+  display: none;
+}*/
+.path-node .paragraph-type-title {
+  visibility: hidden;
+}
+.field--name-field-sub-text .filter-wrapper, .field--name-field-heading .filter-wrapper {
+  display: none;
+}
+.field--name-field-graduates .field--name-field-description {
+  display: none;
+}
+.field--name-moderation-state .form-select, .field--name-panelizer .form-select {
+  width: auto;
+}

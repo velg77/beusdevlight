@@ -1,0 +1,40 @@
+uuid: 1e102c59-03eb-4c31-8ffd-2b334a4a28a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_publications
+    - node.type.personnel
+    - paragraphs.paragraphs_type.small_content
+  module:
+    - entity_reference_revisions
+id: node.personnel.field_publications
+field_name: field_publications
+entity_type: node
+bundle: personnel
+label: Publications
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      small_content: small_content
+    target_bundles_drag_drop:
+      banner_slider:
+        weight: 5
+        enabled: false
+      content:
+        weight: 6
+        enabled: false
+      message:
+        weight: 7
+        enabled: false
+      small_content:
+        enabled: true
+        weight: 8
+field_type: entity_reference_revisions

@@ -1,0 +1,21 @@
+uuid: a66077a7-b160-4231-be6c-48f89f88e30b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_text
+    - node.type.concentrations
+  module:
+    - text
+id: node.concentrations.field_lead_text
+field_name: field_lead_text
+entity_type: node
+bundle: concentrations
+label: 'Lead text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

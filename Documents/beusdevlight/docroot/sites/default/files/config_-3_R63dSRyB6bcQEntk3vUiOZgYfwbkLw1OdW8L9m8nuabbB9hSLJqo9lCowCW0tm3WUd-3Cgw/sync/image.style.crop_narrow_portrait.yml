@@ -1,0 +1,17 @@
+uuid: 05124f75-e803-44d6-9a08-f76158a7b679
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.narrow_portrait
+  module:
+    - crop
+name: crop_narrow_portrait
+label: 'Cropped: Narrow Portrait'
+effects:
+  a809a9bc-bd4f-48d1-9a5d-38a9a4321f1b:
+    uuid: a809a9bc-bd4f-48d1-9a5d-38a9a4321f1b
+    id: crop_crop
+    weight: null
+    data:
+      crop_type: narrow_portrait

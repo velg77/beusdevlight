@@ -1,0 +1,26 @@
+uuid: 3ad6ae66-7c93-4f2a-853a-dc3b388780e5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.banner_slider
+  module:
+    - custom_add_another
+    - text
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: paragraph.banner_slider.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: banner_slider
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

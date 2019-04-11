@@ -1,0 +1,14 @@
+uuid: 8600827a-6815-45cd-a1f0-234eef9840ea
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: block_content.mission_vision
+label: 'Mission & Vision, Alumni Resources, Learning Community'
+targetEntityType: block_content
+cache: true

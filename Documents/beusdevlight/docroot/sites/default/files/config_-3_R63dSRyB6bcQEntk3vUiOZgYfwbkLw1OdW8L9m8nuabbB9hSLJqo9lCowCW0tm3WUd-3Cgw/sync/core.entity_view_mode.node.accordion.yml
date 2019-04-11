@@ -1,0 +1,14 @@
+uuid: c53adeb4-d68b-40c3-8770-32a5cb5af3b6
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: 'Accordion for personal page'
+id: node.accordion
+label: Accordion
+targetEntityType: node
+cache: true

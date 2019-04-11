@@ -1,0 +1,31 @@
+uuid: 24679f9c-f361-4555-832f-c2aa0c5b5eb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_media_in_library
+    - media.type.tweet
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: v1X2Ij37LE-pe8VuML60W07ZiHqE_lxGHnRNFWDggAA
+id: media.tweet.field_media_in_library
+field_name: field_media_in_library
+entity_type: media
+bundle: tweet
+label: 'Show in media library'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'Shown in media library'
+  off_label: 'Hidden in media library'
+field_type: boolean

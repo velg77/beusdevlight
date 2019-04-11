@@ -1,0 +1,15 @@
+settings:
+  library_url: libraries/cropper/dist/cropper.min.js
+  css_url: libraries/cropper/dist/cropper.min.css
+  crop_preview_image_style: crop_thumbnail
+  crop_list:
+    square: square
+    landscape: landscape
+  crop_types_required:
+    square: square
+    landscape: landscape
+  warn_multiple_usages: false
+  show_default_crop: true
+  show_crop_area: false
+_core:
+  default_config_hash: JTiHOl3PIo9Nyv7j53xwY5OwbwJWwCItksgv_X-NcbE

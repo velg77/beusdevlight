@@ -1,0 +1,32 @@
+uuid: 371ea83c-5caa-412c-a9b5-f3b12abc4df7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_personnel
+    - node.type.awards
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.awards.field_personnel
+field_name: field_personnel
+entity_type: node
+bundle: awards
+label: 'Featured in this Article'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: general
+      display_name: entity_reference_1
+      arguments:
+        - personnel
+field_type: entity_reference

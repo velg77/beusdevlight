@@ -1,0 +1,9 @@
+uuid: 9492e141-2090-47bf-82a0-fd12cd884810
+langcode: en
+status: true
+dependencies: {  }
+id: message
+label: Message
+icon_uuid: null
+description: 'A block consist of image title name and position and is used for message from dean'
+behavior_plugins: {  }

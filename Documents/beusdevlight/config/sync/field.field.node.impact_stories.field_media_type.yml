@@ -1,0 +1,34 @@
+uuid: 594c66f6-e641-4e7b-b2c0-be2d41545a4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_media_type
+    - media.type.image
+    - node.type.impact_stories
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.impact_stories.field_media_type
+field_name: field_media_type
+entity_type: node
+bundle: impact_stories
+label: 'Featured Image'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

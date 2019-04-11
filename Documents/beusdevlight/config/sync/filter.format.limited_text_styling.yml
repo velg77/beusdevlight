@@ -1,0 +1,17 @@
+uuid: 263aa1ea-8cfb-46ce-832c-bf46d1852754
+langcode: en
+status: true
+dependencies: {  }
+name: 'Limited text Styling'
+format: limited_text_styling
+weight: -9
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: '<em> <strong> <cite> <blockquote cite> <code> <ul type> <ol start type> <li> <dl> <dt> <dd> <h2 id> <h4 id> <h5 id> <h6 id> <u> <s> <sup> <sub> <a href hreflang class="inline-button"> <div class="two-col"> <span class="pullquote"> <h3 id class="title-border">'
+      filter_html_help: true
+      filter_html_nofollow: false

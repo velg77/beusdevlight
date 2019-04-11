@@ -1,0 +1,14 @@
+uuid: 8d5f0b3f-6e97-44d0-858a-ef57b028fb9a
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+id: node.feature_article
+label: 'Featured in Article'
+targetEntityType: node
+cache: true

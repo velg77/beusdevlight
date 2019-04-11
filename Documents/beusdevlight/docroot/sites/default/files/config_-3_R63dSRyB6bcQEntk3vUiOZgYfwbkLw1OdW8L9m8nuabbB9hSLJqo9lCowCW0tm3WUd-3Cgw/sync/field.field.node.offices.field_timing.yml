@@ -1,0 +1,21 @@
+uuid: f8edea91-b5f6-4d8e-9f81-e1388c2ef390
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_timing
+    - node.type.offices
+  module:
+    - text
+id: node.offices.field_timing
+field_name: field_timing
+entity_type: node
+bundle: offices
+label: Timing
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

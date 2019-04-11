@@ -1,0 +1,30 @@
+uuid: f225d1c9-57e3-4464-997c-ecbae7ce6d67
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.media_slideshow
+    - field.field.block_content.media_slideshow.field_banner_slider
+  module:
+    - ds
+    - entity_reference_revisions
+_core:
+  default_config_hash: hVHMNQ6SuxyBzrEV2AJkwdHKAxQ7btc6JPGH548r9_E
+id: block_content.media_slideshow.default
+targetEntityType: block_content
+bundle: media_slideshow
+mode: default
+content:
+  field_banner_slider:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    region: content
+hidden:
+  addtoany: true

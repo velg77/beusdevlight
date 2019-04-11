@@ -1,0 +1,14 @@
+uuid: 9c906f86-de83-4259-8466-8ecfd09d951e
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.student_organisation_reviewer
+  module:
+    - user
+id: user_remove_role_action.student_organisation_reviewer
+label: 'Remove the Student Organisation reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: student_organisation_reviewer

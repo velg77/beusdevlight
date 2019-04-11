@@ -1,0 +1,14 @@
+uuid: 685d2b63-ba87-4906-a8fd-e894b480b665
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - paragraphs
+third_party_settings:
+  lightning_core:
+    description: ''
+id: paragraph.quik_facts
+label: 'Quick Facts'
+targetEntityType: paragraph
+cache: true

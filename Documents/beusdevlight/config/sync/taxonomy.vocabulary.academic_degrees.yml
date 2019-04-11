@@ -1,0 +1,9 @@
+uuid: eaa38ee1-4ddf-46b8-ae12-306832062ec7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Academic Degrees'
+vid: academic_degrees
+description: 'List of terms in degrees and certifications'
+hierarchy: 0
+weight: 0

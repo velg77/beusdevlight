@@ -1,0 +1,147 @@
+// Css3 Mixins
+@import "../../base/_variables";
+
+
+  .deg-decrp{
+   .concentration-tags{
+     & > .views-row{
+      border-top: 4px solid $site-color-yellow;
+      margin-bottom: 50px;
+      padding-top: 70px;
+        &::after{
+          content: "";
+          display: table;
+          clear: both;
+        }
+     }
+   }
+   .group-left{
+    .heading{
+      color: #333333;
+      font-size: 1.444rem;
+      margin: 0px;
+      font-family: 'Avenir-heavy', sans-serif;
+    }
+   }
+   .group-right{
+     .views-field-title{
+      font-family: 'Avenir-medium', sans-serif;
+      position: relative;
+      margin: 10px;
+       &::before{
+        content: '|';
+        color: #ffcb05;
+        background: #ffcb05;
+        position: absolute;
+        left: -14px;
+        top: 6px;
+        font-size: 12px;
+        width: 4px;
+       }
+     }
+     .title-group{
+      border:none;
+      margin: 0px;
+      font-size: 1.111rem;
+      font-family: 'Open Sans Regular', sans-serif;
+      text-align: uppercase;
+      color:#000;
+     }
+   }
+   .field--name-description {
+    font-size: 0.889rem;
+  }
+  .deg-decrp .field--name-field-lead-text {
+    font-size: 1.111rem;
+    border-bottom: none;
+  }
+  }
+
+  @media (min-width: 1024px) {
+    .deg-decrp{
+     .group-left{
+        float:left;
+        width:70%;
+        padding-right: 100px;
+     }
+     .group-right{
+      width:30%;
+      float:right;
+     }
+    }
+
+  }
+
+  // .deg-decrp{
+  //   margin:20px 0;
+  //   padding: 30px 0;
+  //   border-bottom: 4px solid $site-color-yellow;
+  //   h2{
+  //     color:#333333;
+  //     font-size:1.444rem;
+  //     margin:0px;
+  //   }
+  //   .field--name-field-lead-text{
+  //     font-size:1.111rem;
+  //     border-bottom: none;
+  //     p{
+  //       margin-top:5px;
+  //     }
+  //   }
+  //   .field--name-description{
+  //     font-size:0.889rem;
+  //   }
+  //   .title-group{
+
+  //   }
+  //   .concentration-tags{
+
+  //       font-family: 'Avenir-medium', sans-serif;
+  //       line-height:1.111rem;
+  //       margin:10px;
+  //       .views-field-title{
+  //        margin:0px;
+  //       }
+  //       .views-row{
+  //         position: relative;
+  //         margin:10px 0;
+  //         &:before {
+  //           content: '|';
+  //           color: #ffcb05;
+  //           background: #ffcb05;
+  //           position: absolute;
+  //           left: -14px;
+  //           top: 0px;
+  //           font-size: 12px;
+  //           width: 4px;
+  //         }
+  //       }
+  //     h3{
+  //       font-size: 1.111rem;
+  //       color:#000;
+  //       margin-bottom: 20px;
+  //     }
+  //     a:hover{
+  //       border-bottom: none;
+  //     }
+  //   }
+  //   &:last-child{
+  //     border-bottom: none;
+  //   }
+  // }
+
+  // @media (min-width: 1024px) {
+  //   .deg-decrp{
+  //     .title-group{
+  //       float:left;
+  //       width:70%;
+  //       padding-right: 100px;
+  //     }
+  //     .concentration-tags{
+  //       width:27%;
+  //      float:right;
+  //     }
+  //   }
+
+  // }
+

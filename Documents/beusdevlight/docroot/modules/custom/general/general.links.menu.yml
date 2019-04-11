@@ -1,0 +1,7 @@
+general.admin_settings_form:
+  title: 'Natural form settings'
+  description: 'Display all vocabulary in admin form'
+  parent: system.admin_config_development
+  route_name: general.admin_settings_form
+  weight: 100
+

@@ -1,0 +1,9 @@
+uuid: 3b3e69fd-047c-4f9e-ac3f-84863935e248
+langcode: en
+status: true
+dependencies: {  }
+id: courses_syllabi
+label: 'Courses & Syllabi'
+icon_uuid: null
+description: ''
+behavior_plugins: {  }

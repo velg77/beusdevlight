@@ -1,0 +1,28 @@
+uuid: 7fc44b30-07db-47b7-9564-bd823ce454ff
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.academic_year
+  module:
+    - panelizer
+    - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.academic_year.default
+targetEntityType: taxonomy_term
+bundle: academic_year
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

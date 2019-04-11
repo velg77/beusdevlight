@@ -1,0 +1,29 @@
+uuid: d79225f9-db5b-47ff-875e-de012315d2be
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:967b88aa-0091-4ea8-ab37-dc75076ec0c3'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - behavioursoe
+third_party_settings:
+  block_class:
+    classes: ftr-logo-blk
+id: footerlogofollowus
+theme: behavioursoe
+region: footer
+weight: -11
+provider: null
+plugin: 'block_content:967b88aa-0091-4ea8-ab37-dc75076ec0c3'
+settings:
+  id: 'block_content:967b88aa-0091-4ea8-ab37-dc75076ec0c3'
+  label: 'Footer Logo & Follow Us'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,21 @@
+uuid: 6d1c2016-b2f3-463e-9e07-7c95c3ebd0fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.panelizer
+    - node.type.impact_stories
+  module:
+    - panelizer
+id: node.impact_stories.panelizer
+field_name: panelizer
+entity_type: node
+bundle: impact_stories
+label: Panelizer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: panelizer

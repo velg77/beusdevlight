@@ -1,0 +1,14 @@
+uuid: 14a50921-6fb0-46fa-b19f-786318b467eb
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - menu_link_content
+third_party_settings:
+  lightning_core:
+    description: ''
+id: menu_link_content.small_teaser
+label: 'Small Teaser'
+targetEntityType: menu_link_content
+cache: true

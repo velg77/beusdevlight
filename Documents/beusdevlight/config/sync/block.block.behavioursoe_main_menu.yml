@@ -1,0 +1,30 @@
+uuid: d4f6bf12-1dac-4038-aed8-7708b9a1e9b3
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - block_class
+    - system
+  theme:
+    - behavioursoe
+third_party_settings:
+  block_class:
+    classes: 'main-menu mobile-mega-menu'
+_core:
+  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
+id: behavioursoe_main_menu
+theme: behavioursoe
+region: header
+weight: -14
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

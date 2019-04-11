@@ -1,0 +1,29 @@
+uuid: a3a1c2c0-8e35-4334-9246-2a16d328c892
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_tags
+    - node.type.awards
+    - taxonomy.vocabulary.topics_and_expertise_
+id: node.awards.field_tags
+field_name: field_tags
+entity_type: node
+bundle: awards
+label: Tags
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      topics_and_expertise_: topics_and_expertise_
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

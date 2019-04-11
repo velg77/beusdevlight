@@ -1,0 +1,14 @@
+uuid: 81ea427c-f004-46c3-adf6-00214b4fd6bf
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.node_form_mode_example_reviewer
+  module:
+    - user
+id: user_remove_role_action.node_form_mode_example_reviewer
+label: 'Remove the Node form mode example reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: node_form_mode_example_reviewer

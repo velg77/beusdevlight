@@ -1,0 +1,33 @@
+uuid: ff3848fe-d151-4d53-af9b-c18c08f2e8f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.internships.body
+    - node.type.internships
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.internships.search_index
+targetEntityType: node
+bundle: internships
+mode: search_index
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  links: true

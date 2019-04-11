@@ -1,0 +1,53 @@
+
+  @import "../../base/_variables";
+  .deadline-bdy{
+    border-top: 5px solid $site-color-yellow;
+    font-size: 1.111em;
+    max-width: 770px;
+    margin: 20px auto;
+    display: table;
+    width:100%;
+    & > .field{
+      vertical-align: top;
+      display: table-cell;
+    }
+    .field__label{
+      border-bottom: 1px solid #d8d8d8;
+      padding: 15px 0;
+      text-align: center;
+      color:#000;
+      font-family: 'Open Sans SemiBold', sans-serif;
+    }
+    .field__items{
+     padding: 30px 8px;
+     text-align: center;
+     & >.field__item{
+       display: inline-block;
+       margin: 0 15px;
+     }
+     &:after{
+      content: "";
+      display: table;
+      clear: both;
+     }
+    }
+    .field--name-field-sub-text{
+      font-size: 0.667rem;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .deadline-bdy{
+      .field--name-field-final{
+      .field__items{
+        padding: 30px 18px;
+      }
+    }
+    .node--type-concentrations{
+       .block-entity-fieldnodefield-full-data{
+        max-width: 770px;
+        margin: 20px auto;
+       }
+    }
+  }
+}

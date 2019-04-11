@@ -1,0 +1,23 @@
+entity_type_groups:
+  media:
+    audio_file:
+      open_graph: open_graph
+    document:
+      open_graph: open_graph
+    image:
+      basic: basic
+      open_graph: open_graph
+      facebook: facebook
+    instagram:
+      open_graph: open_graph
+    tweet:
+      basic: basic
+      open_graph: open_graph
+      facebook: facebook
+    video:
+      open_graph: open_graph
+    video_file:
+      open_graph: open_graph
+  node:
+    events:
+      open_graph: open_graph

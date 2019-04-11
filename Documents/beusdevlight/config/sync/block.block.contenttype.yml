@@ -1,0 +1,29 @@
+uuid: 86a26993-871a-4179-bdb6-fe6c2c03d8d6
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.content_type_search
+  module:
+    - facets
+    - system
+  theme:
+    - behavioursoe
+id: contenttype
+theme: behavioursoe
+region: content
+weight: -7
+provider: null
+plugin: 'facet_block:content_type_search'
+settings:
+  id: 'facet_block:content_type_search'
+  label: 'Content type'
+  provider: facets
+  label_display: '0'
+  block_id: contenttype
+visibility:
+  request_path:
+    id: request_path
+    pages: /search1
+    negate: false
+    context_mapping: {  }

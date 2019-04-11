@@ -1,0 +1,29 @@
+uuid: 9ce555b5-0a1d-4f70-b5c3-e1343bdd6fd2
+langcode: en
+status: true
+dependencies: {  }
+id: events_creator
+label: 'Events creator'
+weight: 10
+is_admin: false
+permissions:
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access toolbar'
+  - 'administer panelizer node events content'
+  - 'administer panelizer node events layout'
+  - 'change layouts in place editing'
+  - 'create events content'
+  - 'create url aliases'
+  - 'edit own events content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view events revisions'
+  - 'view latest version'
+  - 'view own unpublished content'

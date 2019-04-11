@@ -1,0 +1,12 @@
+uuid: 682c7906-69d6-4530-9e86-d955c878e9c9
+langcode: en
+status: true
+dependencies: {  }
+id: summa_1
+label: 'summa 1'
+description: ''
+use_admin_theme: false
+path: /summa1
+access_logic: and
+access_conditions: {  }
+parameters: {  }

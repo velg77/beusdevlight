@@ -1,0 +1,480 @@
+diff --git a/config/schema/facets.widgets.schema.yml b/config/schema/facets.widgets.schema.yml
+index 0bfecf2..478a760 100644
+--- a/config/schema/facets.widgets.schema.yml
++++ b/config/schema/facets.widgets.schema.yml
+@@ -32,6 +32,15 @@ facet.widget.config.links:
+     soft_limit:
+       type: integer
+       label: 'Soft limit'
++    show_reset_link:
++      type: boolean
++      label: 'Show reset link'
++    reset_text:
++      type: label
++      label: 'Reset link text'
++    hide_reset_when_no_selection:
++      type: boolean
++      label: 'Hide reset link when no facet item is selected'
+     soft_limit_settings:
+       type: mapping
+       label: 'Soft limit settings'
+diff --git a/src/Plugin/facets/url_processor/QueryString.php b/src/Plugin/facets/url_processor/QueryString.php
+index 52a5ab5..4e78b74 100644
+--- a/src/Plugin/facets/url_processor/QueryString.php
++++ b/src/Plugin/facets/url_processor/QueryString.php
+@@ -80,11 +80,17 @@ class QueryString extends UrlProcessorPluginBase {
+         $this->buildUrls($facet, $children);
+       }
+ 
+-      $filter_string = $this->urlAlias . $this->getSeparator() . $result->getRawValue();
++      if ($result->getRawValue() === NULL) {
++        $filter_string = NULL;
++      }
++      else {
++        $filter_string = $this->urlAlias . $this->getSeparator() . $result->getRawValue();
++      }
+       $result_get_params = clone $get_params;
+ 
+       $filter_params = [];
+       foreach ($this->getActiveFilters() as $facet_id => $values) {
++        $values = array_filter($values);
+         foreach ($values as $value) {
+           $filter_params[] = $this->getUrlAliasByFacetId($facet_id, $facet->getFacetSourceId()) . ":" . $value;
+         }
+@@ -119,10 +125,13 @@ class QueryString extends UrlProcessorPluginBase {
+             }
+           }
+         }
++
+       }
+       // If the value is not active, add the filter string.
+       else {
+-        $filter_params[] = $filter_string;
++        if ($filter_string !== NULL) {
++          $filter_params[] = $filter_string;
++        }
+ 
+         if ($facet->getUseHierarchy()) {
+           // If hierarchy is active, unset parent trail and every child when
+diff --git a/src/Plugin/facets/widget/LinksWidget.php b/src/Plugin/facets/widget/LinksWidget.php
+index b97e85d..8596be1 100644
+--- a/src/Plugin/facets/widget/LinksWidget.php
++++ b/src/Plugin/facets/widget/LinksWidget.php
+@@ -3,7 +3,9 @@
+ namespace Drupal\facets\Plugin\facets\widget;
+ 
+ use Drupal\Core\Form\FormStateInterface;
++use Drupal\Core\Url;
+ use Drupal\facets\FacetInterface;
++use Drupal\facets\Result\Result;
+ use Drupal\facets\Widget\WidgetPluginBase;
+ 
+ /**
+@@ -27,6 +29,9 @@ class LinksWidget extends WidgetPluginBase {
+         'show_less_label' => 'Show less',
+         'show_more_label' => 'Show more',
+       ],
++      'show_reset_link' => FALSE,
++      'hide_reset_when_no_selection' => FALSE,
++      'reset_text' => $this->t('Show all'),
+     ] + parent::defaultConfiguration();
+   }
+ 
+@@ -47,6 +52,64 @@ class LinksWidget extends WidgetPluginBase {
+     if ($facet->getUseHierarchy()) {
+       $build['#attached']['library'][] = 'facets/drupal.facets.hierarchical';
+     }
++
++    $results = $facet->getResults();
++    if ($this->getConfiguration()['show_reset_link'] && count($results) > 0 && (!$this->getConfiguration()['hide_reset_when_no_selection'] || $facet->getActiveItems())) {
++      // Add reset link.
++      $max_items = array_sum(array_map(function ($item) {
++        return $item->getCount();
++      }, $results));
++
++      $urlProcessorManager = \Drupal::service('plugin.manager.facets.url_processor');
++      $url_processor = $urlProcessorManager->createInstance($facet->getFacetSourceConfig()->getUrlProcessorName(), ['facet' => $facet]);
++      $active_filters = $url_processor->getActiveFilters();
++
++      if (isset($active_filters[''])) {
++        unset($active_filters['']);
++      }
++
++      unset($active_filters[$facet->id()]);
++
++      // Only if there are still active filters, use url generator.
++      if ($active_filters) {
++        $url = \Drupal::service('facets.utility.url_generator')
++          ->getUrl($active_filters, FALSE);
++      }
++      else {
++        $request = \Drupal::request();
++        $url = Url::createFromRequest($request);
++        $params = $request->query->all();
++        unset($params[$url_processor->getFilterKey()]);
++        $url->setOption('query', $params);
++      }
++
++      $result_item = new Result($facet, 'reset_all', $this->getConfiguration()['reset_text'], $max_items);
++      $result_item->setActiveState(FALSE);
++      $result_item->setUrl($url);
++
++      $item = $this->prepareLink($result_item);
++
++      // Add a class for the reset link wrapper.
++      $item['#wrapper_attributes'] = ['class' => ['facet-item', 'facets-reset']];
++
++      // Check if any other facet is in use.
++      $none_active = TRUE;
++      foreach ($results as $result) {
++        if ($result->isActive()) {
++          $none_active = FALSE;
++          break;
++        }
++      }
++
++      // Add an is-active class when no other facet is in use.
++      if ($none_active) {
++        $item['#attributes'] = ['class' => ['is-active']];
++      }
++
++      // Put reset facet link on first place.
++      array_unshift($build['#items'], $item);
++    }
++
+     return $build;
+   }
+ 
+@@ -89,6 +152,30 @@ class LinksWidget extends WidgetPluginBase {
+         'optional' => [':input[name="widget_config[soft_limit]"]' => ['value' => 0]],
+       ],
+     ];
++
++    $form['show_reset_link'] = [
++      '#type' => 'checkbox',
++      '#title' => $this->t('Show reset link'),
++      '#default_value' => $this->getConfiguration()['show_reset_link'],
++    ];
++    $form['reset_text'] = [
++      '#type' => 'textfield',
++      '#title' => $this->t('Reset text'),
++      '#default_value' => $this->getConfiguration()['reset_text'],
++      '#states' => [
++        'visible' => [
++          ':input[name="widget_config[show_reset_link]"]' => ['checked' => TRUE],
++        ],
++        'required' => [
++          ':input[name="widget_config[show_reset_link]"]' => ['checked' => TRUE],
++        ],
++      ],
++    ];
++    $form['hide_reset_when_no_selection'] = [
++      '#type' => 'checkbox',
++      '#title' => $this->t('Hide reset link when no facet item is selected'),
++      '#default_value' => $this->getConfiguration()['hide_reset_when_no_selection'],
++    ];
+     return $form;
+   }
+ 
+diff --git a/src/Utility/FacetsUrlGenerator.php b/src/Utility/FacetsUrlGenerator.php
+index 3a28181..4ca592d 100644
+--- a/src/Utility/FacetsUrlGenerator.php
++++ b/src/Utility/FacetsUrlGenerator.php
+@@ -3,6 +3,7 @@
+ namespace Drupal\facets\Utility;
+ 
+ use Drupal\Core\Entity\EntityTypeManagerInterface;
++use Drupal\facets\FacetInterface;
+ use Drupal\facets\Result\Result;
+ use Drupal\facets\UrlProcessor\UrlProcessorPluginManager;
+ 
+diff --git a/tests/src/Functional/WidgetIntegrationTest.php b/tests/src/Functional/WidgetIntegrationTest.php
+index 5a2eeea..852c21c 100644
+--- a/tests/src/Functional/WidgetIntegrationTest.php
++++ b/tests/src/Functional/WidgetIntegrationTest.php
+@@ -173,4 +173,53 @@ class WidgetIntegrationTest extends FacetsTestBase {
+     $this->assertSession()->pageTextNotContains('Custom widget');
+   }
+ 
++  /**
++   * Tests the all link.
++   */
++  public function testAllLink() {
++    $id = 'kepler_16b';
++    $this->createFacet('Kepler 16b', $id);
++    $editUrl = 'admin/config/search/facets/' . $id . '/edit';
++    $this->drupalPostForm($editUrl, ['widget' => 'links'], 'Save');
++
++    $this->drupalGet('search-api-test-fulltext');
++    $this->assertFacetLabel('item');
++    $this->assertFacetLabel('article');
++
++    $this->clickLink('item');
++    $this->checkFacetIsActive('item');
++
++    // Enable the all (reset) link.
++    $this->drupalPostForm($editUrl, ['widget_config[show_reset_link]' => TRUE], 'Save');
++
++    $this->drupalGet('search-api-test-fulltext');
++    $this->assertFacetLabel('item');
++    $this->assertFacetLabel('article');
++    $this->findFacetLink('Show all');
++
++    // Change the text.
++    $edit = [
++      'widget_config[show_reset_link]' => TRUE,
++      'widget_config[reset_text]' => 'Planets',
++    ];
++    $this->drupalPostForm($editUrl, $edit, 'Save');
++
++    // Check that the new text appears and no facets are active.
++    $this->drupalGet('search-api-test-fulltext');
++    $this->assertFacetLabel('item');
++    $this->assertFacetLabel('article');
++    $this->findFacetLink('Planets (5)');
++    $this->checkFacetIsNotActive('item');
++    $this->checkFacetIsNotActive('article');
++
++    // Click one of the facets.
++    $this->clickLink('item');
++    $this->checkFacetIsActive('item');
++
++    // Click the rest link.
++    $this->clickLink('Planets');
++    $this->checkFacetIsNotActive('item');
++    $this->checkFacetIsNotActive('article');
++  }
++
+ }
+diff --git a/tests/src/Kernel/Entity/FacetTest.php b/tests/src/Kernel/Entity/FacetTest.php
+index 4d68bff..1683b90 100644
+--- a/tests/src/Kernel/Entity/FacetTest.php
++++ b/tests/src/Kernel/Entity/FacetTest.php
+@@ -77,6 +77,9 @@ class FacetTest extends KernelTestBase {
+         'show_less_label' => 'Show less',
+         'show_more_label' => 'Show more',
+       ],
++      'show_reset_link' => FALSE,
++      'hide_reset_when_no_selection' => FALSE,
++      'reset_text' => 'Show all',
+     ];
+     $this->assertEquals(['type' => 'links', 'config' => $config], $entity->getWidget());
+     $this->assertInstanceOf(LinksWidget::class, $entity->getWidgetInstance());
+diff --git a/tests/src/Unit/Plugin/widget/CheckboxWidgetTest.php b/tests/src/Unit/Plugin/widget/CheckboxWidgetTest.php
+index f4b109b..d182688 100644
+--- a/tests/src/Unit/Plugin/widget/CheckboxWidgetTest.php
++++ b/tests/src/Unit/Plugin/widget/CheckboxWidgetTest.php
+@@ -2,7 +2,6 @@
+ 
+ namespace Drupal\Tests\facets\Unit\Plugin\widget;
+ 
+-use Drupal\facets\Entity\Facet;
+ use Drupal\facets\Plugin\facets\widget\CheckboxWidget;
+ 
+ /**
+@@ -51,19 +50,21 @@ class CheckboxWidgetTest extends WidgetTestBase {
+   }
+ 
+   /**
+-   * Tests default configuration.
++   * {@inheritdoc}
+    */
+   public function testDefaultConfiguration() {
+     $default_config = $this->widget->defaultConfiguration();
+-    $expected = [
+-      'show_numbers' => FALSE,
+-      'soft_limit' => 0,
+-      'soft_limit_settings' => [
+-        'show_less_label' => 'Show less',
+-        'show_more_label' => 'Show more',
+-      ],
+-    ];
+-    $this->assertEquals($expected, $default_config);
++    $this->assertArrayHasKey('show_numbers', $default_config);
++    $this->assertArrayHasKey('soft_limit', $default_config);
++    $this->assertArrayHasKey('show_reset_link', $default_config);
++    $this->assertArrayHasKey('reset_text', $default_config);
++    $this->assertArrayHasKey('soft_limit_settings', $default_config);
++    $this->assertArrayHasKey('show_less_label', $default_config['soft_limit_settings']);
++    $this->assertArrayHasKey('show_more_label', $default_config['soft_limit_settings']);
++
++    $this->assertEquals(FALSE, $default_config['show_numbers']);
++    $this->assertEquals(0, $default_config['soft_limit']);
++    $this->assertEquals(FALSE, $default_config['show_reset_link']);
+   }
+ 
+ }
+diff --git a/tests/src/Unit/Plugin/widget/LinksWidgetTest.php b/tests/src/Unit/Plugin/widget/LinksWidgetTest.php
+index 30ff588..661ccb1 100644
+--- a/tests/src/Unit/Plugin/widget/LinksWidgetTest.php
++++ b/tests/src/Unit/Plugin/widget/LinksWidgetTest.php
+@@ -2,9 +2,27 @@
+ 
+ namespace Drupal\Tests\facets\Unit\Plugin\widget;
+ 
++use Drupal\Core\Url;
++use Drupal\Core\DependencyInjection\ContainerBuilder;
+ use Drupal\facets\Entity\Facet;
+ use Drupal\facets\Plugin\facets\widget\LinksWidget;
+ use Drupal\facets\Result\Result;
++use Drupal\facets\Utility\FacetsUrlGenerator;
++use Prophecy\Argument;
++
++use Drupal\Core\Entity\EntityStorageInterface;
++use Drupal\Core\Entity\EntityTypeManagerInterface;
++use Drupal\facets\Exception\InvalidProcessorException;
++use Drupal\facets\FacetSource\FacetSourcePluginManager;
++use Drupal\facets\FacetSource\FacetSourcePluginInterface;
++use Drupal\facets\Plugin\facets\processor\UrlProcessorHandler;
++use Drupal\facets\UrlProcessor\UrlProcessorInterface;
++use Drupal\Tests\UnitTestCase;
++use Symfony\Component\HttpFoundation\Request;
++use Symfony\Component\HttpFoundation\RequestStack;
++use Symfony\Component\HttpFoundation\ParameterBag;
++use Drupal\Tests\Core\Routing\TestRouterInterface;
++
+ 
+ /**
+  * Unit test for widget.
+@@ -179,23 +197,95 @@ class LinksWidgetTest extends WidgetTestBase {
+         $this->assertEquals(['facet-item'], $output['#items'][$index]['#wrapper_attributes']['class']);
+       }
+     }
++  }
++
++  /**
++   * Tests the rest link.
++   */
++  public function testResetLink() {
++    $facet = new Facet([], 'facets_facet');
++    $facet->setResults($this->originalResults);
++
++    $output = $this->widget->build($facet);
++
++    $this->assertInternalType('array', $output);
++    $this->assertCount(4, $output['#items']);
+ 
++    $request = new Request();
++    $request->query->set('f', []);
++
++    $request_stack = new RequestStack();
++    $request_stack->push($request);
++
++    $this->createContainer();
++    $container = \Drupal::getContainer();
++    $container->set('request_stack', $request_stack);
++    \Drupal::setContainer($container);
++
++    // Enable the show reset link.
++    $this->widget->setConfiguration(['show_reset_link' => TRUE]);
++    $output = $this->widget->build($facet);
++
++    // Check that we now have more results.
++    $this->assertInternalType('array', $output);
++    $this->assertCount(5, $output['#items']);
+   }
+ 
+   /**
+-   * Tests default configuration.
++   * {@inheritdoc}
+    */
+   public function testDefaultConfiguration() {
+     $default_config = $this->widget->defaultConfiguration();
+-    $expected = [
+-      'show_numbers' => FALSE,
+-      'soft_limit' => 0,
+-      'soft_limit_settings' => [
+-        'show_less_label' => 'Show less',
+-        'show_more_label' => 'Show more',
+-      ],
+-    ];
+-    $this->assertEquals($expected, $default_config);
++    $this->assertArrayHasKey('show_numbers', $default_config);
++    $this->assertArrayHasKey('soft_limit', $default_config);
++    $this->assertArrayHasKey('show_reset_link', $default_config);
++    $this->assertArrayHasKey('reset_text', $default_config);
++    $this->assertArrayHasKey('soft_limit_settings', $default_config);
++    $this->assertArrayHasKey('show_less_label', $default_config['soft_limit_settings']);
++    $this->assertArrayHasKey('show_more_label', $default_config['soft_limit_settings']);
++
++    $this->assertEquals(FALSE, $default_config['show_numbers']);
++    $this->assertEquals(0, $default_config['soft_limit']);
++    $this->assertEquals(FALSE, $default_config['show_reset_link']);
+   }
+ 
++  /**
++   * Sets up a container.
++   */
++  protected function createContainer() {
++    $router = $this->getMockBuilder(TestRouterInterface::class)
++      ->disableOriginalConstructor()
++      ->getMock();
++    $router->expects($this->any())
++      ->method('matchRequest')
++      ->willReturn([
++        '_raw_variables' => new ParameterBag([]),
++        '_route' => 'test',
++      ]);
++
++    $url_processor = $this->getMockBuilder(UrlProcessorInterface::class)
++      ->disableOriginalConstructor()
++      ->getMock();
++
++    $manager = $this->getMockBuilder(FacetSourcePluginManager::class)
++      ->disableOriginalConstructor()
++      ->getMock();
++    $manager->expects($this->exactly(1))
++      ->method('createInstance')
++      ->willReturn($url_processor);
++
++    $storage = $this->getMock(EntityStorageInterface::class);
++    $em = $this->getMockBuilder(EntityTypeManagerInterface::class)
++      ->disableOriginalConstructor()
++      ->getMock();
++    $em->expects($this->exactly(1))
++      ->method('getStorage')
++      ->willReturn($storage);
++
++    $container = new ContainerBuilder();
++    $container->set('router.no_access_checks', $router);
++    $container->set('entity_type.manager', $em);
++    $container->set('plugin.manager.facets.url_processor', $manager);
++    \Drupal::setContainer($container);
++  }
+ }
+diff --git a/tests/src/Unit/Plugin/widget/WidgetTestBase.php b/tests/src/Unit/Plugin/widget/WidgetTestBase.php
+index 510aa17..76975b3 100644
+--- a/tests/src/Unit/Plugin/widget/WidgetTestBase.php
++++ b/tests/src/Unit/Plugin/widget/WidgetTestBase.php
+@@ -10,7 +10,7 @@ use Drupal\Core\Field\WidgetPluginManager;
+ use Drupal\Core\Routing\UrlGeneratorInterface;
+ use Drupal\Core\StringTranslation\TranslationInterface;
+ use Drupal\Core\Url;
+-use Symfony\Component\DependencyInjection\ContainerInterface;
++use Symfony\Component\DependencyInjection\ContainerBuilder;
+ 
+ /**
+  * Base class for widget unit tests.
+@@ -66,16 +66,16 @@ abstract class WidgetTestBase extends UnitTestCase {
+     }
+     $this->originalResults = $original_results;
+ 
+-    // Creates a mocked container, so we can access string translation.
+-    $container = $this->prophesize(ContainerInterface::class);
++    // Create a container, so we can access string translation.
+     $string_translation = $this->prophesize(TranslationInterface::class);
+     $url_generator = $this->prophesize(UrlGeneratorInterface::class);
+     $widget_manager = $this->prophesize(WidgetPluginManager::class);
+ 
+-    $container->get('plugin.manager.facets.widget')->willReturn($widget_manager->reveal());
+-    $container->get('string_translation')->willReturn($string_translation->reveal());
+-    $container->get('url_generator')->willReturn($url_generator->reveal());
+-    \Drupal::setContainer($container->reveal());
++    $container = new ContainerBuilder();
++    $container->set('plugin.manager.facets.widget', $widget_manager->reveal());
++    $container->set('string_translation', $string_translation->reveal());
++    $container->set('url_generator', $url_generator->reveal());
++    \Drupal::setContainer($container);
+ 
+     $this->queryTypes = [
+       'date' => 'date',

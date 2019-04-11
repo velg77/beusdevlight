@@ -1,0 +1,25 @@
+uuid: 5c3aae94-66c4-47d8-ba23-f0f1e2e819b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_topic_label
+    - paragraphs.paragraphs_type.message
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: paragraph.message.field_topic_label
+field_name: field_topic_label
+entity_type: paragraph
+bundle: message
+label: 'Author Name'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

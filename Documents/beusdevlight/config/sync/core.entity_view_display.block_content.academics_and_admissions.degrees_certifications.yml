@@ -1,0 +1,56 @@
+uuid: f8f28402-0665-46ab-b37f-e7ade97c46c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.academics_and_admissions
+    - core.entity_view_mode.block_content.degrees_certifications
+    - field.field.block_content.academics_and_admissions.body
+    - field.field.block_content.academics_and_admissions.field_taxonomy_reference
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        classes: {  }
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+    regions:
+      ds_content:
+        - body
+        - field_taxonomy_reference
+id: block_content.academics_and_admissions.degrees_certifications
+targetEntityType: block_content
+bundle: academics_and_admissions
+mode: degrees_certifications
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_taxonomy_reference:
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: teaser
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  addtoany: true

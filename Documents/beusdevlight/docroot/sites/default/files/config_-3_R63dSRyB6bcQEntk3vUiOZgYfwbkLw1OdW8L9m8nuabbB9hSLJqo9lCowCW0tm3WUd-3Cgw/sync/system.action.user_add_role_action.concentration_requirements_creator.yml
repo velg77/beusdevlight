@@ -1,0 +1,14 @@
+uuid: 284aec18-56a2-48ff-ad04-934477883d30
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.concentration_requirements_creator
+  module:
+    - user
+id: user_add_role_action.concentration_requirements_creator
+label: 'Add the Concentration - Requirements creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: concentration_requirements_creator

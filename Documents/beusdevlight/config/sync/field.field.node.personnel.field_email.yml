@@ -1,0 +1,25 @@
+uuid: 747452e5-4c04-406c-9735-4f24c575eb37
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_email
+    - node.type.personnel
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.personnel.field_email
+field_name: field_email
+entity_type: node
+bundle: personnel
+label: Email
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: email

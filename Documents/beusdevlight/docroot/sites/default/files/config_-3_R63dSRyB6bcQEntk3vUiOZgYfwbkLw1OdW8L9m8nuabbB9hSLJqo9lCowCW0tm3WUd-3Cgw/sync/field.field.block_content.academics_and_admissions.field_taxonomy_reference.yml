@@ -1,0 +1,31 @@
+uuid: 433e3864-55d9-4a3b-8408-dacf4b5f9158
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.academics_and_admissions
+    - field.storage.block_content.field_taxonomy_reference
+    - taxonomy.vocabulary.academic_degrees
+    - taxonomy.vocabulary.academic_programs
+id: block_content.academics_and_admissions.field_taxonomy_reference
+field_name: field_taxonomy_reference
+entity_type: block_content
+bundle: academics_and_admissions
+label: 'Taxonomy reference'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      academic_degrees: academic_degrees
+      academic_programs: academic_programs
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: academic_degrees
+field_type: entity_reference

@@ -1,0 +1,23 @@
+uuid: 7673476f-fea3-4a7b-90a7-90f5ba821b63
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_seating_capacity
+    - node.type.rooms
+id: node.rooms.field_seating_capacity
+field_name: field_seating_capacity
+entity_type: node
+bundle: rooms
+label: 'Seats Count'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

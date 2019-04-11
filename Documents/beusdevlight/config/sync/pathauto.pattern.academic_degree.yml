@@ -1,0 +1,23 @@
+uuid: cf6e1355-cfd3-4eee-bf0d-d3526c1412db
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: academic_degree
+label: 'Academic Degree'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'academic-degrees/[term:name]'
+selection_criteria:
+  651e787a-dd57-403b-b095-adbff1ee74eb:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      academic_degrees: academic_degrees
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: 651e787a-dd57-403b-b095-adbff1ee74eb
+selection_logic: and
+weight: -5
+relationships: {  }

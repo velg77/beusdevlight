@@ -1,0 +1,47 @@
+uuid: 6e87e7dc-b1fc-414d-a418-be15a78e1a03
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.message
+    - field.field.block_content.message.body
+    - field.field.block_content.message.field_message
+  module:
+    - paragraphs
+    - text
+id: block_content.message.default
+targetEntityType: block_content
+bundle: message
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 1
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    region: content
+  field_message:
+    type: entity_reference_paragraphs
+    weight: 26
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
+    third_party_settings: {  }
+    region: content
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  moderation_state: true

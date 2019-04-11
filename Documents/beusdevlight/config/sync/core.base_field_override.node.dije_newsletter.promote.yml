@@ -1,0 +1,22 @@
+uuid: cce6e0d8-3042-460c-938e-2ab162733529
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dije_newsletter
+id: node.dije_newsletter.promote
+field_name: promote
+entity_type: node
+bundle: dije_newsletter
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

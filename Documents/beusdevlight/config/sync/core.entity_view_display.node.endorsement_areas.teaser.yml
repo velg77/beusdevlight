@@ -1,0 +1,31 @@
+uuid: 437ada03-a559-49cf-ab4c-1c1ed00cea42
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.endorsement_areas.body
+    - node.type.endorsement_areas
+  module:
+    - text
+    - user
+id: node.endorsement_areas.teaser
+targetEntityType: node
+bundle: endorsement_areas
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true

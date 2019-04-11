@@ -1,0 +1,28 @@
+uuid: dcddc36e-9faa-4636-af04-7d8a16ab071a
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.news_type
+  module:
+    - panelizer
+    - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.news_type.default
+targetEntityType: taxonomy_term
+bundle: news_type
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

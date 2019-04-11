@@ -1,0 +1,60 @@
+uuid: 900cc7cb-3e55-46fb-9528-2c892b46b71e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.services.field_email
+    - field.field.taxonomy_term.services.field_phone_number
+    - field.field.taxonomy_term.services.field_submit
+    - taxonomy.vocabulary.services
+  module:
+    - link
+    - panelizer
+    - telephone
+    - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.services.default
+targetEntityType: taxonomy_term
+bundle: services
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_email:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_phone_number:
+    weight: 3
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: content
+  field_submit:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

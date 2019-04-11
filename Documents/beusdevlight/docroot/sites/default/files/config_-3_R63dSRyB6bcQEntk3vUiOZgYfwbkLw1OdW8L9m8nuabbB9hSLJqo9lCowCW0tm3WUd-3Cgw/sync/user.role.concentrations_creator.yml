@@ -1,0 +1,29 @@
+uuid: cf9ef33a-a0bb-4240-afac-3864ae41c1d5
+langcode: en
+status: true
+dependencies: {  }
+id: concentrations_creator
+label: 'Concentrations creator'
+weight: 18
+is_admin: false
+permissions:
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access toolbar'
+  - 'administer panelizer node concentrations content'
+  - 'administer panelizer node concentrations layout'
+  - 'change layouts in place editing'
+  - 'create concentrations content'
+  - 'create url aliases'
+  - 'edit own concentrations content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view concentrations revisions'
+  - 'view latest version'
+  - 'view own unpublished content'

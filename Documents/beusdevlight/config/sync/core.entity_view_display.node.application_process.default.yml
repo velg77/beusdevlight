@@ -1,0 +1,66 @@
+uuid: c443bf7d-7992-4202-a73c-7c4c22858b45
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.application_process.body
+    - field.field.node.application_process.field_application_process_catego
+    - field.field.node.application_process.field_application_process_steps
+    - node.type.application_process
+  module:
+    - ds
+    - entity_reference_revisions
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - body
+        - field_application_process_steps
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.application_process.default
+targetEntityType: node
+bundle: application_process
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  field_application_process_steps:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: ds_content
+hidden:
+  addtoany: true
+  field_application_process_catego: true
+  links: true

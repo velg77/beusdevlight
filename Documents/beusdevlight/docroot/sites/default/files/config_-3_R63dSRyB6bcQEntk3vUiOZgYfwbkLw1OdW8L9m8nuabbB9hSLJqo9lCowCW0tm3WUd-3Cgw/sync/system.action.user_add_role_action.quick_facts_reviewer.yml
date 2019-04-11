@@ -1,0 +1,14 @@
+uuid: 057aeb22-c957-4074-b28f-22ac911bfb92
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.quick_facts_reviewer
+  module:
+    - user
+id: user_add_role_action.quick_facts_reviewer
+label: 'Add the Quick Facts reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: quick_facts_reviewer

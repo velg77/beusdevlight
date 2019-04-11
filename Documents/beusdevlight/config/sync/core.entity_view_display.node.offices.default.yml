@@ -1,0 +1,246 @@
+uuid: 0d2a9014-a9bf-4eb9-99ce-af37f3fa60e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.offices.body
+    - field.field.node.offices.field_email
+    - field.field.node.offices.field_lead_text
+    - field.field.node.offices.field_map_location
+    - field.field.node.offices.field_meta_tags
+    - field.field.node.offices.field_phone_number
+    - field.field.node.offices.field_schedule_a_time
+    - field.field.node.offices.field_timing
+    - node.type.offices
+  module:
+    - ds
+    - field_group
+    - link
+    - metatag
+    - panelizer
+    - simple_gmap
+    - telephone
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: behavioursoe_layout
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers: null
+        outer_wrapper: null
+        attributes: ''
+        link_attribute: null
+        link_custom: null
+        classes:
+          layout_class: {  }
+    regions:
+      row3:
+        - group_top_content
+        - group_border_yellow
+        - group_b
+        - group_contact
+        - group_location
+        - group_office_hours
+      row1:
+        - field_lead_text
+        - field_email
+        - field_map_location
+        - field_phone_number
+        - body
+        - field_timing
+        - field_schedule_a_time
+  field_group:
+    group_contact:
+      children:
+        - field_email
+        - field_phone_number
+      parent_name: group_top_content
+      weight: 2
+      format_type: html_element
+      format_settings:
+        label: Contact
+        element: div
+        show_label: true
+        label_element: span
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: off-grd
+      label: Contact
+    group_location:
+      children:
+        - field_map_location
+      parent_name: group_top_content
+      weight: 3
+      format_type: html_element
+      format_settings:
+        label: Location
+        element: div
+        show_label: true
+        label_element: span
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: off-grd
+      label: Location
+    group_office_hours:
+      children:
+        - field_timing
+        - field_schedule_a_time
+      parent_name: group_top_content
+      weight: 4
+      format_type: html_element
+      format_settings:
+        label: 'Office Hours'
+        element: div
+        show_label: true
+        label_element: span
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: off-grd
+      label: 'Office Hours'
+    group_top_content:
+      children:
+        - group_contact
+        - group_location
+        - group_office_hours
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-top
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Top Content'
+    group_b:
+      children:
+        - field_lead_text
+        - body
+      parent_name: ''
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-btm
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Bottom Content'
+    group_border_yellow:
+      children: {  }
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: brd-ylw
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Border Yellow'
+id: node.offices.default
+targetEntityType: node
+bundle: offices
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 3
+    settings: {  }
+    third_party_settings: {  }
+    region: row1
+  field_email:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: email_mailto
+    region: row1
+  field_lead_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: row1
+  field_map_location:
+    weight: 3
+    label: hidden
+    settings:
+      apikey: ''
+      iframe_width: '200'
+      iframe_height: '200'
+      static_scale: 1
+      include_link: true
+      link_text: 'View Map'
+      zoom_level: 14
+      include_text: true
+      map_type: m
+      langcode: en
+      include_map: false
+      include_static_map: false
+    third_party_settings: {  }
+    type: simple_gmap
+    region: row1
+  field_meta_tags:
+    weight: 6
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: metatag_empty_formatter
+    region: content
+  field_phone_number:
+    weight: 3
+    label: hidden
+    settings:
+      title: ''
+    third_party_settings: {  }
+    type: telephone_link
+    region: row1
+  field_schedule_a_time:
+    weight: 5
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: row1
+  field_timing:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: row1
+hidden:
+  addtoany: true
+  links: true

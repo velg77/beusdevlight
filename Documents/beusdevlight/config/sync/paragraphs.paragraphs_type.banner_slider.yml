@@ -1,0 +1,9 @@
+uuid: 3fadb483-e673-41ce-9a4a-d2ceb54cc2f6
+langcode: en
+status: true
+dependencies: {  }
+id: banner_slider
+label: 'Banner Slider'
+icon_uuid: null
+description: 'A paragraph contains multiple fields for banners carousels.'
+behavior_plugins: {  }

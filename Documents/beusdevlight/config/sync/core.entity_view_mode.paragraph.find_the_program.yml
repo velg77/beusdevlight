@@ -1,0 +1,14 @@
+uuid: 64a9d187-0fd9-4cda-a2f6-1a7d066df27e
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - paragraphs
+third_party_settings:
+  lightning_core:
+    description: ''
+id: paragraph.find_the_program
+label: 'Find the Program'
+targetEntityType: paragraph
+cache: true

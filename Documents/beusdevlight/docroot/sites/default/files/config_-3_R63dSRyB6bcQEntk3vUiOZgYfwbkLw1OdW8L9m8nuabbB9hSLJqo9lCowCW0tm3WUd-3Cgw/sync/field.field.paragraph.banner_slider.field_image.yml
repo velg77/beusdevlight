@@ -1,0 +1,32 @@
+uuid: a73687d1-91a9-4b23-b203-4c7129c01276
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_image
+    - media.type.image
+    - media.type.video
+    - media.type.video_file
+    - paragraphs.paragraphs_type.banner_slider
+id: paragraph.banner_slider.field_image
+field_name: field_image
+entity_type: paragraph
+bundle: banner_slider
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+      video: video
+      video_file: video_file
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: video
+field_type: entity_reference

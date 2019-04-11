@@ -1,0 +1,55 @@
+uuid: 4357b00a-c9d4-4740-8ef8-fa857bad4261
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.message
+    - field.field.block_content.message.body
+    - field.field.block_content.message.field_message
+  module:
+    - ds
+    - entity_reference_revisions
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - body
+        - field_message
+id: block_content.message.default
+targetEntityType: block_content
+bundle: message
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  field_message:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: ds_content
+hidden: {  }

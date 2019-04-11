@@ -1,0 +1,68 @@
+uuid: 58a13aef-7740-443a-927d-23bd612f1a35
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.quik_facts
+    - field.field.paragraph.small_content.field_description
+    - field.field.paragraph.small_content.field_sub_title
+    - field.field.paragraph.small_content.field_title
+    - paragraphs.paragraphs_type.small_content
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          left: {  }
+          right: {  }
+    regions:
+      left:
+        - field_title
+        - field_sub_title
+      right:
+        - field_description
+id: paragraph.small_content.quik_facts
+targetEntityType: paragraph
+bundle: small_content
+mode: quik_facts
+content:
+  field_description:
+    type: text_trimmed
+    weight: 2
+    region: right
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_sub_title:
+    type: string
+    weight: 1
+    region: left
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_title:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: left
+hidden: {  }

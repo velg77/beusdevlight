@@ -1,0 +1,32 @@
+uuid: d202ae22-bc36-49e8-98c3-09a0d8b48c09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_personnel
+    - node.type.events
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.events.field_personnel
+field_name: field_personnel
+entity_type: node
+bundle: events
+label: 'Featured Panelists'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: general
+      display_name: entity_reference_1
+      arguments:
+        - personnel
+field_type: entity_reference

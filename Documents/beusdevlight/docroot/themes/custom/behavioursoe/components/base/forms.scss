@@ -1,0 +1,46 @@
+.form-item {
+  margin: 0 0 20px;
+}
+.form-text {
+  border: 1px solid #979797;
+  border-radius: 5px;
+  display: block;
+  font-size: 18px;
+  max-width: 100%;
+  padding: 16px;
+  &:focus, &:hover {
+    border-color: #0D57AA;
+  }
+}
+label {
+  font-size: 0.667em;
+  font-family: 'Open Sans SemiBold', sans-serif;
+}
+.description, .form-item + p {
+  font-size: 0.667em;
+  margin: 8px 0 0;
+}
+.form-actions {
+  margin: 20px 0 0;
+}
+.form-submit {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  background: #fff;
+  color: #00274c;
+  border: 1px solid #0d57aa;
+  background: #fff;
+  font-size: 0.889em;
+  font-family: "Avenir-Book",sans-serif;
+  cursor: pointer;
+  border-radius: 30px;
+  &:hover {
+    background: #0d57aa;
+    color: #fff;
+  }
+  @media (min-width: 1024px) {
+    padding: 16px 47px;
+  }
+}

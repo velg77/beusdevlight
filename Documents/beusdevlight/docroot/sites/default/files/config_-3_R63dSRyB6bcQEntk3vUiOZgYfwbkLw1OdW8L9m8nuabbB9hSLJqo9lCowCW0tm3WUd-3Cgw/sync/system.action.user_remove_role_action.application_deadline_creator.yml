@@ -1,0 +1,14 @@
+uuid: 8e8d9797-a6b1-4d11-b471-1d7c2560c5b5
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.application_deadline_creator
+  module:
+    - user
+id: user_remove_role_action.application_deadline_creator
+label: 'Remove the Application Deadline creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: application_deadline_creator

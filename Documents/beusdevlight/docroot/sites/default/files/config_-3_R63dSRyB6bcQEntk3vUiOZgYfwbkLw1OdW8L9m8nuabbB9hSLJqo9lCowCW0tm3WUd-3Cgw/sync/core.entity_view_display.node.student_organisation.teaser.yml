@@ -1,0 +1,93 @@
+uuid: 5fa2a208-8843-42c2-975e-a56d894b9a7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.student_organisation.body
+    - field.field.node.student_organisation.field_date_of_publication
+    - field.field.node.student_organisation.field_email
+    - field.field.node.student_organisation.field_media_type
+    - field.field.node.student_organisation.field_website
+    - node.type.student_organisation
+  module:
+    - ds
+    - link
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_media_type
+        - node_title
+        - body
+        - field_email
+        - field_website
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: node.student_organisation.teaser
+targetEntityType: node
+bundle: student_organisation
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 2
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  field_email:
+    type: email_mailto
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_media_type:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  field_website:
+    type: link_separate
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_date_of_publication: true
+  links: true

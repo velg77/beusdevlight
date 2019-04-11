@@ -1,0 +1,20 @@
+
+  @import "../../base/_variables";
+  .node--type-internships{
+    max-width: 770px;
+    margin: 20px auto;
+    .field--name-body{
+      p{
+        & > a{
+          line-height: 2.4rem;
+        }
+      }
+    }
+    .title-border{
+      color:#333333;
+      font-family: 'Avenir-Heavy', sans-serif;
+      font-size:1.889rem;
+      padding: 20px 0;
+    }
+  }
+

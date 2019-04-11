@@ -1,0 +1,17 @@
+diff --git a/core/modules/content_moderation/src/Routing/ContentModerationRouteSubscriber.php b/core/modules/content_moderation/src/Routing/ContentModerationRouteSubscriber.php
+index 4cfdbbeeb0..1f87a300b2 100644
+--- a/core/modules/content_moderation/src/Routing/ContentModerationRouteSubscriber.php
++++ b/core/modules/content_moderation/src/Routing/ContentModerationRouteSubscriber.php
+@@ -71,7 +71,11 @@ protected function setLatestRevisionFlag(Route $route) {
+     }
+     $parameters = $route->getOption('parameters') ?: [];
+     foreach ($parameters as &$parameter) {
+-      if ($parameter['type'] === 'entity:' . $entity_type && !isset($parameter['load_latest_revision'])) {
++      if (isset($parameter['type']) && $parameter['type'] === 'entity:' . $entity_type && !isset($parameter['load_latest_revision'])) {
++        $parameter['load_latest_revision'] = TRUE;
++      }
++      elseif (isset($parameter['targetEntityType']) && $parameter['targetEntityType'] === $entity_type) {
++        $parameter['type'] = 'entity:' . $entity_type;
+         $parameter['load_latest_revision'] = TRUE;
+       }
+     }

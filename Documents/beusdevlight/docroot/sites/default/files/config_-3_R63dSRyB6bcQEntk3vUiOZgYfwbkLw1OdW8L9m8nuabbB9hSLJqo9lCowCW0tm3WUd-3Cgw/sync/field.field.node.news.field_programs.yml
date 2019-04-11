@@ -1,0 +1,29 @@
+uuid: adefcd90-7b04-4bd7-8820-162446836a32
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_programs
+    - node.type.news
+    - taxonomy.vocabulary.academic_programs
+id: node.news.field_programs
+field_name: field_programs
+entity_type: node
+bundle: news
+label: 'Academic Program(s)'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      academic_programs: academic_programs
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

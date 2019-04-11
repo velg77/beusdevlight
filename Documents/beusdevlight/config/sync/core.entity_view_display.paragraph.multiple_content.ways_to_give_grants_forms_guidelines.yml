@@ -1,0 +1,23 @@
+uuid: 45300185-4c17-4f1e-99f1-bda27dd551ff
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.ways_to_give_grants_forms_guidelines
+    - field.field.paragraph.multiple_content.field_sub_text
+    - paragraphs.paragraphs_type.multiple_content
+  module:
+    - text
+id: paragraph.multiple_content.ways_to_give_grants_forms_guidelines
+targetEntityType: paragraph
+bundle: multiple_content
+mode: ways_to_give_grants_forms_guidelines
+content:
+  field_sub_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

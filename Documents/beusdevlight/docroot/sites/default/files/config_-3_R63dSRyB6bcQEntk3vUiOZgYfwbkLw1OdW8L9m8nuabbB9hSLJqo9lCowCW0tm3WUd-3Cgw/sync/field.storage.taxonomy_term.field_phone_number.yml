@@ -1,0 +1,19 @@
+uuid: 40fb3641-d4a1-4112-b753-a5dcc4d107f6
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - telephone
+id: taxonomy_term.field_phone_number
+field_name: field_phone_number
+entity_type: taxonomy_term
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,17 @@
+uuid: ba6bcba9-fabb-467a-b696-cf893bb2c80e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: C19s-DgCoW5aZz7bys6qI9jrW1Johq0cN-IGCtDbR0Y
+id: media_manager
+label: 'Media manager'
+weight: -3
+is_admin: false
+permissions:
+  - 'access image_browser entity browser pages'
+  - 'access media overview'
+  - 'access media_browser entity browser pages'
+  - 'access video_browser entity browser pages'
+  - 'administer media'
+  - 'administer media bundles'

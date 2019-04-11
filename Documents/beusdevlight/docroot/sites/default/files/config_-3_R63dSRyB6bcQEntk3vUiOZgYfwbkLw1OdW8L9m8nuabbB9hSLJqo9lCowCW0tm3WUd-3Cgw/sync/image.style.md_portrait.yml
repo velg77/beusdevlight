@@ -1,0 +1,25 @@
+uuid: 46b80cd9-2320-44ef-b02a-36ff3b73d4df
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.portrait
+  module:
+    - crop
+name: md_portrait
+label: md_portrait
+effects:
+  831485af-b9d0-4348-b25a-fc75c74cf92a:
+    uuid: 831485af-b9d0-4348-b25a-fc75c74cf92a
+    id: image_scale_and_crop
+    weight: -9
+    data:
+      width: 370
+      height: 401
+      anchor: center-center
+  23848f7a-c276-4562-8f4c-c958bfda2822:
+    uuid: 23848f7a-c276-4562-8f4c-c958bfda2822
+    id: crop_crop
+    weight: -10
+    data:
+      crop_type: portrait

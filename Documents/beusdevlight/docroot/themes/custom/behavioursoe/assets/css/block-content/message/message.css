@@ -1,0 +1,131 @@
+/**
+ * Clearfix
+*/
+/**
+ * Buttons
+*/
+.box {
+  padding: 10px 30px; }
+
+/**
+ * Css3 Extensions
+*/
+/**
+ * Flex
+*/
+/**
+ * Invisible
+*/
+.block-content--type-message {
+  margin: 69px 0 64px 0; }
+  .block-content--type-message .field--name-field-message > .field__item .group-left {
+    position: relative; }
+    .block-content--type-message .field--name-field-message > .field__item .group-left img {
+      width: 100%;
+      height: auto; }
+    .block-content--type-message .field--name-field-message > .field__item .group-left .field--name-field-image-caption {
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      width: 100%;
+      background: rgba(0, 39, 76, 0.8);
+      color: #fff;
+      padding: 5px 0 3px 0;
+      font-size: 0.778rem;
+      text-align: center; }
+    .block-content--type-message .field--name-field-message > .field__item .group-left .grp-eml-phn {
+      text-align: center;
+      margin-top: 18px;
+      font-size: 0.889rem; }
+    .block-content--type-message .field--name-field-message > .field__item .group-left .field--name-field-email {
+      color: #00274c; }
+  .block-content--type-message .field--name-field-message > .field__item .group-right .field--name-field-title {
+    font-family: 'Avenir-Light', sans-serif;
+    font-size: 1.2em;
+    line-height: 58px;
+    letter-spacing: 0px;
+    color: #000000;
+    margin-top: 20px;
+    text-transform: uppercase; }
+  .block-content--type-message .field--name-field-message > .field__item .group-right .field--name-field-full-description {
+    font-size: 1.111em;
+    line-height: 28px;
+    letter-spacing: 0;
+    color: #333333;
+    position: relative; }
+    .block-content--type-message .field--name-field-message > .field__item .group-right .field--name-field-full-description blockquote {
+      margin: 0 32px; }
+      .block-content--type-message .field--name-field-message > .field__item .group-right .field--name-field-full-description blockquote a {
+        font-family: 'OpenSans', sans-serif;
+        color: #0d57aa;
+        font-size: 0.778em;
+        letter-spacing: 0; }
+    .block-content--type-message .field--name-field-message > .field__item .group-right .field--name-field-full-description blockquote::before {
+      content: "";
+      background: url(../../../images/pullquote1.png) no-repeat;
+      width: 24px;
+      height: 20px;
+      display: inline-block;
+      background-size: 100%;
+      position: absolute;
+      left: 0; }
+    .block-content--type-message .field--name-field-message > .field__item .group-right .field--name-field-full-description blockquote::after {
+      content: "";
+      background: url(../../../images/pullquote2.png) no-repeat;
+      width: 24px;
+      height: 20px;
+      display: inline-block;
+      background-size: 100%;
+      position: absolute;
+      right: 0;
+      margin-top: -48px; }
+  .block-content--type-message .field--name-field-message > .field__item .group-right .field--name-field-topic-label {
+    font-family: 'Avenir-Heavy', sans-serif;
+    font-size: 1.111em;
+    line-height: 36px;
+    letter-spacing: 0;
+    color: #0d57aa;
+    margin-top: 10px;
+    font-weight: bold; }
+  .block-content--type-message .field--name-field-message > .field__item .group-right .field--name-field-sub-title {
+    font-family: 'OpenSans', sans-serif;
+    font-size: 0.889em;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: #555555; }
+
+@media (min-width: 768px) {
+  .block-content--view-mode-full .field--name-field-message > .field__item .group-left {
+    float: left;
+    width: 270px; }
+    .block-content--view-mode-full .field--name-field-message > .field__item .group-left .field--name-field-image-caption {
+      margin-top: 0; }
+  .block-content--view-mode-full .field--name-field-message > .field__item .group-right {
+    float: left;
+    width: calc(100% - 275px);
+    padding-left: 26px; }
+    .block-content--view-mode-full .field--name-field-message > .field__item .group-right .field--name-field-title {
+      font-size: 1.33em;
+      line-height: 40px;
+      margin-top: 0; }
+    .block-content--view-mode-full .field--name-field-message > .field__item .group-right .field--name-field-full-description blockquote {
+      margin: 0 62px; }
+    .block-content--view-mode-full .field--name-field-message > .field__item .group-right .field--name-field-full-description blockquote::before {
+      width: 44px;
+      height: 36px; }
+    .block-content--view-mode-full .field--name-field-message > .field__item .group-right .field--name-field-full-description blockquote::after {
+      width: 44px;
+      height: 36px; }
+    .block-content--view-mode-full .field--name-field-message > .field__item .group-right .field--name-field-topic-label,
+    .block-content--view-mode-full .field--name-field-message > .field__item .group-right .field--name-field-sub-title {
+      margin-left: 60px; } }
+
+@media (min-width: 1024px) {
+  .block-content--view-mode-full {
+    margin: 0 70px; }
+    .block-content--view-mode-full .field--name-field-message > .field__item .group-left {
+      float: left; }
+    .block-content--view-mode-full .field--name-field-message > .field__item .group-right .field--name-field-title {
+      font-size: 2.667em;
+      line-height: 37px;
+      margin-top: 0; } }

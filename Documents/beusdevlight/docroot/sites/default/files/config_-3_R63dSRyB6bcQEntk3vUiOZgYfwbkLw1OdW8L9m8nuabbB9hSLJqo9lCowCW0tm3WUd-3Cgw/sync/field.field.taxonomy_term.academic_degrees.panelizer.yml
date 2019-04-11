@@ -1,0 +1,21 @@
+uuid: 931d4338-1df0-4001-a54b-af9075e09e3b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.panelizer
+    - taxonomy.vocabulary.academic_degrees
+  module:
+    - panelizer
+id: taxonomy_term.academic_degrees.panelizer
+field_name: panelizer
+entity_type: taxonomy_term
+bundle: academic_degrees
+label: Panelizer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: panelizer

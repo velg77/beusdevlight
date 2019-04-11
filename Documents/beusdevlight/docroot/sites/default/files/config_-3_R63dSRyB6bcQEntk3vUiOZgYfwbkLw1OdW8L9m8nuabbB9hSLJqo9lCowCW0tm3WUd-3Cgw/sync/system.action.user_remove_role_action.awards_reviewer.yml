@@ -1,0 +1,14 @@
+uuid: aacdfbbd-ae38-4864-a2fb-c74499a770dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.awards_reviewer
+  module:
+    - user
+id: user_remove_role_action.awards_reviewer
+label: 'Remove the Awards reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: awards_reviewer

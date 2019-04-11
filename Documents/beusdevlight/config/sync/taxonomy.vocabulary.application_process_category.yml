@@ -1,0 +1,9 @@
+uuid: ff70a421-aefb-4def-ab08-1d768c9f37a3
+langcode: en
+status: true
+dependencies: {  }
+name: 'Application Process Category'
+vid: application_process_category
+description: 'List of terms in Application Process'
+hierarchy: 0
+weight: 0

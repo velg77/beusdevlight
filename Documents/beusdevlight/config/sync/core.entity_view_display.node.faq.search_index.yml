@@ -1,0 +1,51 @@
+uuid: 0ef0f21c-413a-49ae-bb36-81f806250db3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.faq.body
+    - field.field.node.faq.field_category
+    - field.field.node.faq.field_cta_link
+    - field.field.node.faq.field_programs
+    - node.type.faq
+  module:
+    - link
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.faq.search_index
+targetEntityType: node
+bundle: faq
+mode: search_index
+content:
+  body:
+    label: above
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_cta_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  addtoany: true
+  field_category: true
+  field_programs: true
+  links: true

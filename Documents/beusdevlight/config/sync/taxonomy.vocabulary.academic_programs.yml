@@ -1,0 +1,9 @@
+uuid: f05a0cc7-1432-448d-99f2-91052f7441ba
+langcode: en
+status: true
+dependencies: {  }
+name: 'Academic Programs'
+vid: academic_programs
+description: "List the academic programs\t"
+hierarchy: 0
+weight: 0

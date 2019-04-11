@@ -1,0 +1,23 @@
+uuid: 94383322-8f6e-4c23-b369-c8d766473406
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_manual_entry
+    - node.type.news
+id: node.news.field_show_manual_entry
+field_name: field_show_manual_entry
+entity_type: node
+bundle: news
+label: 'Show Manual Entry'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

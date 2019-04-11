@@ -1,0 +1,14 @@
+uuid: b20ed5bc-347a-47a6-8261-d66ade902c80
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - paragraphs
+third_party_settings:
+  lightning_core:
+    description: ''
+id: paragraph.hero_image_small
+label: 'Hero Image Small'
+targetEntityType: paragraph
+cache: true

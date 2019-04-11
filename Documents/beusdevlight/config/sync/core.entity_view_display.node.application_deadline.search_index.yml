@@ -1,0 +1,41 @@
+uuid: 83dbfb06-6ebd-45b7-b24d-93152cb99bb2
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.application_deadline.body
+    - field.field.node.application_deadline.field_fall
+    - field.field.node.application_deadline.field_final
+    - field.field.node.application_deadline.field_priority
+    - field.field.node.application_deadline.field_winter
+    - node.type.application_deadline
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.application_deadline.search_index
+targetEntityType: node
+bundle: application_deadline
+mode: search_index
+content:
+  body:
+    type: text_default
+    weight: 0
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_fall: true
+  field_final: true
+  field_priority: true
+  field_winter: true
+  links: true

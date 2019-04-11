@@ -1,0 +1,326 @@
+uuid: 488fd8a9-7d05-4571-bb7a-a879c00f2a16
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.rooms.body
+    - field.field.node.rooms.field_360deg_image
+    - field.field.node.rooms.field_building_hours
+    - field.field.node.rooms.field_floor_plans
+    - field.field.node.rooms.field_key_pickup_information
+    - field.field.node.rooms.field_key_return_information
+    - field.field.node.rooms.field_lead_text
+    - field.field.node.rooms.field_map_location
+    - field.field.node.rooms.field_media_type
+    - field.field.node.rooms.field_meta_tags
+    - field.field.node.rooms.field_room_amenities
+    - field.field.node.rooms.field_room_features
+    - field.field.node.rooms.field_room_no
+    - field.field.node.rooms.field_room_technology
+    - field.field.node.rooms.field_room_types
+    - field.field.node.rooms.field_seating_capacity
+    - field.field.node.rooms.field_seating_capacity_fx
+    - image.style.md_square_2x
+    - node.type.rooms
+  module:
+    - ds
+    - field_group
+    - media
+    - panelizer
+    - simple_gmap
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - group_top_content
+        - field_360deg_image
+        - node_title
+        - field_building_hours
+        - field_map_location
+        - field_media_type
+        - field_room_no
+        - 'dynamic_token_field:node-view_floor_plans_link'
+        - group_location
+        - group_key_pick_up
+        - 'dynamic_token_field:node-check_availability_button_room_d'
+        - group_building_hours
+        - group_after_hours_key_return
+        - group_info_wrap
+        - group_key_pickup_key_after_hours
+        - field_key_pickup_information
+        - field_key_return_information
+        - group_top_left
+        - group_top_right
+    fields:
+      'dynamic_token_field:node-check_availability_button_room_d':
+        plugin_id: 'dynamic_token_field:node-check_availability_button_room_d'
+        weight: 4
+        label: hidden
+        formatter: default
+      'dynamic_token_field:node-view_floor_plans_link':
+        plugin_id: 'dynamic_token_field:node-view_floor_plans_link'
+        weight: 3
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          wrapper: h1
+          class: ''
+          link: false
+  field_group:
+    group_top_content:
+      children:
+        - group_top_left
+        - group_top_right
+      parent_name: ''
+      weight: 0
+      format_type: html_element
+      format_settings:
+        label: 'Top Content'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'grp-tp clearfix'
+      label: 'Top Content'
+    group_top_left:
+      children:
+        - field_360deg_image
+        - field_media_type
+      parent_name: group_top_content
+      weight: 25
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-tp-lft
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Top Left'
+    group_top_right:
+      children:
+        - node_title
+        - field_room_no
+        - 'dynamic_token_field:node-check_availability_button_room_d'
+        - group_info_wrap
+      parent_name: group_top_content
+      weight: 26
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-tp-rgt
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Top Right'
+    group_location:
+      children:
+        - field_map_location
+        - 'dynamic_token_field:node-view_floor_plans_link'
+      parent_name: group_info_wrap
+      weight: 4
+      format_type: html_element
+      format_settings:
+        label: Location
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'grp-loc grp-info'
+      label: Location
+    group_building_hours:
+      children:
+        - field_building_hours
+      parent_name: group_info_wrap
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: 'grp-bhr grp-info'
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Building Hours'
+    group_key_pickup_key_after_hours:
+      children:
+        - group_key_pick_up
+        - group_after_hours_key_return
+      parent_name: group_info_wrap
+      weight: 6
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-info
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Key Pickup & Key After Hours'
+    group_key_pick_up:
+      children:
+        - field_key_pickup_information
+      parent_name: group_key_pickup_key_after_hours
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-kpck
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Key Pick-Up'
+    group_after_hours_key_return:
+      children:
+        - field_key_return_information
+      parent_name: group_key_pickup_key_after_hours
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-krtn
+        element: div
+        show_label: true
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'After-Hours Key Return'
+    group_info_wrap:
+      children:
+        - group_location
+        - group_building_hours
+        - group_key_pickup_key_after_hours
+      parent_name: group_top_right
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-info-wrp
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Info Wrap'
+id: node.rooms.default
+targetEntityType: node
+bundle: rooms
+mode: default
+content:
+  field_360deg_image:
+    type: entity_reference_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      view_mode: panorama
+      link: false
+    third_party_settings: {  }
+  field_building_hours:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_key_pickup_information:
+    type: text_default
+    weight: 6
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_key_return_information:
+    type: text_default
+    weight: 21
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_map_location:
+    type: simple_gmap
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      apikey: ''
+      iframe_width: '200'
+      iframe_height: '200'
+      static_scale: 1
+      include_link: true
+      link_text: 'View Map'
+      zoom_level: 14
+      include_text: true
+      map_type: m
+      langcode: en
+      include_map: false
+      include_static_map: false
+    third_party_settings: {  }
+  field_media_type:
+    type: media_thumbnail
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      image_style: md_square_2x
+      image_link: ''
+    third_party_settings: {  }
+  field_room_no:
+    type: string
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_floor_plans: true
+  field_lead_text: true
+  field_meta_tags: true
+  field_room_amenities: true
+  field_room_features: true
+  field_room_technology: true
+  field_room_types: true
+  field_seating_capacity: true
+  field_seating_capacity_fx: true
+  links: true

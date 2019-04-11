@@ -1,0 +1,22 @@
+uuid: cbf02443-8f31-41ea-ad30-9b02a808539c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: impact_stories
+label: 'Impact Stories'
+type: 'canonical_entities:node'
+pattern: 'impact-stories/[node:title]'
+selection_criteria:
+  db17df1c-edb2-4e62-9014-56c526dc79ce:
+    id: node_type
+    bundles:
+      impact_stories: impact_stories
+    negate: false
+    context_mapping:
+      node: node
+    uuid: db17df1c-edb2-4e62-9014-56c526dc79ce
+selection_logic: and
+weight: -5
+relationships: {  }

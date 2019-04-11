@@ -1,0 +1,16 @@
+uuid: 7a36796c-0464-430e-a94e-5fc98d75b732
+langcode: en
+status: true
+dependencies: {  }
+id: basic_pager
+label: 'Basic pager'
+panes:
+  left:
+    style: none
+    config: {  }
+  center:
+    style: basic
+    config: {  }
+  right:
+    style: none
+    config: {  }

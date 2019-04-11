@@ -1,0 +1,85 @@
+uuid: a6237d6b-d78b-45be-b8e9-3537287be091
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.2_cols_grid_with_bg
+    - field.field.paragraph.content.field_cta
+    - field.field.paragraph.content.field_description
+    - field.field.paragraph.content.field_image
+    - field.field.paragraph.content.field_sub_title
+    - field.field.paragraph.content.field_title
+    - image.style.mdlg_landscape_2x
+    - paragraphs.paragraphs_type.content
+  module:
+    - ds
+    - link
+    - media
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_image
+        - field_title
+        - field_description
+        - field_cta
+id: paragraph.content.2_cols_grid_with_bg
+targetEntityType: paragraph
+bundle: content
+mode: 2_cols_grid_with_bg
+content:
+  field_cta:
+    weight: 3
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: ds_content
+  field_description:
+    type: text_trimmed
+    weight: 2
+    region: ds_content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: mdlg_landscape_2x
+      image_link: ''
+    third_party_settings: {  }
+    type: media_thumbnail
+    region: ds_content
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+hidden:
+  field_sub_title: true

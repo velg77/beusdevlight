@@ -1,0 +1,29 @@
+uuid: 940b4db3-86b8-4e79-a750-61521fd5cc5d
+langcode: en
+status: true
+dependencies: {  }
+id: internships_creator
+label: 'Internships creator'
+weight: 30
+is_admin: false
+permissions:
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access toolbar'
+  - 'administer panelizer node internships content'
+  - 'administer panelizer node internships layout'
+  - 'change layouts in place editing'
+  - 'create internships content'
+  - 'create url aliases'
+  - 'edit own internships content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view internships revisions'
+  - 'view latest version'
+  - 'view own unpublished content'

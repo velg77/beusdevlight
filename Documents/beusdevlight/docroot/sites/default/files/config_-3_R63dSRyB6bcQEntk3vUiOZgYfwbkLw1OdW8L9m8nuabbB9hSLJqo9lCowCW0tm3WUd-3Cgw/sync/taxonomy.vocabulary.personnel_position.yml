@@ -1,0 +1,9 @@
+uuid: fd3032a6-748f-4849-9789-b202d0a17dce
+langcode: en
+status: true
+dependencies: {  }
+name: 'Personnel Position'
+vid: personnel_position
+description: 'Position of a Personnel'
+hierarchy: 0
+weight: 0

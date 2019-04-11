@@ -1,0 +1,30 @@
+uuid: f2e8b60c-d0b5-4cc3-b2aa-94e8c1f4f505
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_footer_markup_text
+    - node.type.events
+  module:
+    - custom_add_another
+    - markup
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.events.field_footer_markup_text
+field_name: field_footer_markup_text
+entity_type: node
+bundle: events
+label: 'Footer Markup Text'
+description: ''
+required: false
+translatable: false
+default_value:
+  - {  }
+default_value_callback: ''
+settings:
+  markup:
+    value: "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</p>\r\n"
+    format: rich_text
+field_type: markup

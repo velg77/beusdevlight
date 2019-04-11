@@ -1,0 +1,14 @@
+uuid: 6c3445f7-be37-41c2-8109-9b7afac0b8d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.personnel_reviewer
+  module:
+    - user
+id: user_remove_role_action.personnel_reviewer
+label: 'Remove the Personnel reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: personnel_reviewer

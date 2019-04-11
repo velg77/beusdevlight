@@ -1,0 +1,32 @@
+uuid: 937ab2aa-ab69-4395-8ba2-885d599f88ed
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.general
+  module:
+    - ctools
+    - views
+  theme:
+    - behavioursoe
+id: views_block__general_more_awards
+theme: behavioursoe
+region: content
+weight: -5
+provider: null
+plugin: 'views_block:general-more_awards'
+settings:
+  id: 'views_block:general-more_awards'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      awards: awards
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'

@@ -1,0 +1,21 @@
+uuid: 99e83906-fcc7-4561-82b7-4769d8d3836e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_key_pickup_information
+    - node.type.rooms
+  module:
+    - text
+id: node.rooms.field_key_pickup_information
+field_name: field_key_pickup_information
+entity_type: node
+bundle: rooms
+label: 'Key Pickup Information'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

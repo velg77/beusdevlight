@@ -1,0 +1,11 @@
+id: event_seating
+label: 'Event Seating[node:field_seating_capacity_fx]'
+ui_limit: ''
+properties:
+  content:
+    value: "<p>[node:field_seating_capacity_fx:entity]</p>\r\n"
+    format: rich_text
+type: token
+type_label: 'Token field'
+entities:
+  node: node

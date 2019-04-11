@@ -1,0 +1,125 @@
+/**block-content--view-mode-find-program
+paragraph--type-content
+*/
+@import "../../base/_variables";
+.block-content--view-mode-find-program {
+  .field--name-field-cta a {
+    color: #ffffff;
+    background: none;
+    padding: 0;
+    border: 0;
+    font-size: 0.889em;
+    text-transform: none;
+    font-family: 'Avenir-Medium', sans-serif;
+    &:after {
+      content: "\f105";
+      font-family: 'Fontawesome 5 pro';
+      padding-left: 10px;
+      font-size: 0.875rem;
+    }
+  }
+  .field--name-field-content {
+    margin: 20px -15px 0;
+    & > .field__item {
+      border-left: 15px solid #fff;
+      border-right: 15px solid #fff;
+      background-color: $site-color-cntblue;
+    }
+  }
+  .paragraph--type-content {
+    padding: 15px 10px;
+    &:after {
+      display: none;
+    }
+    .group-left, .group-right {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .group-left {
+      width: 90px;
+      padding-right: 15px;
+    }
+    .group-right {
+      width: -moz-calc(100% - 90px);
+      width: -webkit-calc(100% - 90px);
+      width: calc(100% - 90px);
+      margin-left: -5px;
+    }
+    .field--name-field-title {
+      color: #ffffff;
+      font-size: 1.444em;
+      font-family: 'Avenir-Heavy', sans-serif;;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .block-content--view-mode-find-program {
+    .field--name-field-content {
+      display: table;
+      width: 100%;
+      width: -moz-calc(100% + 30px);
+      width: -webkit-calc(100% + 30px);
+      width: calc(100% + 30px);
+      table-layout: fixed;
+      &> .field__item {
+        width: 50%;
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .block-content--view-mode-find-program .paragraph--type-content {
+    padding: 30px 40px; 
+    .group-left {
+      width: 100px;
+      padding-right: 20px;
+    }
+    .group-right {
+      width: -moz-calc(100% - 100px);
+      width: -webkit-calc(100% - 100px);
+      width: calc(100% - 100px);
+    }
+  }
+}
+
+.lft-sd-br {
+  .block-content--view-mode-find-program {
+    .field--name-field-content {
+      display: block;
+      margin: 0;
+      width: auto;
+      & > .field__item {
+        display: block;
+        background: none;
+        border: 0;
+        border-top: 1px solid #d8d8d8;
+        width: auto;
+        padding: 25px 0;
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+    .paragraph--type-content {
+      padding: 0;
+      .group-left, .group-right {
+        vertical-align: top;
+      }
+      .field--name-field-title {
+        color: #555;
+      }
+    }
+    .field--name-field-cta {
+      .field__item {
+        margin: 0;
+      }
+      a {
+        color: #0d57aa;
+      }
+    }
+  }
+}

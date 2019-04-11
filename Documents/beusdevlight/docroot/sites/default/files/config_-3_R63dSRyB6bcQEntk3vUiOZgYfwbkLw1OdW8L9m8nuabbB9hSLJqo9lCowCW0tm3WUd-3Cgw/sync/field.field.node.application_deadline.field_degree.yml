@@ -1,0 +1,29 @@
+uuid: affb0e14-5ce4-4962-a051-fd6556a53c90
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_degree
+    - node.type.application_deadline
+    - taxonomy.vocabulary.academic_degrees
+id: node.application_deadline.field_degree
+field_name: field_degree
+entity_type: node
+bundle: application_deadline
+label: Degree
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      academic_degrees: academic_degrees
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

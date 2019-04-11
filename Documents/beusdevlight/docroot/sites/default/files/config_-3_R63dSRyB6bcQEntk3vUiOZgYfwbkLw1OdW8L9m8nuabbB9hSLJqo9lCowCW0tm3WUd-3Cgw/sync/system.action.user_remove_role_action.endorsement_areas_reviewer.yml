@@ -1,0 +1,14 @@
+uuid: c2136846-684f-4918-891b-8edd02c099e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.endorsement_areas_reviewer
+  module:
+    - user
+id: user_remove_role_action.endorsement_areas_reviewer
+label: 'Remove the Endorsement Areas reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: endorsement_areas_reviewer

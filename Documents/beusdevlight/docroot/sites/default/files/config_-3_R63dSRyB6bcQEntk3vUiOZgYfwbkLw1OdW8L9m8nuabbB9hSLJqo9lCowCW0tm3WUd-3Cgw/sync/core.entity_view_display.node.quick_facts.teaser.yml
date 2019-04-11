@@ -1,0 +1,31 @@
+uuid: f9ee2174-150f-4637-97ae-ea7f2c78d1e4
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.quick_facts.body
+    - node.type.quick_facts
+  module:
+    - text
+    - user
+id: node.quick_facts.teaser
+targetEntityType: node
+bundle: quick_facts
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true

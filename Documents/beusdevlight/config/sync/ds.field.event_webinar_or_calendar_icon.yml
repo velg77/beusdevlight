@@ -1,0 +1,11 @@
+id: event_webinar_or_calendar_icon
+label: 'Event Webinar or Calendar Icon'
+ui_limit: ''
+properties:
+  content:
+    value: "<?php\r\n\r\nif(function_exists('ds_event_calendaricon')) {\r\nprint ds_event_calendaricon('[node:field_events_type]');\r\n}\r\n\r\n?>"
+    format: php_filter
+type: token
+type_label: 'Token field'
+entities:
+  node: node

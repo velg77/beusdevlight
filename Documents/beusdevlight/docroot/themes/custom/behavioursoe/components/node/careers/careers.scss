@@ -1,0 +1,42 @@
+
+  @import "../../base/_variables";
+
+  .node--type-careers{
+    text-align: center;
+  }
+ .field--name-field-carrers{
+  max-width: 770px;
+  margin: 20px auto;
+ }
+ .field--name-field-graduates{
+  display: table;
+  width:100%;
+  margin: 40px 0;
+  & > .field__item{
+    margin:20px 0;
+    @media (min-width: 640px) {
+      display: table-cell;
+      padding: 0 100px;
+      margin:0px;
+    }
+    .field--name-field-title{
+      color: #1254a0;
+      text-align: center;
+      font-size: 2.778rem;
+      font-family: 'Avenir-Light',sans-serif;
+    }
+    .field--name-field-sub-title{
+      font-size: 0.889rem;
+    }
+  }
+}
+
+ @media (min-width: 568px) {
+  .field--name-field-carrers{
+    .field--name-field-graduates{
+      & > .field__item{
+
+      }
+    }
+  }
+ }

@@ -1,0 +1,17 @@
+uuid: eb2d7dab-facb-41bf-a6ab-4a9f4586ff1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.square
+  module:
+    - crop
+name: crop_square
+label: 'Cropped: Square'
+effects:
+  41995757-1fbb-488b-86a2-826f0a0c3590:
+    uuid: 41995757-1fbb-488b-86a2-826f0a0c3590
+    id: crop_crop
+    weight: null
+    data:
+      crop_type: square

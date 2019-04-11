@@ -1,0 +1,87 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:behaviorsoe1.betabasket.net
+X-WR-TIMEZONE:Australia/Adelaide
+BEGIN:VTIMEZONE
+TZID:Australia/Adelaide
+X-LIC-LOCATION:Australia/Adelaide
+BEGIN:DAYLIGHT
+TZNAME:ACDT
+TZOFFSETFROM:+0930
+TZOFFSETTO:+1030
+DTSTART:20181006T163000
+END:DAYLIGHT
+BEGIN:DAYLIGHT
+TZNAME:ACDT
+TZOFFSETFROM:+0930
+TZOFFSETTO:+1030
+DTSTART:20191005T163000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZNAME:ACST
+TZOFFSETFROM:+1030
+TZOFFSETTO:+0930
+DTSTART:20180331T163000
+END:STANDARD
+BEGIN:STANDARD
+TZNAME:ACST
+TZOFFSETFROM:+1030
+TZOFFSETTO:+0930
+DTSTART:20190406T163000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:9cbd36eaec470494203683f5d5f32e18
+DTSTART;TZID=Australia/Adelaide:20190215T143101
+SEQUENCE:0
+TRANSP:OPAQUE
+URL:http://behaviorsoe1.betabasket.net/[node:path]
+SUMMARY:Lorem ipsum dolor sit amet\, consectetur adipiscing elit
+CLASS:PUBLIC
+DESCRIPTION:Description:\nLorem ipsum dolor sit amet\, consectetur adipisci
+ ng elit. Aenean sit\namet auctor nulla. Curabitur ullamcorper a felis sit 
+ amet congue.\nMauris non libero ac ex viverra fermentum. Nulla vestibulum\
+ , dui vitae\npulvinar maximus\, turpis neque eleifend nunc\, in molestie l
+ ectus elit\nnon felis. Sed at turpis quis erat vehicula commodo. Integer a
+ nte\ntortor\, posuere sed iaculis a\, mattis vitae purus. Praesent erat\nm
+ assa\, tristique eu orci sagittis\, tristique cursus arcu. Sed mattis\nlec
+ tus sed dui laoreet\, et iaculis neque malesuada. Mauris rhoncus\ndignissi
+ m ornare. Vivamus non tristique ex\, vitae rhoncus ligula. Nam\nlibero pur
+ us\, maximus sed cursus et\, vestibulum eget risus.\n\nAenean eget lacinia
+  arcu\, vitae facilisis turpis. Donec interdum\ncursus nunc\, et consequat
+  elit laoreet lobortis. Donec sit amet lectus\nvitae risus lacinia tempus 
+ et id nisl. Aenean volutpat feugiat ipsum\,\nat interdum urna lacinia nec.
+  Etiam ac suscipit mi. Maecenas ac felis\na nibh semper lacinia a nec sapi
+ en. Sed porta ante vel turpis pretium\,\nbibendum faucibus sem viverra. Et
+ iam dignissim lacus quis lorem\nlaoreet porta. Quisque ultrices felis cons
+ ectetur\, luctus ligula eu\,\nvestibulum est. Ut feugiat et nisi et tristi
+ que. Vivamus porta in mi\nat gravida. Quisque iaculis eros in posuere port
+ titor.\n Start Date: Sun\, 02/17/2019 - 22:01 End Date: [node:field_event_
+ date]\n[node:field_author]
+X-ALT-DESC;FMTTYPE=text/html:Description: <p>Lorem ipsum dolor sit amet\, c
+ onsectetur adipiscing elit. Aenean sit amet auctor nulla. Curabitur ullamc
+ orper a felis sit amet congue. Mauris non libero ac ex viverra fermentum. 
+ Nulla vestibulum\, dui vitae pulvinar maximus\, turpis neque eleifend nunc
+ \, in molestie lectus elit non felis. Sed at turpis quis erat vehicula com
+ modo. Integer ante tortor\, posuere sed iaculis a\, mattis vitae purus. Pr
+ aesent erat massa\, tristique eu orci sagittis\, tristique cursus arcu. Se
+ d mattis lectus sed dui laoreet\, et iaculis neque malesuada. Mauris rhonc
+ us dignissim ornare. Vivamus non tristique ex\, vitae rhoncus ligula. Nam 
+ libero purus\, maximus sed cursus et\, vestibulum eget risus.</p>\n\n<p>Ae
+ nean eget lacinia arcu\, vitae facilisis turpis. Donec interdum cursus nun
+ c\, et consequat elit laoreet lobortis. Donec sit amet lectus vitae risus 
+ lacinia tempus et id nisl. Aenean volutpat feugiat ipsum\, at interdum urn
+ a lacinia nec. Etiam ac suscipit mi. Maecenas ac felis a nibh semper lacin
+ ia a nec sapien. Sed porta ante vel turpis pretium\, bibendum faucibus sem
+  viverra. Etiam dignissim lacus quis lorem laoreet porta. Quisque ultrices
+  felis consectetur\, luctus ligula eu\, vestibulum est. Ut feugiat et nisi
+  et tristique. Vivamus porta in mi at gravida. Quisque iaculis eros in pos
+ uere porttitor.</p>\n</br>\nStart Date: \n\n<!-- THEME DEBUG -->\n<!-- THE
+ ME HOOK: 'time' -->\n<!-- BEGIN OUTPUT from 'core/themes/classy/templates/
+ field/time.html.twig' -->\n<time datetime=\"2019-02-17T11:31:01Z\" class=\
+ "datetime\">Sun\, 02/17/2019 - 22:01</time>\n\n<!-- END OUTPUT from 'core/
+ themes/classy/templates/field/time.html.twig' -->\n\n</br></br>\nEnd Date:
+  [node:field_event_date]</br>\n[node:field_author]
+DTSTAMP:20190326T155542Z
+END:VEVENT
+END:VCALENDAR

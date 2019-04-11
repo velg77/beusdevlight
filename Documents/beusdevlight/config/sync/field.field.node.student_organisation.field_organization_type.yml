@@ -1,0 +1,28 @@
+uuid: ce115912-151c-4acf-90ef-bed2c97e2663
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_organization_type
+    - node.type.student_organisation
+  module:
+    - custom_add_another
+    - options
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.student_organisation.field_organization_type
+field_name: field_organization_type
+entity_type: node
+bundle: student_organisation
+label: Type
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: student_organization
+default_value_callback: ''
+settings: {  }
+field_type: list_string

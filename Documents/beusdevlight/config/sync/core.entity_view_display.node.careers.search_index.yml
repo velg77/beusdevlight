@@ -1,0 +1,39 @@
+uuid: ab74a429-5537-4096-9ff3-5714e40db3b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.careers.body
+    - field.field.node.careers.field_full_data
+    - field.field.node.careers.field_graduate
+    - field.field.node.careers.field_graduates
+    - node.type.careers
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.careers.search_index
+targetEntityType: node
+bundle: careers
+mode: search_index
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_full_data: true
+  field_graduate: true
+  field_graduates: true
+  links: true

@@ -1,0 +1,9 @@
+uuid: be2f49f6-93f2-4fea-b196-53bac8030a90
+langcode: en
+status: true
+dependencies: {  }
+name: 'Student Category'
+vid: student_category
+description: ''
+hierarchy: 0
+weight: 0

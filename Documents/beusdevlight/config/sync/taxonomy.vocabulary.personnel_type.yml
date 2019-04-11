@@ -1,0 +1,9 @@
+uuid: db68357d-1b2f-4d46-8d32-092037c74a00
+langcode: en
+status: true
+dependencies: {  }
+name: 'Personnel Type'
+vid: personnel_type
+description: 'Type of Personnel'
+hierarchy: 0
+weight: 0

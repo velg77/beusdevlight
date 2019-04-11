@@ -1,0 +1,59 @@
+uuid: 40b63891-48c6-4dca-96dd-c091e01b547e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.token
+    - field.field.node.student_organisation.body
+    - field.field.node.student_organisation.field_email
+    - field.field.node.student_organisation.field_media_type
+    - field.field.node.student_organisation.field_website
+    - node.type.student_organisation
+  module:
+    - ds
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_media_type
+        - body
+id: node.student_organisation.token
+targetEntityType: node
+bundle: student_organisation
+mode: token
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_media_type:
+    weight: 0
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+hidden:
+  addtoany: true
+  field_email: true
+  field_website: true
+  links: true

@@ -1,0 +1,19 @@
+uuid: bad54c9c-f3b6-4bf9-ac59-7b9c2e0fc11d
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+    - text
+id: taxonomy_term.field_lead_text
+field_name: field_lead_text
+entity_type: taxonomy_term
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

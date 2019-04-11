@@ -1,0 +1,9 @@
+uuid: 7759f385-b650-4fbf-8fb8-e810814f33dc
+langcode: en
+status: true
+dependencies: {  }
+name: Degree
+vid: degree
+description: 'List of terms in Degrees'
+hierarchy: 0
+weight: 0

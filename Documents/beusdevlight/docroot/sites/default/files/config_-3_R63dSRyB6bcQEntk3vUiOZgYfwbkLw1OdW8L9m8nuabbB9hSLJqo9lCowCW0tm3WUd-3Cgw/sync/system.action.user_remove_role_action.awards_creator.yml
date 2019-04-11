@@ -1,0 +1,14 @@
+uuid: 0a622dd1-6bc6-4988-8c0d-fb11eb1ec249
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.awards_creator
+  module:
+    - user
+id: user_remove_role_action.awards_creator
+label: 'Remove the Awards creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: awards_creator

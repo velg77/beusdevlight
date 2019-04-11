@@ -1,0 +1,19 @@
+uuid: d04061d6-1568-4458-b8b9-739cff5955bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_small_text
+    - node.type.concentrations
+id: node.concentrations.field_small_text
+field_name: field_small_text
+entity_type: node
+bundle: concentrations
+label: 'Small Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

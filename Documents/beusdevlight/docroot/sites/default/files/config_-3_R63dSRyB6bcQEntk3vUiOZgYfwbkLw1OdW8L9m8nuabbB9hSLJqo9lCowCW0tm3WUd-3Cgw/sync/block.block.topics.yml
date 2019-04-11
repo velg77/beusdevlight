@@ -1,0 +1,29 @@
+uuid: 261cf271-2667-41d9-b946-3af4267fa76d
+langcode: en
+status: true
+dependencies:
+  config:
+    - facets.facet.topics
+  module:
+    - facets
+    - system
+  theme:
+    - behavioursoe
+id: topics
+theme: behavioursoe
+region: sidebar
+weight: 0
+provider: null
+plugin: 'facet_block:topics'
+settings:
+  id: 'facet_block:topics'
+  label: Topics
+  provider: facets
+  label_display: visible
+  block_id: topics
+visibility:
+  request_path:
+    id: request_path
+    pages: /search1
+    negate: false
+    context_mapping: {  }

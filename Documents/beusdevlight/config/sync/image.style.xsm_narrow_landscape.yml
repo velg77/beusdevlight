@@ -1,0 +1,25 @@
+uuid: 93f30ff8-d859-4c97-b956-337eda3b6fdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.narrow_landscape
+  module:
+    - crop
+name: xsm_narrow_landscape
+label: xsm_narrow_landscape
+effects:
+  cea28983-2709-4a89-ac68-4abe1093d3f7:
+    uuid: cea28983-2709-4a89-ac68-4abe1093d3f7
+    id: crop_crop
+    weight: 1
+    data:
+      crop_type: narrow_landscape
+  ebe22eb8-1efe-4912-be27-17c3e4b73eff:
+    uuid: ebe22eb8-1efe-4912-be27-17c3e4b73eff
+    id: image_scale_and_crop
+    weight: 2
+    data:
+      width: 170
+      height: 71
+      anchor: center-center

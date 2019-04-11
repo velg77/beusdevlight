@@ -1,0 +1,20 @@
+uuid: 2790afd1-10eb-41b0-a958-4cf3b8dd12a1
+langcode: en
+status: true
+dependencies:
+  theme:
+    - behavioursoe
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: behavioursoe_local_actions
+theme: behavioursoe
+region: content
+weight: -14
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

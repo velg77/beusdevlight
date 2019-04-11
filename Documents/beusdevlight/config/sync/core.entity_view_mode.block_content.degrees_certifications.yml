@@ -1,0 +1,14 @@
+uuid: eeed2d0b-d674-4278-9e5f-251be2ed2b56
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: block_content.degrees_certifications
+label: 'Degrees & Certifications'
+targetEntityType: block_content
+cache: true

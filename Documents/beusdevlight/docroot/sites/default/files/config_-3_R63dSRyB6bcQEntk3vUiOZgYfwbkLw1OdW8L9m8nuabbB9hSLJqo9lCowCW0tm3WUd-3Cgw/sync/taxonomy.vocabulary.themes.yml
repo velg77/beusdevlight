@@ -1,0 +1,9 @@
+uuid: c741827e-03e1-42ef-8bb7-9ef96f6d29ac
+langcode: en
+status: true
+dependencies: {  }
+name: Themes
+vid: themes
+description: 'Course Themes'
+hierarchy: 0
+weight: 0

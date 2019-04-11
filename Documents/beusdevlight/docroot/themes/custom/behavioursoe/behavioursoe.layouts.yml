@@ -1,0 +1,91 @@
+behavioursoe_layout:
+  label: SOE Simple Layout
+  category: SOE
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: components/layout/simple-layout
+  regions:    
+    row1:
+      label: Row 1
+    row2:
+      label: Row 2
+    row3:
+      label: Row 3
+    row4:
+      label: Row 4
+    row5:
+      label: Row 5
+    row6:
+      label: Row 6
+    row7:
+      label: Row 7
+    row8:
+      label: Row 8
+    left_sidebar:
+      label: Left Sidebar
+    main_content:
+      label: Main Content
+    right_sidebar:
+      label: Right Sidebar
+    row9:
+      label: Row 9
+    row10:
+      label: Row 10
+    row11:
+      label: Row 11
+    row12:
+      label: Row 12
+    row13:
+      label: Row 13
+    row14:
+      label: Row 14
+    row15:
+      label: Row 15
+
+behavioursoe_clayout:
+  label: SOE Simple Layout (Concentration)
+  category: SOE
+  class: '\Drupal\ds\Plugin\DsLayout'
+  type: partial
+  template: components/layout/simple-layout-concentration
+  regions:    
+    row1:
+      label: Row 1
+    row2:
+      label: Row 2
+    row3:
+      label: Row 3
+    row4:
+      label: Row 4
+    row5:
+      label: Row 5
+    row6:
+      label: Row 6
+    row7:
+      label: Row 7
+    row8:
+      label: Row 8
+    row9:
+      label: Row 9
+    row10:
+      label: Row 10
+    row11:
+      label: Row 11
+    row12:
+      label: Row 12
+    row13:
+      label: Row 13
+    row14:
+      label: Row 14
+    row15:
+      label: Row 15
+    row16:
+      label: Row 16
+    row17:
+      label: Row 17         
+    row18:
+      label: Row 18
+    row19:
+      label: Row 19
+    row20:
+      label: Row 20    

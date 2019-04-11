@@ -1,0 +1,22 @@
+uuid: 4e8cfe0e-c5a0-403d-8349-85d0aec74a12
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.concentrations
+id: node.concentrations.promote
+field_name: promote
+entity_type: node
+bundle: concentrations
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

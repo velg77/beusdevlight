@@ -1,0 +1,40 @@
+uuid: 096ba5d5-dff1-4603-ac96-cc4e9915e421
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.node_form_mode_example.body
+    - field.field.node.node_form_mode_example.field_picture
+    - node.type.node_form_mode_example
+  module:
+    - image
+    - text
+    - user
+_core:
+  default_config_hash: lnjWN9kjU_kT7rxBX9-7Pgtj_a42skEDybd6bcM93wo
+id: node.node_form_mode_example.default
+targetEntityType: node
+bundle: node_form_mode_example
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_picture:
+    weight: 102
+    label: above
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  links:
+    weight: 100
+    region: content
+hidden:
+  addtoany: true

@@ -1,0 +1,19 @@
+uuid: 60238d52-98db-4843-a3e1-a7dd1f572246
+langcode: en
+status: true
+dependencies: {  }
+id: events_reviewer
+label: 'Events reviewer'
+weight: 11
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'delete any events content'
+  - 'edit any events content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'view any unpublished content'
+  - 'view latest version'

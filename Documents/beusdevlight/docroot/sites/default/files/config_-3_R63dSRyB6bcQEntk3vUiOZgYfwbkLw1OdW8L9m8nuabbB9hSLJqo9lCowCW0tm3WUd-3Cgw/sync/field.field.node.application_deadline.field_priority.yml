@@ -1,0 +1,46 @@
+uuid: 5025ba73-e174-4750-8925-625d47f3a02c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_priority
+    - node.type.application_deadline
+    - paragraphs.paragraphs_type.multiple_content
+  module:
+    - entity_reference_revisions
+id: node.application_deadline.field_priority
+field_name: field_priority
+entity_type: node
+bundle: application_deadline
+label: Priority
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      multiple_content: multiple_content
+    target_bundles_drag_drop:
+      banner_slider:
+        weight: 7
+        enabled: false
+      content:
+        weight: 8
+        enabled: false
+      cta_group:
+        weight: 9
+        enabled: false
+      message:
+        weight: 10
+        enabled: false
+      multiple_content:
+        enabled: true
+        weight: 11
+      small_content:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

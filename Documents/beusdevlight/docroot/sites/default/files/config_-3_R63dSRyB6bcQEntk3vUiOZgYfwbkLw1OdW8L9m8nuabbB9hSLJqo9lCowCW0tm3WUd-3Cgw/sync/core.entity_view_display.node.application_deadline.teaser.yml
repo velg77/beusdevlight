@@ -1,0 +1,65 @@
+uuid: 84548bcb-a04e-4c06-9668-b76a3398b7b1
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.application_deadline.body
+    - field.field.node.application_deadline.field_degree
+    - field.field.node.application_deadline.field_fall
+    - field.field.node.application_deadline.field_final
+    - field.field.node.application_deadline.field_priority
+    - field.field.node.application_deadline.field_winter
+    - node.type.application_deadline
+  module:
+    - ds
+    - entity_reference_revisions
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_priority
+        - field_final
+id: node.application_deadline.teaser
+targetEntityType: node
+bundle: application_deadline
+mode: teaser
+content:
+  field_final:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+  field_priority:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_degree: true
+  field_fall: true
+  field_winter: true
+  links: true

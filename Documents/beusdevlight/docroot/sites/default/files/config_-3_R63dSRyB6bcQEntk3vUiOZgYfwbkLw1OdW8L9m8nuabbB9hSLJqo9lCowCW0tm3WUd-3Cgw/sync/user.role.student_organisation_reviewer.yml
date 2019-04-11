@@ -1,0 +1,19 @@
+uuid: 7fd02741-0a5a-427f-b1d1-6dd74f80b498
+langcode: en
+status: true
+dependencies: {  }
+id: student_organisation_reviewer
+label: 'Student Organisation reviewer'
+weight: 5
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'delete any student_organisation content'
+  - 'edit any student_organisation content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'view any unpublished content'
+  - 'view latest version'

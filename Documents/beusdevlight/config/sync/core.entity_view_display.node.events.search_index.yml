@@ -1,0 +1,139 @@
+uuid: da7de5f0-6f2c-4f51-9ed2-61a1ed9488b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.events.body
+    - field.field.node.events.field_display_event_time
+    - field.field.node.events.field_email
+    - field.field.node.events.field_event_end_date
+    - field.field.node.events.field_event_start_date
+    - field.field.node.events.field_events_type
+    - field.field.node.events.field_first_name
+    - field.field.node.events.field_information_for_calender
+    - field.field.node.events.field_lead_text
+    - field.field.node.events.field_map_location
+    - field.field.node.events.field_name
+    - field.field.node.events.field_personemail
+    - field.field.node.events.field_personnel
+    - field.field.node.events.field_phone_no
+    - field.field.node.events.field_phone_number
+    - field.field.node.events.field_registration
+    - field.field.node.events.field_related_events
+    - field.field.node.events.field_show_manual_entry
+    - field.field.node.events.field_tags
+    - field.field.node.events.field_web
+    - node.type.events
+  module:
+    - ds
+    - field_group
+    - panelizer
+    - smart_trim
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  field_group:
+    group_left:
+      children: {  }
+      parent_name: ''
+      weight: 30
+      format_type: html_element
+      format_settings:
+        label: 'Event Card'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: 'evnt-card dpt dpb'
+      label: 'Event Card'
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - 'bundle_field:node'
+        - field_tags
+        - field_date_of_publication
+        - node_title
+        - body
+    fields:
+      'bundle_field:node':
+        plugin_id: 'bundle_field:node'
+        weight: 0
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 3
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: node.events.search_index
+targetEntityType: node
+bundle: events
+mode: search_index
+content:
+  body:
+    type: smart_trim
+    weight: 4
+    region: content
+    label: hidden
+    settings:
+      trim_length: 150
+      trim_type: chars
+      trim_suffix: ''
+      wrap_class: trimmed
+      more_text: More
+      more_class: more-link
+      summary_handler: full
+      trim_options:
+        text: true
+        trim_zero: false
+      wrap_output: false
+      more_link: false
+    third_party_settings: {  }
+  field_tags:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  content_moderation_control: true
+  field_display_event_time: true
+  field_email: true
+  field_event_end_date: true
+  field_event_start_date: true
+  field_events_type: true
+  field_first_name: true
+  field_information_for_calender: true
+  field_lead_text: true
+  field_map_location: true
+  field_name: true
+  field_personemail: true
+  field_personnel: true
+  field_phone_no: true
+  field_phone_number: true
+  field_registration: true
+  field_related_events: true
+  field_show_manual_entry: true
+  field_web: true
+  links: true

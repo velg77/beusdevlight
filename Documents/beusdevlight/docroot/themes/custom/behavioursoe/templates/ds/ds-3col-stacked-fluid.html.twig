@@ -1,0 +1,71 @@
+{#
+/**
+ * @file
+ * Display Suite 3 column stacked template.
+ *
+ * Available variables:
+ * - outer_wrapper: outer wrapper element
+ * - header_wrapper: wrapper element around header region
+ * - left_wrapper: wrapper element around left region
+ * - middle_wrapper: wrapper element around middle region
+ * - right_wrapper: wrapper element around right region
+ * - footer_wrapper: wrapper element around footer region
+ * - attributes: layout attributes
+ * - header_attributes: attributes for header region
+ * - left_attributes: attributes for left region
+ * - middle_attributes: attributes for middle region
+ * - right_attributes: attributes for right region
+ * - footer_attributes: attributes for footer region
+ * - header: content of header region
+ * - left: content of left region
+ * - middle: content of middle region
+ * - right: content of right region
+ * - footer: content of footer region
+ */
+#}
+
+{% set left = left|render %}
+{% set middle = middle|render %}
+{% set right = right|render %}
+
+{% if (left and not right) or (right and not left) %}
+  {% set layout_class = 'group-one-sidebar' %}
+{% elseif (left and right) %}
+  {% set layout_class = 'group-two-sidebars' %}
+{% elseif (left) %}
+  {% set layout_class = 'group-sidebar-left' %}
+{% elseif (right) %}
+  {% set layout_class = 'group-sidebar-right' %}
+{% endif %}
+
+<div{{ attributes.addClass(layout_class, 'ds-3col-stacked-fluid', 'clearfix') }}>
+
+  {{ title_suffix.contextual_links }}
+
+  <div{{ header_attributes.addClass('group-header') }}>
+    {{ header }}
+  </div>
+
+  {% if left %}
+    <div{{ left_attributes.addClass('group-left') }}>
+      {{ left }}
+    </div>
+  {% endif %}
+
+  {% if middle %}
+    <div{{ middle_attributes.addClass('group-middle') }}>
+      {{ middle }}
+    </div>
+  {% endif %}
+
+  {% if right %}
+    <div{{ right_attributes.addClass('group-right') }}>
+      {{ right }}
+    </div>
+  {% endif %}
+
+  <div{{ footer_attributes.addClass('group-footer') }}>
+    {{ footer }}
+  </div>
+
+</div>

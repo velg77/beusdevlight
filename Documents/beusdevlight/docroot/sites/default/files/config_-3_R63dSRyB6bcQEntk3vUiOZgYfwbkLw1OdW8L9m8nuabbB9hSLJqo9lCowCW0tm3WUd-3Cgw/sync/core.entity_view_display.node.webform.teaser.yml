@@ -1,0 +1,72 @@
+uuid: 5a374641-f009-4ba5-889f-3a23dd7f6248
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.webform.body
+    - field.field.node.webform.panelizer
+    - field.field.node.webform.webform
+    - node.type.webform
+  module:
+    - ds
+    - panelizer
+    - text
+    - user
+    - webform
+third_party_settings:
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - panelizer
+        - links
+        - body
+        - webform
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+_core:
+  default_config_hash: Ls5l3Xs7-YstJnurxFLKj38Exqr2JMZs1j9YeX1Kh2o
+id: node.webform.teaser
+targetEntityType: node
+bundle: webform
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 2
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  panelizer:
+    type: panelizer
+    weight: 0
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  webform:
+    type: webform_entity_reference_entity_view
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+hidden:
+  addtoany: true

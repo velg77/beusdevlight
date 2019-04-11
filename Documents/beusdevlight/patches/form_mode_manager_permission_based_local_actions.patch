@@ -1,0 +1,58 @@
+diff --git a/form_mode_manager.permissions.yml b/form_mode_manager.permissions.yml
+index 27e3cec..d43b7ab 100644
+--- a/form_mode_manager.permissions.yml
++++ b/form_mode_manager.permissions.yml
+@@ -1,2 +1,6 @@
+ permission_callbacks:
+   - Drupal\form_mode_manager\FormModeManagerPermissions::formModeManagerPermissions
++
++'access form mode manager local action':
++  title: 'Form mode manager local action permission'
++  description: 'Gives Form mode manager local action permission to the users.'  
+diff --git a/src/Plugin/Derivative/FormModeManagerLocalAction.php b/src/Plugin/Derivative/FormModeManagerLocalAction.php
+index 50476fb..9581104 100644
+--- a/src/Plugin/Derivative/FormModeManagerLocalAction.php
++++ b/src/Plugin/Derivative/FormModeManagerLocalAction.php
+@@ -46,26 +46,29 @@ class FormModeManagerLocalAction extends DeriverBase implements ContainerDeriver
+    */
+   public function getDerivativeDefinitions($base_plugin_definition) {
+     $this->derivatives = [];
+-    $form_modes_definitions = $this->formModeManager->getAllFormModesDefinitions();
+-    foreach ($form_modes_definitions as $entity_type_id => $form_modes) {
+-      foreach ($form_modes as $form_mode_name => $form_mode) {
+-        if ($this->formModeManager->hasActiveFormMode($entity_type_id, $form_mode_name)) {
++    $user = \Drupal::currentUser();
++    if ($user->hasPermission('access form mode manager local action')) {
++      $form_modes_definitions = $this->formModeManager->getAllFormModesDefinitions();
++      foreach ($form_modes_definitions as $entity_type_id => $form_modes) {
++        foreach ($form_modes as $form_mode_name => $form_mode) {
++          if ($this->formModeManager->hasActiveFormMode($entity_type_id, $form_mode_name)) {
+ 
+-          $this->setDefaultLocalTask($form_mode, $entity_type_id, $form_mode_name);
++            $this->setDefaultLocalTask($form_mode, $entity_type_id, $form_mode_name);
+ 
+-          if ($this->isUserEntityType($entity_type_id)) {
+-            $this->derivatives[$form_mode['id']]['route_name'] = "user.admin_create.$form_mode_name";
+-            unset($this->derivatives[$form_mode['id']]['route_parameters']);
+-          }
++            if ($this->isUserEntityType($entity_type_id)) {
++              $this->derivatives[$form_mode['id']]['route_name'] = "user.admin_create.$form_mode_name";
++              unset($this->derivatives[$form_mode['id']]['route_parameters']);
++            }
+ 
+-          $this->setNodeEntityType($form_mode, $entity_type_id);
++            $this->setNodeEntityType($form_mode, $entity_type_id);
+ 
+-          $this->setMediaEntityType($form_mode, $entity_type_id);
++            $this->setMediaEntityType($form_mode, $entity_type_id);
+ 
+-          $this->setTaxonomyTermEntityType($form_mode, $entity_type_id);
++            $this->setTaxonomyTermEntityType($form_mode, $entity_type_id);
++          }
+         }
+       }
+-    }
++   }
+ 
+     return $this->derivatives;
+   }

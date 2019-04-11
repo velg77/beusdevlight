@@ -1,0 +1,31 @@
+// Css3 Mixins
+@import "../../base/variables";
+
+.block-content--view-mode-people-type-list {
+  text-align:center;
+  .field--name-field-people-taxonomy-term{
+    margin:40px 0 50px 0;
+  .field__item {
+    display: block;
+    margin:10px;
+  }
+  a {
+    @include button_large();
+    @include blue-borderbutton();
+    padding:5px 30px;
+  }
+}
+}
+
+
+@media (min-width: 768px) {
+
+  .block-content--view-mode-people-type-list {
+    .field--name-field-people-taxonomy-term{
+    .field__item {
+      display: inline;
+    }
+  }
+ }
+}
+

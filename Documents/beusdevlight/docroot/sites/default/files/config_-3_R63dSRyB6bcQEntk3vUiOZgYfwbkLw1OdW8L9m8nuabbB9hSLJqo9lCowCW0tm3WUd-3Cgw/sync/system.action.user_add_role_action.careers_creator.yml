@@ -1,0 +1,14 @@
+uuid: dc780a34-3394-4eca-b3de-38c72d929cdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.careers_creator
+  module:
+    - user
+id: user_add_role_action.careers_creator
+label: 'Add the Careers creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: careers_creator

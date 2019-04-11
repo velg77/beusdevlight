@@ -1,0 +1,46 @@
+uuid: bcbd7a3f-d867-4759-839b-973f1d1ba870
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.small_content
+    - field.storage.block_content.field_small
+    - paragraphs.paragraphs_type.small_content
+  module:
+    - entity_reference_revisions
+id: block_content.small_content.field_small
+field_name: field_small
+entity_type: block_content
+bundle: small_content
+label: 'Small Content'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      small_content: small_content
+    target_bundles_drag_drop:
+      banner_slider:
+        weight: 7
+        enabled: false
+      content:
+        weight: 8
+        enabled: false
+      cta_group:
+        weight: 9
+        enabled: false
+      message:
+        weight: 10
+        enabled: false
+      multiple_content:
+        weight: 11
+        enabled: false
+      small_content:
+        enabled: true
+        weight: 12
+field_type: entity_reference_revisions

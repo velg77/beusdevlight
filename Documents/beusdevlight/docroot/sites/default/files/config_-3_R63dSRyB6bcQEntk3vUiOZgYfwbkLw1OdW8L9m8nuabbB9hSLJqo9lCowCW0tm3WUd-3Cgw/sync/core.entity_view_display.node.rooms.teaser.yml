@@ -1,0 +1,109 @@
+uuid: 9f397750-b11a-4937-bca3-456325127324
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.rooms.body
+    - field.field.node.rooms.field_360deg_image
+    - field.field.node.rooms.field_building_hours
+    - field.field.node.rooms.field_date_of_publication
+    - field.field.node.rooms.field_floor_plans
+    - field.field.node.rooms.field_key_pickup_information
+    - field.field.node.rooms.field_key_return_information
+    - field.field.node.rooms.field_lead_text
+    - field.field.node.rooms.field_map_location
+    - field.field.node.rooms.field_media_type
+    - field.field.node.rooms.field_room_amenities
+    - field.field.node.rooms.field_room_no
+    - field.field.node.rooms.field_room_technology
+    - field.field.node.rooms.field_room_types
+    - field.field.node.rooms.field_seating_capacity
+    - field.field.node.rooms.field_seating_capacity_fx
+    - image.style.md_square
+    - node.type.rooms
+  module:
+    - ds
+    - link
+    - media
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_360deg_image
+        - field_seating_capacity_fx
+        - node_title
+        - field_floor_plans
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 2
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: node.rooms.teaser
+targetEntityType: node
+bundle: rooms
+mode: teaser
+content:
+  field_360deg_image:
+    type: media_thumbnail
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: md_square
+      image_link: content
+    third_party_settings: {  }
+  field_floor_plans:
+    type: link
+    weight: 3
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+  field_seating_capacity_fx:
+    type: entity_reference_label
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_building_hours: true
+  field_date_of_publication: true
+  field_key_pickup_information: true
+  field_key_return_information: true
+  field_lead_text: true
+  field_map_location: true
+  field_media_type: true
+  field_room_amenities: true
+  field_room_no: true
+  field_room_technology: true
+  field_room_types: true
+  field_seating_capacity: true
+  links: true

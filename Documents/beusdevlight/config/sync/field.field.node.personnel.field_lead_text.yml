@@ -1,0 +1,31 @@
+uuid: 0eff9de8-6763-4cb5-b82e-504d458ba343
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_text
+    - node.type.personnel
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    limited_text_styling: limited_text_styling
+    rich_text: '0'
+    plain_text: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.personnel.field_lead_text
+field_name: field_lead_text
+entity_type: node
+bundle: personnel
+label: 'Lead text'
+description: 'Opening Paragraph / Summary'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

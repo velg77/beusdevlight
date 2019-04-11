@@ -1,0 +1,43 @@
+uuid: fb992981-f856-4a07-8ce7-22a2c596c26c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_afffiliations_committees
+    - node.type.personnel
+    - paragraphs.paragraphs_type.cta_group
+  module:
+    - entity_reference_revisions
+id: node.personnel.field_afffiliations_committees
+field_name: field_afffiliations_committees
+entity_type: node
+bundle: personnel
+label: 'Afffiliations & Committees'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      cta_group: cta_group
+    target_bundles_drag_drop:
+      banner_slider:
+        weight: 6
+        enabled: false
+      content:
+        weight: 7
+        enabled: false
+      cta_group:
+        enabled: true
+        weight: 8
+      message:
+        weight: 9
+        enabled: false
+      small_content:
+        weight: 10
+        enabled: false
+field_type: entity_reference_revisions

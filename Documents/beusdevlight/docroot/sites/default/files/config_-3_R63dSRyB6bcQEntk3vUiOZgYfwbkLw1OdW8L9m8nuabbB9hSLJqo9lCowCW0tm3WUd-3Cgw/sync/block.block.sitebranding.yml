@@ -1,0 +1,23 @@
+uuid: a52ae67d-d634-4985-b18e-d2fdaf3bdc2c
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - behavioursoe
+id: sitebranding
+theme: behavioursoe
+region: header_top
+weight: 0
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

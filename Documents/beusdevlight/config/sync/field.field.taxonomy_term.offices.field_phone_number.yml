@@ -1,0 +1,26 @@
+uuid: 97b84356-8ff6-4d40-9b96-7847fab48e5c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_phone_number
+    - taxonomy.vocabulary.offices
+  module:
+    - custom_add_another
+    - telephone
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: taxonomy_term.offices.field_phone_number
+field_name: field_phone_number
+entity_type: taxonomy_term
+bundle: offices
+label: 'Phone no'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

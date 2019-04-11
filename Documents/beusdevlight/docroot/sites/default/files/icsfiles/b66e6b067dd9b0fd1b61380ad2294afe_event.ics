@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:behaviorsoe1.betabasket.net
+X-WR-TIMEZONE:Asia/Kolkata
+BEGIN:VTIMEZONE
+TZID:Asia/Kolkata
+X-LIC-LOCATION:Asia/Kolkata
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:59aa7bbd0bbafbb7885071983f4af269
+DTSTART;TZID=Asia/Kolkata:20190325T200000
+SEQUENCE:0
+TRANSP:OPAQUE
+URL:http://behaviorsoe1.betabasket.net/[node:path]
+SUMMARY:Testing Events
+CLASS:PUBLIC
+DESCRIPTION:Description: [node:body] Start Date: Mon\, 03/25/2019 - 20:00 E
+ nd Date:\nMon\, 03/25/2019 - 23:00 [node:field_author]
+X-ALT-DESC;FMTTYPE=text/html:Description: [node:body]</br>\nStart Date: \n\
+ n<!-- THEME DEBUG -->\n<!-- THEME HOOK: 'time' -->\n<!-- BEGIN OUTPUT from
+  'core/themes/classy/templates/field/time.html.twig' -->\n<time datetime=\
+ "2019-03-25T14:30:00Z\" class=\"datetime\">Mon\, 03/25/2019 - 20:00</time>
+ \n\n<!-- END OUTPUT from 'core/themes/classy/templates/field/time.html.twi
+ g' -->\n\n</br></br>\nEnd Date: \n\n<!-- THEME DEBUG -->\n<!-- THEME HOOK:
+  'time' -->\n<!-- BEGIN OUTPUT from 'core/themes/classy/templates/field/ti
+ me.html.twig' -->\n<time datetime=\"2019-03-25T17:30:00Z\" class=\"datetim
+ e\">Mon\, 03/25/2019 - 23:00</time>\n\n<!-- END OUTPUT from 'core/themes/c
+ lassy/templates/field/time.html.twig' -->\n\n</br>\n[node:field_author]
+DTSTAMP:20190321T124529Z
+END:VEVENT
+END:VCALENDAR

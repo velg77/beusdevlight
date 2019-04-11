@@ -1,0 +1,14 @@
+uuid: ba058f55-e042-404c-8a6b-054900e07df3
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.careers_reviewer
+  module:
+    - user
+id: user_remove_role_action.careers_reviewer
+label: 'Remove the Careers reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: careers_reviewer

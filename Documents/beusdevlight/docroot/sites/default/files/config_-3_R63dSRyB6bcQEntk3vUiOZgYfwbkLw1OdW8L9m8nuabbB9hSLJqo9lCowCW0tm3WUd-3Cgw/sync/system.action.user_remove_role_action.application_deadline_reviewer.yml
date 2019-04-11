@@ -1,0 +1,14 @@
+uuid: 31f4a60a-c160-413a-a1db-2f9e7daae353
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.application_deadline_reviewer
+  module:
+    - user
+id: user_remove_role_action.application_deadline_reviewer
+label: 'Remove the Application Deadline reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: application_deadline_reviewer

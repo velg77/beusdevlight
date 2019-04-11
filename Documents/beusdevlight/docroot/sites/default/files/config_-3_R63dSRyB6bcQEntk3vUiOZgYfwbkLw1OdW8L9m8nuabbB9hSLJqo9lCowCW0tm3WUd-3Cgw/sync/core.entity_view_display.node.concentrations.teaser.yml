@@ -1,0 +1,170 @@
+uuid: 5693455f-6cd2-458a-9d70-3eb11c9b7215
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.concentrations.body
+    - field.field.node.concentrations.field_carrers
+    - field.field.node.concentrations.field_degree
+    - field.field.node.concentrations.field_endorsement_
+    - field.field.node.concentrations.field_full_data
+    - field.field.node.concentrations.field_heading
+    - field.field.node.concentrations.field_inter
+    - field.field.node.concentrations.field_lead_text
+    - field.field.node.concentrations.field_name
+    - field.field.node.concentrations.field_quick_fact
+    - field.field.node.concentrations.field_requirements
+    - field.field.node.concentrations.field_small_text
+    - field.field.node.concentrations.field_tab_1_title
+    - field.field.node.concentrations.field_tab_2_title
+    - field.field.node.concentrations.field_tab_3_title
+    - field.field.node.concentrations.panelizer
+    - node.type.concentrations
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.concentrations.teaser
+targetEntityType: node
+bundle: concentrations
+mode: teaser
+content:
+  addtoany:
+    weight: 18
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  body:
+    type: text_default
+    weight: 3
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_carrers:
+    type: entity_reference_entity_view
+    weight: 15
+    region: content
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  field_degree:
+    type: entity_reference_label
+    weight: 17
+    region: content
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_endorsement_:
+    type: entity_reference_entity_view
+    weight: 5
+    region: content
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  field_full_data:
+    type: text_default
+    weight: 2
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_heading:
+    type: text_default
+    weight: 19
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_inter:
+    type: entity_reference_entity_view
+    weight: 16
+    region: content
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  field_lead_text:
+    type: text_default
+    weight: 10
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_quick_fact:
+    type: entity_reference_entity_view
+    weight: 12
+    region: content
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  field_requirements:
+    type: entity_reference_entity_view
+    weight: 4
+    region: content
+    label: above
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+  field_small_text:
+    type: string
+    weight: 7
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_tab_1_title:
+    type: string
+    weight: 9
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_tab_2_title:
+    type: string
+    weight: 14
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_tab_3_title:
+    type: string
+    weight: 1
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  links:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  panelizer:
+    type: panelizer
+    weight: 13
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_name: true

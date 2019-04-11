@@ -1,0 +1,14 @@
+uuid: b3c88c3f-7bc1-4d0b-a988-c75af926bbb9
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.awards_reviewer
+  module:
+    - user
+id: user_add_role_action.awards_reviewer
+label: 'Add the Awards reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: awards_reviewer

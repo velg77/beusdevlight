@@ -1,0 +1,92 @@
+uuid: 5693455f-6cd2-458a-9d70-3eb11c9b7215
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.concentrations.body
+    - field.field.node.concentrations.field_acadamic_degree
+    - field.field.node.concentrations.field_carrers
+    - field.field.node.concentrations.field_course
+    - field.field.node.concentrations.field_deadline
+    - field.field.node.concentrations.field_degree
+    - field.field.node.concentrations.field_endorsement_
+    - field.field.node.concentrations.field_full_data
+    - field.field.node.concentrations.field_heading
+    - field.field.node.concentrations.field_inter
+    - field.field.node.concentrations.field_lead_text
+    - field.field.node.concentrations.field_quick_fact
+    - field.field.node.concentrations.field_requirements
+    - field.field.node.concentrations.field_tab_1_title
+    - field.field.node.concentrations.field_tab_2_title
+    - field.field.node.concentrations.field_tab_3_title
+    - field.field.node.concentrations.panelizer
+    - node.type.concentrations
+  module:
+    - ds
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - node_title
+        - field_lead_text
+        - links
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 0
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h2
+          class: ''
+id: node.concentrations.teaser
+targetEntityType: node
+bundle: concentrations
+mode: teaser
+content:
+  field_lead_text:
+    type: text_default
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  field_acadamic_degree: true
+  field_carrers: true
+  field_course: true
+  field_deadline: true
+  field_degree: true
+  field_endorsement_: true
+  field_full_data: true
+  field_heading: true
+  field_inter: true
+  field_quick_fact: true
+  field_requirements: true
+  field_tab_1_title: true
+  field_tab_2_title: true
+  field_tab_3_title: true
+  panelizer: true

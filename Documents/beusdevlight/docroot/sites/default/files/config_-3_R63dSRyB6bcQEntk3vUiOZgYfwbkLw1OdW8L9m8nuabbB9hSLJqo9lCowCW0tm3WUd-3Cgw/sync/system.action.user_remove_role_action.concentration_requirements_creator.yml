@@ -1,0 +1,14 @@
+uuid: 932db36e-faad-4d81-b57b-b176adb63aca
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.concentration_requirements_creator
+  module:
+    - user
+id: user_remove_role_action.concentration_requirements_creator
+label: 'Remove the Concentration - Requirements creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: concentration_requirements_creator

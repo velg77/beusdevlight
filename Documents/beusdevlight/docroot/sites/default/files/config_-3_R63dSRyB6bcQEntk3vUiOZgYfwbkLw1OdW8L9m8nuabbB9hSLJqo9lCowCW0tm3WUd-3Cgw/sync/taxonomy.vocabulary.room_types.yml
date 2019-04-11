@@ -1,0 +1,9 @@
+uuid: f999c057-f022-492c-bcb5-ef57bf20cbe5
+langcode: en
+status: true
+dependencies: {  }
+name: 'Room Types'
+vid: room_types
+description: ''
+hierarchy: 0
+weight: 0

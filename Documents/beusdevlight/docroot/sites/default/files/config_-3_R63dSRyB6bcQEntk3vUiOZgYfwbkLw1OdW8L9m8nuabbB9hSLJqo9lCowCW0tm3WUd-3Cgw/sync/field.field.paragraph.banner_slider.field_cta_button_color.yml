@@ -1,0 +1,21 @@
+uuid: 943c2d68-2d94-4ba9-9063-0462594a8b18
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_cta_button_color
+    - paragraphs.paragraphs_type.banner_slider
+  module:
+    - options
+id: paragraph.banner_slider.field_cta_button_color
+field_name: field_cta_button_color
+entity_type: paragraph
+bundle: banner_slider
+label: 'CTA Button color'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,40 @@
+uuid: a95d04d9-b201-48bc-b70c-868527292732
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.degree.field_acadamic_degree
+    - field.field.taxonomy_term.degree.field_academic_program_s
+    - field.field.taxonomy_term.degree.field_lead_text
+    - taxonomy.vocabulary.degree
+  module:
+    - panelizer
+    - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.degree.default
+targetEntityType: taxonomy_term
+bundle: degree
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_lead_text:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden:
+  field_acadamic_degree: true
+  field_academic_program_s: true

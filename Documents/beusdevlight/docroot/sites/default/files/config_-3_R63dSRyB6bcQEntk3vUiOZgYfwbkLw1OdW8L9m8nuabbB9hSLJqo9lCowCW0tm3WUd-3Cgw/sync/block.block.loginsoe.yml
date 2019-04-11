@@ -1,0 +1,25 @@
+uuid: 67db67ee-ccaf-47aa-998c-5e349ad903be
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:0ffc2f30-5fdb-45b8-919d-b3c38a9696ab'
+  module:
+    - block_content
+  theme:
+    - behavioursoe
+id: loginsoe
+theme: behavioursoe
+region: footer
+weight: -9
+provider: null
+plugin: 'block_content:0ffc2f30-5fdb-45b8-919d-b3c38a9696ab'
+settings:
+  id: 'block_content:0ffc2f30-5fdb-45b8-919d-b3c38a9696ab'
+  label: 'Login SOE'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

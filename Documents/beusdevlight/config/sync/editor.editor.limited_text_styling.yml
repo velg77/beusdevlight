@@ -1,0 +1,65 @@
+uuid: f19dbac3-59bb-47eb-bb43-2346b9b793cd
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.limited_text_styling
+  module:
+    - ckeditor
+format: limited_text_styling
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - FontSize
+            - Bold
+            - Italic
+            - Underline
+            - Strike
+            - Superscript
+            - Subscript
+            - '-'
+            - RemoveFormat
+            - '-'
+            - JustifyLeft
+            - JustifyCenter
+            - JustifyRight
+            - JustifyBlock
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Media
+          items:
+            - Blockquote
+        -
+          name: Tools
+          items:
+            - Undo
+            - Redo
+            - Source
+            - Styles
+  plugins:
+    autogrow:
+      enable: 0
+      min_height: '50'
+      max_height: '150'
+      bottom_space: '50'
+    language:
+      language_list: un
+    stylescombo:
+      styles: "span.pullquote|Pull Quote\r\nh3.title-border|Title with Underline\r\na.inline-button|Button\r\ndiv.two-col|Two Col Item"
+image_upload:
+  status: false
+  scheme: public
+  directory: inline-images
+  max_size: ''
+  max_dimensions:
+    width: null
+    height: null

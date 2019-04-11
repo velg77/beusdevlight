@@ -1,0 +1,12 @@
+uuid: 430e5b0c-5db9-4bca-b058-933989c15249
+langcode: en
+status: true
+dependencies: {  }
+id: page12
+label: page12
+description: ''
+use_admin_theme: false
+path: /page12
+access_logic: and
+access_conditions: {  }
+parameters: {  }

@@ -1,0 +1,8 @@
+uuid: b4e78f7f-4b51-43ac-8527-4e82985fe365
+langcode: en
+status: true
+dependencies: {  }
+id: academics_and_admissions
+label: 'Academics Programs and Degrees'
+revision: 1
+description: 'A block type consist of taxonomy term with reference to academic programs'

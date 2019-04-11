@@ -1,0 +1,29 @@
+uuid: d8f2ef1e-7552-44aa-ae68-ad502ead8b26
+langcode: en
+status: true
+dependencies: {  }
+id: impact_stories_creator
+label: 'Impact Stories creator'
+weight: 2
+is_admin: false
+permissions:
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access toolbar'
+  - 'administer panelizer node impact_stories content'
+  - 'administer panelizer node impact_stories layout'
+  - 'change layouts in place editing'
+  - 'create impact_stories content'
+  - 'create url aliases'
+  - 'edit own impact_stories content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view impact_stories revisions'
+  - 'view latest version'
+  - 'view own unpublished content'

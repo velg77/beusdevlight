@@ -1,0 +1,14 @@
+uuid: 24bf2acf-ea6f-4d8f-bf5e-1092deb90505
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: block_content.3_cols_grid_with_bg
+label: '3 Cols Grid with BG'
+targetEntityType: block_content
+cache: true

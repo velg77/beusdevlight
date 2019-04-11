@@ -1,0 +1,273 @@
+uuid: c9963d58-ca19-4911-98aa-0bfdcb288d79
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.small_teaser
+    - field.field.node.awards.body
+    - field.field.node.awards.field_date_of_publication
+    - field.field.node.awards.field_funding_agency
+    - field.field.node.awards.field_lead_text
+    - field.field.node.awards.field_period
+    - field.field.node.awards.field_personnel
+    - field.field.node.awards.field_primary_investigators
+    - field.field.node.awards.field_tags
+    - field.field.node.awards.panelizer
+    - node.type.awards
+  module:
+    - ds
+    - panelizer
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          b0cf40e2-669f-4658-b7ba-6651675bab39:
+            id: 'entity_field:node:uid'
+            label: 'Authored by'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: author
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 0
+            uuid: b0cf40e2-669f-4658-b7ba-6651675bab39
+          5bce457e-9fdf-4c51-9cfe-3dcb10526d93:
+            id: 'entity_field:node:created'
+            label: 'Authored on'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: timestamp
+              settings:
+                date_format: medium
+                custom_date_format: ''
+                timezone: ''
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 0
+            uuid: 5bce457e-9fdf-4c51-9cfe-3dcb10526d93
+          a4c48c6f-c0af-437d-8397-b39cf851a21f:
+            id: 'entity_field:node:body'
+            label: Body
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 4
+            uuid: a4c48c6f-c0af-437d-8397-b39cf851a21f
+          6749bb4d-6f6c-469d-9c70-7a8d21dee3f2:
+            id: 'entity_field:node:field_date_of_publication'
+            label: 'Date of Publication'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: datetime_default
+              settings:
+                format_type: medium
+                timezone_override: ''
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 7
+            uuid: 6749bb4d-6f6c-469d-9c70-7a8d21dee3f2
+          d6fbaa9d-c1b0-4213-ba65-d2dd826855c7:
+            id: 'entity_field:node:field_funding_agency'
+            label: 'Funding Agency'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 2
+            uuid: d6fbaa9d-c1b0-4213-ba65-d2dd826855c7
+          a5b059d2-d314-4455-b09f-bc041677cd46:
+            id: 'entity_field:node:field_lead_text'
+            label: 'Lead text'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 3
+            uuid: a5b059d2-d314-4455-b09f-bc041677cd46
+          af0fdc90-9c6f-4fce-a3cf-20d708a552c4:
+            id: 'entity_field:node:field_period'
+            label: Period
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: string
+              settings:
+                link_to_entity: false
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 0
+            uuid: af0fdc90-9c6f-4fce-a3cf-20d708a552c4
+          f1d4c96e-d609-4dcb-bf9d-6d8cae54d8c7:
+            id: 'entity_field:node:field_personnel'
+            label: 'Featured in this Article'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: entity_reference_entity_view
+              settings:
+                view_mode: teaser
+                link: false
+              third_party_settings:
+                ds:
+                  ds_limit: ''
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 6
+            uuid: f1d4c96e-d609-4dcb-bf9d-6d8cae54d8c7
+          ce6bd2ec-4144-44d1-b42a-19dfdcd22f51:
+            id: 'entity_field:node:field_primary_investigators'
+            label: 'Primary Investigator(s)'
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: above
+              type: entity_reference_label
+              settings:
+                link: true
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 1
+            uuid: ce6bd2ec-4144-44d1-b42a-19dfdcd22f51
+          ccc5c6a8-fd37-46e3-bde0-18588b0090d2:
+            id: 'entity_field:node:field_tags'
+            label: Tags
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: inline
+              type: entity_reference_label
+              settings:
+                link: true
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 5
+            uuid: ccc5c6a8-fd37-46e3-bde0-18588b0090d2
+        id: panels_variant
+        label: Default
+        uuid: 4842b668-f1d4-4431-869c-87d666a1f7b8
+        weight: 0
+        layout: layout_onecol
+        layout_settings: {  }
+        page_title: '[node:title]'
+        storage_type: ''
+        storage_id: ''
+        builder: ipe
+        pattern: panelizer
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_period
+        - node_title
+    fields:
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+id: node.awards.small_teaser
+targetEntityType: node
+bundle: awards
+mode: small_teaser
+content:
+  field_period:
+    weight: 0
+    label: inline
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: ds_content
+hidden:
+  addtoany: true
+  body: true
+  field_date_of_publication: true
+  field_funding_agency: true
+  field_lead_text: true
+  field_personnel: true
+  field_primary_investigators: true
+  field_tags: true
+  links: true
+  panelizer: true

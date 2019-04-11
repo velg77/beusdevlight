@@ -1,0 +1,14 @@
+uuid: 1ea272ba-d33d-411b-bb64-3aeedc513edd
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - paragraphs
+third_party_settings:
+  lightning_core:
+    description: ''
+id: paragraph.mission_vision_alumni_resources_learning_community
+label: 'Mission & Vision, Alumni Resources, Learning Community'
+targetEntityType: paragraph
+cache: true

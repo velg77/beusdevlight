@@ -1,0 +1,78 @@
+uuid: e69a5fd7-3832-4310-8220-d230ebaff03b
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.find_the_program
+    - field.field.paragraph.content.field_cta
+    - field.field.paragraph.content.field_description
+    - field.field.paragraph.content.field_image
+    - field.field.paragraph.content.field_sub_title
+    - field.field.paragraph.content.field_title
+    - paragraphs.paragraphs_type.content
+  module:
+    - ds
+    - link
+    - media
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          left: {  }
+          right: {  }
+    regions:
+      left:
+        - field_image
+      right:
+        - field_title
+        - field_cta
+id: paragraph.content.find_the_program
+targetEntityType: paragraph
+bundle: content
+mode: find_the_program
+content:
+  field_cta:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: right
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: media_thumbnail
+    region: left
+  field_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: right
+hidden:
+  field_description: true
+  field_sub_title: true

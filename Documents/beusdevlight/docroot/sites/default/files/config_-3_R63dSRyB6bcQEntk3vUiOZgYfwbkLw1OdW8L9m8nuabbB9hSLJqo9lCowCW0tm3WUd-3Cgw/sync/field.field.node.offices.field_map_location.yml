@@ -1,0 +1,21 @@
+uuid: abd5cdce-585b-48ae-9b62-4bc4c6ebf58c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_map_location
+    - node.type.offices
+  module:
+    - text
+id: node.offices.field_map_location
+field_name: field_map_location
+entity_type: node
+bundle: offices
+label: Location
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

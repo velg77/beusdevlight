@@ -1,0 +1,11 @@
+id: student_organisation_website
+label: 'Student Organisation Website'
+ui_limit: ''
+properties:
+  content:
+    value: "<p><a href=\"field_website]\">Visit Website</a></p>\r\n"
+    format: limited_text_styling
+type: token
+type_label: 'Token field'
+entities:
+  node: node

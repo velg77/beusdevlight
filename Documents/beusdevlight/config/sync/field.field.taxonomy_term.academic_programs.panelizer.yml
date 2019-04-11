@@ -1,0 +1,26 @@
+uuid: 832b82ff-f445-4c0d-a752-35ceac14b126
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.panelizer
+    - taxonomy.vocabulary.academic_programs
+  module:
+    - custom_add_another
+    - panelizer
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: taxonomy_term.academic_programs.panelizer
+field_name: panelizer
+entity_type: taxonomy_term
+bundle: academic_programs
+label: Panelizer
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: panelizer

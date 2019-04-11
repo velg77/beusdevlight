@@ -1,0 +1,32 @@
+uuid: 582ac810-d712-4594-84f1-64b50d86bc62
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_map_location
+    - node.type.events
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    limited_text_styling: limited_text_styling
+    plain_text: plain_text
+    rich_text: '0'
+    php_filter: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.events.field_map_location
+field_name: field_map_location
+entity_type: node
+bundle: events
+label: Location
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

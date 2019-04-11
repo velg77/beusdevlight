@@ -1,0 +1,14 @@
+uuid: 7f1f6732-034a-4bfa-aa57-a0e10f367d51
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.internships_creator
+  module:
+    - user
+id: user_remove_role_action.internships_creator
+label: 'Remove the Internships creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: internships_creator

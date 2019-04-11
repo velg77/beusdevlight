@@ -1,0 +1,14 @@
+uuid: d8e7f9a0-e7bf-4a16-9fe8-8ab9fe9a6756
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.application_deadline_creator
+  module:
+    - user
+id: user_add_role_action.application_deadline_creator
+label: 'Add the Application Deadline creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: application_deadline_creator

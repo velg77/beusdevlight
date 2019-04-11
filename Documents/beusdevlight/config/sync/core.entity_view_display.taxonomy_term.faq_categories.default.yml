@@ -1,0 +1,28 @@
+uuid: 5e297095-399d-4ada-8a77-049dfa41d082
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.faq_categories
+  module:
+    - panelizer
+    - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.faq_categories.default
+targetEntityType: taxonomy_term
+bundle: faq_categories
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

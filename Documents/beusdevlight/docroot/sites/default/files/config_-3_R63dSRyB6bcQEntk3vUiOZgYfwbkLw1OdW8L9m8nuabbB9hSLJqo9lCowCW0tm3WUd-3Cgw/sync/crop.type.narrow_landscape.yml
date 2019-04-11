@@ -1,0 +1,12 @@
+uuid: fa45260e-3253-47f2-aaba-962c1c29f26e
+langcode: en
+status: true
+dependencies: {  }
+label: 'Narrow Landscape'
+id: narrow_landscape
+description: ''
+aspect_ratio: '12:5'
+soft_limit_width: null
+soft_limit_height: null
+hard_limit_width: null
+hard_limit_height: null

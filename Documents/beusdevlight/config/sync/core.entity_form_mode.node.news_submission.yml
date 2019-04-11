@@ -1,0 +1,14 @@
+uuid: 1544b79e-48fc-48f5-9dcf-43a7fb743dc6
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+id: node.news_submission
+label: 'News Submission'
+targetEntityType: node
+cache: true

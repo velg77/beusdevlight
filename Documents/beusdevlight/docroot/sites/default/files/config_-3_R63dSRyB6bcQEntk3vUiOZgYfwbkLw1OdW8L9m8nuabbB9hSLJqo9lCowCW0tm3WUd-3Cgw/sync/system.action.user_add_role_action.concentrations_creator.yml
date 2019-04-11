@@ -1,0 +1,14 @@
+uuid: e18edb1b-8750-4a60-b838-8fbf5ef1f4ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.concentrations_creator
+  module:
+    - user
+id: user_add_role_action.concentrations_creator
+label: 'Add the Concentrations creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: concentrations_creator

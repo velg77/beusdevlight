@@ -1,0 +1,68 @@
+uuid: aa62d1fb-1b69-4568-b5d3-1ff9d48bcd04
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.people
+    - field.field.block_content.people.body
+    - field.field.block_content.people.field_link
+    - field.field.block_content.people.field_people_taxonomy_term
+    - field.field.block_content.people.field_personnel
+    - field.field.block_content.people.field_title
+  module:
+    - ds
+    - link
+    - text
+id: block_content.people.default
+targetEntityType: block_content
+bundle: people
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_link:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_people_taxonomy_term:
+    weight: 3
+    label: hidden
+    settings:
+      link: true
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    type: entity_reference_label
+    region: content
+  field_personnel:
+    weight: 2
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_title:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  addtoany: true

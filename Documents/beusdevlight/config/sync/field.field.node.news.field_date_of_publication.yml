@@ -1,0 +1,29 @@
+uuid: 052d721b-3624-42d8-a347-8cb21e1852e0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_of_publication
+    - node.type.news
+  module:
+    - custom_add_another
+    - datetime
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.news.field_date_of_publication
+field_name: field_date_of_publication
+entity_type: node
+bundle: news
+label: 'Display Date'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+default_value_callback: ''
+settings: {  }
+field_type: datetime

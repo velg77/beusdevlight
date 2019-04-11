@@ -1,0 +1,47 @@
+uuid: ded67f95-cc4b-4bb1-9068-43c9c709c433
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.offices.body
+    - field.field.node.offices.field_date_of_publication
+    - field.field.node.offices.field_email
+    - field.field.node.offices.field_lead_text
+    - field.field.node.offices.field_map_location
+    - field.field.node.offices.field_phone_number
+    - field.field.node.offices.field_schedule_a_time
+    - field.field.node.offices.field_timing
+    - node.type.offices
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.offices.search_index
+targetEntityType: node
+bundle: offices
+mode: search_index
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_date_of_publication: true
+  field_email: true
+  field_lead_text: true
+  field_map_location: true
+  field_phone_number: true
+  field_schedule_a_time: true
+  field_timing: true
+  links: true

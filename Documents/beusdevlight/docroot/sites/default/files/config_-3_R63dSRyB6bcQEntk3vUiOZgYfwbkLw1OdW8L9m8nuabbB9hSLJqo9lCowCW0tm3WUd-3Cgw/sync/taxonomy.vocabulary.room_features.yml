@@ -1,0 +1,9 @@
+uuid: a0ab4909-d5ae-46b0-afb8-877f8cdc9540
+langcode: en
+status: true
+dependencies: {  }
+name: 'Room Features'
+vid: room_features
+description: 'Room features are listed.'
+hierarchy: 1
+weight: 0

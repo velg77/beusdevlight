@@ -1,0 +1,9 @@
+uuid: 8cb42a17-0c5f-4d0e-b1b7-b2ef542b2ea0
+langcode: en
+status: true
+dependencies: {  }
+name: 'Room Features - Seating Capacity'
+vid: room_features_seating_capacity
+description: 'Room Features - Seating Capacity'
+hierarchy: 0
+weight: 0

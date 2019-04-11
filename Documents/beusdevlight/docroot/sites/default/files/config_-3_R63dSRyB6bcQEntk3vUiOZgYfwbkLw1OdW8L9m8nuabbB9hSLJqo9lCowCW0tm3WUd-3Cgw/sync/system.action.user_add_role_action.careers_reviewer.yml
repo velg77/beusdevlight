@@ -1,0 +1,14 @@
+uuid: 888df455-e9dc-40cc-9b32-78d3f69b9825
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.careers_reviewer
+  module:
+    - user
+id: user_add_role_action.careers_reviewer
+label: 'Add the Careers reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: careers_reviewer

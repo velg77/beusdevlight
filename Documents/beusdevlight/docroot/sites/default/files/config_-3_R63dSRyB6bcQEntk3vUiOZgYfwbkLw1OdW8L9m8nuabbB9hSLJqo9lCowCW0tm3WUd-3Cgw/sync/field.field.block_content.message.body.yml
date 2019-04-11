@@ -1,0 +1,22 @@
+uuid: 232340b1-a3f4-4abf-8580-0b7b72def99c
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.message
+    - field.storage.block_content.body
+  module:
+    - text
+id: block_content.message.body
+field_name: body
+entity_type: block_content
+bundle: message
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

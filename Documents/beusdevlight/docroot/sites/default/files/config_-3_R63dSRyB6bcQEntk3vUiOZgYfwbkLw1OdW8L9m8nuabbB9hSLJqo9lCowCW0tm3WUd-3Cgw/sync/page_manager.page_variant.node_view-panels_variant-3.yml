@@ -1,0 +1,196 @@
+uuid: 887c0388-704d-4e26-a7cf-1446b84ec239
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.node_view
+    - views.view.general
+    - views.view.personal_awards
+  module:
+    - ctools
+    - ctools_block
+    - panels
+    - views
+id: node_view-panels_variant-3
+label: Personal
+variant: panels_variant
+variant_settings:
+  blocks:
+    d6fe96b0-5256-41bc-a89b-3ffd43f59136:
+      id: 'entity_view:node'
+      label: 'Entity view (Content)'
+      provider: ctools
+      label_display: '0'
+      view_mode: default
+      region: row1
+      weight: -10
+      uuid: d6fe96b0-5256-41bc-a89b-3ffd43f59136
+      context_mapping:
+        entity: node
+    a766e91a-d59a-4224-8199-e4360de51e72:
+      id: 'entity_field:node:field_publications'
+      label: Publications
+      provider: ctools_block
+      label_display: visible
+      formatter:
+        label: hidden
+        type: entity_reference_revisions_entity_view
+        settings:
+          view_mode: hero_title
+        third_party_settings: {  }
+        weight: 0
+      region: row4
+      weight: -10
+      uuid: a766e91a-d59a-4224-8199-e4360de51e72
+      context_mapping:
+        entity: node
+    ac940cb1-81bd-4989-80b7-56c9c875040d:
+      id: 'views_block:personal_awards-block_1'
+      label: ''
+      provider: views
+      label_display: visible
+      views_label: ''
+      items_per_page: none
+      region: row5
+      weight: -10
+      uuid: ac940cb1-81bd-4989-80b7-56c9c875040d
+      context_mapping: {  }
+    423aadb2-0f67-4bc3-86ad-a0530ebed949:
+      id: 'entity_field:node:field_afffiliations_committees'
+      label: 'Afffiliations & Committees'
+      provider: ctools_block
+      label_display: visible
+      formatter:
+        label: above
+        type: entity_reference_revisions_entity_view
+        settings:
+          view_mode: hero_title
+        third_party_settings: {  }
+        weight: 0
+      region: row6
+      weight: -2
+      uuid: 423aadb2-0f67-4bc3-86ad-a0530ebed949
+      context_mapping:
+        entity: node
+    b910539c-cbe1-4ef0-8dfd-d6ac7b79919d:
+      id: 'entity_field:node:body'
+      label: Body
+      provider: ctools_block
+      label_display: '0'
+      formatter:
+        label: hidden
+        type: text_default
+        settings: {  }
+        third_party_settings: {  }
+        weight: 0
+      region: row2
+      weight: -1
+      uuid: b910539c-cbe1-4ef0-8dfd-d6ac7b79919d
+      context_mapping:
+        entity: node
+    0dbdf06b-2f8d-4579-8c01-d5114db86447:
+      id: 'entity_field:node:field_lead_text'
+      label: 'Lead text'
+      provider: ctools_block
+      label_display: '0'
+      formatter:
+        label: hidden
+        type: text_default
+        settings: {  }
+        third_party_settings: {  }
+        weight: 0
+      region: row2
+      weight: -2
+      uuid: 0dbdf06b-2f8d-4579-8c01-d5114db86447
+      context_mapping:
+        entity: node
+    54ead89f-c2fa-4246-b632-fbe284847b9a:
+      id: 'entity_field:node:field_tags'
+      label: Tags
+      provider: ctools_block
+      label_display: '0'
+      formatter:
+        label: above
+        type: entity_reference_label
+        settings:
+          link: true
+        third_party_settings: {  }
+        weight: 0
+      region: row2
+      weight: -3
+      uuid: 54ead89f-c2fa-4246-b632-fbe284847b9a
+      context_mapping:
+        entity: node
+    05c81fa6-4639-482c-9d88-e4ef0245c18a:
+      id: 'views_block:general-block_17'
+      label: Courses
+      provider: views
+      label_display: visible
+      views_label: Courses
+      items_per_page: none
+      region: row3
+      weight: -3
+      uuid: 05c81fa6-4639-482c-9d88-e4ef0245c18a
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 533d82a8-6797-4df9-bf80-dc5eafa9a023
+  label: null
+  weight: 0
+  layout: behavioursoe_layout
+  layout_settings:
+    wrappers:
+      row1: div
+      row2: div
+      row3: div
+      row4: div
+      row5: div
+      row6: div
+      row7: div
+      row8: div
+      row9: div
+      row10: div
+      row11: div
+      row12: div
+      row13: div
+      row14: div
+      row15: div
+    outer_wrapper: div
+    attributes: ''
+    link_attribute: ''
+    link_custom: ''
+    classes:
+      layout_class:
+        row_sp_top: row_sp_top
+        row_sp_bot: row_sp_bot
+      row1: {  }
+      row2:
+        sm_cnt: sm_cnt
+      row3: {  }
+      row4: {  }
+      row5: {  }
+      row6: {  }
+      row7: {  }
+      row8: {  }
+      row9: {  }
+      row10: {  }
+      row11: {  }
+      row12: {  }
+      row13: {  }
+      row14: {  }
+      row15: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: node_view-panels_variant-3
+  builder: standard
+page: node_view
+weight: 0
+selection_criteria:
+  -
+    id: 'entity_bundle:node'
+    bundles:
+      personnel: personnel
+    negate: false
+    context_mapping:
+      node: node
+selection_logic: and
+static_context: {  }

@@ -1,0 +1,29 @@
+uuid: 8b4ecbac-67df-46a2-8580-aca9f59497e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_show_manual_entry
+    - node.type.impact_stories
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.impact_stories.field_show_manual_entry
+field_name: field_show_manual_entry
+entity_type: node
+bundle: impact_stories
+label: 'Related Impact Stories Show Manual Entry'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

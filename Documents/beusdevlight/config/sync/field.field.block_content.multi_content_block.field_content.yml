@@ -1,0 +1,42 @@
+uuid: 5903659a-891c-491b-8cf6-0b3ab2a2f045
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.multi_content_block
+    - field.storage.block_content.field_content
+    - paragraphs.paragraphs_type.content
+  module:
+    - custom_add_another
+    - entity_reference_revisions
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: block_content.multi_content_block.field_content
+field_name: field_content
+entity_type: block_content
+bundle: multi_content_block
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      content: content
+    target_bundles_drag_drop:
+      banner_slider:
+        weight: 4
+        enabled: false
+      content:
+        enabled: true
+        weight: 5
+      message:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

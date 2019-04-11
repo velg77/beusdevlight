@@ -1,0 +1,80 @@
+  @import "../../base/_variables";
+  .cur-bdy{
+    .group-left{
+      padding-left: 15px;
+      & > .field-item{
+        padding: 10px 0;
+        position: relative;
+        font-size: 0.889rem;
+        cursor: pointer;
+        &:hover{
+          color:#000;
+        }
+        &::before{
+          content: '|';
+          color: #dedede;
+          background: #dedede;
+          position: absolute;
+          left: -14px;
+          top: 15px;
+          font-size: 12px;
+          width: 4px;
+        }
+        &.active{
+          font-weight: bold;
+          color:$site-color-cntblue;
+          &::before{
+            color:$site-color-cntblue;
+            background: $site-color-cntblue;
+          }
+        }
+      }
+
+    }
+
+      .group-right{
+        .block-title{
+          display: none;
+        }
+      }
+    .view-filters{
+      display:none;
+    }
+    .crs-title{
+      position: relative;
+      padding-right:10px;
+    }
+    table{
+      td,th{
+        padding: 15px 5px;
+      }
+    }
+    .tab-hdr{
+      color:#333;
+    }
+  }
+
+   @media(min-width: 768px){
+    .cur-bdy{
+      .group-left{
+        float:left;
+        width: 22%;
+        max-width: 325px;
+        .block-title{
+          display: none;
+        }
+      }
+      .group-right{
+        float: right;
+        width: 73%;
+        .block-title{
+          display: block;
+        }
+      }
+      table{
+        td,th{
+          padding: 15px;
+        }
+      }
+    }
+   }

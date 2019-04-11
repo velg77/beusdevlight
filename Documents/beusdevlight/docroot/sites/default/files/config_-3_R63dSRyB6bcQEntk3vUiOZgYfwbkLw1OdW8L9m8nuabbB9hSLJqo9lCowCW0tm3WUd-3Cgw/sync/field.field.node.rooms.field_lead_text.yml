@@ -1,0 +1,21 @@
+uuid: 7c97efda-1d53-4b43-8e24-bf3bba334f85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_text
+    - node.type.rooms
+  module:
+    - text
+id: node.rooms.field_lead_text
+field_name: field_lead_text
+entity_type: node
+bundle: rooms
+label: 'Lead text'
+description: 'Opening Paragraph / Summary'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

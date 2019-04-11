@@ -1,0 +1,48 @@
+{#
+/**
+ * @file
+ * Display Suite 2 column stacked template.
+ *
+ * Available variables:
+ * - outer_wrapper: outer wrapper element
+ * - header_wrapper: wrapper element around header region
+ * - left_wrapper: wrapper element around left region
+ * - right_wrapper: wrapper element around right region
+ * - footer_wrapper: wrapper element around footer region
+ * - attributes: layout attributes
+ * - header_attributes: attributes for header region
+ * - left_attributes: attributes for left region
+ * - right_attributes: attributes for right region
+ * - footer_attributes: attributes for footer region
+ * - header: content of header region
+ * - left: content of left region
+ * - right: content of right region
+ * - footer: content of footer region
+ */
+#}
+
+{{attach_library('behavioursoe/node-requirements')}}
+
+<div{{ attributes.addClass('ds-2col-stacked', 'clearfix') }}>
+
+  {{ title_suffix.contextual_links }}
+
+  <div class="node-group-top">
+    {{ header }}
+  </div>
+
+  <div class="clearfix req-bdy">
+    <div class="group-left">
+      {{ left }}
+    </div>
+
+    <div class="group-right">
+      {{ right }}
+    </div>
+  </div>
+
+  <div class="node-group-bot">
+    {{ footer }}
+  </div>
+
+</div>

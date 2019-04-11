@@ -1,0 +1,14 @@
+uuid: 31f64d08-0909-490a-b547-690dbf0af2aa
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: block_content.people_type_list
+label: 'People Type List'
+targetEntityType: block_content
+cache: true

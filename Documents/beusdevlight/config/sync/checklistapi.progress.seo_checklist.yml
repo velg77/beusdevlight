@@ -1,0 +1,38 @@
+progress:
+  '#changed': 1551691749
+  '#changed_by': '5'
+  '#completed_items': 11
+  '#items':
+    install_and_enable_seo_checklist_module:
+      '#completed': 1551691738
+      '#uid': '5'
+    install_and_enable_admin_toolbar_module:
+      '#completed': 1551691738
+      '#uid': '5'
+    install_and_enable_pathauto_module:
+      '#completed': 1551691738
+      '#uid': '5'
+    install_and_enable_metatag_module:
+      '#completed': 1551691738
+      '#uid': '5'
+    install_and_enable_google_analytics_module:
+      '#completed': 1551691738
+      '#uid': '5'
+    configure_google_analytics_module:
+      '#completed': 1551691738
+      '#uid': '5'
+    sign_in_to_google_analytics_and_create_an_analytics_property_for_your_website:
+      '#completed': 1551691738
+      '#uid': '5'
+    cache_the_google_analytics_code:
+      '#completed': 1551691738
+      '#uid': '5'
+    install_and_enable_diff_module:
+      '#completed': 1551691738
+      '#uid': '5'
+    install_and_enable_scheduler_module:
+      '#completed': 1551691738
+      '#uid': '5'
+    install_and_enable_share_buttons_by_addtoany:
+      '#completed': 1551691738
+      '#uid': '5'

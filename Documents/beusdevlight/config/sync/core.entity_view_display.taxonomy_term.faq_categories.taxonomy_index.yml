@@ -1,0 +1,22 @@
+uuid: f89f9ebe-ab3e-40d4-b408-caefc94b19f8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.taxonomy_index
+    - taxonomy.vocabulary.faq_categories
+  module:
+    - text
+id: taxonomy_term.faq_categories.taxonomy_index
+targetEntityType: taxonomy_term
+bundle: faq_categories
+mode: taxonomy_index
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

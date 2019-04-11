@@ -1,0 +1,8 @@
+uuid: 3364f159-2bc7-4ef7-b0e9-b049907e4512
+langcode: en
+status: true
+dependencies: {  }
+id: funding-menu
+label: 'Funding menu'
+description: ''
+locked: false

@@ -1,0 +1,73 @@
+uuid: b5af95e1-675a-444f-b118-7dcb06e6fc28
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.multi_content_block
+    - core.entity_view_mode.block_content.why_soe
+    - field.field.block_content.multi_content_block.body
+    - field.field.block_content.multi_content_block.field_content
+    - field.field.block_content.multi_content_block.field_link
+  module:
+    - ds
+    - entity_reference_revisions
+    - link
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - body
+        - field_content
+        - field_link
+id: block_content.multi_content_block.why_soe
+targetEntityType: block_content
+bundle: multi_content_block
+mode: why_soe
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: ds_content
+  field_content:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: why_soe_ways_to_give_grants_forms_guidelines
+      link: ''
+    third_party_settings:
+      ds:
+        ds_limit: ''
+    region: ds_content
+  field_link:
+    weight: 2
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: ds_content
+hidden: {  }

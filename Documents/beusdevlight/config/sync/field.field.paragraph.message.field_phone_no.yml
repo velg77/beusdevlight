@@ -1,0 +1,26 @@
+uuid: a5f061cf-5d84-4451-81b4-4344bce6e25a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_phone_no
+    - paragraphs.paragraphs_type.message
+  module:
+    - custom_add_another
+    - telephone
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: paragraph.message.field_phone_no
+field_name: field_phone_no
+entity_type: paragraph
+bundle: message
+label: 'Phone no'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: telephone

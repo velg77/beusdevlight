@@ -1,0 +1,14 @@
+uuid: bb148659-9033-4680-8a18-8482f1a49f1e
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - taxonomy
+third_party_settings:
+  lightning_core:
+    description: 'This view mode is for taxonomy term page.'
+id: taxonomy_term.full_taxonomy
+label: 'Full Taxonomy'
+targetEntityType: taxonomy_term
+cache: true

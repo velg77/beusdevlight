@@ -1,0 +1,22 @@
+uuid: 8d02a14c-1dcd-4489-a82a-8b3211ec06fc
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.quick_facts
+id: node.quick_facts.status
+field_name: status
+entity_type: node
+bundle: quick_facts
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

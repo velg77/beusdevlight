@@ -1,0 +1,61 @@
+uuid: 2efc6483-6562-4ace-a73d-2bb81e495788
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.connect
+    - field.field.paragraph.content.field_cta
+    - field.field.paragraph.content.field_description
+    - field.field.paragraph.content.field_image
+    - field.field.paragraph.content.field_sub_title
+    - field.field.paragraph.content.field_title
+    - paragraphs.paragraphs_type.content
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_title
+        - field_description
+id: paragraph.content.connect
+targetEntityType: paragraph
+bundle: content
+mode: connect
+content:
+  field_description:
+    type: text_trimmed
+    weight: 1
+    region: ds_content
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_title:
+    type: string
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_cta: true
+  field_image: true
+  field_sub_title: true

@@ -1,0 +1,25 @@
+uuid: 4d52d3b2-9365-45ab-a8ef-933d2cb70fc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.xlg_narrow_landscape
+    - image.style.xlg_narrow_landscape_2x
+    - image.style.xsm_landscape
+  theme:
+    - behavioursoe
+id: hero_image_small
+label: 'Hero Image Small'
+image_style_mappings:
+  -
+    breakpoint_id: behavioursoe.xsm
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: xlg_narrow_landscape
+  -
+    breakpoint_id: behavioursoe.xsm
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: xlg_narrow_landscape_2x
+breakpoint_group: behavioursoe
+fallback_image_style: xsm_landscape

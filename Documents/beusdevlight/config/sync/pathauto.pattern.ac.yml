@@ -1,0 +1,23 @@
+uuid: c0ab0d42-24d3-40bf-af14-d8e9ad50f528
+langcode: en
+status: true
+dependencies:
+  module:
+    - ctools
+    - taxonomy
+id: ac
+label: 'Academic Program(s)'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'academic-programs/[term:name]'
+selection_criteria:
+  ffaf5b65-7a7c-4166-b0a2-cca3bec8314d:
+    id: 'entity_bundle:taxonomy_term'
+    bundles:
+      academic_programs: academic_programs
+    negate: false
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    uuid: ffaf5b65-7a7c-4166-b0a2-cca3bec8314d
+selection_logic: and
+weight: -5
+relationships: {  }

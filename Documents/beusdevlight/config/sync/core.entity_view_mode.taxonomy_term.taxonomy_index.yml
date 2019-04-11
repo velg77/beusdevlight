@@ -1,0 +1,14 @@
+uuid: 04915d72-062c-4840-b494-5d51014a4515
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - taxonomy
+third_party_settings:
+  lightning_core:
+    description: ''
+id: taxonomy_term.taxonomy_index
+label: 'Taxonomy Index'
+targetEntityType: taxonomy_term
+cache: true

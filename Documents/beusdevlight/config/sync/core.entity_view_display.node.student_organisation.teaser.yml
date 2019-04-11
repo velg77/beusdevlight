@@ -1,0 +1,115 @@
+uuid: 5fa2a208-8843-42c2-975e-a56d894b9a7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.student_organisation.body
+    - field.field.node.student_organisation.field_email
+    - field.field.node.student_organisation.field_media_type
+    - field.field.node.student_organisation.field_website
+    - node.type.student_organisation
+  module:
+    - ds
+    - field_group
+    - panelizer
+    - smart_trim
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_media_type
+        - node_title
+        - body
+        - group_contact_info
+        - 'dynamic_token_field:node-student_organisation_contact'
+        - 'dynamic_token_field:node-student_organisation_website'
+    fields:
+      'dynamic_token_field:node-student_organisation_contact':
+        plugin_id: 'dynamic_token_field:node-student_organisation_contact'
+        weight: 4
+        label: hidden
+        formatter: default
+      'dynamic_token_field:node-student_organisation_website':
+        plugin_id: 'dynamic_token_field:node-student_organisation_website'
+        weight: 5
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h3
+          class: ''
+  field_group:
+    group_contact_info:
+      children:
+        - 'dynamic_token_field:node-student_organisation_contact'
+        - 'dynamic_token_field:node-student_organisation_website'
+      parent_name: ''
+      weight: 3
+      format_type: html_element
+      format_settings:
+        label: 'Contact Info'
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+        id: ''
+        classes: grp-cnt-info
+      label: 'Contact Info'
+id: node.student_organisation.teaser
+targetEntityType: node
+bundle: student_organisation
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: smart_trim
+    weight: 2
+    settings:
+      trim_length: 150
+      trim_type: chars
+      trim_suffix: ''
+      wrap_class: trimmed
+      more_text: More
+      more_class: more-link
+      summary_handler: full
+      wrap_output: false
+      more_link: false
+      trim_options:
+        text: false
+        trim_zero: false
+    third_party_settings: {  }
+    region: content
+  field_media_type:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  field_email: true
+  field_website: true
+  links: true

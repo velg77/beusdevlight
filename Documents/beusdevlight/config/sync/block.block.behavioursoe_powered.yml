@@ -1,0 +1,22 @@
+uuid: ebfde604-b202-474b-a470-3bdd9739e361
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - behavioursoe
+_core:
+  default_config_hash: jQQUUWN2Uxr5qZtc9zcJKBCxpKY8orN1u2HPqYYRQDI
+id: behavioursoe_powered
+theme: behavioursoe
+region: footer
+weight: -4
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

@@ -1,0 +1,240 @@
+uuid: 098aed9f-87f0-4ebe-bceb-88f7d8504512
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.offices.field_email
+    - field.field.taxonomy_term.offices.field_lead_text
+    - field.field.taxonomy_term.offices.field_office_location
+    - field.field.taxonomy_term.offices.field_phone_number
+    - field.field.taxonomy_term.offices.field_schedule_a_time
+    - field.field.taxonomy_term.offices.field_timing
+    - field.field.taxonomy_term.offices.panelizer
+    - taxonomy.vocabulary.offices
+  module:
+    - ds
+    - field_group
+    - panelizer
+third_party_settings:
+  field_group:
+    group_top_content:
+      children:
+        - group_contact
+        - group_location
+        - group_office_hours
+      parent_name: ''
+      weight: 1
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-top
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Top Content'
+    group_contact:
+      children:
+        - field_email
+        - field_phone_number
+      parent_name: group_top_content
+      weight: 2
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: off-grd
+        element: div
+        show_label: true
+        label_element: span
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Contact
+    group_location:
+      children:
+        - field_office_location
+      parent_name: group_top_content
+      weight: 3
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: off-grd
+        element: div
+        show_label: true
+        label_element: span
+        attributes: ''
+        effect: none
+        speed: fast
+      label: Location
+    group_office_hours:
+      children:
+        - field_schedule_a_time
+        - field_timing
+      parent_name: group_top_content
+      weight: 4
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: off-grd
+        element: div
+        show_label: true
+        label_element: span
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Office Hours'
+    group_border_yellow:
+      children: {  }
+      parent_name: ''
+      weight: 5
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: brd-ylw
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Border Yellow'
+    group_grp_btm:
+      children:
+        - description
+        - field_lead_text
+      parent_name: ''
+      weight: 7
+      format_type: html_element
+      format_settings:
+        id: ''
+        classes: grp-btm
+        element: div
+        show_label: false
+        label_element: h3
+        attributes: ''
+        effect: none
+        speed: fast
+      label: 'Bottom Content'
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          6704a282-af8e-4185-b979-494d660ed2bc:
+            id: 'block_content:372943de-ee54-4d8f-8617-24dfc69c1462'
+            label: 'Banner Bottom [Alumni]'
+            provider: block_content
+            label_display: visible
+            status: true
+            info: ''
+            view_mode: default
+            region: row3
+            weight: 0
+            uuid: 6704a282-af8e-4185-b979-494d660ed2bc
+            context_mapping: {  }
+          5209e0ae-97bf-4470-a2eb-d8977264d29d:
+            id: 'entity_view:taxonomy_term'
+            label: 'Entity view (Taxonomy term)'
+            provider: ctools
+            label_display: visible
+            view_mode: full_taxonomy
+            region: row1
+            weight: 0
+            uuid: 5209e0ae-97bf-4470-a2eb-d8977264d29d
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+        id: panels_variant
+        label: Default
+        uuid: 64e1219c-3039-4dc0-921c-435d474e42c2
+        weight: 0
+        layout: behavioursoe_layout
+        layout_settings:
+          wrappers:
+            row1: div
+            row2: div
+            row3: div
+            row4: div
+            row5: div
+            row6: div
+            row7: div
+            row8: div
+            left_sidebar: div
+            main_content: div
+            right_sidebar: div
+            row9: div
+            row10: div
+            row11: div
+            row12: div
+            row13: div
+            row14: div
+            row15: div
+          outer_wrapper: div
+          attributes: ''
+          link_attribute: ''
+          link_custom: ''
+          classes:
+            layout_class: {  }
+            row1:
+              sm_cnt: sm_cnt
+            row2:
+              row_sp_top: row_sp_top
+              sm_cnt: sm_cnt
+            row3: {  }
+            row4: {  }
+            row5: {  }
+            row6: {  }
+            row7: {  }
+            row8: {  }
+            left_sidebar: {  }
+            main_content: {  }
+            right_sidebar: {  }
+            row9: {  }
+            row10: {  }
+            row11: {  }
+            row12: {  }
+            row13: {  }
+            row14: {  }
+            row15: {  }
+        page_title: ''
+        storage_type: panelizer_default
+        storage_id: 'taxonomy_term:offices:default:default'
+        builder: ipe
+        pattern: panelizer
+        static_context: {  }
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - taxonomy_term_title
+        - group_top_content
+        - group_location
+    fields:
+      taxonomy_term_title:
+        plugin_id: taxonomy_term_title
+        weight: 0
+        label: hidden
+        formatter: default
+id: taxonomy_term.offices.default
+targetEntityType: taxonomy_term
+bundle: offices
+mode: default
+content: {  }
+hidden:
+  description: true
+  field_email: true
+  field_lead_text: true
+  field_office_location: true
+  field_phone_number: true
+  field_schedule_a_time: true
+  field_timing: true
+  panelizer: true

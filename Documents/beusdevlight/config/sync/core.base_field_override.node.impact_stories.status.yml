@@ -1,0 +1,22 @@
+uuid: 54b922ba-2bdd-44e2-8de7-4db4eda15374
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.impact_stories
+id: node.impact_stories.status
+field_name: status
+entity_type: node
+bundle: impact_stories
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

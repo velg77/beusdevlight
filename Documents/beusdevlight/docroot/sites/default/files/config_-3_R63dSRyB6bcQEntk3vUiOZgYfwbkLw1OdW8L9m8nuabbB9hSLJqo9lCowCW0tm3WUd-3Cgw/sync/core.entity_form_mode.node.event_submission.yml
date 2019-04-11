@@ -1,0 +1,14 @@
+uuid: 28299845-a713-4b78-a11b-ceeead1af5cb
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+id: node.event_submission
+label: 'Event Submission'
+targetEntityType: node
+cache: true

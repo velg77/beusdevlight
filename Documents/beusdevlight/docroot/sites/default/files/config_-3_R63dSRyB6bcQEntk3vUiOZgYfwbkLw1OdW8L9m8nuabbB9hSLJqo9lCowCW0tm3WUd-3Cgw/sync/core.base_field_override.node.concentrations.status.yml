@@ -1,0 +1,22 @@
+uuid: 1d99c8ab-0b0f-4b60-8ae9-94f551f21041
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.concentrations
+id: node.concentrations.status
+field_name: status
+entity_type: node
+bundle: concentrations
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

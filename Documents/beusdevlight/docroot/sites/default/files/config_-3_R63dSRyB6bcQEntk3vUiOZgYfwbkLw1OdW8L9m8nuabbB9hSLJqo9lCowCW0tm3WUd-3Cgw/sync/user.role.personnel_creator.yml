@@ -1,0 +1,29 @@
+uuid: 18085b95-fee7-4832-9aea-262746963a43
+langcode: en
+status: true
+dependencies: {  }
+id: personnel_creator
+label: 'Personnel creator'
+weight: -2
+is_admin: false
+permissions:
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access toolbar'
+  - 'administer panelizer node personnel content'
+  - 'administer panelizer node personnel layout'
+  - 'change layouts in place editing'
+  - 'create personnel content'
+  - 'create url aliases'
+  - 'edit own personnel content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view personnel revisions'

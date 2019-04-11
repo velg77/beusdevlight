@@ -1,0 +1,27 @@
+uuid: 900b6936-80fb-4f1e-91c1-b004cbcbdf17
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_resume
+    - node.type.personnel
+  module:
+    - file
+id: node.personnel.field_resume
+field_name: field_resume
+entity_type: node
+bundle: personnel
+label: Resume
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'txt pdf doc docx'
+  max_filesize: ''
+  description_field: true
+  handler: 'default:file'
+  handler_settings: {  }
+field_type: file

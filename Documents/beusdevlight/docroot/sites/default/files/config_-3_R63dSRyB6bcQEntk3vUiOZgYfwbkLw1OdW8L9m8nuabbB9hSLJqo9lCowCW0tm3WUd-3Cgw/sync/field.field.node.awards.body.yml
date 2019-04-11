@@ -1,0 +1,22 @@
+uuid: 1d0f5c2d-93ea-4325-9427-9e0da4bca20d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.awards
+  module:
+    - text
+id: node.awards.body
+field_name: body
+entity_type: node
+bundle: awards
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

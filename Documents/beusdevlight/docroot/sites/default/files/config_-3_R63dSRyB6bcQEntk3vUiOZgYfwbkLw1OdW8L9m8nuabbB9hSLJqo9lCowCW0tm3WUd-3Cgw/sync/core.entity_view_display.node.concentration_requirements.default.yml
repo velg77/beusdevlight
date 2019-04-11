@@ -1,0 +1,84 @@
+uuid: fee2c836-a8aa-434e-9b78-11c9d5ac3b96
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.concentration_requirements.body
+    - field.field.node.concentration_requirements.field_credits
+    - field.field.node.concentration_requirements.field_full_data
+    - field.field.node.concentration_requirements.field_sub_title
+    - field.field.node.concentration_requirements.field_sub_value
+    - node.type.concentration_requirements
+  module:
+    - ds
+    - entity_reference_revisions
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - body
+        - field_sub_title
+        - field_sub_value
+        - field_credits
+        - field_full_data
+id: node.concentration_requirements.default
+targetEntityType: node
+bundle: concentration_requirements
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_credits:
+    type: entity_reference_revisions_entity_view
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+  field_full_data:
+    weight: 4
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_sub_title:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_sub_value:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  addtoany: true
+  links: true

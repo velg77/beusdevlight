@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:behaviorsoe1.betabasket.net
+X-WR-TIMEZONE:Asia/Kolkata
+BEGIN:VTIMEZONE
+TZID:Asia/Kolkata
+X-LIC-LOCATION:Asia/Kolkata
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:4d2f3ea74aa53fbfaee851548764cea4
+DTSTART;TZID=Asia/Kolkata:19100101T010400
+SEQUENCE:0
+TRANSP:OPAQUE
+URL:http://behaviorsoe1.betabasket.net/[node:path]
+SUMMARY:Workshop
+CLASS:PUBLIC
+DESCRIPTION:Description: [node:body] Start Date: Tue\, 04/05/1904 - 14:03 E
+ nd Date:\n[node:field_event_date] [node:field_author]
+X-ALT-DESC;FMTTYPE=text/html:Description: [node:body]</br>\nStart Date: \n\
+ n<!-- THEME DEBUG -->\n<!-- THEME HOOK: 'time' -->\n<!-- BEGIN OUTPUT from
+  'core/themes/stable/templates/field/time.html.twig' -->\n<time datetime=\
+ "1904-04-05T08:33:00Z\">Tue\, 04/05/1904 - 14:03</time>\n\n<!-- END OUTPUT
+  from 'core/themes/stable/templates/field/time.html.twig' -->\n\n</br></br
+ >\nEnd Date: [node:field_event_date]</br>\n[node:field_author]
+DTSTAMP:20190313T133921Z
+END:VEVENT
+END:VCALENDAR

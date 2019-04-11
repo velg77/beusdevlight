@@ -1,0 +1,29 @@
+uuid: 0b370f9a-867c-4c71-812e-a5e0bd15e821
+langcode: en
+status: true
+dependencies: {  }
+id: careers_creator
+label: 'Careers creator'
+weight: 28
+is_admin: false
+permissions:
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access toolbar'
+  - 'administer panelizer node careers content'
+  - 'administer panelizer node careers layout'
+  - 'change layouts in place editing'
+  - 'create careers content'
+  - 'create url aliases'
+  - 'edit own careers content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view careers revisions'
+  - 'view latest version'
+  - 'view own unpublished content'

@@ -1,0 +1,28 @@
+uuid: 30e31b77-208e-4f34-a964-b563a857a092
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.personnel_position
+  module:
+    - panelizer
+    - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.personnel_position.default
+targetEntityType: taxonomy_term
+bundle: personnel_position
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

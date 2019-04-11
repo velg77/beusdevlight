@@ -1,0 +1,14 @@
+uuid: 966eb86e-526d-4c5e-aed3-2e372457b1e4
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+id: node.small_teaser
+label: 'Small Teaser'
+targetEntityType: node
+cache: true

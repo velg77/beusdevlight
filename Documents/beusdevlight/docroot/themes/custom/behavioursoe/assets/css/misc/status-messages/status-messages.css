@@ -1,0 +1,18 @@
+.messages {
+  padding: .75rem 1.25rem;
+  border: 1px solid transparent; }
+
+.messages--status {
+  background-color: #bdecc7;
+  border-color: #bdecc7;
+  color: #155724; }
+
+.messages--error {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb; }
+
+.messages--warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba; }

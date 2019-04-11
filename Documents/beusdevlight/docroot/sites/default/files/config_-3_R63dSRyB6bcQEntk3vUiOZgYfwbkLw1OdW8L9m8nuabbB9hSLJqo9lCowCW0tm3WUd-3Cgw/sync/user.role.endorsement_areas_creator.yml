@@ -1,0 +1,29 @@
+uuid: 79218de6-1140-4255-97e3-08ce2f1a9fdd
+langcode: en
+status: true
+dependencies: {  }
+id: endorsement_areas_creator
+label: 'Endorsement Areas creator'
+weight: 32
+is_admin: false
+permissions:
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access toolbar'
+  - 'administer panelizer node endorsement_areas content'
+  - 'administer panelizer node endorsement_areas layout'
+  - 'change layouts in place editing'
+  - 'create endorsement_areas content'
+  - 'create url aliases'
+  - 'edit own endorsement_areas content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view endorsement_areas revisions'
+  - 'view latest version'
+  - 'view own unpublished content'

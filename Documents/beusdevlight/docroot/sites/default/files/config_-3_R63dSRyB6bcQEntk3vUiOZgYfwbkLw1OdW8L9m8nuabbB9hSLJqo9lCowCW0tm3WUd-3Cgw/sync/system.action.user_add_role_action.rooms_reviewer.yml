@@ -1,0 +1,14 @@
+uuid: 5db5da4f-6a21-42f5-9e61-aa55190f0a64
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.rooms_reviewer
+  module:
+    - user
+id: user_add_role_action.rooms_reviewer
+label: 'Add the Rooms reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: rooms_reviewer

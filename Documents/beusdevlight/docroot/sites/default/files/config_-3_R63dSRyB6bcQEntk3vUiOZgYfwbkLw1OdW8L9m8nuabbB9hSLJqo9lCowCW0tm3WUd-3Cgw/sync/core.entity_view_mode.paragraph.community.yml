@@ -1,0 +1,14 @@
+uuid: a8e9a4da-3a38-4abc-aaeb-baee73f1a523
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - paragraphs
+third_party_settings:
+  lightning_core:
+    description: ''
+id: paragraph.community
+label: Community
+targetEntityType: paragraph
+cache: true

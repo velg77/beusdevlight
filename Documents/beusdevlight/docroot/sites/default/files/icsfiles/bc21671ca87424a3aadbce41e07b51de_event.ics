@@ -1,0 +1,111 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:behaviorsoe1.betabasket.net
+X-WR-TIMEZONE:Australia/Adelaide
+BEGIN:VTIMEZONE
+TZID:Australia/Adelaide
+X-LIC-LOCATION:Australia/Adelaide
+BEGIN:DAYLIGHT
+TZNAME:ACDT
+TZOFFSETFROM:+0930
+TZOFFSETTO:+1030
+DTSTART:20181006T163000
+END:DAYLIGHT
+BEGIN:DAYLIGHT
+TZNAME:ACDT
+TZOFFSETFROM:+0930
+TZOFFSETTO:+1030
+DTSTART:20191005T163000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZNAME:ACST
+TZOFFSETFROM:+1030
+TZOFFSETTO:+0930
+DTSTART:20180331T163000
+END:STANDARD
+BEGIN:STANDARD
+TZNAME:ACST
+TZOFFSETFROM:+1030
+TZOFFSETTO:+0930
+DTSTART:20190406T163000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:59e18cb4aae6a149b05bc651e77e04a8
+DTSTART;TZID=Australia/Adelaide:20190316T030000
+SEQUENCE:0
+TRANSP:OPAQUE
+URL:http://behaviorsoe1.betabasket.net/[node:path]
+SUMMARY:In tincidunt massa lorem. Aenean sed tempus leo. Mauris ac ipsum ma
+ ttis\,
+CLASS:PUBLIC
+DESCRIPTION:Description:\nIn tincidunt massa lorem. Aenean sed tempus leo. 
+ Mauris ac ipsum\nmattis\, tristique libero sed\, consequat libero. Cras po
+ suere felis vel\nlacus efficitur\, in dictum ligula convallis. Etiam sit a
+ met elementum\nneque. Sed dictum fermentum mollis. Pellentesque vel sagitt
+ is risus\,\nat semper nisi. Ut eu condimentum sapien\, sed mattis dolor. M
+ aecenas\nsem urna\, rhoncus vitae libero sit amet\, consequat luctus sapie
+ n.\nClass aptent taciti sociosqu ad litora torquent per conubia nostra\,\n
+ per inceptos himenaeos. Vivamus vitae sapien tincidunt justo ultrices\nfer
+ mentum quis ac felis. Nunc euismod malesuada venenatis. Sed\ndignissim ero
+ s in lorem vulputate aliquet vel eget metus.\n\nDonec quis tincidunt orci.
+  Nunc dictum\, metus sit amet scelerisque\nultricies\, metus magna pellent
+ esque turpis\, quis sodales massa augue\nsed nisl. Sed sollicitudin varius
+  interdum. Integer eu dignissim\ntellus. Nunc quis magna varius\, venenati
+ s ipsum vitae\, porta nunc.\nPhasellus ut augue sit amet tellus vulputate 
+ sodales id ut dolor. Nunc\nac dapibus lorem\, ac dapibus felis. Vestibulum
+  blandit libero odio\,\nnec accumsan enim consequat ac. Aliquam finibus ma
+ ssa feugiat diam\ndictum\, ut malesuada nisl consequat. Vestibulum ultrice
+ s iaculis\nvolutpat. Nulla facilisi. Duis nec tempor augue\, nec pellentes
+ que sem.\nNunc pulvinar vehicula orci id varius. Aenean fringilla finibus 
+ lacus\na feugiat.\n\nMauris tempor enim ut odio condimentum gravida. Integ
+ er nulla nisl\,\negestas non sagittis non\, tincidunt a erat. Ut convallis
+ \, nisl sed\nmaximus vulputate\, nisl sem lobortis felis\, sed pellentesqu
+ e augue\nnunc sit amet massa. Nulla eget lectus ac neque bibendum convalli
+ s.\nQuisque lacinia orci dui\, nec sodales ipsum feugiat quis. Vivamus\nul
+ trices purus id ipsum ornare\, et hendrerit enim faucibus. Phasellus\nut i
+ nterdum dolor. Morbi ac porta orci\, vitae suscipit purus.\nSuspendisse gr
+ avida facilisis lectus\, non pharetra libero eleifend sit\namet. Curabitur
+  in urna vestibulum lorem efficitur mollis nec vel\njusto. Ut suscipit vel
+  libero tempor laoreet. Lorem ipsum dolor sit\namet\, consectetur adipisci
+ ng elit. Nam rutrum nisl vel suscipit\nvolutpat.\n Start Date: Sun\, 03/24
+ /2019 - 04:00 End Date: [node:field_event_date]\n[node:field_author]
+X-ALT-DESC;FMTTYPE=text/html:Description: <p>In tincidunt massa lorem. Aene
+ an sed tempus leo. Mauris ac ipsum mattis\, tristique libero sed\, consequ
+ at libero. Cras posuere felis vel lacus efficitur\, in dictum ligula conva
+ llis. Etiam sit amet elementum neque. Sed dictum fermentum mollis. Pellent
+ esque vel sagittis risus\, at semper nisi. Ut eu condimentum sapien\, sed 
+ mattis dolor. Maecenas sem urna\, rhoncus vitae libero sit amet\, consequa
+ t luctus sapien. Class aptent taciti sociosqu ad litora torquent per conub
+ ia nostra\, per inceptos himenaeos. Vivamus vitae sapien tincidunt justo u
+ ltrices fermentum quis ac felis. Nunc euismod malesuada venenatis. Sed dig
+ nissim eros in lorem vulputate aliquet vel eget metus.</p>\n\n<p>Donec qui
+ s tincidunt orci. Nunc dictum\, metus sit amet scelerisque ultricies\, met
+ us magna pellentesque turpis\, quis sodales massa augue sed nisl. Sed soll
+ icitudin varius interdum. Integer eu dignissim tellus. Nunc quis magna var
+ ius\, venenatis ipsum vitae\, porta nunc. Phasellus ut augue sit amet tell
+ us vulputate sodales id ut dolor. Nunc ac dapibus lorem\, ac dapibus felis
+ . Vestibulum blandit libero odio\, nec accumsan enim consequat ac. Aliquam
+  finibus massa feugiat diam dictum\, ut malesuada nisl consequat. Vestibul
+ um ultrices iaculis volutpat. Nulla facilisi. Duis nec tempor augue\, nec 
+ pellentesque sem. Nunc pulvinar vehicula orci id varius. Aenean fringilla 
+ finibus lacus a feugiat.</p>\n\n<p>Mauris tempor enim ut odio condimentum 
+ gravida. Integer nulla nisl\, egestas non sagittis non\, tincidunt a erat.
+  Ut convallis\, nisl sed maximus vulputate\, nisl sem lobortis felis\, sed
+  pellentesque augue nunc sit amet massa. Nulla eget lectus ac neque bibend
+ um convallis. Quisque lacinia orci dui\, nec sodales ipsum feugiat quis. V
+ ivamus ultrices purus id ipsum ornare\, et hendrerit enim faucibus. Phasel
+ lus ut interdum dolor. Morbi ac porta orci\, vitae suscipit purus. Suspend
+ isse gravida facilisis lectus\, non pharetra libero eleifend sit amet. Cur
+ abitur in urna vestibulum lorem efficitur mollis nec vel justo. Ut suscipi
+ t vel libero tempor laoreet. Lorem ipsum dolor sit amet\, consectetur adip
+ iscing elit. Nam rutrum nisl vel suscipit volutpat.</p>\n</br>\nStart Date
+ : \n\n<!-- THEME DEBUG -->\n<!-- THEME HOOK: 'time' -->\n<!-- BEGIN OUTPUT
+  from 'core/themes/classy/templates/field/time.html.twig' -->\n<time datet
+ ime=\"2019-03-23T17:30:00Z\" class=\"datetime\">Sun\, 03/24/2019 - 04:00</
+ time>\n\n<!-- END OUTPUT from 'core/themes/classy/templates/field/time.htm
+ l.twig' -->\n\n</br></br>\nEnd Date: [node:field_event_date]</br>\n[node:f
+ ield_author]
+DTSTAMP:20190405T200322Z
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+uuid: 39d71b44-28bc-49e1-aed5-24da681f41d9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: personnel_
+label: 'Personnel '
+type: 'canonical_entities:node'
+pattern: 'personnel/[node:title]'
+selection_criteria:
+  ccb15cc4-bcd5-4c42-b90d-780b35039aaf:
+    id: node_type
+    bundles:
+      personnel: personnel
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ccb15cc4-bcd5-4c42-b90d-780b35039aaf
+selection_logic: and
+weight: -5
+relationships: {  }

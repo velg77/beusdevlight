@@ -1,0 +1,26 @@
+uuid: 2f05eb23-bccf-452d-a339-0482b33bfcbd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.news
+  module:
+    - custom_add_another
+    - metatag
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.news.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: news
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: metatag

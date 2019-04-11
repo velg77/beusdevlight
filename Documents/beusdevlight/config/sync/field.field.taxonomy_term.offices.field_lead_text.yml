@@ -1,0 +1,32 @@
+uuid: 13ad1deb-f06f-4dcb-8a7b-843e6a35358e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_lead_text
+    - taxonomy.vocabulary.offices
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    limited_text_styling: limited_text_styling
+    php_filter: '0'
+    rich_text: '0'
+    plain_text: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: taxonomy_term.offices.field_lead_text
+field_name: field_lead_text
+entity_type: taxonomy_term
+bundle: offices
+label: 'Lead Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,31 @@
+uuid: 7c90a2e9-7bf7-4c6b-8a6e-5bd72c110b34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_text
+    - node.type.offices
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    limited_text_styling: limited_text_styling
+    rich_text: '0'
+    plain_text: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.offices.field_lead_text
+field_name: field_lead_text
+entity_type: node
+bundle: offices
+label: 'Lead text'
+description: 'Opening Paragraph / Summary'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

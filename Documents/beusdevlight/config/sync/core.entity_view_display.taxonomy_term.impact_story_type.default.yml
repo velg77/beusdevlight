@@ -1,0 +1,28 @@
+uuid: 49d49d0e-28bd-4c9d-9ef7-9f372501dd82
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.impact_story_type
+  module:
+    - panelizer
+    - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: taxonomy_term.impact_story_type.default
+targetEntityType: taxonomy_term
+bundle: impact_story_type
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

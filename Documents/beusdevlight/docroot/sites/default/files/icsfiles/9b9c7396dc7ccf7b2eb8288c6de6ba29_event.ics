@@ -1,0 +1,113 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:behaviorsoe1.betabasket.net
+X-WR-TIMEZONE:Australia/Adelaide
+BEGIN:VTIMEZONE
+TZID:Australia/Adelaide
+X-LIC-LOCATION:Australia/Adelaide
+BEGIN:DAYLIGHT
+TZNAME:ACDT
+TZOFFSETFROM:+0930
+TZOFFSETTO:+1030
+DTSTART:20170930T163000
+END:DAYLIGHT
+BEGIN:DAYLIGHT
+TZNAME:ACDT
+TZOFFSETFROM:+0930
+TZOFFSETTO:+1030
+DTSTART:20181006T163000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZNAME:ACST
+TZOFFSETFROM:+1030
+TZOFFSETTO:+0930
+DTSTART:20180331T163000
+END:STANDARD
+BEGIN:STANDARD
+TZNAME:ACST
+TZOFFSETFROM:+1030
+TZOFFSETTO:+0930
+DTSTART:20190406T163000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:c13f0afa5cae4f91d9d61b8188a5721c
+DTSTART;TZID=Australia/Adelaide:20180913T133045
+SEQUENCE:0
+TRANSP:OPAQUE
+URL:http://behaviorsoe1.betabasket.net/[node:path]
+SUMMARY:TeachingWorks Seminar Series Lunch Discussion - Gloria Ladson-Billi
+ ngs  
+CLASS:PUBLIC
+DESCRIPTION:Description:\nCurabitur sed euismod tortor. Sed porta nunc vita
+ e nisl tincidunt\nfermentum. Cras congue accumsan dolor in condimentum. Do
+ nec vitae ante\niaculis lectus feugiat semper. In augue nunc\, pretium a l
+ igula eu\,\ndictum bibendum nibh. Maecenas hendrerit diam ante\, vitae vol
+ utpat dui\nultricies eu. Ut non erat vehicula\, pellentesque est eu\, eges
+ tas orci.\nFusce sed rutrum massa\, vel eleifend ante. Phasellus viverra e
+ nim eget\nenim iaculis\, a auctor sem porta. Proin mollis lobortis egestas
+ . Nam\ndictum facilisis mauris vel pulvinar. Cras sollicitudin\, orci sit 
+ amet\nbibendum scelerisque\, dui enim iaculis purus\, commodo volutpat dia
+ m mi\nid enim. Donec sagittis ante vel risus suscipit sollicitudin. Praese
+ nt\nullamcorper sapien sit amet egestas viverra. In laoreet justo mi\, ege
+ t\nimperdiet nisi porttitor vitae. Cras pretium turpis non ante rhoncus\na
+ ccumsan.\n\nVivamus lectus nunc\, commodo at dignissim sed\, aliquam eget 
+ ex.\n\n* Nullam porttitor ligula augue. Sed velit lorem\, hendrerit in ant
+ e\nsit amet\, lobortis hendrerit ante.\n * Cras id massa ex. Maecenas temp
+ us pulvinar urna\, elementum\nullamcorper nibh.\n * Vestibulum dolor nunc\
+ , cursus nec est ut\, vulputate venenatis\nmagna.\n * Quisque ipsum quam\,
+  consequat vulputate diam id\, dignissim viverra\nlibero.\n * Aliquam sit 
+ amet elit imperdiet\, ornare diam quis\, tincidunt\nlorem.\n\nVivamus blan
+ dit augue id ligula egestas\, vel gravida dui porta. Cras\nvel scelerisque
+  nibh\, et semper magna. Nullam congue est vitae gravida\nbibendum. Vivamu
+ s congue\, eros nec condimentum rutrum\, nisi velit\nultricies quam\, blan
+ dit malesuada ante lorem eget quam.\n\n* Phasellus ultrices augue sed mass
+ a suscipit\, nec gravida leo\nconsequat.\n * Nunc ac mattis metus. Aenean 
+ faucibus velit pharetra ipsum\ngravida\, eu pretium urna tristique.\n * Ae
+ nean aliquet nec sapien eu pellentesque. Morbi porta nisl eros\,\neget dap
+ ibus quam ullamcorper non.\n\nProin consequat\, est ac maximus lobortis\, 
+ elit purus cursus velit\,\ncondimentum dignissim diam massa eu lectus. Qui
+ sque ultrices pretium\nmauris facilisis ultrices. Fusce laoreet et magna a
+  luctus. Vestibulum\nvitae dapibus nulla\, eu porta dolor.\n Start Date: W
+ ed\, 03/20/2019 - 18:55 End Date: [node:field_event_date]\n[node:field_aut
+ hor]
+X-ALT-DESC;FMTTYPE=text/html:Description: <p>Curabitur sed euismod tortor. 
+ Sed porta nunc vitae nisl tincidunt fermentum. Cras congue accumsan dolor 
+ in condimentum. Donec vitae ante iaculis lectus feugiat semper. In augue n
+ unc\, pretium a ligula eu\, dictum bibendum nibh. Maecenas hendrerit diam 
+ ante\, vitae volutpat dui ultricies eu. Ut non erat vehicula\, pellentesqu
+ e est eu\, egestas orci. Fusce sed rutrum massa\, vel eleifend ante. Phase
+ llus viverra enim eget enim iaculis\, a auctor sem porta. Proin mollis lob
+ ortis egestas. Nam dictum facilisis mauris vel pulvinar. Cras sollicitudin
+ \, orci sit amet bibendum scelerisque\, dui enim iaculis purus\, commodo v
+ olutpat diam mi id enim. Donec sagittis ante vel risus suscipit sollicitud
+ in. Praesent ullamcorper sapien sit amet egestas viverra. In laoreet justo
+  mi\, eget imperdiet nisi porttitor vitae. Cras pretium turpis non ante rh
+ oncus accumsan.</p>\n\n<p>Vivamus lectus nunc\, commodo at dignissim sed\,
+  aliquam eget ex.</p>\n\n<ol><li>Nullam porttitor ligula augue. Sed velit 
+ lorem\, hendrerit in ante sit amet\, lobortis hendrerit ante.</li>\n<li>Cr
+ as id massa ex. Maecenas tempus pulvinar urna\, elementum ullamcorper nibh
+ .</li>\n<li>Vestibulum dolor nunc\, cursus nec est ut\, vulputate venenati
+ s magna.</li>\n<li>Quisque ipsum quam\, consequat vulputate diam id\, dign
+ issim viverra libero.</li>\n<li>Aliquam sit amet elit imperdiet\, ornare d
+ iam quis\, tincidunt lorem.</li>\n</ol><p>Vivamus blandit augue id ligula 
+ egestas\, vel gravida dui porta. Cras vel scelerisque nibh\, et semper mag
+ na. Nullam congue est vitae gravida bibendum. Vivamus congue\, eros nec co
+ ndimentum rutrum\, nisi velit ultricies quam\, blandit malesuada ante lore
+ m eget quam.</p>\n\n<ul><li>Phasellus ultrices augue sed massa suscipit\, 
+ nec gravida leo consequat.</li>\n<li>Nunc ac mattis metus. Aenean faucibus
+  velit pharetra ipsum gravida\, eu pretium urna tristique.</li>\n<li>Aenea
+ n aliquet nec sapien eu pellentesque. Morbi porta nisl eros\, eget dapibus
+  quam ullamcorper non.</li>\n</ul><p>Proin consequat\, est ac maximus lobo
+ rtis\, elit purus cursus velit\, condimentum dignissim diam massa eu lectu
+ s. Quisque ultrices pretium mauris facilisis ultrices. Fusce laoreet et ma
+ gna a luctus. Vestibulum vitae dapibus nulla\, eu porta dolor.</p>\n</br>\
+ nStart Date: \n\n<!-- THEME DEBUG -->\n<!-- THEME HOOK: 'time' -->\n<!-- B
+ EGIN OUTPUT from 'core/themes/classy/templates/field/time.html.twig' -->\n
+ <time datetime=\"2019-03-20T08:25:00Z\" class=\"datetime\">Wed\, 03/20/201
+ 9 - 18:55</time>\n\n<!-- END OUTPUT from 'core/themes/classy/templates/fie
+ ld/time.html.twig' -->\n\n</br></br>\nEnd Date: [node:field_event_date]</b
+ r>\n[node:field_author]
+DTSTAMP:20190406T021134Z
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,51 @@
+uuid: 4f9ab602-8efa-4df7-a0b2-2996ec721449
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_fall
+    - node.type.application_deadline
+    - paragraphs.paragraphs_type.multiple_content
+  module:
+    - custom_add_another
+    - entity_reference_revisions
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.application_deadline.field_fall
+field_name: field_fall
+entity_type: node
+bundle: application_deadline
+label: Fall
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      multiple_content: multiple_content
+    target_bundles_drag_drop:
+      banner_slider:
+        weight: 7
+        enabled: false
+      content:
+        weight: 8
+        enabled: false
+      cta_group:
+        weight: 9
+        enabled: false
+      message:
+        weight: 10
+        enabled: false
+      multiple_content:
+        enabled: true
+        weight: 11
+      small_content:
+        weight: 12
+        enabled: false
+field_type: entity_reference_revisions

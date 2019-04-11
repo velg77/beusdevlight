@@ -1,0 +1,14 @@
+uuid: 12105a56-789b-465d-b809-20cf334ab323
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.quick_facts_creator
+  module:
+    - user
+id: user_add_role_action.quick_facts_creator
+label: 'Add the Quick Facts creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: quick_facts_creator

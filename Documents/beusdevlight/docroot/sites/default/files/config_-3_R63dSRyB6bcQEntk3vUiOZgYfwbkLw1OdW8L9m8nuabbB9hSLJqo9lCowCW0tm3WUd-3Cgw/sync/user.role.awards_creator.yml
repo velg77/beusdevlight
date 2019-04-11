@@ -1,0 +1,29 @@
+uuid: c3917ef1-8ecc-45f7-99ec-82eaed91742c
+langcode: en
+status: true
+dependencies: {  }
+id: awards_creator
+label: 'Awards creator'
+weight: 8
+is_admin: false
+permissions:
+  - 'access contextual links'
+  - 'access image_browser entity browser pages'
+  - 'access in-place editing'
+  - 'access media_browser entity browser pages'
+  - 'access panels in-place editing'
+  - 'access toolbar'
+  - 'administer panelizer node awards content'
+  - 'administer panelizer node awards layout'
+  - 'change layouts in place editing'
+  - 'create awards content'
+  - 'create url aliases'
+  - 'edit own awards content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'use text format rich_text'
+  - 'view any unpublished content'
+  - 'view awards revisions'
+  - 'view latest version'
+  - 'view own unpublished content'

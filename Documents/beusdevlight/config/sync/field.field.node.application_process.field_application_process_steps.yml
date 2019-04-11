@@ -1,0 +1,51 @@
+uuid: 74cc31f7-9b97-4c0f-9a31-81a8e34cf04c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_application_process_steps
+    - node.type.application_process
+    - paragraphs.paragraphs_type.small_content
+  module:
+    - custom_add_another
+    - entity_reference_revisions
+third_party_settings:
+  custom_add_another:
+    custom_add_another: 'Add more Steps'
+    custom_remove: ''
+id: node.application_process.field_application_process_steps
+field_name: field_application_process_steps
+entity_type: node
+bundle: application_process
+label: 'Application Process Steps'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      small_content: small_content
+    target_bundles_drag_drop:
+      banner_slider:
+        weight: 7
+        enabled: false
+      content:
+        weight: 8
+        enabled: false
+      cta_group:
+        weight: 9
+        enabled: false
+      message:
+        weight: 10
+        enabled: false
+      multiple_content:
+        weight: 11
+        enabled: false
+      small_content:
+        enabled: true
+        weight: 12
+field_type: entity_reference_revisions

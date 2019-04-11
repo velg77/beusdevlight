@@ -1,0 +1,29 @@
+uuid: 9ebe17eb-89c2-4faa-8ea8-30f73660ea3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image
+    - node.type.news
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.news.field_image
+field_name: field_image
+entity_type: node
+bundle: news
+label: 'Consider this image as banner image'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

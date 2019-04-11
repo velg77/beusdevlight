@@ -1,0 +1,22 @@
+uuid: a0d2a569-5e8b-4f7c-aa3a-68444faff058
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.endorsement_areas
+  module:
+    - text
+id: node.endorsement_areas.body
+field_name: body
+entity_type: node
+bundle: endorsement_areas
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

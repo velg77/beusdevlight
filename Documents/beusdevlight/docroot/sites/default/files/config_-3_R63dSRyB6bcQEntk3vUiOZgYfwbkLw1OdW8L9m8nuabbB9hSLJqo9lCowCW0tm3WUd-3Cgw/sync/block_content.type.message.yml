@@ -1,0 +1,8 @@
+uuid: bfd4fee3-8ede-4734-9624-d72319094012
+langcode: en
+status: true
+dependencies: {  }
+id: message
+label: Message
+revision: 1
+description: "A block consist of Message Paragraph type and is used for message from dean\t\r\n"

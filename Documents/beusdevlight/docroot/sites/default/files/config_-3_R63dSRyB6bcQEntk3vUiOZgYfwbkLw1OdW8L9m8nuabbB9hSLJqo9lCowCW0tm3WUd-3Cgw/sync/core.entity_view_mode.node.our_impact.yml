@@ -1,0 +1,14 @@
+uuid: 72796b83-a2b5-4122-96bc-7ac3b9ef9ff1
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+id: node.our_impact
+label: Featured
+targetEntityType: node
+cache: true

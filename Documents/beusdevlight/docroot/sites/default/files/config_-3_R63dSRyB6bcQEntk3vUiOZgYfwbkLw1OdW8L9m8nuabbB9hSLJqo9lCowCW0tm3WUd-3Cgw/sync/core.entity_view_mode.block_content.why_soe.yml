@@ -1,0 +1,14 @@
+uuid: 42f64500-7bdc-47f0-84cd-89be2994fe55
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: block_content.why_soe
+label: 'Why SOE, Ways to Give, Grants, Forms & Guidelines'
+targetEntityType: block_content
+cache: true

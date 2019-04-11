@@ -1,0 +1,20 @@
+uuid: 2f921c88-de67-46e7-8b54-d46c25f0aee6
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_application_process_catego
+field_name: field_application_process_catego
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

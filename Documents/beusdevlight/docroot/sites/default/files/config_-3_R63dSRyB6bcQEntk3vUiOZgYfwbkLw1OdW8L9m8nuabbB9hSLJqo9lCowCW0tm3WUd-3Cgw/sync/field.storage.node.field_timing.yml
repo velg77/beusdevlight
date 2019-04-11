@@ -1,0 +1,19 @@
+uuid: 7843de63-34c4-49d9-a624-841ba1bc6e5c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - text
+id: node.field_timing
+field_name: field_timing
+entity_type: node
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

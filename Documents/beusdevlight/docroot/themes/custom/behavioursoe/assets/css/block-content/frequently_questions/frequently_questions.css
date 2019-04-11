@@ -1,0 +1,19 @@
+.block-content--view-mode-frequently-questions .field--type-entity-reference-revisions {
+  text-align: center; }
+  .block-content--view-mode-frequently-questions .field--type-entity-reference-revisions .field--name-field-cta a {
+    line-height: 28px;
+    font-size: 0.889em;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    border-radius: 30px;
+    font-family: "Avenir-Medium", sans-serif;
+    white-space: initial;
+    border-bottom: 0;
+    color: #fff;
+    border: 1.5px solid #85aad4;
+    background: #0d57aa;
+    padding: 5px 30px; }
+    .block-content--view-mode-frequently-questions .field--type-entity-reference-revisions .field--name-field-cta a:hover {
+      color: #0d57aa;
+      background: #fff; }

@@ -1,0 +1,21 @@
+uuid: 3f09d592-b5a7-47e6-ada1-88d69f5b643a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_text
+    - node.type.news
+  module:
+    - text
+id: node.news.field_lead_text
+field_name: field_lead_text
+entity_type: node
+bundle: news
+label: 'Lead text'
+description: 'Opening Paragraph / Summary'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,14 @@
+uuid: e3daa185-865e-46b8-8c9d-9f912efd6465
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.courses_creator
+  module:
+    - user
+id: user_add_role_action.courses_creator
+label: 'Add the Courses creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: courses_creator

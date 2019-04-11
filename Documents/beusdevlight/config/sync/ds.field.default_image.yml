@@ -1,0 +1,11 @@
+id: default_image
+label: 'Default Image'
+ui_limit: ''
+properties:
+  content:
+    value: '<a href="[node:url]" title="[node:title]" class="defaultimage">[node:title]</a>'
+    format: php_filter
+type: token
+type_label: 'Token field'
+entities:
+  node: node

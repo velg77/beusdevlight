@@ -1,0 +1,28 @@
+buttons_size: 21
+additional_html: ''
+additional_css: ''
+additional_js: 'a2a_config.exclude_services = ["email", "pinterest", "whatsapp","google_gmail", "pocket", "mix","reddit", "telegram", "tumblr","aol_mail", "amazon_wish_list", "balatarin","bitty_browser", "blinklist", "blogger","bibsonomy", "blogmarks", "box_net","buffer", "citeulike", "copy_link", "design_float", "diaspora", "digg", "diary_ru","diigo", "douban", "care2_news", "draugiem" ,"dzone", "evernote", "facebook_messenger", "bookmarks_fr", "fark", "flipboard", "folkd", "google_bookmarks", "google_classroom", "google_plus", "instapaper", "houzz", "kakao", "known", "kik", "line", "kindle_it", "livejournal", "hacker_news", "mastodon", "mail_ru","mendeley", "hatena", "mixi", "mewe", "meneame", "myspace", "netvouz", "odnoklassniki", "outlook_com", "papaly", "pinboard", "plurk", "print", "printfriendly", "protopage_bookmarks", "pusha", "qzone", "rediff", "refind", "renren", "sina_weibo", "sitejot", "skype", "slashdot", "sms", "stocktwits", "svejo", "threema", "tuenti", "trello", "twiddla", "typepad_post", "symbaloo_bookmarks", "viber", "viadeo", "vk", "wanelo", "wechat", "wordpress", "xing", "wykop", "yahoo_mail", "yoolink", "yummly"];'
+universal_button: custom
+custom_universal_button: /sites/default/files/shareicon.png
+universal_button_placement: before
+no_3p: false
+entities:
+  media: 0
+  node: 1
+  comment: 1
+  block_content: 0
+  consumer: 0
+  contact_message: 0
+  content_moderation_state: 0
+  crop: 0
+  file: 0
+  search_api_task: 0
+  shortcut: 0
+  oauth2_token: 0
+  taxonomy_term: 0
+  user: 0
+  menu_link_content: 0
+  paragraph: 0
+  webform_submission: 0
+_core:
+  default_config_hash: 9YPlBuinIKLe5jVEf-aIhZvKFn77i18yD4CrNR0BbVQ

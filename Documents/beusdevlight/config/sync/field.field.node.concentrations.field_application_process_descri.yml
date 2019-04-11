@@ -1,0 +1,32 @@
+uuid: cd9d2393-1e6b-4af3-a27c-03e68131afd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_application_process_descri
+    - node.type.concentrations
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    limited_text_styling: limited_text_styling
+    php_filter: '0'
+    rich_text: '0'
+    plain_text: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.concentrations.field_application_process_descri
+field_name: field_application_process_descri
+entity_type: node
+bundle: concentrations
+label: 'Application Process Description'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

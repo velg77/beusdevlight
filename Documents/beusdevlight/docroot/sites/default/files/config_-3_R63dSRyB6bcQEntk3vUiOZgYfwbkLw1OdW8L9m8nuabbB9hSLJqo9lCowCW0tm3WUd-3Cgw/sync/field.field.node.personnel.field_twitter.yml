@@ -1,0 +1,23 @@
+uuid: 57eb6da0-b0d5-480d-a806-67c339232ed9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_twitter
+    - node.type.personnel
+  module:
+    - link
+id: node.personnel.field_twitter
+field_name: field_twitter
+entity_type: node
+bundle: personnel
+label: Twitter
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

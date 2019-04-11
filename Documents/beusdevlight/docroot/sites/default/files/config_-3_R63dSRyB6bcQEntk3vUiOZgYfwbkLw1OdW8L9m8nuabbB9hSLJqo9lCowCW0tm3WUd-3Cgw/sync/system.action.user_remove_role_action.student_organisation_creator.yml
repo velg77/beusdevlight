@@ -1,0 +1,14 @@
+uuid: 4dc3044c-9621-4443-b9c3-20f43ea63ca0
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.student_organisation_creator
+  module:
+    - user
+id: user_remove_role_action.student_organisation_creator
+label: 'Remove the Student Organisation creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: student_organisation_creator

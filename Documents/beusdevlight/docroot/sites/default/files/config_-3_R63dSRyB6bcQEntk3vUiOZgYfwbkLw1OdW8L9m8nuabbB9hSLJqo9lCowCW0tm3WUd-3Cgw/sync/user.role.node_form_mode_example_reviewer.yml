@@ -1,0 +1,19 @@
+uuid: 21d7adb3-0b72-4c63-843e-93d40a4b1216
+langcode: en
+status: true
+dependencies: {  }
+id: node_form_mode_example_reviewer
+label: 'Node form mode example reviewer'
+weight: 35
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'delete any node_form_mode_example content'
+  - 'edit any node_form_mode_example content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'view any unpublished content'
+  - 'view latest version'

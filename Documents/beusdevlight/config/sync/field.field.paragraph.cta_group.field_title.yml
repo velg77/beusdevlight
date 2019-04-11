@@ -1,0 +1,25 @@
+uuid: b34cc449-c4be-4138-a323-e86aa48e8f25
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_title
+    - paragraphs.paragraphs_type.cta_group
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: paragraph.cta_group.field_title
+field_name: field_title
+entity_type: paragraph
+bundle: cta_group
+label: Title
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

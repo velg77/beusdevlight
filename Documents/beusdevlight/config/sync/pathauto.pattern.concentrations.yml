@@ -1,0 +1,22 @@
+uuid: da35bb84-8b98-4b08-a609-0265eab5cde9
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: concentrations
+label: Concentrations
+type: 'canonical_entities:node'
+pattern: 'concentration/[node:title]'
+selection_criteria:
+  c8e2a6dd-24a8-4a11-985d-088bf22a7bc4:
+    id: node_type
+    bundles:
+      concentrations: concentrations
+    negate: false
+    context_mapping:
+      node: node
+    uuid: c8e2a6dd-24a8-4a11-985d-088bf22a7bc4
+selection_logic: and
+weight: -5
+relationships: {  }

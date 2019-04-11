@@ -1,0 +1,39 @@
+uuid: 06fb2160-6681-42c1-90f2-e9b74af6c372
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.menu_link_content.main.field_image
+    - system.menu.main
+  module:
+    - link
+    - menu_item_extras
+id: menu_link_content.main.default
+targetEntityType: menu_link_content
+bundle: main
+mode: default
+content:
+  field_image:
+    weight: 1
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  view_mode:
+    type: menu_item_extras_view_mode_selector_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

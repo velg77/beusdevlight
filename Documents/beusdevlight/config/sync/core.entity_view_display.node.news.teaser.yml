@@ -1,0 +1,154 @@
+uuid: 12c4a6d6-5c86-4533-9c4a-7c9f65a9337f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.news.body
+    - field.field.node.news.field_author
+    - field.field.node.news.field_date_of_publication
+    - field.field.node.news.field_email
+    - field.field.node.news.field_first_name
+    - field.field.node.news.field_image
+    - field.field.node.news.field_lead_text
+    - field.field.node.news.field_media
+    - field.field.node.news.field_media_type
+    - field.field.node.news.field_name
+    - field.field.node.news.field_news_type
+    - field.field.node.news.field_personnel
+    - field.field.node.news.field_phone_number
+    - field.field.node.news.field_programs
+    - field.field.node.news.field_related_news
+    - field.field.node.news.field_show_manual_entry
+    - field.field.node.news.field_tags
+    - field.field.node.news.field_video_duration
+    - field.field.node.news.field_web
+    - image.style.md_landscape_2x
+    - node.type.news
+  module:
+    - datetime
+    - ds
+    - media
+    - panelizer
+    - smart_trim
+    - user
+third_party_settings:
+  ds:
+    layout:
+      id: layout_twocol
+      library: layout_discovery/twocol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      first:
+        - field_media_type
+        - 'dynamic_token_field:node-default_image'
+        - 'dynamic_token_field:node-news_video_icon'
+        - 'dynamic_token_field:node-news_video_duration'
+      second:
+        - field_tags
+        - field_date_of_publication
+        - node_title
+        - body
+    fields:
+      'dynamic_token_field:node-default_image':
+        plugin_id: 'dynamic_token_field:node-default_image'
+        weight: 1
+        label: hidden
+        formatter: default
+      'dynamic_token_field:node-news_video_duration':
+        plugin_id: 'dynamic_token_field:node-news_video_duration'
+        weight: 3
+        label: hidden
+        formatter: default
+      'dynamic_token_field:node-news_video_icon':
+        plugin_id: 'dynamic_token_field:node-news_video_icon'
+        weight: 2
+        label: hidden
+        formatter: default
+      node_title:
+        plugin_id: node_title
+        weight: 6
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h3
+          class: ''
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.news.teaser
+targetEntityType: node
+bundle: news
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: smart_trim
+    weight: 7
+    settings:
+      trim_length: 150
+      trim_type: chars
+      trim_suffix: ''
+      wrap_class: trimmed
+      more_text: More
+      more_class: more-link
+      summary_handler: full
+      trim_options:
+        text: true
+        trim_zero: false
+      wrap_output: false
+      more_link: false
+    third_party_settings: {  }
+    region: second
+  field_date_of_publication:
+    type: datetime_custom
+    weight: 5
+    region: second
+    label: hidden
+    settings:
+      timezone_override: ''
+      date_format: 'F d, Y'
+    third_party_settings: {  }
+  field_media_type:
+    type: media_thumbnail
+    weight: 0
+    region: first
+    label: hidden
+    settings:
+      image_style: md_landscape_2x
+      image_link: content
+    third_party_settings: {  }
+  field_tags:
+    type: entity_reference_label
+    weight: 4
+    region: second
+    label: hidden
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: '1'
+hidden:
+  addtoany: true
+  content_moderation_control: true
+  field_author: true
+  field_email: true
+  field_first_name: true
+  field_image: true
+  field_lead_text: true
+  field_media: true
+  field_name: true
+  field_news_type: true
+  field_personnel: true
+  field_phone_number: true
+  field_programs: true
+  field_related_news: true
+  field_show_manual_entry: true
+  field_video_duration: true
+  field_web: true
+  links: true

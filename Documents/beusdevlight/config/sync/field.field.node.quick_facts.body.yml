@@ -1,0 +1,32 @@
+uuid: 7a92b3a4-010b-4b9a-aa17-d71de6fa319f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.quick_facts
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    rich_text: rich_text
+    limited_text_styling: '0'
+    plain_text: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.quick_facts.body
+field_name: body
+entity_type: node
+bundle: quick_facts
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

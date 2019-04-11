@@ -1,0 +1,117 @@
+uuid: ce1dfc8d-2396-417e-a202-f7a68600e2a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.hero_image_small
+    - field.field.paragraph.banner_slider.field_cta
+    - field.field.paragraph.banner_slider.field_cta_button_color
+    - field.field.paragraph.banner_slider.field_description
+    - field.field.paragraph.banner_slider.field_downloadable_file
+    - field.field.paragraph.banner_slider.field_heading_style
+    - field.field.paragraph.banner_slider.field_image
+    - field.field.paragraph.banner_slider.field_title
+    - field.field.paragraph.banner_slider.field_topic_label
+    - paragraphs.paragraphs_type.banner_slider
+  module:
+    - ds
+    - link
+    - smart_trim
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          left: {  }
+          right: {  }
+    regions:
+      left:
+        - field_image
+      right:
+        - field_topic_label
+        - 'dynamic_token_field:paragraph-banner_title'
+        - field_description
+        - field_cta
+        - field_downloadable_file
+    fields:
+      'dynamic_token_field:paragraph-banner_title':
+        plugin_id: 'dynamic_token_field:paragraph-banner_title'
+        weight: 2
+        label: hidden
+        formatter: default
+id: paragraph.banner_slider.hero_image_small
+targetEntityType: paragraph
+bundle: banner_slider
+mode: hero_image_small
+content:
+  field_cta:
+    type: link
+    weight: 4
+    region: right
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+  field_description:
+    type: text_trimmed
+    weight: 3
+    region: right
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+  field_downloadable_file:
+    type: entity_reference_label
+    weight: 5
+    region: right
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: hero_image_small
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: left
+  field_topic_label:
+    type: smart_trim
+    weight: 1
+    region: right
+    label: hidden
+    settings:
+      trim_length: 600
+      trim_type: chars
+      trim_suffix: ''
+      wrap_output: false
+      wrap_class: trimmed
+      more_link: false
+      more_class: more-link
+      more_text: More
+      summary_handler: full
+      trim_options: {  }
+    third_party_settings: {  }
+hidden:
+  field_cta_button_color: true
+  field_heading_style: true
+  field_title: true

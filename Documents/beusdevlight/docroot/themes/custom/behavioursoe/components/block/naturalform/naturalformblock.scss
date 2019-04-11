@@ -1,0 +1,118 @@
+.block-naturalformblock-block,
+.block-admissinsnaturalformblock-block {
+    text-align: center;
+
+    form {
+        .block-title {
+            color: #ffffff;
+
+        }
+
+        p {
+            font-size: 1.111em;
+            font-family: 'OpenSans', sans-serif;
+            line-height: 28px;
+            letter-spacing: 0;
+            color: #ffffff;
+        }
+        div {           
+            label {
+                font-size: 2.000em;
+                font-family: 'Avenir-Light', sans-serif;
+                letter-spacing: 0.25px;
+                color: #ffffff;
+            }
+
+            .chosen-container {
+                width: auto !important;
+
+                a.chosen-single {
+                    background: no-repeat;
+                    border: none;
+                    border-bottom: 2px solid #fff;
+                    box-shadow: none;
+                    color: #fff;
+                    font-family: 'Avenir-Heavy', sans-serif;
+                    font-size: 2.000em;
+                    margin-bottom: 5px;
+                    letter-spacing: 0.5px;
+                    height: 33px;
+                    width: fit-content;
+                    border-radius: 0;
+
+                    div {
+                        b {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            background: url(../../../../assets/images/dropdown-arrow.png) no-repeat 0px 2px !important;
+                            background-position: 0px -29px !important;
+                            background-size: 16px 50px !important;
+                        }
+                    }
+                }
+
+                .chosen-drop {
+                    width: 100%;
+
+                    .chosen-search {
+                        display: none;
+                    }
+
+                    ul {
+                        padding: 10px;
+
+                        li {
+                            font-family: 'Avenir-Heavy', sans-serif;
+                            font-size: 1.444em;
+                            line-height: 24px;
+                            letter-spacing: 0.36px;
+                            color: #0d57aa;
+                            text-align: left;
+
+                            &.highlighted {
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+            .chosen-container-active.chosen-with-drop{
+                .chosen-single{
+                    div{
+                        b {
+                            background-position: 0px 9px !important;
+                        }
+                    } 
+                } 
+            }
+        }
+        .form-item {
+            margin: 0 0 50px;
+        }
+        #child2_chosen,
+        #child3_chosen {
+            pointer-events: none;
+        }
+
+        .form-submit {
+            padding: 8px 47px;
+            font-family: 'Avenir-Medium', sans-serif;
+        }
+        #edit-submit-label{
+            pointer-events: none;
+        }
+    }
+}
+
+// @media (min-width: 768px) {
+
+//     .block-naturalformblock-block,
+//     .block-admissinsnaturalformblock-block {
+//         form {
+//             input {
+//                 margin-top: 18px;
+//             }
+//         }
+//     }
+// }

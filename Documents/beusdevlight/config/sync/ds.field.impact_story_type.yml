@@ -1,0 +1,11 @@
+id: impact_story_type
+label: 'Impact Story Type'
+ui_limit: ''
+properties:
+  content:
+    value: "<table data-striping=\"1\">\r\n\t<tbody>\r\n\t\t<tr data-tt-id=\"token-node--field-media\" data-tt-parent-id=\"token-node\" id=\"token-node--field-media\">\r\n\t\t\t<td><a href=\"javascript:void(0);\" title=\"Insert this token into your form\">[node:field_media]</a></td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n"
+    format: rich_text
+type: token
+type_label: 'Token field'
+entities:
+  node: node

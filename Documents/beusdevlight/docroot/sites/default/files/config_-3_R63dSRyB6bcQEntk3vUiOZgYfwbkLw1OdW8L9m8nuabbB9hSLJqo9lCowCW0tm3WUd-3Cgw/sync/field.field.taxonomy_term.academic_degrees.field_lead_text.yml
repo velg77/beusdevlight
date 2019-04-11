@@ -1,0 +1,21 @@
+uuid: 184653c8-b8da-4ed9-b787-8472cf97c10c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_lead_text
+    - taxonomy.vocabulary.academic_degrees
+  module:
+    - text
+id: taxonomy_term.academic_degrees.field_lead_text
+field_name: field_lead_text
+entity_type: taxonomy_term
+bundle: academic_degrees
+label: 'Lead Text'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

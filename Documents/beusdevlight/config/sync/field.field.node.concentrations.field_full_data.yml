@@ -1,0 +1,32 @@
+uuid: f6de7d90-a459-4421-a20f-543389c0c618
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_full_data
+    - node.type.concentrations
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    limited_text_styling: limited_text_styling
+    php_filter: '0'
+    rich_text: '0'
+    plain_text: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.concentrations.field_full_data
+field_name: field_full_data
+entity_type: node
+bundle: concentrations
+label: 'Deadline Description'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

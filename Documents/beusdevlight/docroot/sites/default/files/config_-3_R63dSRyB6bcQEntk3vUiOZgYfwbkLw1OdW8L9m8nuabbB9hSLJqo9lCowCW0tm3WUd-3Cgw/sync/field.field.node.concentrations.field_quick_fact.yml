@@ -1,0 +1,28 @@
+uuid: 9e468ee2-259a-4807-ab82-a6433cb6fe07
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_quick_fact
+    - node.type.concentrations
+    - node.type.quick_facts
+id: node.concentrations.field_quick_fact
+field_name: field_quick_fact
+entity_type: node
+bundle: concentrations
+label: 'Quick Facts'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      quick_facts: quick_facts
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

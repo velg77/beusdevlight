@@ -1,0 +1,76 @@
+uuid: 011aaf74-c567-4bd6-bc74-52a7f3dfe468
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.careers.body
+    - field.field.node.careers.field_full_data
+    - field.field.node.careers.field_graduate
+    - field.field.node.careers.field_graduates
+    - node.type.careers
+  module:
+    - ds
+    - entity_reference_revisions
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: ds_1col
+      library: null
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          ds_content: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          ds_content: {  }
+    regions:
+      ds_content:
+        - field_graduates
+        - field_graduate
+        - field_full_data
+id: node.careers.teaser
+targetEntityType: node
+bundle: careers
+mode: teaser
+content:
+  field_full_data:
+    type: text_default
+    weight: 2
+    region: ds_content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_graduate:
+    type: text_default
+    weight: 1
+    region: ds_content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_graduates:
+    type: entity_reference_revisions_entity_view
+    weight: 0
+    region: ds_content
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  body: true
+  links: true

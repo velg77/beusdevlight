@@ -1,0 +1,175 @@
+// Css3 Mixins
+@import "../../base/variables";
+
+.node-form {
+  fieldset {
+    border: 0;
+    padding: 0;
+    legend {
+      font-family: 'Open Sans Bold', sans-serif;
+      font-weight: 600;
+      padding: 0;
+    }
+  }
+  .fieldset-wrapper {
+    padding: 10px 0 0;
+    letter-spacing: -.31em;
+    text-rendering: optimizespeed;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    .form-wrapper {
+      letter-spacing: 0.01em;
+      width: 100%;
+      fieldset {
+        padding: 0;
+        width: 100%;
+        margin: 0;
+        legend {
+          font-size: 0.667em;
+          font-family: 'Open Sans SemiBold', sans-serif;
+        }
+      }
+      .fieldset-wrapper {
+        letter-spacing: 0.01em;
+        display: block;
+        margin: 0;
+      }
+      &.filter-wrapper {
+        display: none;
+      }
+    }
+    .js-form-type-radio {
+      label {
+        display: inline;
+        margin: 0;
+      }
+    }
+    .field--type-datetime {
+      .fieldset-wrapper {
+        margin: 0 -10px;
+        letter-spacing: 0.01em;
+        display: block;
+        &:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+        .form-item {
+          float: left;
+          width: 30%;
+          padding: 0 10px;
+          &:nth-child(3n+1) {
+            clear: both;
+          }
+          &:nth-child(3n) {
+            width: 40%;
+          }
+        }
+      }
+      div.chosen-container-single .chosen-single {
+        line-height: 57px;
+        height: 59px;
+        background: #fff;
+        font-size: 18px;
+        div b {
+          background-position: 0px 19px;
+        }
+      }
+    }
+    .field--widget-entity-browser-entity-reference {
+      summary {
+        font-size: 0.667em;
+        font-family: 'Open Sans SemiBold', sans-serif;
+        display: block;
+        margin: 0 0 5px;
+      }
+      iframe {
+        z-index: 1;
+      }
+      .form-wrapper {
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+        & > details {
+          display: none;
+        }
+      }
+    }
+  }
+  .form-item {
+    label {
+      display: block;
+      margin: 0 0 5px;
+      .field-edit-link {
+        display: none;
+      }
+    }
+    .form-text,  .form-email, .form-tel {
+      width: 100%;
+      border: 1px solid #979797;
+      border-radius: 5px;
+      display: block;
+      font-size: 18px;
+      max-width: 100%;
+      padding: 16px;
+      &:focus, &:hover {
+        border-color: #0D57AA;
+      }
+    }
+    .form-textarea {
+      width: 100%;
+      border: 1px solid #979797;
+      font-size: 18px;
+      border-radius: 5px;
+      max-width: 100%;
+      min-width: 100%;
+      padding: 16px;
+      &:focus, &:hover {
+        border-color: #0D57AA;
+      }
+    }
+    .field--name-field-map-location {
+      .form-textarea {
+        height: 59px;
+        min-height: 59px;
+      }
+    }
+  }
+  .form-actions {
+    margin: 0;
+    text-align: right;
+    .form-submit {
+      @include button_medium();
+      @include site-color-yellowbutton();
+      color: #0d57aa;
+      padding: 5px 45px;
+    }
+  }
+  .js-form-type-vertical-tabs {
+    display: none;
+  }
+}
+@media (min-width: 768px) {
+  .node-form {
+    .fieldset-wrapper {
+      margin-left: -15px;
+      margin-right: -15px;
+      .form-wrapper {
+        padding-left: 15px;
+        padding-right: 15px;
+        width: 50%;
+      }
+      .field--name-field-web, .field--name-body, .field--name-field-media-type {
+        width: 100%;
+      }
+    }
+  }
+}

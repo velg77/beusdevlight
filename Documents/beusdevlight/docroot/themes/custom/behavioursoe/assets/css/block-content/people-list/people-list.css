@@ -1,0 +1,123 @@
+.block-content--type-people .field--name-field-personnel.field__items,
+.block-content--type-people .views-row {
+  text-align: center; }
+  .block-content--type-people .field--name-field-personnel.field__items > .field__item,
+  .block-content--type-people .field--name-field-personnel.field__items .node--type-personnel,
+  .block-content--type-people .views-row > .field__item,
+  .block-content--type-people .views-row .node--type-personnel {
+    display: block;
+    margin-top: 15px; }
+    .block-content--type-people .field--name-field-personnel.field__items > .field__item .group-left,
+    .block-content--type-people .field--name-field-personnel.field__items .node--type-personnel .group-left,
+    .block-content--type-people .views-row > .field__item .group-left,
+    .block-content--type-people .views-row .node--type-personnel .group-left {
+      position: relative; }
+      .block-content--type-people .field--name-field-personnel.field__items > .field__item .group-left > .field__item,
+      .block-content--type-people .field--name-field-personnel.field__items .node--type-personnel .group-left > .field__item,
+      .block-content--type-people .views-row > .field__item .group-left > .field__item,
+      .block-content--type-people .views-row .node--type-personnel .group-left > .field__item {
+        width: 100% !important; }
+      .block-content--type-people .field--name-field-personnel.field__items > .field__item .group-left .field--name-field-position,
+      .block-content--type-people .field--name-field-personnel.field__items .node--type-personnel .group-left .field--name-field-position,
+      .block-content--type-people .views-row > .field__item .group-left .field--name-field-position,
+      .block-content--type-people .views-row .node--type-personnel .group-left .field--name-field-position {
+        position: absolute;
+        margin-left: 0px;
+        bottom: 0px;
+        width: 100%;
+        background: rgba(0, 39, 76, 0.8);
+        color: #fff;
+        padding: 5px 0 3px 0;
+        font-size: 0.778rem;
+        text-align: center; }
+        .block-content--type-people .field--name-field-personnel.field__items > .field__item .group-left .field--name-field-position > .field__item,
+        .block-content--type-people .field--name-field-personnel.field__items .node--type-personnel .group-left .field--name-field-position > .field__item,
+        .block-content--type-people .views-row > .field__item .group-left .field--name-field-position > .field__item,
+        .block-content--type-people .views-row .node--type-personnel .group-left .field--name-field-position > .field__item {
+          width: 100% !important;
+          padding: 0;
+          margin-top: 0; }
+    .block-content--type-people .field--name-field-personnel.field__items > .field__item .field--name-node-title,
+    .block-content--type-people .field--name-field-personnel.field__items .node--type-personnel .field--name-node-title,
+    .block-content--type-people .views-row > .field__item .field--name-node-title,
+    .block-content--type-people .views-row .node--type-personnel .field--name-node-title {
+      font-family: 'Avenir-Medium', sans-serif;
+      font-size: 1.111em;
+      line-height: 30px;
+      letter-spacing: 0;
+      color: #0d57aa;
+      text-align: center;
+      display: block;
+      margin: 45px 0 3px 0; }
+      .block-content--type-people .field--name-field-personnel.field__items > .field__item .field--name-node-title h3,
+      .block-content--type-people .field--name-field-personnel.field__items .node--type-personnel .field--name-node-title h3,
+      .block-content--type-people .views-row > .field__item .field--name-node-title h3,
+      .block-content--type-people .views-row .node--type-personnel .field--name-node-title h3 {
+        font-size: 1rem; }
+    .block-content--type-people .field--name-field-personnel.field__items > .field__item .field--name-field-email,
+    .block-content--type-people .field--name-field-personnel.field__items .node--type-personnel .field--name-field-email,
+    .block-content--type-people .views-row > .field__item .field--name-field-email,
+    .block-content--type-people .views-row .node--type-personnel .field--name-field-email {
+      font-size: 0.889em;
+      line-height: 24px;
+      letter-spacing: 0;
+      color: #0d57aa;
+      text-align: center;
+      display: block;
+      margin: 5px 0; }
+    .block-content--type-people .field--name-field-personnel.field__items > .field__item .field--name-field-phone-number,
+    .block-content--type-people .field--name-field-personnel.field__items .node--type-personnel .field--name-field-phone-number,
+    .block-content--type-people .views-row > .field__item .field--name-field-phone-number,
+    .block-content--type-people .views-row .node--type-personnel .field--name-field-phone-number {
+      font-size: 0.889em;
+      line-height: 24px;
+      letter-spacing: 0;
+      text-align: center;
+      display: block;
+      margin: 5px 0; }
+      .block-content--type-people .field--name-field-personnel.field__items > .field__item .field--name-field-phone-number a,
+      .block-content--type-people .field--name-field-personnel.field__items .node--type-personnel .field--name-field-phone-number a,
+      .block-content--type-people .views-row > .field__item .field--name-field-phone-number a,
+      .block-content--type-people .views-row .node--type-personnel .field--name-field-phone-number a {
+        color: #555555 !important; }
+
+.block-content--type-people .field--name-field-title {
+  font-family: 'Avenir-Medium', sans-serif;
+  font-size: 1.111em;
+  text-align: center;
+  letter-spacing: -0.21px;
+  border-bottom: 4px solid #ffcb05;
+  padding-bottom: 13px; }
+
+@media (min-width: 568px) {
+  .block-content--type-people .field--name-field-personnel.field__items {
+    margin: 0 -15px;
+    letter-spacing: -0.31em; }
+    .block-content--type-people .field--name-field-personnel.field__items > .field__item {
+      display: inline-block;
+      width: 50%;
+      padding: 0 15px;
+      letter-spacing: 0;
+      vertical-align: top; }
+      .block-content--type-people .field--name-field-personnel.field__items > .field__item .group-left > .field__item {
+        width: 100% !important; } }
+
+@media (min-width: 768px) {
+  .block-content--type-people .field--name-field-personnel.field__items > .field__item {
+    width: 25%; }
+    .block-content--type-people .field--name-field-personnel.field__items > .field__item .group-left > .field__item {
+      width: 100% !important; }
+    .block-content--type-people .field--name-field-personnel.field__items > .field__item .field--name-node-title h3 {
+      font-size: 0.88rem !important; } }
+
+@media (min-width: 1024px) {
+  .block-content--type-people .field--name-field-personnel.field__items > .field__item .group-left > .field__item,
+  .block-content--type-people .field--name-field-personnel.field__items .node--type-personnel .group-left > .field__item,
+  .block-content--type-people .views-row > .field__item .group-left > .field__item,
+  .block-content--type-people .views-row .node--type-personnel .group-left > .field__item {
+    width: 100% !important; }
+  .block-content--type-people .field--name-field-personnel.field__items > .field__item .field--name-node-title h3,
+  .block-content--type-people .field--name-field-personnel.field__items .node--type-personnel .field--name-node-title h3,
+  .block-content--type-people .views-row > .field__item .field--name-node-title h3,
+  .block-content--type-people .views-row .node--type-personnel .field--name-node-title h3 {
+    font-size: 1.111em !important; } }

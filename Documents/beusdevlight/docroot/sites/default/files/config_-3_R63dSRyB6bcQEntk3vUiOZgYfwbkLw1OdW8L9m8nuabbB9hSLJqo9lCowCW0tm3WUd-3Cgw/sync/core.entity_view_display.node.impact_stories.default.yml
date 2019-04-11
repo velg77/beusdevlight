@@ -1,0 +1,118 @@
+uuid: 29998a76-9d1d-47d3-b9f3-441c79929e92
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.impact_stories.body
+    - field.field.node.impact_stories.field_author
+    - field.field.node.impact_stories.field_date_of_publication
+    - field.field.node.impact_stories.field_image_video_caption
+    - field.field.node.impact_stories.field_impact_story_type
+    - field.field.node.impact_stories.field_lead_text
+    - field.field.node.impact_stories.field_media
+    - field.field.node.impact_stories.field_media_type
+    - field.field.node.impact_stories.field_news_type
+    - field.field.node.impact_stories.field_personnel
+    - field.field.node.impact_stories.field_programs
+    - field.field.node.impact_stories.field_related_impact_stories
+    - field.field.node.impact_stories.field_show_manual_entry
+    - field.field.node.impact_stories.field_tags
+    - field.field.node.impact_stories.panelizer
+    - node.type.impact_stories
+  module:
+    - datetime
+    - ds
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+  ds:
+    layout:
+      id: layout_onecol
+      library: layout_discovery/onecol
+      disable_css: false
+      entity_classes: all_classes
+      settings: {  }
+    regions:
+      content:
+        - field_date_of_publication
+        - field_author
+        - field_lead_text
+        - body
+        - field_tags
+        - field_personnel
+id: node.impact_stories.default
+targetEntityType: node
+bundle: impact_stories
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 3
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_author:
+    type: string
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  field_date_of_publication:
+    type: datetime_time_ago
+    weight: 0
+    region: content
+    label: above
+    settings:
+      future_format: '@interval hence'
+      past_format: '@interval ago'
+      granularity: 2
+    third_party_settings: {  }
+  field_lead_text:
+    type: text_default
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_personnel:
+    type: entity_reference_entity_view
+    weight: 5
+    region: content
+    label: above
+    settings:
+      view_mode: feature_article
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+  field_tags:
+    type: entity_reference_label
+    weight: 4
+    region: content
+    label: above
+    settings:
+      link: false
+    third_party_settings:
+      ds:
+        ds_limit: ''
+hidden:
+  addtoany: true
+  field_image_video_caption: true
+  field_impact_story_type: true
+  field_media: true
+  field_media_type: true
+  field_news_type: true
+  field_programs: true
+  field_related_impact_stories: true
+  field_show_manual_entry: true
+  links: true
+  panelizer: true

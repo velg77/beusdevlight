@@ -1,0 +1,28 @@
+uuid: 6c8370d6-d5da-44dd-85cb-f5bb4b6fa1ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_submit
+    - taxonomy.vocabulary.services
+  module:
+    - link
+id: taxonomy_term.services.field_submit
+field_name: field_submit
+entity_type: taxonomy_term
+bundle: services
+label: Submit
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:#'
+    title: 'Submit Request'
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 17
+  title: 1
+field_type: link

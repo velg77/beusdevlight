@@ -1,0 +1,124 @@
+
+  @import "../../base/_variables";
+  .endor-bdy{
+
+  .view-filters{
+    display:none;
+  }
+  .group-left{
+    padding-left: 15px;
+    & > .field-item{
+      padding: 10px 0;
+      position: relative;
+      font-size: 0.889rem;
+      cursor: pointer;
+      &:hover{
+        color:#000;
+      }
+      &::before{
+        content: '|';
+        color: #dedede;
+        background: #dedede;
+        position: absolute;
+        left: -14px;
+        top: 15px;
+        font-size: 12px;
+        width: 4px;
+      }
+      &.active{
+        font-weight: bold;
+        color:$site-color-cntblue;
+        &::before{
+          color:$site-color-cntblue;
+          background: $site-color-cntblue;
+        }
+      }
+    }
+    .block-title{
+      display: block;
+    }
+  }
+  .group-right{
+  .prsnl-crs{
+     border:none;
+     table,tr,th,td{
+      border:none;
+      padding-left: 30px;
+    }
+    th{
+      border-bottom: 1px solid #d8d8d8;
+    }
+    thead{
+      border-top: 4px solid #ffcb05;
+    }
+    tr:nth-of-type(even){
+     background: #f1f1f1;
+    }
+    td{
+      font-size:20px;
+    }
+    td:first-child{
+      width: 220px;
+      p{
+        display: inline-block;
+        line-height: 18px;
+        margin-bottom: 15px;
+      }
+    }
+    td:last-child{
+      font-size: 0.778rem;
+      p{
+        line-height: 3.4;
+      }
+    }
+    tbody{
+      p{
+        line-height: 2.4;
+        color: #434343;
+        font-family: 'Avenir-Light', sans-serif;
+      }
+    }
+    sup{
+      font-size:0.778rem;
+    }
+  }
+  .block-title{
+    display: none;
+  }
+   }
+
+   caption{
+    text-align: left;
+    font-size: 1.667rem;
+    color: #333;
+    font-family: 'Avenir-Black', sans-serif;
+    padding-bottom: 15px;
+   }
+.tab-hdr{
+  color:#333;
+}
+
+
+  }
+
+
+  @media(min-width: 768px){
+   .endor-bdy{
+    .group-left{
+      float: left;
+      width: 22%;
+      margin-top: 100px;
+      max-width: 325px;
+      .block-title{
+        display:  none;
+      }
+    }
+    .group-right{
+      float: right;
+      width: 74%;
+      .block-title{
+        display: block;
+      }
+    }
+  }
+  }

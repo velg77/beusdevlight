@@ -1,0 +1,35 @@
+uuid: eab6c8f0-2a4e-473c-b627-9207d20c21ef
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.media.media_library
+    - field.field.media.image.field_media_in_library
+    - field.field.media.image.image
+    - image.style.xsm_landscape
+    - media.type.image
+  module:
+    - image
+_core:
+  default_config_hash: VLDxfMVPTkd2xvOjFMCh3kWmaOYnd03zggFXuUXQVEY
+id: media.image.media_library
+targetEntityType: media
+bundle: image
+mode: media_library
+content:
+  image:
+    type: image
+    weight: 0
+    region: content
+    label: above
+    settings:
+      image_style: xsm_landscape
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  addtoany: true
+  created: true
+  field_media_in_library: true
+  name: true
+  thumbnail: true
+  uid: true

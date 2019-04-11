@@ -1,0 +1,61 @@
+uuid: 66233b3d-cf76-49eb-9857-da8d2204c800
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.search_index
+    - field.field.node.rooms.body
+    - field.field.node.rooms.field_360deg_image
+    - field.field.node.rooms.field_building_hours
+    - field.field.node.rooms.field_date_of_publication
+    - field.field.node.rooms.field_floor_plans
+    - field.field.node.rooms.field_key_pickup_information
+    - field.field.node.rooms.field_key_return_information
+    - field.field.node.rooms.field_lead_text
+    - field.field.node.rooms.field_map_location
+    - field.field.node.rooms.field_media_type
+    - field.field.node.rooms.field_room_amenities
+    - field.field.node.rooms.field_room_no
+    - field.field.node.rooms.field_room_technology
+    - field.field.node.rooms.field_seating_capacity
+    - field.field.node.rooms.field_seating_capacity_fx
+    - node.type.rooms
+  module:
+    - panelizer
+    - text
+    - user
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+id: node.rooms.search_index
+targetEntityType: node
+bundle: rooms
+mode: search_index
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  field_360deg_image: true
+  field_building_hours: true
+  field_date_of_publication: true
+  field_floor_plans: true
+  field_key_pickup_information: true
+  field_key_return_information: true
+  field_lead_text: true
+  field_map_location: true
+  field_media_type: true
+  field_room_amenities: true
+  field_room_no: true
+  field_room_technology: true
+  field_seating_capacity: true
+  field_seating_capacity_fx: true
+  links: true

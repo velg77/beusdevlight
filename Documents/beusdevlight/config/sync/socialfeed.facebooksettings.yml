@@ -1,0 +1,22 @@
+page_name: UniMity.Solutions
+app_id: '318442768871567'
+secret_key: 9c386158b9206326d6fdcb2fef573542
+user_token: EAAEhnzwesI8BACDQ69Iirl8iYHqamzx14n4tNgfv6y6lXwTGZCzQlnSf0OXN6TLHP0nDkrwk3S74sGQJ79TwfvrmuQ3izUZA1W7W4kZB0ZBmt1NClfYTGbY9GJ24ju31YqthtZAYWbAPZCfuwIp8BqlaCNdE3II1AZD
+page_permanent_token: ''
+no_feeds: 5
+all_types: true
+post_type: ''
+display_pic: false
+display_video: false
+trim_length: 120
+teaser_text: 'Read More'
+hashtag: true
+time_stamp: true
+time_format: d-M-Y
+_core:
+  default_config_hash: ZhNTf4xDv-EnuWETsfQXiexaGv1UvVZpUzngGRVaczA
+submit: 'Save configuration'
+form_build_id: form-k7i9NVL8N6hHeNhJUjp3qezyoGxaTB1k1HRlTnJLwNc
+form_token: fgDISVY3X-sspgPXjq1UNetUKoBOFh-WzHYc5JD3wGw
+form_id: facebook_settings_form
+op: 'Save configuration'

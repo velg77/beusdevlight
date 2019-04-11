@@ -1,0 +1,91 @@
+
+  //News listing pages Styles
+  @import "../../base/_variables";
+
+  .node--type-concentration-requirements{
+    .field--name-body {
+      font-size: 1.111em;
+      max-width: 770px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .field--name-field-sub-title{
+      text-align: center;
+      font-size: 1.111rem;
+      color: #333333;
+      font-family: 'Open Sans Bold',sans-serif;
+    }
+    .field--name-field-sub-value{
+        color:#1254a0;
+        text-align:center;
+        font-size: 2.778rem;
+        font-family: 'Avenir-Light',sans-serif;
+    }
+    .req-bdy{
+      border-top: 5px solid $site-color-yellow;
+      padding-top: 35px;
+      .group-left{
+        .field--name-field-sub-title{
+          text-align: left;
+          font-size: 2.778rem;
+          color: #1254a0;
+          font-family: 'Avenir-Light',sans-serif;
+          margin-bottom: 5px;
+        }
+        }
+        .group-right{
+         .field--name-field-full-data{
+           color: #333;
+           font-size: 1.111rem;
+           > p:first-child{
+             margin:0;
+           }
+         }
+        }
+       .field--name-field-title{
+        color:#333;
+        font-family: 'Avenir-Medium', sans-serif;
+        font-size: 1.111rem;
+        line-height: 1.556rem;
+       }
+    }
+  }
+  @media (min-width: 768px) {
+    .node--type-concentration-requirements{
+      .req-bdy{
+        .group-left{
+          float: left;
+          width: 27%;
+          max-width: 325px;
+          padding-right: 50px;
+          .field--name-field-sub-title{
+            margin-bottom: 30px;
+          }
+        }
+        .group-right{
+          float: right;
+          width: 73%;
+          padding-right: 65px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+
+    .node--type-concentration-requirements{
+      .req-bdy{
+        .group-left{
+          width:22%;
+        }
+        .group-right{
+          width:78%;
+          max-width: calc(100% - 300px);
+        }
+      }
+    }
+
+  }
+

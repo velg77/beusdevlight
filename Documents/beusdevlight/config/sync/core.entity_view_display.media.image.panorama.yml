@@ -1,0 +1,35 @@
+uuid: 2396fd9b-b894-41a6-bbaf-344f2608ef6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.panorama
+    - field.field.media.image.field_media_in_library
+    - field.field.media.image.image
+    - media.type.image
+  module:
+    - virtual_tour
+_core:
+  default_config_hash: VLDxfMVPTkd2xvOjFMCh3kWmaOYnd03zggFXuUXQVEY
+id: media.image.panorama
+targetEntityType: media
+bundle: image
+mode: panorama
+content:
+  image:
+    type: virtual_tour
+    weight: 0
+    label: hidden
+    settings:
+      virtual_tour_type: ''
+      virtual_tour_display_style: ''
+      virtual_tour_autoload: '1'
+    third_party_settings: {  }
+    region: content
+hidden:
+  addtoany: true
+  created: true
+  field_media_in_library: true
+  name: true
+  thumbnail: true
+  uid: true

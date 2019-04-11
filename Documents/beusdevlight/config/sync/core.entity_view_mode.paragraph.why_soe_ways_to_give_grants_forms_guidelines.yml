@@ -1,0 +1,14 @@
+uuid: 483af39f-df3a-418d-823c-d168cc576385
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - paragraphs
+third_party_settings:
+  lightning_core:
+    description: ''
+id: paragraph.why_soe_ways_to_give_grants_forms_guidelines
+label: 'Why SOE'
+targetEntityType: paragraph
+cache: true

@@ -1,0 +1,14 @@
+uuid: fb181a3a-0e54-457f-9b8b-f81e3004600c
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.offices_reviewer
+  module:
+    - user
+id: user_add_role_action.offices_reviewer
+label: 'Add the Offices reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: offices_reviewer

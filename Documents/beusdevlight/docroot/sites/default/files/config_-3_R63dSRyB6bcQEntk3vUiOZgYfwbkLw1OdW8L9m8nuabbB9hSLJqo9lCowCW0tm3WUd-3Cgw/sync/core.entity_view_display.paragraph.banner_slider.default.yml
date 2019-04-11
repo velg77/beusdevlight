@@ -1,0 +1,106 @@
+uuid: d8ded4ee-a79e-42e4-9e62-848aee6ec8a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.banner_slider.field_cta
+    - field.field.paragraph.banner_slider.field_cta_button_color
+    - field.field.paragraph.banner_slider.field_description
+    - field.field.paragraph.banner_slider.field_downloadable_file
+    - field.field.paragraph.banner_slider.field_heading_style
+    - field.field.paragraph.banner_slider.field_image
+    - field.field.paragraph.banner_slider.field_title
+    - field.field.paragraph.banner_slider.field_topic_label
+    - paragraphs.paragraphs_type.banner_slider
+  module:
+    - ds
+    - link
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          left: {  }
+          right: {  }
+    regions:
+      left:
+        - field_image
+      right:
+        - field_topic_label
+        - 'dynamic_token_field:paragraph-banner_title'
+        - field_description
+        - field_cta
+        - field_downloadable_file
+    fields:
+      'dynamic_token_field:paragraph-banner_title':
+        plugin_id: 'dynamic_token_field:paragraph-banner_title'
+        weight: 2
+        label: hidden
+        formatter: default
+id: paragraph.banner_slider.default
+targetEntityType: paragraph
+bundle: banner_slider
+mode: default
+content:
+  field_cta:
+    weight: 4
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: right
+  field_description:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: right
+  field_downloadable_file:
+    type: entity_reference_entity_view
+    weight: 5
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: right
+  field_image:
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: hero_image
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: left
+  field_topic_label:
+    type: string
+    weight: 1
+    region: right
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+hidden:
+  field_cta_button_color: true
+  field_heading_style: true
+  field_title: true

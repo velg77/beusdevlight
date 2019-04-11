@@ -1,0 +1,35 @@
+uuid: 847f76b2-0c2b-4e55-987c-f23db1eb7c46
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.admissions_based_natural_form.field_url_faq
+    - taxonomy.vocabulary.admissions_based_natural_form
+  module:
+    - link
+    - text
+id: taxonomy_term.admissions_based_natural_form.default
+targetEntityType: taxonomy_term
+bundle: admissions_based_natural_form
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_url_faq:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

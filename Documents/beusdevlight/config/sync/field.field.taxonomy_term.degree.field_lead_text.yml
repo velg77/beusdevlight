@@ -1,0 +1,26 @@
+uuid: 150cf076-458b-4926-bbce-4213ea22c5ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_lead_text
+    - taxonomy.vocabulary.degree
+  module:
+    - custom_add_another
+    - text
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: taxonomy_term.degree.field_lead_text
+field_name: field_lead_text
+entity_type: taxonomy_term
+bundle: degree
+label: 'Lead Text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

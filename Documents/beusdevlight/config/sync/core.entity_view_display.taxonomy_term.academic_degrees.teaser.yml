@@ -1,0 +1,112 @@
+uuid: 2ce4165b-8e18-4c84-a0cc-52c321a33e4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.teaser
+    - field.field.taxonomy_term.academic_degrees.field_featured_image
+    - field.field.taxonomy_term.academic_degrees.field_lead_text
+    - field.field.taxonomy_term.academic_degrees.panelizer
+    - image.style.sm_landscape_2x
+    - taxonomy.vocabulary.academic_degrees
+  module:
+    - ds
+    - media
+    - panelizer
+    - text
+third_party_settings:
+  panelizer:
+    enable: false
+    custom: false
+    allow: false
+    default: default
+    displays:
+      default:
+        blocks:
+          8c0ebd86-a978-42f4-8cfb-02d0092a07e3:
+            id: 'entity_field:taxonomy_term:description'
+            label: Description
+            provider: ctools_block
+            label_display: '0'
+            formatter:
+              label: hidden
+              type: text_default
+              settings: {  }
+              third_party_settings: {  }
+              weight: 0
+              region: content
+            context_mapping:
+              entity: '@panelizer.entity_context:entity'
+            region: content
+            weight: 0
+            uuid: 8c0ebd86-a978-42f4-8cfb-02d0092a07e3
+        id: panels_variant
+        label: Default
+        uuid: 7ca105f8-6cbc-4e0d-9391-d38ee3bb0ef5
+        weight: 0
+        layout: layout_onecol
+        layout_settings: {  }
+        page_title: '[term:name]'
+        storage_type: ''
+        storage_id: ''
+        builder: ipe
+        pattern: panelizer
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          left: {  }
+          right: {  }
+    regions:
+      left:
+        - field_featured_image
+      right:
+        - taxonomy_term_title
+        - field_lead_text
+    fields:
+      taxonomy_term_title:
+        plugin_id: taxonomy_term_title
+        weight: 1
+        label: hidden
+        formatter: default
+        settings:
+          link: true
+          wrapper: h3
+          class: ''
+id: taxonomy_term.academic_degrees.teaser
+targetEntityType: taxonomy_term
+bundle: academic_degrees
+mode: teaser
+content:
+  field_featured_image:
+    type: media_thumbnail
+    weight: 0
+    region: left
+    label: hidden
+    settings:
+      image_style: sm_landscape_2x
+      image_link: content
+    third_party_settings: {  }
+  field_lead_text:
+    type: text_trimmed
+    weight: 2
+    region: right
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+hidden:
+  description: true
+  panelizer: true

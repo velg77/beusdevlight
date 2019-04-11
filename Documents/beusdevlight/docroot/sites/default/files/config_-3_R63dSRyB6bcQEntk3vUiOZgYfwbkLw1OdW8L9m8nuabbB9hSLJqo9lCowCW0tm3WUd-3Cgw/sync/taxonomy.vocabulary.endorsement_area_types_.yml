@@ -1,0 +1,9 @@
+uuid: 418bd5b8-200f-48eb-ad0e-61e3c8b67ebb
+langcode: en
+status: true
+dependencies: {  }
+name: 'Endorsement Area Types'
+vid: endorsement_area_types_
+description: ''
+hierarchy: 0
+weight: 0

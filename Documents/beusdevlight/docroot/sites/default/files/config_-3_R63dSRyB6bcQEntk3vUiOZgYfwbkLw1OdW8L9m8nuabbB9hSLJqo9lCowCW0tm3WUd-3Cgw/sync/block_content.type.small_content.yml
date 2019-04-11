@@ -1,0 +1,8 @@
+uuid: abdd2af9-7531-4a94-a7ea-1896ad9f5f0b
+langcode: en
+status: true
+dependencies: {  }
+id: small_content
+label: 'Small Content'
+revision: 1
+description: ''

@@ -1,0 +1,14 @@
+uuid: a9fa6f2f-f341-48bc-9a4f-675887278a80
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.rooms_creator
+  module:
+    - user
+id: user_add_role_action.rooms_creator
+label: 'Add the Rooms creator role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: rooms_creator

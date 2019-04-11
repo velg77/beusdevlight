@@ -1,0 +1,22 @@
+uuid: e0da329b-26fb-4724-9446-2654ba2cdaa2
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.concentration_requirements
+id: node.concentration_requirements.promote
+field_name: promote
+entity_type: node
+bundle: concentration_requirements
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

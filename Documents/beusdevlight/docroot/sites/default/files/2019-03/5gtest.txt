@@ -1,0 +1,32 @@
+1) how to remove or move a file from knowledge management -if somebody wrongly posted in wrong place.
+2) IE 11 - knowledge management 
+3) Date format and data in milestones
+4) activities - if completed.... delay can be 
+5) edit option for %
+6) subactivities not been updated...(report)- not 100% complate and last update date < 7 days and subactivite completion date is less than current date.
+7) in subactivity - %age that should have been completed as of this week
+8) Susheela issue
+9) Email trigger
+10) Just all Roles
+
+
+
+Staging env
+backup
+Recovery
+Admin access
+Handover
+
+
+
+Issue management
+
+Dot can see only 3 cateogy (create)
+in general creator and owner pertaining 
+Creator can edit / owner can update status only in issue.
+PMepi, either they are creator or owner or any member is creator or owner.
+any member can create certain categroy for their internal issue management or certain catgory they can have to assign
+There are 2 category where gpi can creator.
+
+
+

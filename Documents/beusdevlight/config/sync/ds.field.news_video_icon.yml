@@ -1,0 +1,11 @@
+id: news_video_icon
+label: 'News Video Icon'
+ui_limit: ''
+properties:
+  content:
+    value: "<?php\r\n\r\nif(function_exists('ds_news_video_icon')) {\r\nprint ds_news_video_icon('[node:field_news_type:entity]','[node:url]','[node:field_video_duration]');\r\n}\r\n\r\n?>"
+    format: php_filter
+type: token
+type_label: 'Token field'
+entities:
+  node: node

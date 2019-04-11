@@ -1,0 +1,13 @@
+type: module
+name: Virtual Tour
+description: 'Provides an field formatter to Virtual Tour effect on an image.'
+package: Image
+# core: 8.x
+dependencies:
+  - image
+
+# Information added by Drupal.org packaging script on 2017-11-18
+version: '8.x-1.0-alpha1'
+core: '8.x'
+project: 'virtual_tour'
+datestamp: 1511003605

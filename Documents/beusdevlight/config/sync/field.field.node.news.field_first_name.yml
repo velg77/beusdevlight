@@ -1,0 +1,25 @@
+uuid: be4e8233-113b-415d-bc86-ec0ff915dd8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_first_name
+    - node.type.news
+  module:
+    - custom_add_another
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.news.field_first_name
+field_name: field_first_name
+entity_type: node
+bundle: news
+label: 'First Name'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

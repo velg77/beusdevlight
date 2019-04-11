@@ -1,0 +1,22 @@
+uuid: 292f85c3-b715-4778-ac2b-a212b64a81e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.impact_stories
+  module:
+    - text
+id: node.impact_stories.body
+field_name: body
+entity_type: node
+bundle: impact_stories
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

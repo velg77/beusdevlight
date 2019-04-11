@@ -1,0 +1,22 @@
+uuid: 1514c70c-16d0-4ed0-8369-c6f964cc06d7
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.student_organisation
+id: node.student_organisation.status
+field_name: status
+entity_type: node
+bundle: student_organisation
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

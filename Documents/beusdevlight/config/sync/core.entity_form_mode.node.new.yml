@@ -1,0 +1,14 @@
+uuid: fd44c757-9064-4376-83d4-128c71ac13d8
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+id: node.new
+label: New
+targetEntityType: node
+cache: true

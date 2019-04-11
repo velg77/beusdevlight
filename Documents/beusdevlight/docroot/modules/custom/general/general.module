@@ -1,0 +1,590 @@
+<?php
+
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\block\Entity\Block;
+use Drupal\Core\Session\AccountInterface;
+use Drupal\node\NodeInterface;
+use Drupal\Core\Access\AccessResult;
+use Drupal\views\ViewExecutable;
+use Drupal\views\Plugin\views\query\QueryPluginBase;
+use Drupal\Core\Ajax\AjaxResponse;
+use Drupal\field\FieldStorageConfigInterfac;
+use Drupal\editor\Entity\Editor;
+use Drupal\Core\Entity\EntityInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+
+
+/**
+ * Implements hook_block_access(). To Show/Hide Related News/Events/Impact Stories View Block.
+ */
+function general_block_access(Block $block, $operation, AccountInterface $account) 
+{
+
+  $node = \Drupal::routeMatch()->getParameter('node');
+  
+  $flag = FALSE;
+
+  if ($node instanceof NodeInterface) {
+    if ($node->hasField('field_show_manual_entry')) {
+      // Check show manual entry checkbox is turned off
+      if ($node->get('field_show_manual_entry')->value == 0) {
+        $flag = TRUE;
+      }
+    }
+  }
+
+  // // Given access if show manual entry checkbox is turned off.
+  if ($operation == 'view' && ( $block->getPluginId() == 'views_block:general-more_news_tags'
+      || $block->getPluginId() == 'views_block:general-more_events_tags'
+      || $block->getPluginId() == 'views_block:general-more_impact_stories_tags' ) ) {
+    return AccessResult::forbiddenIf($flag == FALSE)->addCacheableDependency($block);
+  }
+
+  return AccessResult::neutral();
+}
+
+/**
+ * Implements hook_views_query_alter(). To Show/Hide Related News/Events/Impact Stories View Block.
+ */
+function general_views_query_alter(ViewExecutable $view, QueryPluginBase $query) 
+{
+
+  //Hide Sticky news from the news listing
+  if ($view->id() == 'general_listing_blocks' && $view->current_display == 'block_1') {
+    //get the node id of latest created content
+    $querys = \Drupal::database()->query("SELECT node_field_data.nid AS nid
+    FROM
+    {node_field_data} node_field_data
+    LEFT JOIN {node__field_date_of_publication} publication_date on publication_date.entity_id = node_field_data.nid
+    WHERE (node_field_data.status = '1') AND (node_field_data.type IN ('news')) AND (node_field_data.sticky = '1')
+    ORDER BY publication_date.field_date_of_publication_value DESC
+    LIMIT 1 OFFSET 0");
+    $exnid = $querys->fetchField();
+
+    //Exclude that node id from the view result
+    foreach ($query->getWhere() as &$condition_group) {
+      foreach ($condition_group['conditions'] as $key => &$condition) {
+        //kint($condition_group['conditions']);
+        if ($condition[0] == 'nid'){
+          $condition[1] = $exnid;
+        }
+      }
+    }
+  }
+
+  //Hide Sticky news from the Dije Newsletter from listing
+
+  if ($view->id() == 'general_listing_blocks' && $view->current_display == 'block_19') {
+    //get the node id of latest created content
+    $querys = \Drupal::database()->query("SELECT node_field_data.nid AS nid
+    FROM
+    {node_field_data} node_field_data
+    LEFT JOIN {node__field_created_date} created_date on created_date.entity_id = 
+    node_field_data.nid
+    WHERE (node_field_data.status = '1') AND (node_field_data.type IN ('dije_newsletter')) AND (node_field_data.sticky = '1')
+    ORDER BY created_date.field_created_date_value DESC
+    LIMIT 1 OFFSET 0");
+    $exnid = $querys->fetchField();
+
+    //Exclude that node id from the view result
+    foreach ($query->getWhere() as &$condition_group) {
+      foreach ($condition_group['conditions'] as $key => &$condition) {
+        //kint($condition_group['conditions']);
+        if ($condition[0] == 'nid'){
+          $condition[1] = $exnid;
+        }
+      }
+    }
+  }
+}
+
+
+/**
+ *
+ * Implements hook_form_views_exposed_form_alter for views exposed form 
+ */
+function general_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) 
+{   
+
+  //Alter the form for add the markup fields for views popup filter
+  
+  if (isset($form['#id']) && ($form['#id'] == 'views-exposed-form-general-listing-blocks-block-10' || $form['#id'] == 'views-exposed-form-general-listing-blocks-block-1') || $form['#id'] == 'views-exposed-form-general-listing-blocks-block-7' || $form['#id'] == 'views-exposed-form-general-listing-blocks-block-2' || $form['#id'] == 'views-exposed-form-general-listing-blocks-block-14' || $form['#id'] == 'views-exposed-form-general-listing-blocks-block-15' || $form['#id'] == 'views-exposed-form-general-listing-blocks-block-16') {
+   
+    if (isset($form['field_tags'])) {                        
+      $form['field_tags']['#attributes'] = ['class' => ['topic-fldset']];
+    }
+    if (isset($form['field_news_type'])) {                        
+      $form['field_news_type']['#attributes'] = ['class' => ['type-fldset']];
+    }
+    $form['filterby'] = [
+      '#markup' => '<a href="#" id="filtby" class="element-invisible">Select options and filter</a><div id="filterheader"><div class="blkleft"><div class="filtby">Filter By</div>',
+      '#weight'=>-256,
+    ];
+    $form['selectall'] = [
+      '#markup' => '<a href="#selectall" class="selall">Select All</a>',
+      '#weight'=>-255,
+    ];
+    $form['clearall'] = [
+      '#markup' => '<a href="#clearall" class="clrall">Clear All</a></div>',
+      '#weight'=>-254,
+    ];
+    $form['frmsubmit'] = [
+      '#markup' => '<div class="filterblk"><a href="#filternow" class="filterbtn">Filter Now</a>',
+      '#weight'=>-253,
+    ];
+    $form['frmclose'] = [
+      '#markup' => '<a href="#close" class="close">&times;</a></div></div>',
+      '#weight'=>-252,
+    ]; 
+  } 
+
+  /*
+  * Alter the Contration Views exposed form to show only the filter option which have the node connection
+  *
+  */
+
+  if (isset($form['#id']) && ($form['#id'] == 'views-exposed-form-general-concentration-courses'))
+  {
+     $node = \Drupal::routeMatch()->getParameter('node');
+      //load current page node to get course data
+      if ($node instanceof \Drupal\node\NodeInterface) {
+        $ref_entity = $node->get('field_course')->referencedEntities();
+        foreach($ref_entity as $key => $refnid) {
+          if(!empty($refnid->get('field_academic_year'))){
+          foreach($refnid->get('field_academic_year')->referencedEntities() as $key => $termid) {         
+            $active_tid[$termid->id()] = $termid->label();                           
+          }         
+        }         
+
+        }      
+        $form['field_academic_year_target_id']['#default_value'] = key($active_tid);
+      $form['field_academic_year_target_id']['#options'] = $active_tid;
+    }
+  }
+
+  if (isset($form['#id']) && ($form['#id'] == 'views-exposed-form-general-endorsement-areas'))
+  {
+  	$node = \Drupal::routeMatch()->getParameter('node');
+    //kint($form);die;
+      //load current page node to get course data
+      if ($node instanceof \Drupal\node\NodeInterface) {
+        $ref_entity = $node->get('field_endorsement_')->referencedEntities();
+        foreach($ref_entity as $key => $refnid) {
+          if(!empty($refnid->get('field_endorsement_areas'))){
+          foreach($refnid->get('field_endorsement_areas')->referencedEntities() as $key => $termid) {         
+            $active_tid[$termid->id()] = $termid->label();                           
+          }         
+        }         
+
+        }      
+        //echo "<pre>";print_r($active_tid);exit;
+        
+      $form['field_endorsement_areas_target_id']['#default_value'] = key($active_tid);
+      $form['field_endorsement_areas_target_id']['#options'] = $active_tid;
+     
+    }
+    //kint($form);die;
+  }
+
+  
+}
+
+
+/**
+ * Implements hook_views_pre_view
+ *
+ */
+function general_views_pre_view(ViewExecutable $view, $display_id, array &$args) {
+  //kint($view);
+  //views_pre_view for Remove the Views Filter Handler to display the sticky news on search results
+  if ($view->id() == 'general_listing_blocks' && $display_id === 'block_1') {
+    $exposed_filters_input = [];
+    $filters = $view->getHandlers('filter', $view->current_display);
+    $exposed_input = $view->getExposedInput();
+    foreach ($filters as $key => $filter) {
+      if ($filter['exposed'] && isset($filter['id']) && $filter['id'] != 'nid') {
+        if (!empty($exposed_input[$filter['id']])) {
+          $exposed_filters_input[$filter['id']] = $exposed_input[$filter['id']];
+        }
+      }
+    }
+
+    if (!empty($exposed_filters_input)) {
+      $view->removeHandler($view->current_display, 'filter', 'nid');
+    }
+  }
+
+  if ($view->id() == 'general_listing_blocks' && $display_id == 'more_rooms') {
+    $node = \Drupal::routeMatch()->getParameter('node');
+    if ($node instanceof NodeInterface && 'rooms' == $node->bundle()) {  
+      $room_type_tid = $node->get('field_room_types')->target_id;
+      $nid = $node->id();
+      $args = [$room_type_tid, $nid];
+    }    
+  }
+}
+
+
+/**
+ * Implements hook_views_pre_render(). To Show/Hide Related News View Block in Panel Page.
+ */
+function general_views_pre_render(ViewExecutable $view) {
+  //kint($view);
+  $node = \Drupal::routeMatch()->getParameter('node');
+	if ($node instanceof NodeInterface && 'news' == $node->bundle()) {  
+		$mentry = $node->get('field_show_manual_entry')->value;
+		if ($view->id() == 'general' && $view->current_display === 'more_news_tags' && $mentry==1) {
+      unset($view->empty['area']);
+			foreach ($view->result as $key => $value) {
+			  unset($view->result[$key]);
+			}
+		}
+	}
+
+	//Events
+	if ($node instanceof NodeInterface && 'events' == $node->bundle()) {  
+		$mentry = $node->get('field_show_manual_entry')->value;
+		if ($view->id() == 'general' && $view->current_display === 'more_events_tags' && $mentry==1) {
+      unset($view->empty['area']);
+			foreach ($view->result as $key => $value) {
+        unset($view->result[$key]);
+			}
+		}
+	}
+
+	//Impact Stories
+	if ($node instanceof NodeInterface && 'impact_stories' == $node->bundle()) {  
+		$mentry = $node->get('field_show_manual_entry')->value;
+		if ($view->id() == 'general' && $view->current_display === 'more_impact_stories_tags' && $mentry==1) {
+      unset($view->empty['area']);
+			foreach ($view->result as $key => $value) {
+        unset($view->result[$key]);
+			}
+		}
+	}
+
+  
+}
+
+/**
+ * Implements ds field to show events date format.
+ * 
+ */
+function ds_events_date_format($start_date, $end_date) 
+{
+  $DateBegin = date('Y-m-d', strtotime($start_date));
+  $DateEnd = date('Y-m-d', strtotime($end_date));
+  
+  if(empty($end_date) && !empty($start_date)){
+    $date = '<div>'.date('l', strtotime($start_date)).'</div>';
+    $date .= '<div>'.date('M d, Y', strtotime($start_date)).'</div>';     
+  }else if(!empty($start_date) && !empty($end_date) ) { 
+    if($DateBegin == $DateEnd){
+      $date = '<div>'.date('l', strtotime($start_date)).'</div>';
+      $date .= '<div>'.date('M d, Y', strtotime($start_date)).'</div>';  
+    }else{
+      $date = '<div>'.date('l', strtotime($start_date)).' - '.date('l', strtotime($end_date)).'</div>';
+      $date .= '<div>'.date('M d', strtotime($start_date)).' - '.date('M d, Y', strtotime($end_date)).'</div>'; 
+    }      
+  }
+  return $date;
+}
+
+
+/**
+ * Implements ds field to video icon.
+ * 
+ */
+function ds_news_video_icon($news_format,$nodeurl,$duration) 
+{
+  $icon = '';
+  if ($news_format == 'Video') {
+    $icon = "<a href='$nodeurl'><span class='video-icon'></span></a><span class='video_duration'>$duration</span>";
+  }
+  return $icon;
+}
+
+
+/**
+ * Implement ds field for Impact Stories Video Icon
+ */
+function ds_impact_stories_video_icon($imp_format,$nodeurl,$duration) 
+{
+  $icons = '';
+  if ($imp_format == 'Video') {
+    $icons = "<a href='$nodeurl'><span class='video-icon'></span></a><span class='video_duration'>$duration</span>";
+  }
+  return $icons;
+}
+
+/**
+ * Implements ds field to room unavailability.
+ * 
+ */
+function ds_news_room_unavailability($room_available_link) 
+{
+  $icon = '';
+  if ($news_format == 'Video') {
+    $icon = '<span class="video-icon"></span>';
+  }
+  return $icon;
+}
+
+/**
+ * Implements ds field to Event Webinar Icon.
+ * 
+ */
+function ds_event_calendaricon($eventtype, $dateformat) 
+{
+  $icons = '';
+  if ($eventtype=="Webinar") {
+    $icons = "<span class='webinar-icon'></span>$dateformat";
+  }
+  if ($eventtype=="Event") {
+    $icons = "<span class='calendar-icon'></span>$dateformat";
+  }
+return $icons;
+}
+/**
+ * Implements ds field to Event Webinar Icon for Event Details page.
+ * 
+ */
+
+function ds_event_calendaricon_detailpage($eventtype) 
+{
+  $icons = '';
+
+    $icons = "$eventtype<span class='webinar-icon'></span>";
+
+  return $icons;
+}
+
+/**
+ * Implements ds field to room floor plan
+ */
+function ds_rooms_floorplan_availablity($room_floorplan, $button = FALSE) 
+{
+  $available = '';
+  if(empty($room_floorplan)) {
+    $available = '<span class="roomavail">Unavailable</span>';
+  }else{
+    $available = '<div class="field--name-field-floor-plans">' . $room_floorplan . '</div>';
+  }
+  
+  if ($button) {
+    $available = '<div class="availability-button">' . $available . '</div>';
+  }
+  return $available;
+}
+
+
+
+
+/**
+ * Node Form alter to change the personnel page form button name
+ */
+function general_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) 
+{
+  $node = $form_state->getFormObject()->getEntity();
+ //Change the Paragraph field button and title label for Career Content type
+  if ($node->getType() == 'careers') {
+     $numerickeys = count(array_filter(array_keys($form['field_graduates']['widget']), 'is_int'));
+      for($i=0;$i<=$numerickeys-1;$i++)
+      {
+        $form['field_graduates']['widget'][$i]['subform']['field_sub_title']['widget'][0]['value']['#title']= t('Short Description');
+        $form['field_graduates']['widget'][$i]['subform']['field_title']['widget'][0]['value']['#title']= t('Summary / Value');   
+      }
+  }
+
+  //Change the Paragraph field button and title label for Application Deadline Content type
+  if ($node->getType() == 'application_deadline') {
+
+    //Field Fall
+      $numerickeys = count(array_filter(array_keys($form['field_fall']['widget']), 'is_int'));
+      for($i=0;$i<=$numerickeys-1;$i++)
+      {
+        $form['field_fall']['widget'][$i]['subform']['field_sub_text']['widget'][0]['#title']= t('Deadline Applicant Type');
+        $form['field_fall']['widget'][$i]['subform']['field_date']['widget'][0]['value']['#title']= t('Add Deadline');   
+      }
+      //Field Final
+      $numerickeys_ff = count(array_filter(array_keys($form['field_final']['widget']), 'is_int'));
+      for($i=0;$i<=$numerickeys_ff-1;$i++)
+      {
+        $form['field_final']['widget'][$i]['subform']['field_sub_text']['widget'][0]['#title']= t('Deadline Applicant Type');
+        $form['field_final']['widget'][$i]['subform']['field_date']['widget'][0]['value']['#title']= t('Add Deadline');   
+      }
+      //Filed Priority
+      $numerickeys_fp = count(array_filter(array_keys($form['field_priority']['widget']), 'is_int'));
+      for($i=0;$i<=$numerickeys_fp-1;$i++)
+      {
+        $form['field_priority']['widget'][$i]['subform']['field_sub_text']['widget'][0]['#title']= t('Deadline Applicant Type');
+        $form['field_priority']['widget'][$i]['subform']['field_date']['widget'][0]['value']['#title']= t('Add Deadline');   
+      }
+      //Filed Winter
+      $numerickeys_fw = count(array_filter(array_keys($form['field_winter']['widget']), 'is_int'));
+      for($i=0;$i<=$numerickeys_fw-1;$i++)
+      {
+        $form['field_winter']['widget'][$i]['subform']['field_sub_text']['widget'][0]['#title']= t('Deadline Applicant Type');
+        $form['field_winter']['widget'][$i]['subform']['field_date']['widget'][0]['value']['#title']= t('Add Deadline');   
+      }
+  }
+  //Change the Paragraph field button and title label for Requirment Content type
+  if ($node->getType() == 'concentration_requirements') {
+
+     $numerickeys = count(array_filter(array_keys($form['field_credits']['widget']), 'is_int'));
+      for($i=0;$i<=$numerickeys-1;$i++)
+      {
+        $form['field_credits']['widget'][$i]['subform']['field_sub_title']['widget'][0]['value']['#title']= t('Credit Value');
+        $form['field_credits']['widget'][$i]['subform']['field_title']['widget'][0]['value']['#title']= t('Credit Subject / Label');   
+        unset($form['field_credits']['widget'][$i]['subform']['field_description']);
+      }
+  }
+  //Change the Paragraph field button and title label for Personal Content type
+  if ($e=$node->getType() == 'personnel') {
+  
+     $numerickeys = count(array_filter(array_keys($form['field_publications']['widget']), 'is_int'));
+      for($i=0;$i<=$numerickeys-1;$i++)
+      {
+        $form['field_publications']['widget'][$i]['subform']['field_description']['widget'][0]['#title']= t('Book Name / Title'); 
+        $form['field_publications']['widget'][$i]['subform']['field_sub_title']['widget'][0]['value']['#title']= t('Author / Summary');
+          
+      }
+
+      $numerickeys = count(array_filter(array_keys($form['field_afffiliations_committees']['widget']), 'is_int'));
+      for($i=0;$i<=$numerickeys-1;$i++)
+      {
+        $form['field_afffiliations_committees']['widget'][$i]['subform']['field_cta']['widget']['#title']='Sub Topics';
+      }
+  }
+  //Change the Paragraph field button and title label for Quick Facts Content type
+  if ($node->getType() == 'quick_facts') {
+     $numerickeys = count(array_filter(array_keys($form['field_quick_facts']['widget']), 'is_int'));
+      for($i=0;$i<=$numerickeys-1;$i++)
+      {
+        $form['field_quick_facts']['widget'][$i]['subform']['field_description']['widget'][0]['#title']="Deadline / Points / More Info";
+      }
+
+  }
+  //Change the Paragraph field button and title label for application Process Content type
+  if ($node->getType() == 'application_process') {
+     $numerickeys = count(array_filter(array_keys($form['field_application_process_steps']['widget']), 'is_int'));
+      for($i=0;$i<=$numerickeys-1;$i++)
+      {
+        $form['field_application_process_steps']['widget'][$i]['subform']['field_title']['widget'][0]['value']['#title']= t('Step');   
+        unset($form['field_application_process_steps']['widget'][$i]['subform']['field_sub_title']);
+      }
+
+  }
+
+
+  //Add css and js to all node forms
+  if (isset($form['#attributes']['class'][1]) && $form['#attributes']['class'][1] == 'node-form') {
+    $form['#attached']['library'][] = 'general/backend_forms';
+  }
+
+}
+
+
+ 
+/**
+ * Unset the BEF News Views Filter checkbox Duplicate id
+ */
+function general_preprocess_bef_checkboxes(&$variables)
+{
+  unset($variables['attributes']['id']);
+}
+
+
+
+/**
+ * Implement hook_form_alter for alter the forms related
+ */
+function general_form_alter(&$form, FormStateInterface $form_state, $form_id) 
+{
+  
+  //Form alter for add the css and js for Entity browser page
+
+  if ($form['form_id']['#value'] == 'entity_browser_media_browser_form'){
+    $form['#attached']['library'][] = 'general/backend_forms';
+  }
+
+  // Alter for event submission and news submission
+  if ($form_id == 'node_events_form'){
+    $roles = $uid = \Drupal::currentUser()->getRoles();
+    ///kint($form);
+    if (in_array('anonymous', $roles)) {
+      
+      $form['moderation_state']['#access'] = FALSE;
+      $form['revision_information']['#access'] = FALSE;
+      //unset($form['field_lead_text']['widget'][0]['#allowed_formats']);
+    }
+  }
+
+  //Form alter for Connect us page form alter to set the default value of Reason and Department Dropdown
+
+  if ($form['form_id']['#value'] == 'webform_submission_connect_with_us_node_105_add_form' && isset($_GET['tid'])){
+    
+    $tid = $_GET['tid'];
+    if (empty($tid) || !is_numeric($tid)){
+      $response = new RedirectResponse("/services");
+      $response->send();
+      exit;
+    }
+    $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($tid);
+    $tname = $term->getName();
+    $form['elements']['department']['#default_value'] = "Office of Communications";
+    $form['elements']['reason']['#default_value'] = [ "$tname" => "$tname" ];
+  }
+
+  if ($form['form_id']['#value'] == 'node_news_news_submission_form' || $form['form_id']['#value'] == 'node_events_event_submission_form')
+  {
+    $form['body']['widget'][0]['#allowed_formats']['plain_text']='plain_text';
+	unset($form['body']['widget'][0]['#description']);
+  }
+
+
+  //Unset webform filter for Editor Role
+  //kint($form['form_id']['#value']);
+  if ($form['form_id']['#value'] == 'webform_filter_form' || $form['form_id']['#value'] == 'webform_submission_filter_form'){
+    $current_user = \Drupal::currentUser();
+    $roles = $current_user->getRoles();
+    if (in_array('editor', array_values($roles))) {
+         unset($form['filter']);
+    }
+  }
+
+}
+
+function general_menu_local_tasks_alter(&$data, $route_name) {
+  //kint($route_name);
+  // $routes = ['entity.entity_view_display.node.default', ...]; // put other routes in place of '...'
+  // if (in_array($route_name, $routes)) {
+  //   unset($data['tabs'][0]['local_task_to_remove']); 
+  // }
+}
+
+/**
+ * Implement hook_entity_presave for clearing cache of natural language form
+ */
+function general_entity_presave(EntityInterface $entity){
+
+  if ($entity->getEntityTypeId() == 'taxonomy_term'){
+
+    if ($entity->getVocabularyId() == 'admissions_based_natural_form') {
+      $cid = 'admissionnaturalform';
+      \Drupal::cache()->invalidate($cid);
+    } else if ($entity->getVocabularyId() == 'natural_form') {
+      $cid = 'faqnaturalform';
+      \Drupal::cache()->invalidate($cid);
+    }
+  }
+}
+
+/**
+ * Implement hook_entity_delete for clearing cache of natural language form
+ */
+function general_entity_delete(EntityInterface $entity) {
+
+  //code reusability
+  general_entity_presave($entity);
+}

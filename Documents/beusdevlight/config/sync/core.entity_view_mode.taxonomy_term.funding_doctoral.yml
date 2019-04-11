@@ -1,0 +1,14 @@
+uuid: 96f75c47-a918-4f6b-9669-5cac4daab239
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - taxonomy
+third_party_settings:
+  lightning_core:
+    description: ''
+id: taxonomy_term.funding_doctoral
+label: 'Funding Doctoral'
+targetEntityType: taxonomy_term
+cache: true

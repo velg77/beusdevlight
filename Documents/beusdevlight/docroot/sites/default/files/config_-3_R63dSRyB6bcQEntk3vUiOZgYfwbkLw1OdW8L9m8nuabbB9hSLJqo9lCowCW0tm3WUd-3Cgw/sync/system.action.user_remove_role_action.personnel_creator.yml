@@ -1,0 +1,14 @@
+uuid: 7fb9fef8-36b1-466e-b517-f1ba8478fc88
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.personnel_creator
+  module:
+    - user
+id: user_remove_role_action.personnel_creator
+label: 'Remove the Personnel creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: personnel_creator

@@ -1,0 +1,14 @@
+uuid: d91656d4-2340-4fd4-a445-77fb54c2faa3
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.concentration_requirements_reviewer
+  module:
+    - user
+id: user_add_role_action.concentration_requirements_reviewer
+label: 'Add the Concentration - Requirements reviewer role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: concentration_requirements_reviewer

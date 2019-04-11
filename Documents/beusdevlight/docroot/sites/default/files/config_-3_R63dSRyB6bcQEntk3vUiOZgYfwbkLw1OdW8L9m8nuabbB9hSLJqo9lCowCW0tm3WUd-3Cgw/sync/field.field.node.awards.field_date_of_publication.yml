@@ -1,0 +1,21 @@
+uuid: 71515803-7266-40ce-83b8-722b414917a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_of_publication
+    - node.type.awards
+  module:
+    - datetime
+id: node.awards.field_date_of_publication
+field_name: field_date_of_publication
+entity_type: node
+bundle: awards
+label: 'Date of Publication'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

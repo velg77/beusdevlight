@@ -1,0 +1,33 @@
+uuid: 9c30308e-31c2-4b8e-941c-1356b328fe66
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.small_content
+    - field.field.block_content.small_content.body
+    - field.field.block_content.small_content.field_small
+  module:
+    - entity_reference_revisions
+    - text
+id: block_content.small_content.default
+targetEntityType: block_content
+bundle: small_content
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  field_small:
+    type: entity_reference_revisions_entity_view
+    weight: 1
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    region: content
+hidden: {  }

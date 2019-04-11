@@ -1,0 +1,14 @@
+uuid: 5edf4c88-e381-493a-8e89-780ab335e678
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - user
+third_party_settings:
+  lightning_core:
+    description: ''
+id: user.event_submission
+label: 'Event Submission'
+targetEntityType: user
+cache: true

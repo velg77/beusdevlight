@@ -1,0 +1,28 @@
+uuid: cdfbbf08-036c-4167-ad82-31388bc90024
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_inter
+    - node.type.concentrations
+    - node.type.internships
+id: node.concentrations.field_inter
+field_name: field_inter
+entity_type: node
+bundle: concentrations
+label: Internship
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      internships: internships
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

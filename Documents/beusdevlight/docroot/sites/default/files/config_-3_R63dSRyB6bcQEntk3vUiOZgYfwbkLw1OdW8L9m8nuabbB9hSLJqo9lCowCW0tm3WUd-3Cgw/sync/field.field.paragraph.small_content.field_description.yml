@@ -1,0 +1,21 @@
+uuid: c58ff0b2-9377-4549-be87-703f91380daf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_description
+    - paragraphs.paragraphs_type.small_content
+  module:
+    - text
+id: paragraph.small_content.field_description
+field_name: field_description
+entity_type: paragraph
+bundle: small_content
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

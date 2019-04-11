@@ -1,0 +1,13 @@
+name: ics_field
+type: module
+description: A module providing a calendar download as an .ics file
+# core: 8.x
+package: PwC's Experience Center Zurich
+dependencies:
+  - datetime
+  - token
+# Information added by Drupal.org packaging script on 2017-01-30
+version: '8.x-1.0'
+core: '8.x'
+project: 'ics_field'
+datestamp: 1485787691

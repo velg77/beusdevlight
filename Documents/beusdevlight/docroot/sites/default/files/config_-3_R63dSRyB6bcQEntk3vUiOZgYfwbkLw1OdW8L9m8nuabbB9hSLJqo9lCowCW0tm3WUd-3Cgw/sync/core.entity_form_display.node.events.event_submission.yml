@@ -1,0 +1,198 @@
+uuid: 9139d86d-0558-49ef-83fe-8d4ddd84f9d3
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_form_mode.node.event_submission
+    - field.field.node.events.body
+    - field.field.node.events.field_date_of_publication
+    - field.field.node.events.field_display_event_time
+    - field.field.node.events.field_email
+    - field.field.node.events.field_event_end_date
+    - field.field.node.events.field_event_start_date
+    - field.field.node.events.field_events_type
+    - field.field.node.events.field_first_name
+    - field.field.node.events.field_information_for_calender
+    - field.field.node.events.field_lead_text
+    - field.field.node.events.field_map_location
+    - field.field.node.events.field_name
+    - field.field.node.events.field_personemail
+    - field.field.node.events.field_personnel
+    - field.field.node.events.field_phone_no
+    - field.field.node.events.field_phone_number
+    - field.field.node.events.field_registration
+    - field.field.node.events.field_related_events
+    - field.field.node.events.field_show_manual_entry
+    - field.field.node.events.field_tags
+    - field.field.node.events.field_web
+    - node.type.events
+  module:
+    - datetime
+    - field_group
+    - scheduler
+    - telephone
+    - text
+third_party_settings:
+  field_group:
+    group_about_you:
+      children: {  }
+      parent_name: ''
+      weight: 0
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'About You'
+    group_about_the:
+      children: {  }
+      parent_name: ''
+      weight: 6
+      format_type: fieldset
+      format_settings:
+        id: ''
+        classes: ''
+        description: ''
+        required_fields: true
+      label: 'About the event'
+id: node.events.event_submission
+targetEntityType: node
+bundle: events
+mode: event_submission
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 11
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+  field_email:
+    weight: 8
+    settings:
+      size: 60
+      placeholder: 'Contact Email to display within Event Card'
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_event_end_date:
+    weight: 13
+    settings:
+      date_order: MDY
+      time_type: '12'
+      increment: 15
+    third_party_settings: {  }
+    type: datetime_datelist
+    region: content
+  field_event_start_date:
+    weight: 12
+    settings:
+      date_order: MDY
+      time_type: '12'
+      increment: 15
+    third_party_settings: {  }
+    type: datetime_datelist
+    region: content
+  field_first_name:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_lead_text:
+    type: text_textarea
+    weight: 14
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_map_location:
+    type: text_textarea
+    weight: 10
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_name:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_personemail:
+    type: email_default
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_phone_no:
+    type: telephone_default
+    weight: 4
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_phone_number:
+    weight: 9
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_web:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  publish_on:
+    type: datetime_timestamp_no_default
+    weight: 15
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  unpublish_on:
+    type: datetime_timestamp_no_default
+    weight: 16
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_date_of_publication: true
+  field_display_event_time: true
+  field_events_type: true
+  field_information_for_calender: true
+  field_personnel: true
+  field_registration: true
+  field_related_events: true
+  field_show_manual_entry: true
+  field_tags: true
+  moderation_state: true
+  path: true
+  promote: true
+  scheduler_settings: true
+  status: true
+  sticky: true
+  uid: true

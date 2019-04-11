@@ -1,0 +1,22 @@
+uuid: 3b0bcea8-4e35-46e3-aefd-29751b29aaf9
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.dije_newsletter
+id: node.dije_newsletter.status
+field_name: status
+entity_type: node
+bundle: dije_newsletter
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

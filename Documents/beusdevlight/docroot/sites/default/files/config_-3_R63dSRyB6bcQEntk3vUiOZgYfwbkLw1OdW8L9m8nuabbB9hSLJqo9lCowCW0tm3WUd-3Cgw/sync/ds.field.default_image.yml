@@ -1,0 +1,11 @@
+id: default_image
+label: 'Default Image'
+ui_limit: ''
+properties:
+  content:
+    value: '<div class=''defaultimage''></div>'
+    format: rich_text
+type: token
+type_label: 'Token field'
+entities:
+  node: node

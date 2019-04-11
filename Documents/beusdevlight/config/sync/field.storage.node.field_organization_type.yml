@@ -1,0 +1,27 @@
+uuid: 10080d0c-6915-4e97-9bd8-7654116404f4
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_organization_type
+field_name: field_organization_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: student_organization
+      label: 'Student Organization'
+    -
+      value: scholorship
+      label: Scholorship
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

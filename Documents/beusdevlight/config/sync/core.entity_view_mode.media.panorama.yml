@@ -1,0 +1,14 @@
+uuid: 082efadf-7b8f-4e8e-8933-975f2c2b4dde
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - media
+third_party_settings:
+  lightning_core:
+    description: 'displays the panorama 360 degree  view of the image'
+id: media.panorama
+label: Panorama
+targetEntityType: media
+cache: true

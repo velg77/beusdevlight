@@ -1,0 +1,47 @@
+
+  @import "../../base/_variables";
+  .field--name-field-quick-facts{
+    & > .field__item{
+      padding: 20px 40px;
+    }
+    & > .field__item:first-child{
+       border-top:5px solid $site-color-yellow;
+       margin-top: 35px;
+    }
+    & > .field__item:nth-of-type(even){
+      background: #f1f1f1;
+   }
+
+    .field--name-field-title{
+      font-family: 'Avenir-Medium', sans-serif;
+      font-size:1.111rem;
+      color:#333333;
+      margin-bottom: 5px;
+      line-height: 1.500rem;
+    }
+    .field--name-field-sub-title{
+      font-size:0.889rem;
+    }
+    .group-right{
+      font-family: 'Avenir-Heavy', sans-serif;
+      color:#000;
+      p{
+        margin:0;
+      }
+    }
+
+  }
+
+
+  @media (min-width: 768px) {
+    .field--name-field-quick-facts{
+       .group-left{
+           float:left;
+       }
+       .group-right{
+        float:right;
+    }
+    }
+  }
+
+

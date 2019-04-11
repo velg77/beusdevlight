@@ -1,0 +1,14 @@
+uuid: 704c9843-f3f4-4325-90b5-5ad9e2bf999b
+langcode: en
+status: true
+dependencies:
+  module:
+    - lightning_core
+    - node
+third_party_settings:
+  lightning_core:
+    description: ''
+id: node.student_highlight
+label: 'Student Highlight'
+targetEntityType: node
+cache: true

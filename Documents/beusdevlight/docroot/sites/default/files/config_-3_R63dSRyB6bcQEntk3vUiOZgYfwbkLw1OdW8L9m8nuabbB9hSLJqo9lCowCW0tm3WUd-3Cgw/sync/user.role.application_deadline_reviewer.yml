@@ -1,0 +1,19 @@
+uuid: 0e0f01e3-43df-497f-91e7-ea0c451b0cfd
+langcode: en
+status: true
+dependencies: {  }
+id: application_deadline_reviewer
+label: 'Application Deadline reviewer'
+weight: 25
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'delete any application_deadline content'
+  - 'edit any application_deadline content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'view any unpublished content'
+  - 'view latest version'

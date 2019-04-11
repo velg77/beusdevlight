@@ -1,0 +1,29 @@
+Vocabulary_list: null
+first_name: 'I am a'
+second_name: 'I have some question about'
+third_name: 'Tell me about more'
+title: 'Crop is not working for media field'
+subtitle: awtw
+academic_student_category: 'IM A'
+student_questions: 'I HAVE SOME QUESTIONS'
+question_more_details: 'MORE ABOUT'
+admissions_title: 'HOW DO I APPLY?'
+admissions_subtitle: 'Please select from the option below so we can help'
+student_category: 'I AMA A'
+student_course: ' IM INTERESTED IN A'
+student_aim: 'I WANT TO'
+vocabularys: academic_degrees
+vocabularyst: _none
+faq_vocabulary: natural_form
+faq_title: 'I HAVE SOME QUESTIONS'
+faq_subtitle: 'Please select from the option below so we can help'
+faq_child1: 'I am a'
+faq_child2: 'I have some questions about'
+faq_child3: 'Tell me about more'
+admissions_vocabulary: admissions_based_natural_form
+admissions_child1: 'I am a'
+admissions_child2: 'I''m interested in a'
+admissions_child3: 'I want to'
+submit_label: SUBMIT
+submit_label1: 'SHOW MY ANSWERS '
+submit_label2: 'SEE ALL FAQS'

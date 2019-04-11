@@ -1,0 +1,21 @@
+uuid: dbc9dea2-3b47-49d2-baa8-3994d658b725
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_building_hours
+    - node.type.rooms
+  module:
+    - text
+id: node.rooms.field_building_hours
+field_name: field_building_hours
+entity_type: node
+bundle: rooms
+label: 'Building Hours'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,29 @@
+uuid: f9380259-1cc0-43d0-8a0b-7a7171615c76
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:756150c3-e400-470b-b43a-a9180ba6f11a'
+  module:
+    - block_class
+    - block_content
+  theme:
+    - behavioursoe
+third_party_settings:
+  block_class:
+    classes: 'cpy-rht-blk clearfix'
+id: copyrightblock
+theme: behavioursoe
+region: footer
+weight: -8
+provider: null
+plugin: 'block_content:756150c3-e400-470b-b43a-a9180ba6f11a'
+settings:
+  id: 'block_content:756150c3-e400-470b-b43a-a9180ba6f11a'
+  label: 'Copyright Block'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

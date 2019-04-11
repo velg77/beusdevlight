@@ -1,0 +1,11 @@
+id: banner_title
+label: 'Banner Title'
+ui_limit: ''
+properties:
+  content:
+    value: '<[paragraph:field_heading_style]>[paragraph:field_title]</[paragraph:field_heading_style]>'
+    format: rich_text
+type: token
+type_label: 'Token field'
+entities:
+  paragraph: paragraph

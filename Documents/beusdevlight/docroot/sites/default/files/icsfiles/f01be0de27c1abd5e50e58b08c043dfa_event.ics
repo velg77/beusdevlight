@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:behaviorsoe1.betabasket.net
+X-WR-TIMEZONE:Australia/Adelaide
+BEGIN:VTIMEZONE
+TZID:Australia/Adelaide
+X-LIC-LOCATION:Australia/Adelaide
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:bf00d9924414536ea4e4dffbdefd7fe5
+DTSTART;TZID=Australia/Adelaide:19010202T021500
+SEQUENCE:0
+TRANSP:OPAQUE
+URL:http://behaviorsoe1.betabasket.net/[node:path]
+SUMMARY:test
+CLASS:PUBLIC
+DESCRIPTION:Description:\ntest event\n Start Date: Sat\, 02/02/1901 - 02:15
+  End Date:\n[node:field_event_end_date] [node:field_author]
+X-ALT-DESC;FMTTYPE=text/html:Description: <p>test event</p>\n</br>\nStart D
+ ate: \n\n<!-- THEME DEBUG -->\n<!-- THEME HOOK: 'time' -->\n<!-- BEGIN OUT
+ PUT from 'core/themes/stable/templates/field/time.html.twig' -->\n<time da
+ tetime=\"1901-02-01T16:45:00Z\">Sat\, 02/02/1901 - 02:15</time>\n\n<!-- EN
+ D OUTPUT from 'core/themes/stable/templates/field/time.html.twig' -->\n\n<
+ /br></br>\nEnd Date: [node:field_event_end_date]</br>\n[node:field_author]
+DTSTAMP:20190408T172950Z
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+uuid: 81288a15-0cc2-4edd-a3f7-c4f162c41cea
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.internships
+id: node.internships.promote
+field_name: promote
+entity_type: node
+bundle: internships
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

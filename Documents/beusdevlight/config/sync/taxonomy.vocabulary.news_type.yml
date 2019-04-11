@@ -1,0 +1,9 @@
+uuid: 7eed76ef-7c24-41c0-b5f9-347a0a1aa79a
+langcode: en
+status: true
+dependencies: {  }
+name: 'News Type'
+vid: news_type
+description: 'Type of the media'
+hierarchy: 0
+weight: 0

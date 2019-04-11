@@ -1,0 +1,21 @@
+uuid: 47cad2f4-7add-4302-ae56-60f99a7559e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_map_location
+    - node.type.personnel
+  module:
+    - text
+id: node.personnel.field_map_location
+field_name: field_map_location
+entity_type: node
+bundle: personnel
+label: Location
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

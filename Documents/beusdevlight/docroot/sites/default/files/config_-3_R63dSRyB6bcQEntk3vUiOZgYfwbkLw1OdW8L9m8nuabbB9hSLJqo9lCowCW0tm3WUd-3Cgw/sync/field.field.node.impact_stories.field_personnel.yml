@@ -1,0 +1,25 @@
+uuid: 92fc2686-9e8a-474c-9315-ab6a496cf379
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_personnel
+    - node.type.impact_stories
+id: node.impact_stories.field_personnel
+field_name: field_personnel
+entity_type: node
+bundle: impact_stories
+label: 'Featured in this Article'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: views
+  handler_settings:
+    view:
+      view_name: general
+      display_name: entity_reference_1
+      arguments: {  }
+field_type: entity_reference

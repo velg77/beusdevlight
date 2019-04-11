@@ -1,0 +1,27 @@
+{{ attach_library('behavioursoe/header') }}
+
+<header class="header">  
+  <div class="hdr-mbl">
+    <a href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home" class="mbl-logo">
+      <img src="/themes/custom/behavioursoe/logo.svg" alt="{{ 'Home'|t }}" />
+    </a>
+    <div class="bars nav-ico fr">
+      <a href="#" class="main-menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="element-invisible">Enable Menu</span>
+      </a>
+    </div>
+    </div>
+    <div class="hdr-btm">
+      <div class="inside">
+        <div class="container">
+          {% block header_content %}
+            {{content}}
+          {% endblock %}        
+          <div class="cls-icon"></div>
+        </div>
+      </div>
+  </div>
+</header>

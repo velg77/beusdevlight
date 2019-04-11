@@ -1,0 +1,62 @@
+// Css3 Mixins
+@import "../../base/variables";
+
+.block-content--view-mode-ways-to-give-grants-forms-guidelines {
+  .field--name-field-content{
+    letter-spacing: -0.31rem;
+    margin-top: 40px;
+    & > .field__item {
+      text-align: center;
+      padding:15px;
+      letter-spacing: 0;
+      vertical-align: top;
+    }
+  }
+  .field--name-field-title{
+    font-size: 1.111rem;
+    font-family: 'Avenir-Black', sans-serif;
+    padding-bottom: 10px;
+  }
+  .field--name-field-cta a{
+    background: none;
+    border: none;
+    text-transform: none;
+    color:#0d57aa;
+    &:after{
+      content: "\f105";
+      font-family: 'Fontawesome 5 pro';
+      padding-left: 10px;
+      font-size: 1.111rem;
+      vertical-align: middle;
+    }
+    &:hover{
+      color:$site-color-blue;
+    }
+  }
+  .field--name-field-sub-title{
+    font-size: 0.889rem;
+  }
+  .field--name-field-image{
+    padding-bottom: 36px;
+  }
+}
+
+@media(min-width: 768px) {
+  .block-content--view-mode-ways-to-give-grants-forms-guidelines {
+    .field--name-field-content{
+      & > .field__item {
+         width:50%;
+         display: inline-block;
+      }
+    }
+  }
+}
+@media(min-width: 1024px) {
+  .block-content--view-mode-ways-to-give-grants-forms-guidelines {
+    .field--name-field-content{
+      & > .field__item {
+         width:25%;
+      }
+    }
+  }
+}

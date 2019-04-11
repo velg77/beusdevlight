@@ -1,0 +1,17 @@
+uuid: cc5411bb-da4e-4f2c-8de7-ad9bab35e543
+langcode: en
+status: true
+dependencies:
+  config:
+    - crop.type.portrait
+  module:
+    - crop
+name: crop_portrait
+label: 'Cropped: Portrait'
+effects:
+  25a72f31-0890-4946-ad06-205db551a77e:
+    uuid: 25a72f31-0890-4946-ad06-205db551a77e
+    id: crop_crop
+    weight: null
+    data:
+      crop_type: portrait

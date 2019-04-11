@@ -1,0 +1,57 @@
+/**
+ * Clearfix
+*/
+/**
+ * Buttons
+*/
+.box {
+  padding: 10px 30px; }
+
+/**
+ * Css3 Extensions
+*/
+/**
+ * Flex
+*/
+/**
+ * Invisible
+*/
+.block-content--view-mode-why-soe .field--name-field-content:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.block-content--view-mode-why-soe .field--name-field-content > .field__item {
+  position: relative;
+  text-align: center;
+  padding: 25px;
+  font-family: "Avenir-Black", sans-serif; }
+  .block-content--view-mode-why-soe .field--name-field-content > .field__item .field--name-field-title {
+    font-size: 3.5rem;
+    color: #0d57aa;
+    display: inline-block;
+    padding: 4px 25px;
+    border-bottom: 4px solid #ffcb05;
+    line-height: 1; }
+  .block-content--view-mode-why-soe .field--name-field-content > .field__item .field--name-field-sub-title {
+    font-size: 1.111rem;
+    padding: 12px 0 5px 0;
+    color: #333333; }
+  .block-content--view-mode-why-soe .field--name-field-content > .field__item .field--name-field-description {
+    font-size: 0.778rem;
+    color: #747474;
+    font-family: "Avenir-Light", sans-serif; }
+    .block-content--view-mode-why-soe .field--name-field-content > .field__item .field--name-field-description p {
+      margin: 0px; }
+  @media (min-width: 640px) {
+    .block-content--view-mode-why-soe .field--name-field-content > .field__item {
+      float: left;
+      width: 50%; } }
+  @media (min-width: 1024px) {
+    .block-content--view-mode-why-soe .field--name-field-content > .field__item {
+      width: 33.33%; }
+      .block-content--view-mode-why-soe .field--name-field-content > .field__item:nth-of-type(3n+1) {
+        clear: both; } }
+  @media (min-width: 1200px) {
+    .block-content--view-mode-why-soe .field--name-field-content > .field__item .field--name-field-title {
+      font-size: 5.278em; } }

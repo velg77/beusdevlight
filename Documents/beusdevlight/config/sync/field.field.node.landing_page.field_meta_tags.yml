@@ -1,0 +1,30 @@
+uuid: aa45422a-c551-40db-971a-3bab8cfd0171
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meta_tags
+    - node.type.landing_page
+  module:
+    - custom_add_another
+    - metatag
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+_core:
+  default_config_hash: pqOEUUuFT7pGGUULlZGfLL-5gvE3VxEW0epL24YgGSQ
+id: node.landing_page.field_meta_tags
+field_name: field_meta_tags
+entity_type: node
+bundle: landing_page
+label: 'Meta tags'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'a:1:{s:5:"title";s:34:"[current-page:title] | [site:name]";}'
+default_value_callback: ''
+settings: {  }
+field_type: metatag

@@ -1,0 +1,56 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:behaviorsoe1.betabasket.net
+X-WR-TIMEZONE:Australia/Adelaide
+BEGIN:VTIMEZONE
+TZID:Australia/Adelaide
+X-LIC-LOCATION:Australia/Adelaide
+BEGIN:DAYLIGHT
+TZNAME:ACDT
+TZOFFSETFROM:+0930
+TZOFFSETTO:+1030
+DTSTART:20181006T163000
+END:DAYLIGHT
+BEGIN:DAYLIGHT
+TZNAME:ACDT
+TZOFFSETFROM:+0930
+TZOFFSETTO:+1030
+DTSTART:20191005T163000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZNAME:ACST
+TZOFFSETFROM:+1030
+TZOFFSETTO:+0930
+DTSTART:20180331T163000
+END:STANDARD
+BEGIN:STANDARD
+TZNAME:ACST
+TZOFFSETFROM:+1030
+TZOFFSETTO:+0930
+DTSTART:20190406T163000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:e50421b25f70f13eebca6022357e60d6
+DTSTART;TZID=Australia/Adelaide:20190307T235800
+SEQUENCE:0
+TRANSP:OPAQUE
+URL:http://behaviorsoe1.betabasket.net/[node:path]
+SUMMARY:About us
+CLASS:PUBLIC
+DESCRIPTION:Description:\ngfdghh\n Start Date: Thu\, 03/07/2019 - 23:58 End
+  Date: Fri\, 03/01/2019 - 22:02\n[node:field_author]
+X-ALT-DESC;FMTTYPE=text/html:Description: <p>gfdghh</p>\n</br>\nStart Date:
+  \n\n<!-- THEME DEBUG -->\n<!-- THEME HOOK: 'time' -->\n<!-- BEGIN OUTPUT 
+ from 'core/themes/classy/templates/field/time.html.twig' -->\n<time dateti
+ me=\"2019-03-07T13:28:00Z\" class=\"datetime\">Thu\, 03/07/2019 - 23:58</t
+ ime>\n\n<!-- END OUTPUT from 'core/themes/classy/templates/field/time.html
+ .twig' -->\n\n</br></br>\nEnd Date: \n\n<!-- THEME DEBUG -->\n<!-- THEME H
+ OOK: 'time' -->\n<!-- BEGIN OUTPUT from 'core/themes/classy/templates/fiel
+ d/time.html.twig' -->\n<time datetime=\"2019-03-01T11:32:00Z\" class=\"dat
+ etime\">Fri\, 03/01/2019 - 22:02</time>\n\n<!-- END OUTPUT from 'core/them
+ es/classy/templates/field/time.html.twig' -->\n\n</br>\n[node:field_author
+ ]
+DTSTAMP:20190326T011958Z
+END:VEVENT
+END:VCALENDAR

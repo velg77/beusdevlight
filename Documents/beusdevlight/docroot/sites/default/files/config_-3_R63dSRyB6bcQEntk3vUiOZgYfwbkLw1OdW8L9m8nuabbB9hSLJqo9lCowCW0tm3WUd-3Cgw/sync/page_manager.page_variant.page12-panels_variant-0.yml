@@ -1,0 +1,80 @@
+uuid: 75934e43-c5a9-4313-8265-133aef3b9218
+langcode: en
+status: true
+dependencies:
+  config:
+    - page_manager.page.page12
+  content:
+    - 'block_content:academics_and_admissions:5e1c3a05-afb9-401c-8ef3-e11130d99304'
+  module:
+    - block_content
+    - panels
+id: page12-panels_variant-0
+label: Panels
+variant: panels_variant
+variant_settings:
+  blocks:
+    77f0f839-ff8a-45c0-a227-a6f63030e547:
+      id: 'block_content:5e1c3a05-afb9-401c-8ef3-e11130d99304'
+      label: 'ACADEMIC PROGRAMS [Academics and Admissions]'
+      provider: block_content
+      label_display: visible
+      status: true
+      info: ''
+      view_mode: full
+      region: row1
+      weight: 0
+      uuid: 77f0f839-ff8a-45c0-a227-a6f63030e547
+      context_mapping: {  }
+  id: panels_variant
+  uuid: 1bee483c-a4d8-44b4-9e21-e83b410b264f
+  label: null
+  weight: 0
+  layout: behavioursoe_layout
+  layout_settings:
+    wrappers:
+      row1: section
+      row2: section
+      row3: div
+      row4: div
+      row5: div
+      row6: div
+      row7: div
+      row8: div
+      row9: div
+      row10: div
+      row11: div
+      row12: div
+      row13: div
+      row14: div
+      row15: div
+    outer_wrapper: div
+    attributes: ''
+    link_attribute: ''
+    link_custom: ''
+    classes:
+      layout_class: {  }
+      row1: {  }
+      row2: {  }
+      row3: {  }
+      row4: {  }
+      row5: {  }
+      row6: {  }
+      row7: {  }
+      row8: {  }
+      row9: {  }
+      row10: {  }
+      row11: {  }
+      row12: {  }
+      row13: {  }
+      row14: {  }
+      row15: {  }
+  page_title: ''
+  storage_type: page_manager
+  storage_id: page12-panels_variant-0
+  builder: standard
+page: page12
+weight: 0
+selection_criteria: {  }
+selection_logic: and
+static_context: {  }

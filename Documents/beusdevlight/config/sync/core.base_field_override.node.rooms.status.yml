@@ -1,0 +1,22 @@
+uuid: a610e44c-2ad2-4863-b26e-d7a7f1e25a7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.rooms
+id: node.rooms.status
+field_name: status
+entity_type: node
+bundle: rooms
+label: Published
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

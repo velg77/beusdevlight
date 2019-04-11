@@ -1,0 +1,22 @@
+{#
+/**
+ * @file
+ * Display Suite 1 column template.
+ *
+ * Available variables:
+ * - ds_content_wrapper: wrapper around content
+ * - attributes: content region attributes
+ * - ds_content: content region
+ */
+#}
+
+{{attach_library('behavioursoe/two-cols-grid-with-bg')}}
+{{attach_library('behavioursoe/three-cols-grid-with-bg')}}
+
+<div{{ attributes.addClass('ds-1col sm-col-box', 'clearfix') }}>
+
+  {{ title_suffix.contextual_links }}
+
+  {{ ds_content }}
+
+</div>

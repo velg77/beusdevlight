@@ -1,0 +1,14 @@
+uuid: 9f7b7de6-99b1-43e8-9e4d-6349fb1cd65b
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - lightning_core
+third_party_settings:
+  lightning_core:
+    description: ''
+id: block_content.connect
+label: Connect
+targetEntityType: block_content
+cache: true

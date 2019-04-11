@@ -1,0 +1,21 @@
+uuid: 4fcaa3ed-2a15-4b98-ac46-8d62b9968742
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_lead_text
+    - node.type.awards
+  module:
+    - text
+id: node.awards.field_lead_text
+field_name: field_lead_text
+entity_type: node
+bundle: awards
+label: 'Lead text'
+description: 'Opening Paragraph / Summary'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

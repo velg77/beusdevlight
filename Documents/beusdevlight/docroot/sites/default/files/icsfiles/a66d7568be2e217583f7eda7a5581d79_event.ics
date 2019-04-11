@@ -1,0 +1,149 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:behaviorsoe1.betabasket.net
+X-WR-TIMEZONE:Australia/Adelaide
+BEGIN:VTIMEZONE
+TZID:Australia/Adelaide
+X-LIC-LOCATION:Australia/Adelaide
+BEGIN:DAYLIGHT
+TZNAME:ACDT
+TZOFFSETFROM:+0930
+TZOFFSETTO:+1030
+DTSTART:20181006T163000
+END:DAYLIGHT
+BEGIN:DAYLIGHT
+TZNAME:ACDT
+TZOFFSETFROM:+0930
+TZOFFSETTO:+1030
+DTSTART:20191005T163000
+END:DAYLIGHT
+BEGIN:STANDARD
+TZNAME:ACST
+TZOFFSETFROM:+1030
+TZOFFSETTO:+0930
+DTSTART:20180331T163000
+END:STANDARD
+BEGIN:STANDARD
+TZNAME:ACST
+TZOFFSETFROM:+1030
+TZOFFSETTO:+0930
+DTSTART:20190406T163000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:336ac428fe8f2fff47ca91c9000d41dc
+DTSTART;TZID=Australia/Adelaide:20190315T201515
+SEQUENCE:0
+TRANSP:OPAQUE
+URL:http://behaviorsoe1.betabasket.net/[node:path]
+SUMMARY:&#039\;THUG&#039\; Event
+CLASS:PUBLIC
+DESCRIPTION:Description: [sample image]\nBaker-Bell\, assistant professor i
+ n the Department of English and\nAfrican-American and African Studies prog
+ ram\, and Johnson\, assistant\nprofessor in the Department of English\, ch
+ ose \"The Hate U Give\"\nbecause it fosters opportunities for language stu
+ dy beyond standard\nAmerican English. Instead\, the course challenges stud
+ ents to consider\nhow language\, particularly black or African-American la
+ nguage\, informs\nidentity and experience.\n\n“For me\, 'The Hate U Give
+ ' illustrates how black language reflects\nblack people’s ways of knowin
+ g\, interpreting\, surviving and being in\nthe world\,” Baker-Bell said.
+  “The book also shows how it is nearly\nimpossible to separate a person
+ ’s language from their racial\npositioning in society. Most of the stude
+ nts in ENG 302 are preparing\nto be English teachers. One of my intentions
+  this semester is to\nillustrate how they can use literature like 'The Hat
+ e U Give' to work\nagainst perpetuating linguistic racism\, anti-blackness
+  and violence in\ntheir future classrooms.”\n\nBoth Baker-Bell's and Joh
+ nson’s students attended a screening of\n\"The Hate U Give\,\" which was
+  recently released as a major motion\npicture by 20th Century Fox\, at a l
+ ocal Lansing movie theater on Oct.\n22 and Oct. 24.\n\nTiffany Whittington
+ \, a junior majoring in English\, found the film to\nbe realistic and emot
+ ional. However\, reading and discussing the book\nhas provided her with op
+ portunities to explore language beyond what\nshe describes as a traditiona
+ l study.\n\nWhittington describes the book as “woke\,” and an excellen
+ t choice\nto train future teachers.\n\n“It uses black language and shows
+  the reality of being black and\nliving in America\,” she said. “These
+  are aspects that future\nteachers should be aware of before they start te
+ aching.”\n\nThe decision to use the novel \"The Hate U Give\" and to des
+ ign an\nentire event series around the study of Thomas’ book is on par w
+ ith\nwhat\nBakes/2018/thug-event-series-examines-language-tackles-race-and
+ -bias/r-Bell\nintends to achieve with the book she is currently writing on
+ \nlinguistic justice — a framework to implement in the classroom that\nw
+ ill best reach linguistically marginalized students of color\,\nparticular
+ ly black youth.\n\nWhittington noted \"The Hate U Give\" points to what sh
+ e already knew\nabout racial bias.\n\n“Being black in America means you 
+ must proceed with caution\,\" she\nsaid. \"Society fears us as black indiv
+ iduals\, and if you aren’t\ncareful\, you can easily lose your life.\"\n
+ \nThe THUG Event Series includes a dialogue and live Twitter chat from\n5:
+ 30 to 7:30 p.m. Nov. 5\, in Erickson\nHall.s/2018/thug-event-series-examin
+ es-language-tackles-race-and-bias/\n\nThe next event on Dec. 5 is a collab
+ oration between MSU English\neducation students and faculty who will come 
+ together with an English\nlanguage arts class from Detroit Denby High Scho
+ ol. The final event on\nJan. 12\, THUG Teach-in\, is a professional develo
+ pment event for\neducators interested in receiving support and teaching re
+ sources for\nthe book \"The Hate U Give.\" This event is open to the publi
+ c.\n Start Date: Wed\, 02/06/2019 - 10:55 End Date: [node:field_event_date
+ ]\n[node:field_author]
+X-ALT-DESC;FMTTYPE=text/html:Description: \n\n<!-- THEME DEBUG -->\n<!-- TH
+ EME HOOK: 'entity_embed_container' -->\n<!-- BEGIN OUTPUT from 'modules/co
+ ntrib/entity_embed/templates/entity-embed-container.html.twig' -->\n<artic
+ le class=\"embedded-entity\"><!-- THEME DEBUG --><!-- THEME HOOK: 'image_f
+ ormatter' --><!-- BEGIN OUTPUT from 'core/themes/classy/templates/field/im
+ age-formatter.html.twig' --><!-- THEME DEBUG --><!-- THEME HOOK: 'image' -
+ -><!-- BEGIN OUTPUT from 'core/themes/classy/templates/field/image.html.tw
+ ig' --><img src=\"/sites/default/files/2019-03/ban-img-03.jpg\" alt=\"samp
+ le image\" title=\"sample image\" typeof=\"foaf:Image\" /><!-- END OUTPUT 
+ from 'core/themes/classy/templates/field/image.html.twig' --><!-- END OUTP
+ UT from 'core/themes/classy/templates/field/image-formatter.html.twig' -->
+ </article><!-- END OUTPUT from 'modules/contrib/entity_embed/templates/ent
+ ity-embed-container.html.twig' --><p>Baker-Bell\, assistant professor in t
+ he Department of English and African-American and African Studies program\
+ , and Johnson\, assistant professor in the Department of English\, chose \
+ "The Hate U Give\" because it fosters opportunities for language study bey
+ ond standard American English. Instead\, the course challenges students to
+  consider how language\, particularly black or African-American language\,
+  informs identity and experience.</p>\n\n<p>“For me\, 'The Hate U Give' 
+ illustrates how black language reflects black people’s ways of knowing\,
+  interpreting\, surviving and being in the world\,” Baker-Bell said. “
+ The book also shows how it is nearly impossible to separate a person’s l
+ anguage from their racial positioning in society. Most of the students in 
+ ENG 302 are preparing to be English teachers. One of my intentions this se
+ mester is to illustrate how they can use literature like 'The Hate U Give'
+  to work against perpetuating linguistic racism\, anti-blackness and viole
+ nce in their future classrooms.”</p>\n\n<p>Both Baker-Bell's and Johnson
+ ’s students attended a screening of \"The Hate U Give\,\" which was rece
+ ntly released as a major motion picture by 20th Century Fox\, at a local L
+ ansing movie theater on Oct. 22 and Oct. 24.</p>\n\n<p>Tiffany Whittington
+ \, a junior majoring in English\, found the film to be realistic and emoti
+ onal. However\, reading and discussing the book has provided her with oppo
+ rtunities to explore language beyond what she describes as a traditional s
+ tudy.</p>\n\n<p>Whittington describes the book as “woke\,” and an exce
+ llent choice to train future teachers.</p>\n\n<p>“It uses black language
+  and shows the reality of being black and living in America\,” she said.
+  “These are aspects that future teachers should be aware of before they 
+ start teaching.”</p>\n\n<p>The decision to use the novel \"The Hate U Gi
+ ve\" and to design an entire event series around the study of Thomas’ bo
+ ok is on par with what Bakes/2018/thug-event-series-examines-language-tack
+ les-race-and-bias/r-Bell intends to achieve with the book she is currently
+  writing on linguistic justice — a framework to implement in the classro
+ om that will best reach linguistically marginalized students of color\, pa
+ rticularly black youth.</p>\n\n<p>Whittington noted \"The Hate U Give\" po
+ ints to what she already knew about racial bias.</p>\n\n<p>“Being black 
+ in America means you must proceed with caution\,\" she said. \"Society fea
+ rs us as black individuals\, and if you aren’t careful\, you can easily 
+ lose your life.\"</p>\n\n<p>The THUG Event Series includes a dialogue and 
+ live Twitter chat from 5:30 to 7:30 p.m. Nov. 5\, in Erickson Hall.s/2018/
+ thug-event-series-examines-language-tackles-race-and-bias/</p>\n\n<p>The n
+ ext event on Dec. 5 is a collaboration between MSU English education stude
+ nts and faculty who will come together with an English language arts class
+  from Detroit Denby High School. The final event on Jan. 12\, THUG Teach-i
+ n\, is a professional development event for educators interested in receiv
+ ing support and teaching resources for the book \"The Hate U Give.\" This 
+ event is open to the public.</p>\n</br>\nStart Date: \n\n<!-- THEME DEBUG 
+ -->\n<!-- THEME HOOK: 'time' -->\n<!-- BEGIN OUTPUT from 'core/themes/clas
+ sy/templates/field/time.html.twig' -->\n<time datetime=\"2019-02-06T00:25:
+ 55Z\" class=\"datetime\">Wed\, 02/06/2019 - 10:55</time>\n\n<!-- END OUTPU
+ T from 'core/themes/classy/templates/field/time.html.twig' -->\n\n</br></b
+ r>\nEnd Date: [node:field_event_date]</br>\n[node:field_author]
+DTSTAMP:20190326T152326Z
+END:VEVENT
+END:VCALENDAR

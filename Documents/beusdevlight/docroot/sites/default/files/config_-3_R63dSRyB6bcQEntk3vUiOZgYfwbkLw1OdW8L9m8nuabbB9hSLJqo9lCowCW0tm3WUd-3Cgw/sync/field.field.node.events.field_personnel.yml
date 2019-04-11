@@ -1,0 +1,28 @@
+uuid: d202ae22-bc36-49e8-98c3-09a0d8b48c09
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_personnel
+    - node.type.events
+    - node.type.personnel
+id: node.events.field_personnel
+field_name: field_personnel
+entity_type: node
+bundle: events
+label: 'Featured Panelists'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      personnel: personnel
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

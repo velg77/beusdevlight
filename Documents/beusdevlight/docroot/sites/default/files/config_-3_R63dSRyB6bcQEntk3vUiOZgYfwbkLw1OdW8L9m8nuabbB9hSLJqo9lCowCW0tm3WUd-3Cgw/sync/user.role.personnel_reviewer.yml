@@ -1,0 +1,19 @@
+uuid: ea5eb98e-e1da-4200-9596-48574fc1aa91
+langcode: en
+status: true
+dependencies: {  }
+id: personnel_reviewer
+label: 'Personnel reviewer'
+weight: -1
+is_admin: false
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'delete any personnel content'
+  - 'edit any personnel content'
+  - 'use editorial transition archive'
+  - 'use editorial transition publish'
+  - 'use editorial transition review'
+  - 'use moderation sidebar'
+  - 'view any unpublished content'
+  - 'view latest version'

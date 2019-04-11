@@ -1,0 +1,22 @@
+uuid: 06aad4b6-27d3-4f08-9d0e-04f77c61717a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: awards
+label: Awards
+type: 'canonical_entities:node'
+pattern: 'awards/[node:title]'
+selection_criteria:
+  ca23840c-5731-4f5a-8ac7-11ef0591b56b:
+    id: node_type
+    bundles:
+      awards: awards
+    negate: false
+    context_mapping:
+      node: node
+    uuid: ca23840c-5731-4f5a-8ac7-11ef0591b56b
+selection_logic: and
+weight: -5
+relationships: {  }

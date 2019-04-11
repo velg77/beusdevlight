@@ -1,0 +1,32 @@
+uuid: 292f85c3-b715-4778-ac2b-a212b64a81e7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.impact_stories
+  module:
+    - allowed_formats
+    - custom_add_another
+    - text
+third_party_settings:
+  allowed_formats:
+    rich_text: rich_text
+    limited_text_styling: '0'
+    plain_text: '0'
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.impact_stories.body
+field_name: body
+entity_type: node
+bundle: impact_stories
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+field_type: text_with_summary

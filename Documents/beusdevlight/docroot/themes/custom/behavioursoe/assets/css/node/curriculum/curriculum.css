@@ -1,0 +1,73 @@
+/**
+ * Clearfix
+*/
+/**
+ * Buttons
+*/
+.box {
+  padding: 10px 30px; }
+
+/**
+ * Css3 Extensions
+*/
+/**
+ * Flex
+*/
+/**
+ * Invisible
+*/
+.cur-bdy .group-left {
+  padding-left: 15px; }
+  .cur-bdy .group-left > .field-item {
+    padding: 10px 0;
+    position: relative;
+    font-size: 0.889rem;
+    cursor: pointer; }
+    .cur-bdy .group-left > .field-item:hover {
+      color: #000; }
+    .cur-bdy .group-left > .field-item::before {
+      content: '|';
+      color: #dedede;
+      background: #dedede;
+      position: absolute;
+      left: -14px;
+      top: 15px;
+      font-size: 12px;
+      width: 4px; }
+    .cur-bdy .group-left > .field-item.active {
+      font-weight: bold;
+      color: #0d57aa; }
+      .cur-bdy .group-left > .field-item.active::before {
+        color: #0d57aa;
+        background: #0d57aa; }
+
+.cur-bdy .group-right .block-title {
+  display: none; }
+
+.cur-bdy .view-filters {
+  display: none; }
+
+.cur-bdy .crs-title {
+  position: relative;
+  padding-right: 10px; }
+
+.cur-bdy table td, .cur-bdy table th {
+  padding: 15px 5px; }
+
+.cur-bdy .tab-hdr {
+  color: #333; }
+
+@media (min-width: 768px) {
+  .cur-bdy .group-left {
+    float: left;
+    width: 22%;
+    max-width: 325px; }
+    .cur-bdy .group-left .block-title {
+      display: none; }
+  .cur-bdy .group-right {
+    float: right;
+    width: 73%; }
+    .cur-bdy .group-right .block-title {
+      display: block; }
+  .cur-bdy table td, .cur-bdy table th {
+    padding: 15px; } }

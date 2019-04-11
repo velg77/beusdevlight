@@ -1,0 +1,50 @@
+// Css3 Mixins
+@import "../base/variables";
+
+/**
+ * Field
+*/
+
+.field--name-field-cta {
+  .field__item {
+    display: inline;
+    vertical-align: middle;
+  }
+  a {
+    @include button_large();
+    @include site-color-yellowbutton();
+  }
+}
+
+.field-val-cta-color-white ~ .field--name-field-cta {
+  a {
+    @include whitebgbutton();
+  }
+
+}
+
+.field--name-title-para {
+  font-family: "Avenir-Black", sans-serif;
+  margin: 0;
+}
+
+.field--type-link {
+  .field__item {
+    display: block;
+    margin:10px;
+  }
+}
+
+.field--name-image {
+  img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 768px) {
+  .field--type-link {
+    .field__item {
+      display: inline;
+    }
+  }
+}

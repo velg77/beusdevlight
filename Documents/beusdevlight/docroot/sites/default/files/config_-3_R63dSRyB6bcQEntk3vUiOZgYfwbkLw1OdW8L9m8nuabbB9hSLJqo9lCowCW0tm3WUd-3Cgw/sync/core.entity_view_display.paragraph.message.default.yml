@@ -1,0 +1,97 @@
+uuid: d9030f85-4958-49dc-a040-2e9b25c58eda
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.message.field_full_description
+    - field.field.paragraph.message.field_image
+    - field.field.paragraph.message.field_image_caption
+    - field.field.paragraph.message.field_sub_title
+    - field.field.paragraph.message.field_title
+    - field.field.paragraph.message.field_topic_label
+    - paragraphs.paragraphs_type.message
+  module:
+    - ds
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: false
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+          left: {  }
+          right: {  }
+    regions:
+      left:
+        - field_image
+        - field_image_caption
+      right:
+        - field_title
+        - field_full_description
+        - field_topic_label
+        - field_sub_title
+id: paragraph.message.default
+targetEntityType: paragraph
+bundle: message
+mode: default
+content:
+  field_full_description:
+    weight: 3
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: right
+  field_image:
+    type: entity_reference_entity_view
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+      view_mode: default
+    third_party_settings: {  }
+    region: left
+  field_image_caption:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: left
+  field_sub_title:
+    weight: 5
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: right
+  field_title:
+    weight: 2
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: right
+  field_topic_label:
+    weight: 4
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: right
+hidden: {  }

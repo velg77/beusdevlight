@@ -1,0 +1,14 @@
+uuid: 487e39ff-fde3-4c5b-907a-5858c1d57c8a
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.concentration_requirements_reviewer
+  module:
+    - user
+id: user_remove_role_action.concentration_requirements_reviewer
+label: 'Remove the Concentration - Requirements reviewer role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: concentration_requirements_reviewer

@@ -1,0 +1,14 @@
+uuid: cde71d2a-e0af-4e09-aeea-f752e3402c68
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.endorsement_areas_creator
+  module:
+    - user
+id: user_remove_role_action.endorsement_areas_creator
+label: 'Remove the Endorsement Areas creator role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: endorsement_areas_creator

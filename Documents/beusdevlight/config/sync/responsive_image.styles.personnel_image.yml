@@ -1,0 +1,34 @@
+uuid: d445c7c8-8ee4-47ac-bf22-049cb5c5de5e
+langcode: en
+status: true
+dependencies:
+  config:
+    - image.style.md_portrait
+    - image.style.md_portrait_2x
+  theme:
+    - behavioursoe
+id: personnel_image
+label: 'Personnel Image'
+image_style_mappings:
+  -
+    breakpoint_id: behavioursoe.xlg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: md_portrait
+  -
+    breakpoint_id: behavioursoe.xlg
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: md_portrait_2x
+  -
+    breakpoint_id: behavioursoe.lg
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: md_portrait
+  -
+    breakpoint_id: behavioursoe.lg
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: md_portrait_2x
+breakpoint_group: behavioursoe
+fallback_image_style: md_portrait

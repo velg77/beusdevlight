@@ -1,0 +1,11 @@
+id: room_seating_capacity
+label: 'Room Seating Capacity'
+ui_limit: ''
+properties:
+  content:
+    value: "  <div class=\"field__label\">Seating Capacity</div>\r\n              <div class=\"field__item\">[node:field_seating_capacity]</div>"
+    format: rich_text
+type: token
+type_label: 'Token field'
+entities:
+  node: node

@@ -1,0 +1,29 @@
+uuid: 369cd24b-db48-42c3-ba3c-85c24bd7aa82
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_endorsement_areas
+    - node.type.endorsement_areas
+    - taxonomy.vocabulary.en
+id: node.endorsement_areas.field_endorsement_areas
+field_name: field_endorsement_areas
+entity_type: node
+bundle: endorsement_areas
+label: 'Endorsement Areas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      en: en
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

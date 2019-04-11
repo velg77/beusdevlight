@@ -1,0 +1,23 @@
+uuid: 8e0b806d-144c-4da4-8558-8fc75df5ab3f
+langcode: en
+status: false
+dependencies:
+  config:
+    - core.entity_view_mode.paragraph.publications
+    - field.field.paragraph.multiple_content.field_sub_text
+    - paragraphs.paragraphs_type.multiple_content
+  module:
+    - text
+id: paragraph.multiple_content.publications
+targetEntityType: paragraph
+bundle: multiple_content
+mode: publications
+content:
+  field_sub_text:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

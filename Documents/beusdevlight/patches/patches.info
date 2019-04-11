@@ -1,0 +1,22 @@
+Iyyappan
+----------------
+Added the patch to ics_field module to show the add to calender button
+
+drupal issue  - https://www.drupal.org/project/ics_field/issues/2924791
+patch url - https://www.drupal.org/project/ics_field/issues/2924791#comment-12665274
+Patch applied to Scheduler module to correct the scheduler content moderation Integration(Check Module Description) - https://www.drupal.org/project/scheduler_content_moderation_integration
+-----------------------------
+
+
+Added the patch to panels and panelizer module
+
+drupal issue(panels) - https://www.drupal.org/project/panels/issues/3031778#comment-12977883
+drupal issue(panelizer) - https://www.drupal.org/project/panelizer/issues/3034080#comment-12977752
+drupal issue (page manager) - https://www.drupal.org/project/page_manager/issues/2799885#comment-12572128
+drupal issue (page manager) - https://www.drupal.org/project/page_manager/issues/3033057
+drupal issue (Facets to show All reults link ) - https://www.drupal.org/project/facets/issues/2692027
+drupal issue (Form Block Mode) - https://www.drupal.org/project/formblock/issues/2816415
+drupal issue (Form Mode Manager) - https://www.drupal.org/files/issues/2018-11-15/2969012-7.patch
+drupal issue (Field Widget rows length) https://www.drupal.org/files/issues/2717599-73.patch
+Drupal issue (Entity Browser) - https://www.drupal.org/files/issues/2019-03-10/entity-browser-auto-height-iframe-3025100-41.patch
+Drupal issue (Entity Browser) - https://www.drupal.org/files/issues/2019-03-18/entity-browser-auto-height-iframe-3025100-52.patch

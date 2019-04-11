@@ -1,0 +1,35 @@
+uuid: 454c222c-c76f-4d01-b795-7d407ea3533e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.natural_form.field_url_faq
+    - taxonomy.vocabulary.natural_form
+  module:
+    - link
+    - text
+id: taxonomy_term.natural_form.default
+targetEntityType: taxonomy_term
+bundle: natural_form
+mode: default
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_url_faq:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden: {  }

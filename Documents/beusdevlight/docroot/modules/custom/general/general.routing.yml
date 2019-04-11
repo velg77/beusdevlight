@@ -1,0 +1,26 @@
+general.naturalform:
+ path: '/simpleform'
+ defaults:
+  _form: '\Drupal\general\Form\NaturalForm'
+  _title: 'Application form'
+ requirements:
+   _permission: 'access content'
+
+general.admin_settings_form:  
+  path: '/admin/config/general/adminsettings'  
+  defaults:  
+    _form: '\Drupal\general\Form\NaturalAdminForm'  
+    _title: 'Natural Language Form'  
+  requirements:  
+    _permission: 'access administration pages'  
+  options:  
+    _admin_route: TRUE
+
+general.admissionsnaturalform:
+ path: '/naturalform'
+ defaults:
+  _form: '\Drupal\general\Form\AdmissionsNaturalForm'
+  _title: 'Natural Application form'
+ requirements:
+   _permission: 'access content'
+

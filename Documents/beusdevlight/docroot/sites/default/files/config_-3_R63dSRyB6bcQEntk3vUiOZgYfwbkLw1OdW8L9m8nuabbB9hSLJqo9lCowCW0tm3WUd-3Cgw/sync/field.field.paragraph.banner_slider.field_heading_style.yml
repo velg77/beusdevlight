@@ -1,0 +1,23 @@
+uuid: 4955b25f-b96a-4f0a-bca2-de8866a2c3fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_heading_style
+    - paragraphs.paragraphs_type.banner_slider
+  module:
+    - options
+id: paragraph.banner_slider.field_heading_style
+field_name: field_heading_style
+entity_type: paragraph
+bundle: banner_slider
+label: 'Heading Style'
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: h2
+default_value_callback: ''
+settings: {  }
+field_type: list_string

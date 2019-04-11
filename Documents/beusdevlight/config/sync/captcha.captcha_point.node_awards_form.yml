@@ -1,0 +1,7 @@
+uuid: d04f3010-1134-492c-9f5f-94dd325bd586
+langcode: en
+status: false
+dependencies: {  }
+formId: node_awards_form
+captchaType: default
+label: null

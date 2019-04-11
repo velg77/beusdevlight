@@ -1,0 +1,54 @@
+uuid: 03ff3cd2-b78d-4179-9490-876b561162bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_syllabus
+    - node.type.courses
+    - paragraphs.paragraphs_type.courses_syllabi
+  module:
+    - custom_add_another
+    - entity_reference_revisions
+third_party_settings:
+  custom_add_another:
+    custom_add_another: ''
+    custom_remove: ''
+id: node.courses.field_syllabus
+field_name: field_syllabus
+entity_type: node
+bundle: courses
+label: Syllabus
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 0
+    target_bundles:
+      courses_syllabi: courses_syllabi
+    target_bundles_drag_drop:
+      banner_slider:
+        weight: 8
+        enabled: false
+      content:
+        weight: 9
+        enabled: false
+      courses_syllabi:
+        enabled: true
+        weight: 10
+      cta_group:
+        weight: 11
+        enabled: false
+      message:
+        weight: 12
+        enabled: false
+      multiple_content:
+        weight: 13
+        enabled: false
+      small_content:
+        weight: 14
+        enabled: false
+field_type: entity_reference_revisions

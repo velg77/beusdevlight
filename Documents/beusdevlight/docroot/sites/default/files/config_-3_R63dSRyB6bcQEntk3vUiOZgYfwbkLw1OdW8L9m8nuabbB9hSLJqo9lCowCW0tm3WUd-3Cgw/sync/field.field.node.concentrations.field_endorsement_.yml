@@ -1,0 +1,28 @@
+uuid: cf365480-68e9-4e52-9b65-947116196cbe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_endorsement_
+    - node.type.concentrations
+    - node.type.endorsement_areas
+id: node.concentrations.field_endorsement_
+field_name: field_endorsement_
+entity_type: node
+bundle: concentrations
+label: 'Endorsement Areas'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      endorsement_areas: endorsement_areas
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,22 @@
+uuid: d4a96bf3-7239-4193-af78-34c334bde5bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.taxonomy_term.taxonomy_index
+    - taxonomy.vocabulary.course_types
+  module:
+    - text
+id: taxonomy_term.course_types.taxonomy_index
+targetEntityType: taxonomy_term
+bundle: course_types
+mode: taxonomy_index
+content:
+  description:
+    label: hidden
+    type: text_default
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

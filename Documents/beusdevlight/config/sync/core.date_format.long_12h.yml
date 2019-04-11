@@ -1,0 +1,8 @@
+uuid: 99af4371-3797-4088-b10c-1f53d8618781
+langcode: en
+status: true
+dependencies: {  }
+id: long_12h
+label: 'Long (12-hour)'
+locked: false
+pattern: 'F j, Y \a\t g:i A'

@@ -1,0 +1,30 @@
+uuid: 82a7b7e3-3af8-40b2-8a9b-25089aff5b7e
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.general_blocks_taxonomy_
+  module:
+    - system
+    - views
+  theme:
+    - behavioursoe
+id: views_block__general_blocks_taxonomy__block_3_2
+theme: behavioursoe
+region: sidebar
+weight: -15
+provider: null
+plugin: 'views_block:general_blocks_taxonomy_-block_3'
+settings:
+  id: 'views_block:general_blocks_taxonomy_-block_3'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: "/faq/*\r\n/faq"
+    negate: false
+    context_mapping: {  }
